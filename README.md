@@ -23,13 +23,13 @@
 
 ## 콘텐츠 구성
 
-**1.Principles**
+**1. Principles**
 
-**2.Writing**
+**2. Writings**
 
-**3.Color**
+**3. Colors**
 
-**4.Web**
+**4. Web**
 
 - **Components**
   - Mobile, PC, PAPER
@@ -40,7 +40,7 @@
 - **Motion**
   - 공통 가이드
 
-**5.App**
+**5. App**
 
 - **Components**
   - Android, iOS, PAPER
