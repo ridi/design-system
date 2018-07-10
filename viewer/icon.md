@@ -9,7 +9,7 @@
 * 아이콘등의 리소스 네이밍을 자세하게 표기합니다. 리소스의 이름이 다소 길어질 수 있지만, 수정이 필요할 때 리소스가 쓰이고 있는 경로를 쉽게 찾을 수 있어 유지보수에 용이합니다. <br>
     예) reader_typo_setting_column_width.xml
 * 리소스 네이밍 규칙 <br>
-    [Android](https://github.com/ridi/style-guide/tree/master/Android#%EB%A6%AC%EC%86%8C%EC%8A%A4-%EB%84%A4%EC%9D%B4%EB%B0%8D)
+    [Android](https://github.com/ridi/style-guide/tree/master/Android#%EB%A6%AC%EC%86%8C%EC%8A%A4-%EB%84%A4%EC%9D%B4%EB%B0%8D) <br>
     [iOS](https://github.com/ridi/style-guide/tree/master/iOS#%EB%A6%AC%EB%94%94-%EB%A6%AC%EC%86%8C%EC%8A%A4-%EB%84%A4%EC%9D%B4%EB%B0%8D)
 
 
