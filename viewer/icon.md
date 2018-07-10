@@ -29,7 +29,7 @@
 ## 특징
 * Human Interface Guidelines의 [System Icon](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/system-icons/) 스타일을 바탕으로 1pt의 라인 아이콘을 주로 사용합니다.
 * 가끔 highligthed 된 상태를 표현할 때 면 아이콘도 함께 사용합니다.
-##리소스 포맷
+## 리소스 포맷
 @1x, @2x, @3x 사이즈의 png 형식을 사용합니다.
 
 
