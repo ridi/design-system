@@ -36,7 +36,7 @@
 
 ### 애니메이션과 트랜지션 (Animation & Transition)
 * 화면 간 전환이나, 화면 내 부분적인 변화를 표현할 때와 같은 상황에만 사용합니다. 
-* 대부분 OS 자체 시스템 기본 애니메이션, 트랜지션 속성만으로도 자연스럽게 표현할 수 있습니다.
+* 대부분 OS 자체 시스템 기본 애니메이션, 트랜지션 속성만으로도 자연스럽게 표현할 수 있습니다. <br>
     ex. iOS의 coverVertical, crossDissolve / Android의 AccelerateDecelerateInterpolator 등
 * 시스템 스타일만으로는 표현이 부족하다고 판단될 때 커스텀 애니메이션을 적용합니다. <br>
     ex. 독서노트 편집모드
@@ -70,8 +70,8 @@
 * 반복 횟수 : 1회만 or 여러 번 or 계속 (무한히) 실행
 
 ### Interpolator란?
-Interpolator는 Android Animation에서 State를 시간에 따라 어떤 양상으로 변화시킬 지 나타내는 function입니다.
-Interpolator는 쉽게 변형할 수 있습니다. 각 Interpolator에 factor를 바꿔주면 됩니다.
+Interpolator는 Android Animation에서 State를 시간에 따라 어떤 양상으로 변화시킬 지 나타내는 function입니다. <br>
+Interpolator는 쉽게 변형할 수 있습니다. 각 Interpolator에 factor를 바꿔주면 됩니다.<br>
 ![Interpolator](/viewer/image/motion/interpolator.png)
 <figcaption>Graph 출처 : http://antoine-merle.com/images/interpolators2.png</figcaption>
 
