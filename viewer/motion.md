@@ -1,29 +1,3 @@
-# Icon
-
-# 공통
-
-## 기준
-* 각 플랫폼 별로 1x (mdpi, @1x) 사이즈를 기준으로 제작하고, 모든 해상도에 대응하는 리소스 사이즈를 각각 추출하여 사용합니다.
-* 대부분 24*24px 사이즈로 만들고 컴포넌트에 따라 여백이나 크기를 유동적으로 조정합니다.
-## 리소스 관리
-* 아이콘등의 리소스 네이밍을 자세하게 표기합니다. 리소스의 이름이 다소 길어질 수 있지만, 수정이 필요할 때 리소스가 쓰이고 있는 경로를 쉽게 찾을 수 있어 유지보수에 용이합니다. <br>
-    예) reader_typo_setting_column_width.xml
-* 리소스 네이밍 규칙 <br>
-    [Android](https://github.com/ridi/style-guide/tree/master/Android#%EB%A6%AC%EC%86%8C%EC%8A%A4-%EB%84%A4%EC%9D%B4%EB%B0%8D) <br>
-    [iOS](https://github.com/ridi/style-guide/tree/master/iOS#%EB%A6%AC%EB%94%94-%EB%A6%AC%EC%86%8C%EC%8A%A4-%EB%84%A4%EC%9D%B4%EB%B0%8D)
-
-
-# Android/PAPER
-
-## 특징
-* [Material Design Icons](https://material.io/tools/icons/?style=baseline) 스타일을 바탕으로 사용하고 부분적으로 커스텀하여 라인, 면 아이콘 스타일을 모두 사용합니다.
-* iOS보다는 상대적으로 두꺼운 스타일(2dp)의 라인 아이콘을 주로 사용합니다.
-## 리소스 포맷
-* 모양이나 색상이 복잡하지 않은 경우 해상도별 대응이 쉽도록 SVG(Vector drawable) 형식을 사용합니다.
-* 모양이나 색상이 복잡하고 해상도별로 다른 모양의 리소스가 필요한 경우 각 해상도에 맞는 png 형식을 사용합니다.<br>
-    예) 리소스에 쉐도우가 들어갈 때, 색상이 한 가지 이상일 때 등..(ex. tts 버튼)
-
-
 # 모션과 애니메이션이 중요한 이유
 디지털 제품은 동적(Dynamic)입니다. 사용자는 서비스를 이용하는 매 순간 변화하는 화면, 움직이는 요소를 마주하게됩니다. 
 그러므로 제품 전반에 걸쳐 일관되고 자연스러운 모션, 트랜지션을 제공해야 사용자 경험을 해치지 않을 수 있습니다.
@@ -91,7 +65,7 @@
 ### Interpolator란?
 Interpolator는 Android Animation에서 State를 시간에 따라 어떤 양상으로 변화시킬 지 나타내는 function입니다.
 Interpolator는 쉽게 변형할 수 있습니다. 각 Interpolator에 factor를 바꿔주면 됩니다.
-![Interpolator](/image/motion/interpolator.png){:data-action="zoom"}
+![Interpolator](/viewer/image/motion/interpolator.png){:data-action="zoom"}
 <figcaption>Graph 출처 : http://antoine-merle.com/images/interpolators2.png</figcaption>
 
 ### Interpolator의 종류
