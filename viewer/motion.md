@@ -1,7 +1,9 @@
 # 모션과 애니메이션이 중요한 이유
-디지털 제품은 동적(Dynamic)입니다. 사용자는 서비스를 이용하는 매 순간 변화하는 화면, 움직이는 요소를 마주하게됩니다. 
-그러므로 제품 전반에 걸쳐 일관되고 자연스러운 모션, 트랜지션을 제공해야 사용자 경험을 해치지 않을 수 있습니다.
-사용자는 한 번에 한 화면만 볼 수 있습니다. 그러므로 모션과 애니메이션은 화면의 위계를 파악하는 데 도움을 줍니다.
+* 디지털 제품은 동적(Dynamic)입니다. 사용자는 서비스를 이용하는 매 순간 변화하는 화면, 움직이는 요소를 마주하게됩니다. <br>
+그러므로 제품 전반에 걸쳐 일관되고 자연스러운 모션, 트랜지션을 제공해야 사용자 경험을 해치지 않을 수 있습니다. <br>
+* 사용자는 한 번에 한 화면만 볼 수 있습니다. 그러므로 모션과 애니메이션은 화면의 위계를 파악하는 데 도움을 줍니다.
+
+
 
 # 모션과 애니메이션 원칙
 
@@ -25,9 +27,12 @@
 
 
 
+
+
 # OS별 적용 방법 및 속성
 
 ## 전체 공통
+
 
 ### 애니메이션과 트랜지션 (Animation & Transition)
 * 화면 간 전환이나, 화면 내 부분적인 변화를 표현할 때와 같은 상황에만 사용합니다. 
@@ -48,11 +53,13 @@
     ex. 이미지 멋지게 공유하기, 인앱검색 튜토리얼 팝업, 반대방향으로 보는 책 토스트 등
 
 
+
 ## iOS
 ### 필요 속성
 * State : 시작, 중간, 끝 상태 (origin, size, scale, rotate 등) <br>
     * 중간에 큰 변화가 없다면, 시작과 끝의 값만 있어도 충분합니다.
 * Duraion & Time : 얼마동안 전환할 것인지 
+
 
 
 ## Android
@@ -65,7 +72,7 @@
 ### Interpolator란?
 Interpolator는 Android Animation에서 State를 시간에 따라 어떤 양상으로 변화시킬 지 나타내는 function입니다.
 Interpolator는 쉽게 변형할 수 있습니다. 각 Interpolator에 factor를 바꿔주면 됩니다.
-![Interpolator](/viewer/image/motion/interpolator.png){:data-action="zoom"}
+![Interpolator](/viewer/image/motion/interpolator.png)
 <figcaption>Graph 출처 : http://antoine-merle.com/images/interpolators2.png</figcaption>
 
 ### Interpolator의 종류
