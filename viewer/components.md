@@ -1,6 +1,6 @@
 # 앱 바(App Bar)
 
-iOS 네비게이션 바(`Navigation Bar`)
+`iOS` 네비게이션 바(Navigation Bar)
 
 탐색, 검색과 더불어 현재 위치한 화면과 관련된 여러 액션을 표시할 때 사용합니다.
 
@@ -22,7 +22,7 @@ iOS 네비게이션 바(`Navigation Bar`)
 
 # 내비게이션 바(Navigation Bar)
 
-Android 앱 바(`App Bar`)
+`Android` 앱 바(App Bar)
 
 내비게이션 바(navigation bar)는 상태 바(status bar) 하단에 나타나며 계층으로 구성된 화면을 탐색할 수 있게 합니다.
 
@@ -77,7 +77,7 @@ Android 앱 바(`App Bar`)
 
  # 바텀 내비게이션(Bottom Navigation)
 
-iOS `Tab Bars`
+`iOS` 탭 바(Tab Bar)
 
 바텀 내비게이션(bottom navigation)은 화면 하단에 노출되는 요소로 다른 페이지로 빠르게 이동할 수 있게 해줍니다. 바텀 네비게이션은 언제 어디에서든 접근할 수 있도록 스크롤 시에도 계속 하단에 노출됩니다. 상시 노출되는 만큼 중요한 기능으로 구성되어야 합니다.
 
@@ -89,7 +89,7 @@ iOS `Tab Bars`
 
  # 모달 바텀 시트(Modal Bottom Sheet)
 
-iOS `Action Sheets`
+`iOS` 액션 시트(Action Sheet)
 
 바텀 시트(bottom sheet)는 [스피너(spinner)](https://developer.android.com/reference/android/widget/Spinner.html)나 [팝업 메뉴(popup menu)](https://developer.android.com/reference/android/widget/PopupMenu.html)의 대안입니다.
 
@@ -106,7 +106,7 @@ iOS `Action Sheets`
 
 # 모달 다이얼로그(Modal Dialog)
 
-iOS `Alerts`
+`iOS` 얼럿(Alerts)
 
 모달 다이얼로그(modal dialog)는 주로 요청할 때 사용합니다. 주로 확인, 선택, 입력, 결정 등을 요청합니다.
 
@@ -196,7 +196,7 @@ iOS `Alerts`
 
 # 메뉴(Menu)
 
-iOS `Action Sheets`
+`iOS` 액션 시트(Action Sheet)
 
 메뉴(menu)에는 옵션 메뉴(option menu), 콘텍스트 메뉴(context menu), 팝업 메뉴(popup menu)가 포함되며 상황 별로 다르게 사용합니다.
 
@@ -219,7 +219,7 @@ iOS `Action Sheets`
 
 # 액션 시트(Action Sheet)
 
-Android 모달 바텀 시트(`Modal Bottom Sheet)`, 메뉴(`Menu)`
+`Android` 모달 바텀 시트(Modal Bottom Sheet), 메뉴(Menu)
 
 액션 시트(action sheet)는 얼럿(alert)의 한 형태입니다. 현재 위치한 화면과 관련된 선택지를 표시할 때 사용합니다. 액션 시트로 새로운 태스크를 시작하게 하는 옵션이나 삭제 같은 치명적인 태스크를 실행하기 전에 승인 요청 옵션을 표시할 수 있습니다.
 
@@ -234,13 +234,13 @@ Android 모달 바텀 시트(`Modal Bottom Sheet)`, 메뉴(`Menu)`
 
 # 프로그레스 인디케이터(Progress Indicator)
 
-iOS `Progress indicator`
+`iOS` 프로그레스 인디케이터(Progress indicator)
 
 프로그레스 인디케이터(progress indicator)는 기능을 실행할 때 현재 진행 상황을 알려줍니다. 전체 과정의 진행률을 보여주는 경우, 진행 시간이 정해지지 않았을 때, 이 두 가지 경우에 사용됩니다. 첫 번째 경우는 진행률을 수치, 프로그레스 바(progress bar)로 보여주며 확정된 인디케이터(determinate indicator)로 부릅니다. 두 번째 경우는 애니메이션이 가미된 로더(loader)를 사용하며 확정되지 않은 인디케이터 (indeterminate indicator)로 부릅니다.
 
 ## 확정된 인디케이터(determinate indicator)
 
-iOS `Progress Bars`
+`iOS` 프로그레스 바(Progress Bar)
 
 ### 구성
 
@@ -274,7 +274,7 @@ iOS `Activity Indicators`
 
  # 스피너(Spinner)
 
-iOS `Views`
+`iOS` 뷰(View)
 
 스피너(spinner)는 여러 값들 중 하나를 선택할 수 있는 컴포넌트입니다. 기본 상태의 스피너는 현재 선택된 값을 보여줍니다. 스피너를 터치하면 선택할 수 있는 값들을 드롭다운 메뉴(dropdown menu)로 보여줍니다.
 
@@ -286,7 +286,7 @@ iOS `Views`
 
 # 스테퍼(Stepper)
 
-iOS `Stepper`
+`iOS` 스테퍼(Stepper)
 
 ### Android의 스테퍼(stepper)
 
@@ -304,7 +304,7 @@ iOS `Stepper`
 
 # 탭(Tab)
 
-iOS `Segmented Controls`
+`iOS` 세그멘티드 컨트롤(Segmented Control)
 
 탭을 사용하면 한정된 공간 안에서 연관된 여러 콘텐츠를 체계적으로 보여줄 수 있습니다. 페이지에서 완전히 벗어나지 않고 쉽게 연관된 콘텐츠를 살펴볼 수도 있습니다.
 
@@ -354,7 +354,7 @@ iOS `Segmented Controls`
 
  # 텍스트 셀렉션 툴바(Text Selection Toolbar)
 
-iOS `Edit Menu`
+`iOS` 에디트 메뉴(Edit Menu)
 
 텍스트 셀렉션 툴바(text selection toolbar)는 텍스트를 선택할 때 사용합니다. 선택하고자 하는 텍스트를 롱 프레스하거나 형광펜이 남겨져 있는 텍스트를 탭하면 해당 텍스트 위에 선택할 수 있는 옵션이 표시됩니다. 더 보기 메뉴를 누르면 부가적인 메뉴를 보여주는 모드로 전환됩니다.
 
@@ -385,7 +385,7 @@ iOS `Edit Menu`
 
 # 툴바(Toolbar)
 
-iOS `Toolbar`
+`iOS` 툴바(Toolbar)
 
 ## Android의 툴바(Toolbar)
 
@@ -422,5 +422,5 @@ iOS `Toolbar`
 
 - 한 번에 읽을 수 있도록 메시지는 핵심만 담아서 작성합니다.
 - 따로 닫기 버튼이 없어도 상관 없습니다. 어디를 터치해도 튜토리얼 벌룬은 닫히지 때문입니다. 하지만 튜토리얼 벌룬을 보고 어떤 액션을 해야 할지 모르는 사용자를 위해 특정 영역을 누르도록 유도해도 좋습니다.
-- 튜토리얼 벌룬은 최대한 맥락에 맞게 띄어져야 하고 사용자의 동선을 방해하지 않도록 최초 한 번 정도 나타나는 게 좋습니다.
+- 튜토리얼 벌룬은 최대한 맥락에 맞게 띄어져야 하고 사용자의 동선을 방해하지 않도록 최초 한 번 정도 나타나는 게 좋습니다
 
