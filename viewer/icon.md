@@ -51,8 +51,7 @@
     (ex. 검정 20%(#ccc), 60%(#666)) 
 
 ## 포맷
-* 비교적 저해상도인 hdpi, xhdpi를 지원하므로 SVG 형식만으로는 pixel-perfect한 표현이 어려울 수 있습니다. 
-* Android 앱과 공통으로 사용하는 에셋을 제외한 경우 png 형식을 사용합니다.
+* 저해상도(hdpi, xhdpi)를 지원함에 따라 SVG 형식만으로는 pixel-perfect 한 표현이 어려울 수 있습니다. 이와 같은 경우, Android 앱과 공통으로 사용하는 에셋을 제외한 경우 png 형식을 사용합니다.
 
 
 # PC & Web 뷰어
