@@ -14,32 +14,32 @@
 #### 1. PC, Mobile
 
 - ##### Primary
-  - **Blue** 
+  - **Blue** <br>
     페이지 내에서 우선순위가 가장 높은 주요 액션 버튼으로 사용합니다.  
      ![Interpolator](/web/img/button_blue.png)
 
 - ##### Secondary
-  - **White**
+  - **White**<br>
     주요 액션 버튼이 강조되어 있는 페이지 내에서 보조 액션 버튼으로 사용합니다.  
      ![Interpolator](/web/img/button_white.png)
-  - **Gray**
+  - **Gray**<br>
     페이지 내에서 다른 버튼과 사용이 겹칠 때 기능을 구분하기 위해 사용합니다.  
      ![Interpolator](/web/img/button_gray.png)
-  - **Blueline**
+  - **Blueline**<br>
     부가 정보 및 기능을 제공할 때 사용합니다. 
      ![Interpolator](/web/img/button_blueline.png)
 
 #### 2. PAPER
 
-- #####  Primary
-  - **E-ink Black**
-      ![Interpolator](/web/img/button_eink_black.png)
+- #####  Primary<br>
+  - **E-ink Black**<br>
+      ![Interpolator](/web/img/button_eink_black.png)<br>
 
-- ##### Secondary
-  - **E-ink Black Line**
-      ![Interpolator](/web/img/button_eink_blackline.png)
-  - **E-ink Gray**
-      ![Interpolator](/web/img/button_eink_gray.png)
+- ##### Secondary<br>
+  - **E-ink Black Line**<br>
+      ![Interpolator](/web/img/button_eink_blackline.png)<br>
+  - **E-ink Gray**<br>
+      ![Interpolator](/web/img/button_eink_gray.png)<br>
 
 ### 크기
 
