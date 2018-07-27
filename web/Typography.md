@@ -22,9 +22,9 @@
 
 - 한글 폰트 Noto sans와 영문, 숫자 폰트 Museo Sans를 효율적으로 사용하기 위해 제작한 웹폰트입니다. 페이퍼샵에서 사용합니다.
 
-### **Noto** **Sans**
+### **Noto Sans**
 
-- 페이퍼 서점에서 사용합니다.
+- PAPER 서점에서 사용합니다.
 
 ## Font Stack
 
@@ -40,19 +40,19 @@ font-family: Helvetica Neue,'Apple SD Gothic Neo',arial,'나눔고딕','NanumGot
 
 ### 1. 글자 크기 분류 기준
 
-#### **Display** 
+#### Display 
 
 - 가장 강조되어야 하는 제목 등에 사용하는 폰트
 
-#### **Heading** 
+#### Heading 
 
 - 타이틀 등 다양한 위치에서 사용하는 폰트
 
-#### **Paragraph** 
+#### Paragraph 
 
 - 단락을 포함하는 본문에 사용하는 폰트
 
-#### **Caption **
+#### Caption 
 
 - 작은 영역에서 사용하는 폰트
 
