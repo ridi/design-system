@@ -70,14 +70,10 @@ Android Animation에서 State를 시간에 따라 어떤 양상으로 변화시�
 <figcaption>Graph 출처 : http://antoine-merle.com/images/interpolators2.png</figcaption>
 
 ### 리디북스 앱에서 사용하고 있는 Interpolator의 종류 
-* 시간에 따라 동일한 비율로 변화 : Linear Interpolator
-* 처음에 느리게 변하다가 점점 빠르게 : Accelerate Interpolator (ease-in)
-* 처음에 빠르게 변하다가 점점 천천히 : Decelerate Interpolator (ease-out)
-* 위 둘을 동시에 : AccelerateDecelerate Interpolator (ease-in-out)
-* 왔다갔다 : Cycle Interpolator
-* 시작 State에서 조금 뒤로 당겼다 이동 : Anticipate Interpolator
-* 도착 State를 조금 지나쳤다가 도착 State로 이동 : Overshoot Interpolator
-* 위 둘을 동시에 : AnticipateOvershoot Interpolator
-* 도착 State에서 통통 튀기 : Bounce Interpolator
+* Accelerate Interpolator: 처음에 느리게 변하다가 점점 빠르게 (ease-in)
+* Decelerate Interpolator: 처음에 빠르게 변하다가 점점 천천히 (ease-out)
+* AccelerateDecelerate Interpolator: 위 둘을 동시에 (ease-in-out)
+* Cycle Interpolator: 왔다갔다 
+
 
 
