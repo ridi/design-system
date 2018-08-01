@@ -10,21 +10,21 @@
 
 - 40, 50, 60, 80, 90, 110, 150, 200
 - 세로가 긴 표지일 경우 섬네일의 최대 세로 값의 크기를 아래와 같이 적용할 수 있습니다.
-- `max-height: width * 1.618 - 10px`
+  - `max-height: width * 1.618 - 10px`
 
 ### 스타일
 
 - Linear Gradient로 입체감을 표현하고, 배경과 섬네일의 구분을 위해 테두리 선을 적용합니다. 
 - 서비스 및 기기 특성에 따라 그림자 효과 및 Linear Gradient 효과를 추가하거나 제외할 수 있습니다.
-- RIDI Select 상세페이지의 섬네일은 배경색과 구분을 위해 예외적으로 그림자 효과를 적용합니다.
-- PAPER에서는 다른 스타일 요소는 제외하고 테두리 선만 적용합니다.
+  - RIDI Select 상세페이지의 섬네일은 배경색과 구분을 위해 예외적으로 그림자 효과를 적용합니다.
+  - PAPER에서는 다른 스타일 요소는 제외하고 테두리 선만 적용합니다.
 
 ### 뱃지
 
 도서 정보 및 상태 등 섬네일에 표시되는 시각적인 요소입니다. 
 
 - 가격 관련 정보 및 도서 정보에 대한 내용이 표시됩니다. 각 요소의 중복 표시가 가능합니다. 
-- PAPER 기기에서 가격 관련 뱃지는 노출되지 않습니다. 
+  - PAPER 기기에서 가격 관련 뱃지는 노출되지 않습니다. 
 - 새로운 뱃지를 추가할 때에는 섬네일을 많이 가리지 않도록 주의하고, 다양한 표지 스타일에 대응할 수 있도록 복잡한 형태는 피하는 것이 좋습니다.
 
 | 명칭  | 예시             |
@@ -65,29 +65,27 @@
 
 - 페이지 내에서 한눈에 많은 도서를 탐색해야 하는 경우에 사용합니다. 
 
-- ex. 홈>섹션 별 도서 리스트, 이벤트 페이지 내 도서 리스트
-
+  - ex. 홈>섹션 별 도서 리스트, 이벤트 페이지 내 도서 리스트
 - 섬네일은 도서 제목 상단에 일정 간격을 두고 배치합니다. 표지의 높이가 균일하지 않기 때문에 해당 기준을 적용하여 섬네일이 일정한 위치에 보이도록 합니다.
 
 ![Interpolator](/web/img/bookmacro_portrait.png)
 
+
 - 섬네일(thumbnail) + 뱃지(badge)
 - 메타데이터(metadata)
-
-- 도서 제목(title)
-
-- 저자(authors)
-- 역자(translator)
-- 별점 및 참여 인원수(star rate)
-- 대여 가격(rental price)
-- 구매 가격(buy price)
-- 만화/소설 뱃지(book type badge)
-- 썸딜 뱃지(some deal badge)
+  - 도서 제목(title)
+  - 저자(authors)
+  - 역자(translator)
+  - 별점 및 참여 인원수(star rate)
+  - 대여 가격(rental price)
+  - 구매 가격(buy price)
+  - 만화/소설 뱃지(book type badge)
+  - 썸딜 뱃지(some deal badge)
 
 ### 리스트 뷰(list view)
 
 - 표시 되어야 하는 도서 정보가 많을 경우, 선택/다운로드 등 사용자의 액션이 필요한 경우에 사용합니다.
-- ex. 도서 검색 결과 리스트, 연재 선호작품 리스트
+  - ex. 도서 검색 결과 리스트, 연재 선호작품 리스트
 - 섬네일은 하나의 리스트 영역에서 일정 간격을 두고 상단 및 중앙에 배치합니다. 하나의 리스트 영역의 높이는 표지 높이에 영향을 받습니다.
 
 ![Interpolator](/web/img/bookmacro_landscape_meta.png)
@@ -96,16 +94,15 @@
 
 - 메타데이터(metadata)
 
-- 도서 제목(title)
-- 부제목(sub title)
-- 별점 및 참여 인원수(star rate)
-- 저자(authors)
-- 역자(translator)
-- 출판사(publisher)
-- 카테고리(category)
-- 책 소개(description)
-- 대여 가격(rental price)
-- 구매 가격(buy price)
-- 만화/소설 뱃지(book type badge)
-- 썸딜 뱃지(some deal badge)
-No newline at end of file
+  - 도서 제목(title)
+  - 부제목(sub title)
+  - 별점 및 참여 인원수(star rate)
+  - 저자(authors)
+  - 역자(translator)
+  - 출판사(publisher)
+  - 카테고리(category)
+  - 책 소개(description)
+  - 대여 가격(rental price)
+  - 구매 가격(buy price)
+  - 만화/소설 뱃지(book type badge)
+  - 썸딜 뱃지(some deal badge)
