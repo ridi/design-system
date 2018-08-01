@@ -108,4 +108,3 @@
 - 구매 가격(buy price)
 - 만화/소설 뱃지(book type badge)
 - 썸딜 뱃지(some deal badge)
-No newline at end of file
