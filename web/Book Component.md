@@ -1,31 +1,40 @@
-# Book Component
+# Book macro
 
-다양한 기기 및 사용 목적에 맞게 구조화한 책 정보를 고객에게 일관성 있게 제공하기 위해 만든 컴포넌트입니다.
+다양한 플랫폼과 상황에 맞게 구조화한 책 정보를 고객에게 일관성 있게 제공하기 위해 만든 컴포넌트입니다.
 
-## 섬네일(Thumbnail)
+## 섬네일 Thumbnail
 
-### 크기 
+### Size 
 
-가로 크기 기준으로 고정되어 있는 값을 상황에 맞게 사용합니다.
+Width 값 기준으로 고정되어 있는 크기를 상황에 맞게 사용합니다.
 
 - 40, 50, 60, 80, 90, 110, 150, 200
-- 세로가 긴 표지일 경우 섬네일의 최대 세로 값의 크기를 아래와 같이 적용할 수 있습니다.
-  - `max-height: width * 1.618 - 10px`
+  - max-height: width * 1.618 - 10px
 
-### 스타일
+### Style
 
-- Linear Gradient로 입체감을 표현하고, 배경과 섬네일의 구분을 위해 테두리 선을 적용합니다. 
-- 서비스 및 기기 특성에 따라 그림자 효과 및 Linear Gradient 효과를 추가하거나 제외할 수 있습니다.
-  - RIDI Select 상세페이지의 섬네일은 배경색과 구분을 위해 예외적으로 그림자 효과를 적용합니다.
-  - PAPER에서는 다른 스타일 요소는 제외하고 테두리 선만 적용합니다.
+기본 스타일은 동일하지만, 플랫폼의 특성과 상황에 따라 다르게 적용할 수 있습니다.
 
-### 뱃지
+- Linear Gradient로 입체감을 주고, 배경과 섬네일의 구분을 위해 Border를 적용합니다. 
+  Shadow는 여러 개의 섬네일이 나열되어 있을 때 섬네일의 간격을 더 좁아 보이게 하므로 사용하지 않습니다.
+- RIDI Select 상세페이지에서 배경색과 구분을 위해 예외적으로 Shadow를 적용합니다.
+- PAPER에서는 다른 스타일 요소는 제외하고, Border만 적용합니다.
 
-도서 정보 및 상태 등 섬네일에 표시되는 시각적인 요소입니다. 
+### Alignment
 
-- 가격 관련 정보 및 도서 정보에 대한 내용이 표시됩니다. 각 요소의 중복 표시가 가능합니다. 
-  - PAPER 기기에서 가격 관련 뱃지는 노출되지 않습니다. 
+리스트 타입에 따라 알맞은 정렬을 적용합니다.
+
+- 그리드 뷰(Grid View): 하단 고정
+- 리스트 뷰(List View): 상단/중앙 정렬
+
+### Badge
+
+- 도서 정보 및 상태 등 섬네일에 표시되는 시각적인 요소입니다. 
 - 새로운 뱃지를 추가할 때에는 섬네일을 많이 가리지 않도록 주의하고, 다양한 표지 스타일에 대응할 수 있도록 복잡한 형태는 피하는 것이 좋습니다.
+
+#### 1. 공통
+
+가격 관련 정보 및 도서 정보에 대한 내용이 표시됩니다. 각 요소의 중복 표시가 가능합니다. PAPER 기기에서는 가격 관련 뱃지는 노출되지 않습니다. 
 
 | 명칭  | 예시             |
 | ----- | ---------------- |
@@ -36,9 +45,20 @@
 
  ![Interpolator](/web/img/bookmacro_badge1.png)
 
-## 메타데이터(Metadata)
+#### 2. 구매목록
 
-사용자에게 보여지는 도서의 정보를 아래와 같은 명칭으로 구분합니다.
+구매 목록 페이지 내에서 도서 상태와 관련된 내용이 표시됩니다.
+
+- 시리즈/세트 도서 수
+- 기간 만료
+
+ ![Interpolator](/web/img/bookmacro_badge2.png)
+
+## 메타데이터 Metadata
+
+사용자에게 많은 양의 정보를 효과적으로 전달하기 위해 도서 정보를 구조화한 데이터입니다.
+
+### 1. 공통
 
 | 코드                | 구분                |
 | ------------------- | ------------------- |
@@ -53,58 +73,84 @@
 | **Description**     | 책 소개             |
 | **Rental Price**    | 대여 가격           |
 | **Buy Price**       | 구매 가격           |
-| **Book Type Badge** | 만화/소설 뱃지      |
-| **Some Deal Badge** | 썸딜 뱃지           |
+| **Book Type Badge** | 만화/소설           |
+| **Some Deal Badge** | 썸딜                |
 
-## 레이아웃 타입(Layout Type)
+### 2. 구매목록
 
-주로 사용하는 레이아웃 및 메타데이터 노출 순서는 다음과 같습니다.
-사용하는 목적과 도서 장르, 상황에 따라 표시되는 정보가 다르지만 기본적으로 도서 제목과 저자 명은 꼭 표시되어야 합니다.
+| 코드                    | 구분                |
+| ----------------------- | ------------------- |
+| **Period Time**         | 대여 도서 남은 시간 |
+| **Period Time Expired** | 만료된 날짜         |
 
-### 그리드 뷰(grid view)
+## 종류 Types
 
-- 페이지 내에서 한눈에 많은 도서를 탐색해야 하는 경우에 사용합니다. 
+주로 사용하는 레이아웃 및 메타데이터 노출 순서는 다음과 같이 정의되어 있습니다. 
+플랫폼의 종류와 도서 장르, 상황에 따라 표시되는 정보가 다르지만 기본적으로 도서 제목과 저자 명은 꼭 표시되어야 합니다.
 
-  - ex. 홈>섹션 별 도서 리스트, 이벤트 페이지 내 도서 리스트
+### 세로형 Portrait
 
-- 섬네일은 도서 제목 상단에 일정 간격을 두고 배치합니다. 표지의 높이가 균일하지 않기 때문에 해당 기준을 적용하여 섬네일이 일정한 위치에 보이도록 합니다.
+모든 플랫폼에서 기본값으로 사용합니다. 
 
-   ![Interpolator](/web/img/bookmacro_portrait.png)
+ ![Interpolator](/web/img/bookmacro_portrait.png)
 
-- 섬네일(thumbnail) + 뱃지(badge)
-- 메타데이터(metadata)
+- Thumbnail + Component
 
-  - 도서 제목(title)
+- Metadata
 
-  - 저자(authors)
-  - 역자(translator)
-  - 별점 및 참여 인원수(star rate)
-  - 대여 가격(rental price)
-  - 구매 가격(buy price)
-  - 만화/소설 뱃지(book type badge)
-  - 썸딜 뱃지(some deal badge)
+  - Title
 
-### 리스트 뷰(list view)
+  - Authors
+  - Translator
+  - Star Rate
+  - Rental Price
+  - Buy Price
+  - Book Type Badge
+  - Some Deal Badge
 
-- 표시 되어야 하는 도서 정보가 많을 경우, 선택/다운로드 등 사용자의 액션이 필요한 경우에 사용합니다.
-  - ex. 도서 검색 결과 리스트, 연재 선호작품 리스트
-- 섬네일은 하나의 리스트 영역에서 일정 간격을 두고 상단 및 중앙에 배치합니다. 하나의 리스트 영역의 높이는 표지 높이에 영향을 받습니다.
+### 가로형 Landscape
+
+#### 1. 가로형 Landscape
+
+  Mobile, PAPER에서 주로 사용합니다. 
+
+ ![Interpolator](/web/img/bookmacro_landscape.png)
+
+- Thumbnail + Component
+
+- Metadata
+
+  - Title
+  - Sub Title
+  - Authors
+  - Translator
+  - Publisher
+  - Star Rate
+  - Rental Price
+  - Buy Price
+
+  - Book Type Badge
+  - Some Deal Badge
+
+#### 2. 가로형 메타데이터 Landscape Metadata
+
+PC에서 주로 사용합니다. Book Type Badge, Some Deal Badge는 메타데이터 영역의 우측 상단에 위치합니다.
 
  ![Interpolator](/web/img/bookmacro_landscape_meta.png)
 
-- 섬네일(thumbnail) + 뱃지(badge)
+- Thumbnail + Component
 
-- 메타데이터(metadata)
+- Metadata
 
-  - 도서 제목(title)
-  - 부제목(sub title)
-  - 별점 및 참여 인원수(star rate)
-  - 저자(authors)
-  - 역자(translator)
-  - 출판사(publisher)
-  - 카테고리(category)
-  - 책 소개(description)
-  - 대여 가격(rental price)
-  - 구매 가격(buy price)
-  - 만화/소설 뱃지(book type badge)
-  - 썸딜 뱃지(some deal badge)
+  - Title
+  - Sub Title
+  - Star Rate
+  - Authors
+  - Translator
+  - Publisher
+  - Category
+  - Description
+  - Rental Price
+  - Buy Price
+  - Book Type Badge
+  - Some Deal Badge
