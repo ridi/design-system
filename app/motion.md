@@ -34,7 +34,7 @@
 ## 전체 공통
 
 
-### 애니메이션과 트랜지션 (Animation & Transition)
+### 애니메이션과 트랜지션(animation & transition)
 * 화면 간 전환이나, 화면 내 부분적인 변화를 표현할 때 사용합니다. 
 * 대부분 OS 자체 시스템 기본 애니메이션, 트랜지션 속성만으로도 자연스럽게 표현할 수 있습니다. <br>
     (ex. iOS의 coverVertical, crossDissolve / Android의 AccelerateDecelerateInterpolator 등)
