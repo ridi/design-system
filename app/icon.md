@@ -54,10 +54,10 @@
 * 저해상도(hdpi, xhdpi)를 지원함에 따라 SVG 형식만으로는 pixel-perfect 한 표현이 어려울 수 있습니다. 이러한 경우, Android 앱과 공통으로 사용하는 에셋을 제외하고 png 형식을 사용합니다.
 
 
-# PC & Web 뷰어
+# Desktop & Web 뷰어
 
 ## 특징
-* PC 뷰어의 경우 iOS/macOS의 아이콘 스타일을 기준으로 합니다.
+* Desktop 뷰어의 경우 iOS/macOS의 아이콘 스타일을 기준으로 합니다.
 * Web 뷰어의 경우 Android의 아이콘 스타일을 기준으로 합니다.
 
 ## 포맷
