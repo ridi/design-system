@@ -4,11 +4,11 @@
 
 ## 서체(Typefaces)
 
-다음 5가지 서체를 제품의 목적에 맞게 사용합니다.
+디자인 시 다음의 서체를 목적에 맞게 사용합니다.
 
 ### **Apple SD Gothic Neo**
 
-- 리디북스 서점에서 한글 폰트로 사용합니다.
+- 리디북스 서점에서 한글 폰트로 사용합니다. 
 
 ### **Helvetica Neue** 
 
@@ -20,15 +20,15 @@
 
 ### **Ridi Sans** 
 
-- 페이퍼 샵에서 두 가지 폰트를 효율적으로 사용하기 위해 제작한 웹 폰트입니다. 한글 폰트는 Noto Sans, 영문/숫자 폰트는 Museo Sans로 구성되어 있습니다.
+- 페이퍼샵에서 두 가지 폰트를 효율적으로 사용하기 위해 제작한 웹폰트입니다. 한글 폰트는 Noto Sans, 영문/숫자 폰트는 Museo Sans로 구성되어 있습니다.
 
 ### **Noto Sans**
 
-- 리디 셀렉트, PAPER 서점에서 사용합니다.
+- 리디셀렉트, PAPER 서점에서 사용하는 웹폰트 입니다.
 
-## 스택(Stack)
+## 폰트 스택(Font Stack)
 
-각 기기 및 OS에서 지원하는 시스템 폰트를 우선으로 출력할 수 있도록 합니다.
+폰트 스택을 다음과 같이 정의하여 각 기기 및 OS에서 지원하는 시스템 폰트를 순차적으로 출력합니다. 시스템 폰트는 사용자가 서비스와 시스템을 오갈 때 익숙하고 일관된 경험을 유지할 수 있게 합니다.
 
 ```
 font-family: Helvetica Neue,'Apple SD Gothic Neo',arial,'나눔고딕','NanumGothic','돋움',Dotum,Tahoma,Geneva,sans-serif;
@@ -36,31 +36,9 @@ font-family: Helvetica Neue,'Apple SD Gothic Neo',arial,'나눔고딕','NanumGot
 
 ## 크기(Scale)
 
-### 종류
+정보의 위계에 맞게 일관된 폰트 크기 사용을 권장합니다. 서비스 및 기기 특성에 따라 가이드라인을 적용하기 어려운 경우는 예외를 허용합니다.
 
-#### 1. 디스플레이(display) 
-
-- 가장 강조되어야 할 때나 제목 등에 사용하는 폰트 크기
-
-#### 2. 제목(heading) 
-
-- 제목과 다양한 위치에서 사용하는 폰트 크기
-
-#### 3. 단락(paragraph) 
-
-- 단락을 포함하는 본문에 사용하는 폰트 크기
-
-#### 4. 캡션(caption) 
-
-- 작은 영역에서 사용하는 폰트 크기
-
-### 사용
-
-- Desktop, mobile, PAPER 공통으로 사용할 수 있는 폰트 크기입니다. 
-- 정보의 위계에 따라 일관된 폰트 크기 사용을 권장합니다. 서비스 및 기기 특성에 따라 분류된 폰트 크기와 관계 없이 사용할 수도 있습니다.
-- 필요하다고 판단 되면 가이드에 등록되지 않은 폰트 크기도 사용할 수 있습니다.
-
-| 명칭        | 크기(px) |
+| 구분        | 크기(px) |
 | ----------- | -------- |
 | Display 1   | 30px     |
 | Display 2   | 24px     |
@@ -74,14 +52,15 @@ font-family: Helvetica Neue,'Apple SD Gothic Neo',arial,'나눔고딕','NanumGot
 
 ## 두께(Weight)
 
-Regular와 bold를 사용합니다. 
-Title, text link, 가격 정보 등 강조가 필요한 경우에만 bold를 사용하고 그 외의 경우에는 regular를 사용합니다.
+- Regular와 bold를 사용합니다. 
+
+- Title, text link, 가격 정보 등 강조가 필요한 경우에만 bold를 사용하고 그 외의 경우에는 regular를 사용합니다.
 
 ## 컬러(Color)
 
 ### 기본 텍스트 컬러(basic text color)
 
-- 일반적인 텍스트에는 슬레이트 그레이(slate gray) 계열을 주로 사용합니다.
+- 일반적인 텍스트에는 slate gray 계열을 사용합니다.
 
 ### 포인트 텍스트 컬러(point text color)
 
@@ -95,7 +74,9 @@ Title, text link, 가격 정보 등 강조가 필요한 경우에만 bold를 사
 
 ## 행간(Line Height)
 
-폰트 크기에 비례한 1.3em 값을 사용합니다. Paragraph의 경우에는 글자 수와 영역에 따라 적절한 값을 유동적으로 적용하여 사용해야 합니다. (*권장: 1.4-1.6)
+폰트 크기에 비례한 1.3em 값을 사용합니다. Paragraph의 경우에는 글자 수와 영역에 따라 적절한 값을 유동적으로 적용하여 사용해야 합니다. 
+
+- 권장: 1.4-1.6
 
 ## 자간(Spacing)
 
