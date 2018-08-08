@@ -10,16 +10,16 @@
 
 #### 주요 버튼(primary button)
 
-- **Blue, E-ink black**
+- **Blue, E-ink black**<br>
   페이지 내에서 우선순위가 가장 높은 주요 액션 버튼으로 사용합니다.  
 
 #### 보조 버튼(secondary button)
 
-- **White, E-ink black line**
+- **White, E-ink black line**<br>
   주요 액션 버튼이 강조되어 있는 페이지 내에서 보조 액션 버튼으로 사용합니다.  
-- **Gray, E-ink gray**
+- **Gray, E-ink gray**<br>
   페이지 내에서 다른 버튼과 사용이 겹칠 때 기능을 구분하기 위해 사용합니다.  
-- **Blueline**
+- **Blueline**<br>
   부가 정보 및 기능을 제공할 때 사용합니다. 
 
 ### 크기
