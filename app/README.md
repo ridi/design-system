@@ -9,7 +9,7 @@
 - 모바일
   - Android
   - iOS
-  - PAPER
+  - PAPER・PAPER Lite / PAPER PRO
 - 데스크톱
   - Windows
   - macOS
