@@ -230,11 +230,11 @@
 
 #### Desktop
 
- [![](/web/img/pagination_pc.png)](#)
+ [![](/contents/web/img/pagination_pc.png)](#)
 
 #### Mobile
 
- [![](/web/img/pagination_mobile.png)](#)
+ [![](/contents/web/img/pagination_mobile.png)](#)
 
 ### 동작
 
