@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
-ruby '~>2.5.0'
+ruby "~>2.5.0"
 
-gem "github-pages", group: :jekyll_plugins
+group :jekyll_plugins do
+  gem "github-pages"
+  gem "hawkins"
+end
