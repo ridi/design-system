@@ -3,6 +3,7 @@ const clean = require('gulp-dest-clean');
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const shell = require('gulp-shell');
+const postcssPresetEnv = require('postcss-preset-env');
 
 const config = {
   css: {
@@ -15,7 +16,14 @@ gulp.task('css:build', () => {
   return (
     gulp.src(config.css.src)
       .pipe(plumber())
-      .pipe(postcss(() => ({})))
+      .pipe(postcss([
+        postcssPresetEnv({
+          stage: 0,
+          features: {
+            'color-mod-function': true,
+          },
+        }),
+      ]))
       .pipe(clean(config.css.dest))
       .pipe(gulp.dest(config.css.dest))
   );

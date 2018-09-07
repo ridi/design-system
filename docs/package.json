@@ -16,7 +16,8 @@
     "gulp-dest-clean": "^0.5.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-shell": "^0.6.5"
+    "gulp-shell": "^0.6.5",
+    "postcss-preset-env": "^5.3.0"
   },
   "engines": {
     "node": ">=8.11 <9",
