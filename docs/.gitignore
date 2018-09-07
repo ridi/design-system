@@ -1,1 +1,3 @@
 _site
+/assets/css
+/node_modules

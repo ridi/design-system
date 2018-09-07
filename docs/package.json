@@ -1,0 +1,24 @@
+{
+  "name": "@ridi/design-system",
+  "description": "RIDI Design System",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ridi/design-system.git"
+  },
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-shell": "^0.6.5"
+  },
+  "engines": {
+    "node": ">=8.11 <9",
+    "npm": ">=5.6 <6"
+  }
+}

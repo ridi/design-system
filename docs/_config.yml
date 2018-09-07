@@ -1,0 +1,12 @@
+# Site settings
+title: RIDI Design System
+baseurl: "/design-system"
+
+# Build settings
+exclude:
+- node_modules
+- Gemfile
+- Gemfile.lock
+- gulpfile.js
+- package.json
+- package-lock.json
