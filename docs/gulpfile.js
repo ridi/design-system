@@ -5,6 +5,8 @@ const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const shell = require('gulp-shell');
 const sourcemaps = require('gulp-sourcemaps');
+const _ = require('lodash');
+const atImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
 
 const config = {
@@ -20,6 +22,9 @@ gulp.task('css:build', () => {
       .pipe(plumber())
       .pipe(sourcemaps.init())
       .pipe(postcss([
+        atImport({
+          resolve: id => _.trimStart(id, '~'),
+        }),
         postcssPresetEnv({
           stage: 0,
           features: {
