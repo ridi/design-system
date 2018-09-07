@@ -1,5 +1,6 @@
-const del = require('del');
 const gulp = require('gulp');
+const clean = require('gulp-dest-clean');
+const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const shell = require('gulp-shell');
 
@@ -10,11 +11,12 @@ const config = {
   },
 };
 
-gulp.task('css:build', async () => {
-  await del(config.css.dest);
+gulp.task('css:build', () => {
   return (
     gulp.src(config.css.src)
+      .pipe(plumber())
       .pipe(postcss(() => ({})))
+      .pipe(clean(config.css.dest))
       .pipe(gulp.dest(config.css.dest))
   );
 });
