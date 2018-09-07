@@ -1,3 +1,4 @@
+const cssnano = require('cssnano');
 const gulp = require('gulp');
 const clean = require('gulp-dest-clean');
 const plumber = require('gulp-plumber');
@@ -25,6 +26,7 @@ gulp.task('css:build', () => {
             'color-mod-function': true,
           },
         }),
+        cssnano(),
       ], {
         map: { inline: false },
       }))

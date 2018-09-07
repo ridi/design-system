@@ -12,6 +12,7 @@
     "start": "gulp start"
   },
   "devDependencies": {
+    "cssnano": "^4.1.0",
     "gulp": "^4.0.0",
     "gulp-dest-clean": "^0.5.0",
     "gulp-plumber": "^1.2.0",
