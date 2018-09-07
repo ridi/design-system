@@ -3,6 +3,7 @@ const clean = require('gulp-dest-clean');
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const shell = require('gulp-shell');
+const sourcemaps = require('gulp-sourcemaps');
 const postcssPresetEnv = require('postcss-preset-env');
 
 const config = {
@@ -16,6 +17,7 @@ gulp.task('css:build', () => {
   return (
     gulp.src(config.css.src)
       .pipe(plumber())
+      .pipe(sourcemaps.init())
       .pipe(postcss([
         postcssPresetEnv({
           stage: 0,
@@ -23,9 +25,12 @@ gulp.task('css:build', () => {
             'color-mod-function': true,
           },
         }),
-      ]))
-      .pipe(clean(config.css.dest))
+      ], {
+        map: { inline: false },
+      }))
+      .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(config.css.dest))
+      .pipe(clean(config.css.dest))
   );
 });
 gulp.task('css:watch', () => {

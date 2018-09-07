@@ -17,6 +17,7 @@
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-shell": "^0.6.5",
+    "gulp-sourcemaps": "^2.6.4",
     "postcss-preset-env": "^5.3.0"
   },
   "engines": {
