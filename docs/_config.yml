@@ -8,5 +8,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - gulpfile.js
+  - Makefile
   - package.json
   - package-lock.json
+  - README.md
