@@ -32,9 +32,7 @@ gulp.task('css:build', () => {
           },
         }),
         cssnano(),
-      ], {
-        map: { inline: false },
-      }))
+      ]))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(config.css.dest))
       .pipe(clean(config.css.dest))
@@ -47,6 +45,5 @@ gulp.task('css:watch', () => {
 gulp.task('jekyll:build', shell.task('bundle exec jekyll build'));
 gulp.task('jekyll:serve', shell.task('bundle exec jekyll liveserve'));
 
-gulp.task('clean', shell.task('git clean -xdf --exclude=node_modules .'));
 gulp.task('build', gulp.series('css:build', 'jekyll:build'));
 gulp.task('start', gulp.parallel('css:watch', 'jekyll:serve'));

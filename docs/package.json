@@ -7,7 +7,6 @@
     "url": "git+https://github.com/ridi/design-system.git"
   },
   "scripts": {
-    "clean": "gulp clean",
     "build": "gulp build",
     "start": "gulp start"
   },
