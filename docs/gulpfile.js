@@ -39,7 +39,11 @@ gulp.task('css:build', () => {
   );
 });
 gulp.task('css:watch', () => {
-  gulp.watch(config.css.src, { ignoreInitial: false }, gulp.parallel('css:build'));
+  gulp.watch(
+    [config.css.src, '_pages/**/*.css'],
+    { ignoreInitial: false },
+    gulp.parallel('css:build'),
+  );
 });
 
 gulp.task('jekyll:build', shell.task('bundle exec jekyll build'));
