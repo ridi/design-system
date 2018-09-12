@@ -12,7 +12,7 @@ const runSequence = require('run-sequence');
 
 const config = {
   css: {
-    src: '_css/*.css',
+    src: '_css/**/*.css',
     dest: 'assets/css',
   },
 };
@@ -40,7 +40,11 @@ gulp.task('css:build', () => {
   );
 });
 gulp.task('css:watch', ['css:build'], () => {
-  gulp.watch([config.css.src, '_pages/**/*.css'], ['css:build']);
+  gulp.watch([
+    '**/*.css',
+    '!_site/**/*.css',
+    `!${config.css.dest}/**/*.css`,
+  ], ['css:build']);
 });
 
 gulp.task('jekyll:build', shell.task('bundle exec jekyll build'));
