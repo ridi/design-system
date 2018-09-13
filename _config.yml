@@ -1,0 +1,24 @@
+# Site settings
+title: RIDI Design System
+baseurl: "/design-system"
+
+# Build settings
+collections:
+  pages:
+    output: true
+    permalink: /:path
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - LICENSE
+  - Makefile
+  - package.json
+  - package-lock.json
+  - README.md

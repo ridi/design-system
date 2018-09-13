@@ -34,3 +34,12 @@
   - Android, iOS, PAPER
 - **Motion**
   - 공통 가이드
+
+## 로컬에서 웹페이지 실행하기
+[Jekyll](https://jekyllrb.com)을 이용한 정적 블로그 생성 툴을 이용하여 관리하고 있습니다.
+GitHub 연동과 관련한 자세한 문서는 [이곳](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages)을 참고하세요.  
+
+```shell
+$ make install  # 의존성 설치하기
+$ make start    # 빌드 및 실행하기
+```
