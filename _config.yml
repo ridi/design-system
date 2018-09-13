@@ -17,6 +17,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - gulpfile.js
+  - LICENSE
   - Makefile
   - package.json
   - package-lock.json
