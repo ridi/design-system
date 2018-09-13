@@ -12,7 +12,7 @@ const runSequence = require('run-sequence');
 
 const config = {
   css: {
-    src: '_css/**/*.css',
+    src: '_css/index.css',
     dest: 'assets/css',
   },
 };
