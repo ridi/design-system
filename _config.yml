@@ -22,3 +22,5 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
+plugins:
+  - jekyll-redirect-from

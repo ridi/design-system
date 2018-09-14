@@ -12,7 +12,7 @@
 
 - name: web
   title: Web
-  url: /web/principles
+  url: /web
   children:
 
     - name: principles
@@ -37,7 +37,7 @@
 
 - name: app
   title: App
-  url: /app/principles
+  url: /app
   children:
 
     - name: principles
