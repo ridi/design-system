@@ -1,0 +1,61 @@
+- name: principles
+  title: Principles
+  url: /principles
+
+- name: writings
+  title: Writings
+  url: /writings
+
+- name: colors
+  title: Colors
+  url: /colors
+
+- name: web
+  title: Web
+  url: /web/principles
+  children:
+
+    - name: principles
+      title: Principles
+      url: /web/principles
+
+    - name: components
+      title: Components
+      url: /web/components
+
+    - name: icons
+      title: Icons
+      url: /web/icons
+
+    - name: typography
+      title: Typography
+      url: /web/typography
+
+    - name: motion
+      title: Motion
+      url: /web/motion
+
+- name: app
+  title: App
+  url: /app/principles
+  children:
+
+    - name: principles
+      title: Principles
+      url: /app/principles
+
+    - name: components
+      title: Components
+      url: /app/components
+
+    - name: icons
+      title: Icons
+      url: /app/icons
+
+    - name: typography
+      title: Typography
+      url: /app/typography
+
+    - name: motion
+      title: Motion
+      url: /app/motion
