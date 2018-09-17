@@ -19,9 +19,10 @@
     "gulp-shell": "^0.6.5",
     "gulp-sourcemaps": "^2.6.4",
     "lodash": "^4.17.10",
+    "normalize.css": "^8.0.0",
     "postcss-import": "^12.0.0",
     "postcss-preset-env": "^5.3.0",
-    "reset-css": "^4.0.1",
+    "postcss-url": "^8.0.0",
     "run-sequence": "^2.2.1"
   },
   "engines": {

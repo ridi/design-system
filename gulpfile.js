@@ -8,6 +8,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const _ = require('lodash');
 const atImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
+const url = require('postcss-url');
 const runSequence = require('run-sequence');
 
 const config = {
@@ -24,7 +25,8 @@ gulp.task('css:build', () => {
       .pipe(sourcemaps.init())
       .pipe(postcss([
         atImport({
-          resolve: id => _.trimStart(id, '~'),
+          resolve: id => _.trimStart(id, '~/'),
+          path: [process.cwd()],
         }),
         postcssPresetEnv({
           stage: 0,
@@ -33,6 +35,16 @@ gulp.task('css:build', () => {
           },
         }),
         cssnano(),
+        url([
+          {
+            url: asset => _.trimStart(asset.url, '/'),
+            multi: true,
+          },
+          {
+            url: 'inline',
+            basePath: process.cwd(),
+          },
+        ]),
       ]))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(config.css.dest))
