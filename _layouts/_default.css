@@ -49,29 +49,41 @@ html {
 }
 
 .site-menu {
-  box-sizing: border-box;
+  height: 100%;
+}
+
+.site-menu__toggle-button {
   position: relative;
   display: inline-block;
+  cursor: pointer;
   width: 64px;
   height: 100%;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
 
-  &:before, &:after, & .site-menu__root-list:before {
-    content: "\00a0";
-    visibility: visible;
+  & .site-menu__toggle-button-content, &:before, &:after {
+    box-sizing: border-box;
+    display: block;
     position: absolute;
     top: 50%;
     left: 20px;
-    box-sizing: border-box;
-    display: block;
     height: 0;
     border: 1px solid currentColor;
+    border-radius: 1px;
   }
 
-  & .site-menu__root-list:before {
+  & .site-menu__toggle-button-content {
     width: 24px;
+    font-size: 0;
+    transition: opacity .2s;
   }
 
   &:before, &:after {
+    content: "";
     width: 18px;
     transition: transform .2s;
   }
@@ -83,40 +95,29 @@ html {
   &:after {
     transform: translateY(7px);
   }
+}
 
-  &:hover, &:active {
-    &:before {
-      transform-origin: center;
-      transform: rotateZ(45deg) scaleX(1.414);
-    }
+.site-menu__toggle-button--pressed {
+  &:before {
+    transform: rotateZ(45deg) scaleX(1.414);
+  }
 
-    &:after {
-      transform-origin: center;
-      transform: rotateZ(-45deg) scaleX(1.414);
-    }
+  &:after {
+    transform: rotateZ(-45deg) scaleX(1.414);
+  }
 
-    & .site-menu__root-list {
-      visibility: visible;
-      position: fixed;
-      width: auto;
-      height: auto;
-
-      &:before {
-        display: none;
-      }
-    }
+  & .site-menu__toggle-button-content {
+    opacity: 0;
   }
 }
 
 .site-menu__root-list {
-  visibility: collapse;
   display: flex;
+  position: absolute;
   top: var(--site-header-height);
   left: 0;
   right: 0;
   bottom: 0;
-  width: 0;
-  height: 0;
   margin: 0;
   padding: 0;
   flex-flow: column nowrap;
@@ -126,12 +127,30 @@ html {
   color: #40474d;
   font-family: 'Open Sans', sans-serif;
   font-size: 22px;
+  opacity: 0;
+  transition: opacity .2s;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+  animation-name: hide;
+  @keyframes hide {
+    100% {
+      visibility: collapse;
+    }
+  }
 }
 
-.site-menu__list {
-  &:not(.site-menu__root-list) {
-    display: none;
+.site-menu__root-list--visible {
+  opacity: 1;
+  animation-name: show;
+  @keyframes show {
+    0% {
+      visibility: visible;
+    }
   }
+}
+
+.site-menu__list:not(.site-menu__root-list) {
+  display: none;
 }
 
 .site-menu__item {

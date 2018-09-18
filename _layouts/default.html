@@ -18,7 +18,11 @@
     </h1>
 
     <nav class="site-menu">
-      <ul class="site-menu__list site-menu__root-list">
+      <button id="site-menu-toggle-button" class="site-menu__toggle-button">
+        <span class="site-menu__toggle-button-content">Toggle Menu</span>
+      </button>
+
+      <ul id="site-menu-root-list" class="site-menu__list site-menu__root-list">
         {% for item in site.data.navigation %}
         <li class="site-menu__item{% if item.url == page_url %} site-menu__item--active{% endif %}">
           <a class="site-menu__link" href="{{ item.url | relative_url }}">
@@ -43,5 +47,17 @@
   </header>
 
   {{ content }}
+
+  <script>
+    (function initSiteMenuToggleButton() {
+      var toggleMenuButton = document.getElementById('site-menu-toggle-button');
+      var rootMenuList = document.getElementById('site-menu-root-list');
+
+      toggleMenuButton.addEventListener('click', function () {
+        toggleMenuButton.classList.toggle('site-menu__toggle-button--pressed');
+        rootMenuList.classList.toggle('site-menu__root-list--visible');
+      });
+    })();
+  </script>
 </body>
 </html>
