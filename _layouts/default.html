@@ -48,6 +48,24 @@
 
   {{ content }}
 
+  <footer class="site-footer">
+    {% for link_list in site.data.links %}
+    <ul class="site-link-list site-link-list-{{ link_list[0] }}">
+      {%- for item in link_list[1] -%}
+      <li class="site-link-list__item site-link-list__item-{{ item.name }}">
+        <a
+          class="site-link-list__link site-link-list__link-{{ item.name }}"
+          href="{{ item.url }}"
+          target="_blank"
+        >
+          {{ item.title }}
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {% endfor %}
+  </footer>
+
   <script>
     (function initSiteMenuToggleButton() {
       var toggleMenuButton = document.getElementById('site-menu-toggle-button');
