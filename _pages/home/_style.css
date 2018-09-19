@@ -3,7 +3,7 @@ html.home {
     margin: 0 0 100px;
     padding: 70px 0;
     text-align: center;
-    background: url('/_pages/home/img/home_bg_m.png');
+    background: url('./img/home_bg_m.png');
     background-size: cover;
   }
 
@@ -54,7 +54,7 @@ html.home {
       margin: 0 auto 30px;
       display: block;
       content: '';
-      background: url('/_pages/home/img/home_icon_principles.png') center no-repeat;
+      background: url('./img/home_icon_principles.png') center no-repeat;
       background-size: contain;
       width: 80px;
       height: 50px;
@@ -66,7 +66,7 @@ html.home {
       margin: 0 auto 30px;
       display: block;
       content: '';
-      background: url('/_pages/home/img/home_icon_writings.png') center no-repeat;
+      background: url('./img/home_icon_writings.png') center no-repeat;
       background-size: contain;
       width: 80px;
       height: 50px;
@@ -78,7 +78,7 @@ html.home {
       margin: 0 auto 30px;
       display: block;
       content: '';
-      background: url('/_pages/home/img/home_icon_colors.png') center no-repeat;
+      background: url('./img/home_icon_colors.png') center no-repeat;
       background-size: contain;
       width: 80px;
       height: 50px;
@@ -90,7 +90,7 @@ html.home {
       margin: 0 auto 30px;
       display: block;
       content: '';
-      background: url('/_pages/home/img/home_icon_web.png') center no-repeat;
+      background: url('./img/home_icon_web.png') center no-repeat;
       background-size: contain;
       width: 80px;
       height: 50px;
@@ -102,7 +102,7 @@ html.home {
       margin: 0 auto 30px;
       display: block;
       content: '';
-      background: url('/_pages/home/img/home_icon_app.png') center no-repeat;
+      background: url('./img/home_icon_app.png') center no-repeat;
       background-size: contain;
       width: 80px;
       height: 50px;

@@ -37,12 +37,12 @@ gulp.task('css:build', () => {
         cssnano(),
         url([
           {
-            url: asset => _.trimStart(asset.url, '/'),
-            multi: true,
+            filter: asset => _.startsWith(asset.url, '/'),
+            url: 'inline',
+            basePath: process.cwd(),
           },
           {
             url: 'inline',
-            basePath: process.cwd(),
           },
         ]),
       ]))
