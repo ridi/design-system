@@ -8,6 +8,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const _ = require('lodash');
 const atImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
+const scss = require('postcss-scss');
 const url = require('postcss-url');
 const runSequence = require('run-sequence');
 
@@ -45,7 +46,9 @@ gulp.task('css:build', () => {
             url: 'inline',
           },
         ]),
-      ]))
+      ], {
+        parser: scss,
+      }))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(config.css.dest))
       .pipe(clean(config.css.dest))
