@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% assign page_url = page.url | remove: '/index' %}
-<html lang="ko">
+<html lang="ko" class="{{ page.root_class }}">
 <head>
   <meta charset="UTF-8">
   <title>{{ site.title }}</title>
@@ -46,7 +46,9 @@
     </nav>
   </header>
 
-  {{ content }}
+  <main class="site-main">
+    {{ content }}
+  </main>
 
   <footer class="site-footer">
     {% for link_list in site.data.links %}
