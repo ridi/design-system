@@ -7,12 +7,11 @@
 
 html {
   font-family: 'Noto Sans KR', sans-serif;
-  background: #f7fafc;
+  background: #fff;
 }
 
 body {
   margin-top: var(--site-header-height);
-  background: #fff;
 }
 
 .site-header {
