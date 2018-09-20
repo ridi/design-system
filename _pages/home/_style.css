@@ -29,6 +29,9 @@ html.home {
 
   & .section {
     margin: 0 0 80px;
+    padding-top: 80px;
+    background-size: 80px 50px;
+    background: no-repeat center top;
   }
 
   & .section-title {
@@ -50,62 +53,22 @@ html.home {
   }
 
   & .section-principles {
-    &:before {
-      margin: 0 auto 30px;
-      display: block;
-      content: '';
-      background: url('./img/home_icon_principles.png') center no-repeat;
-      background-size: contain;
-      width: 80px;
-      height: 50px;
-    }
+    background-image: url('./img/home_icon_principles.png');
   }
 
   & .section-writings {
-    &:before {
-      margin: 0 auto 30px;
-      display: block;
-      content: '';
-      background: url('./img/home_icon_writings.png') center no-repeat;
-      background-size: contain;
-      width: 80px;
-      height: 50px;
-    }
+    background-image: url('./img/home_icon_writings.png');
   }
 
   & .section-colors {
-    &:before {
-      margin: 0 auto 30px;
-      display: block;
-      content: '';
-      background: url('./img/home_icon_colors.png') center no-repeat;
-      background-size: contain;
-      width: 80px;
-      height: 50px;
-    }
+    background-image: url('./img/home_icon_colors.png');
   }
 
   & .section-web {
-    &:before {
-      margin: 0 auto 30px;
-      display: block;
-      content: '';
-      background: url('./img/home_icon_web.png') center no-repeat;
-      background-size: contain;
-      width: 80px;
-      height: 50px;
-    }
+    background-image: url('./img/home_icon_web.png');
   }
 
   & .section-app {
-    &:before {
-      margin: 0 auto 30px;
-      display: block;
-      content: '';
-      background: url('./img/home_icon_app.png') center no-repeat;
-      background-size: contain;
-      width: 80px;
-      height: 50px;
-    }
+    background-image: url('./img/home_icon_app.png');
   }
 }
