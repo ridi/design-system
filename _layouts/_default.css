@@ -11,10 +11,15 @@ html {
 }
 
 body {
+  margin-top: var(--site-header-height);
   background: #fff;
 }
 
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -118,14 +123,14 @@ body {
 .site-menu__root-list {
   visibility: hidden;
   opacity: 0;
-  display: flex;
-  position: absolute;
+  position: fixed;
   top: var(--site-header-height);
   left: 0;
   right: 0;
   bottom: 0;
   margin: 0;
   padding: 0;
+  display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
