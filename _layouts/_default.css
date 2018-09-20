@@ -116,6 +116,8 @@ body {
 }
 
 .site-menu__root-list {
+  visibility: hidden;
+  opacity: 0;
   display: flex;
   position: absolute;
   top: var(--site-header-height);
@@ -131,26 +133,15 @@ body {
   color: #40474d;
   font-family: 'Open Sans', sans-serif;
   font-size: 22px;
-  opacity: 0;
-  transition: opacity .2s;
-  animation-duration: .2s;
-  animation-fill-mode: forwards;
-  animation-name: hide;
-  @keyframes hide {
-    100% {
-      visibility: collapse;
-    }
-  }
+}
+
+.site-menu__root-list--animated {
+  transition: opacity .2s, visibility .2s;
 }
 
 .site-menu__root-list--visible {
+  visibility: visible;
   opacity: 1;
-  animation-name: show;
-  @keyframes show {
-    0% {
-      visibility: visible;
-    }
-  }
 }
 
 .site-menu__list:not(.site-menu__root-list) {

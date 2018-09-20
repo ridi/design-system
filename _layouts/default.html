@@ -75,6 +75,7 @@
 
       toggleMenuButton.addEventListener('click', function () {
         toggleMenuButton.classList.toggle('site-menu__toggle-button--pressed');
+        rootMenuList.classList.add('site-menu__root-list--animated');
         rootMenuList.classList.toggle('site-menu__root-list--visible');
       });
     })();
