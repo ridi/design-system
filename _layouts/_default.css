@@ -25,6 +25,7 @@ body {
   height: var(--site-header-height);
   background: #fff;
   color: #212529;
+  z-index: 10;
 }
 
 .site-title {
