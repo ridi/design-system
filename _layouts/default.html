@@ -22,9 +22,9 @@
         <span class="site-menu__toggle-button-content">Toggle Menu</span>
       </button>
 
-      <ul id="site-menu-root-list" class="site-menu__list site-menu__root-list">
+      <ul id="site-menu-list" class="site-menu__list">
         {% for item in site.data.navigation %}
-        <li class="site-menu__item{% if item.url == page_url %} site-menu__item--active{% endif %}">
+        <li class="site-menu__item{% if item.url == page_url %} site-menu__item_active{% endif %}">
           <a class="site-menu__link" href="{{ item.url | relative_url }}">
             {{ item.title }}
           </a>
@@ -32,7 +32,7 @@
           {% if item.children %}
           <ul class="site-menu__list">
             {% for sub_item in item.children %}
-            <li class="site-menu__item{% if item.url == page_url %} site-menu__item--active{% endif %}">
+            <li class="site-menu__item{% if item.url == page_url %} site-menu__item_active{% endif %}">
               <a class="site-menu__link" href="{{ sub_item.url | relative_url }}">
                 {{ sub_item.title }}
               </a>
@@ -51,12 +51,14 @@
   </main>
 
   <footer class="site-footer">
-    {% for link_list in site.data.links %}
-    <ul class="site-link-list site-link-list-{{ link_list[0] }}">
-      {%- for item in link_list[1] -%}
-      <li class="site-link-list__item site-link-list__item-{{ item.name }}">
+    {% for link_list_hash in site.data.links %}
+    {% assign link_category = link_list_hash[0] %}
+    {% assign link_list = link_list_hash[1] %}
+    <ul class="site-link-list site-link-list-{{ link_category }}">
+      {%- for item in link_list -%}
+      <li class="site-link-list__item site-link-list-{{ link_category }}__item site-link-list__item-{{ item.name }}">
         <a
-          class="site-link-list__link site-link-list__link-{{ item.name }}"
+          class="site-link-list__link site-link-list-{{ link_category }}__link site-link-list__link-{{ item.name }}"
           href="{{ item.url }}"
           target="_blank"
         >
@@ -71,12 +73,12 @@
   <script>
     (function initSiteMenuToggleButton() {
       var toggleMenuButton = document.getElementById('site-menu-toggle-button');
-      var rootMenuList = document.getElementById('site-menu-root-list');
+      var menuList = document.getElementById('site-menu-list');
 
       toggleMenuButton.addEventListener('click', function () {
-        toggleMenuButton.classList.toggle('site-menu__toggle-button--pressed');
-        rootMenuList.classList.add('site-menu__root-list--animated');
-        rootMenuList.classList.toggle('site-menu__root-list--visible');
+        toggleMenuButton.classList.toggle('site-menu__toggle-button_pressed');
+        menuList.classList.add('site-menu__list_animated');
+        menuList.classList.toggle('site-menu__list_visible');
       });
     })();
   </script>

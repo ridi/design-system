@@ -7,7 +7,7 @@ html.home {
     background-size: cover;
   }
 
-  & .header-title {
+  & .header__title {
     margin: 0 0 20px;
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
@@ -17,7 +17,7 @@ html.home {
     text-shadow: 2px 2px 4px rgba(33, 37, 41, 0.5);
   }
 
-  & .header-description {
+  & .header__description {
     margin: 0;
     font-size: 14px;
     font-weight: 300;
@@ -34,7 +34,7 @@ html.home {
     text-align: center;
   }
 
-  & .section-link {
+  & .section__link {
     display: inline-block;
     margin: 0 auto;
     padding-top: 80px;
@@ -45,7 +45,7 @@ html.home {
     }
   }
 
-  & .section-title {
+  & .section__title {
     margin: 0 0 12px;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -53,7 +53,7 @@ html.home {
     color: #303538;
   }
 
-  & .section-description {
+  & .section__description {
     margin: 0;
     font-size: 14px;
     line-height: 1.29;
