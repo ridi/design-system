@@ -35,7 +35,6 @@ gulp.task('css:build', () => {
             'color-mod-function': true,
           },
         }),
-        cssnano(),
         url([
           {
             filter: asset => _.startsWith(asset.url, '/'),
@@ -46,6 +45,7 @@ gulp.task('css:build', () => {
             url: 'inline',
           },
         ]),
+        cssnano(),
       ], {
         parser: scss,
       }))
