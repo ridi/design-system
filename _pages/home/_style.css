@@ -29,9 +29,20 @@ html.home {
 
   & .section {
     margin: 0 0 80px;
-    padding-top: 80px;
     background-size: 80px 50px;
     background: no-repeat center top;
+    text-align: center;
+  }
+
+  & .section-link {
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 80px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   & .section-title {
@@ -39,7 +50,6 @@ html.home {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
-    text-align: center;
     color: #303538;
   }
 
@@ -48,7 +58,6 @@ html.home {
     font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.3px;
-    text-align: center;
     color: #303538;
   }
 
