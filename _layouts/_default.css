@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i');
 
 :root {
   --site-header-height: 74px;
@@ -7,11 +8,132 @@
 
 html {
   font-family: 'Noto Sans KR', sans-serif;
+  line-height: normal;
+  letter-spacing: -.3px;
   background: var(--white);
+  color: var(--slategray_80);
 }
 
 body {
   margin-top: var(--site-header-height);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 40px 0 20px;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: var(--slategray_100);
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.75;
+}
+
+h6 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--slategray_60);
+}
+
+p {
+  line-height: 1.75;
+}
+
+ul {
+  padding: 0 0 0 28px;
+}
+
+ul ul {
+  padding: 0 0 0 18px;
+}
+
+li {
+  margin: 8px 0;
+  line-height: 1.75;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0 0 0 20px;
+  border-left: 4px solid var(--lightsteelblue_20);
+  color: var(--slategray_60);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid var(--slategray_10);
+}
+
+th, td {
+  padding: 10px 30px;
+}
+
+thead {
+  background: var(--lightsteelblue_5);
+}
+
+th {
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--slategray_60);
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--dodgerblue_30);
+
+  &:hover {
+    color: var(--dodgerblue_40);
+  }
+}
+
+pre {
+  overflow: scroll;
+  padding: 30px;
+  background: var(--lightsteelblue_5);
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
 }
 
 .site-header {
@@ -40,6 +162,7 @@ body {
 .site-title__link {
   display: inline-block;
   color: inherit;
+  font-weight: inherit;
   text-decoration: none;
 }
 
@@ -136,9 +259,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
   background: var(--white);
-  color: var(--slategray_80);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
 
   & .site-menu__list {
     display: none;
@@ -156,6 +276,10 @@ body {
 
 .site-menu__item {
   display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0;
+  color: var(--slategray_80);
 }
 
 .site-menu__item_active {
@@ -167,8 +291,13 @@ body {
 .site-menu__link {
   display: block;
   padding: 8px 0;
+  font-weight: inherit;
   color: inherit;
   text-decoration: none;
+}
+
+.site-main {
+  padding: 20px;
 }
 
 .site-footer {

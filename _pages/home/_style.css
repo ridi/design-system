@@ -1,4 +1,8 @@
 html.home {
+  & .site-main {
+    padding: 0;
+  }
+
   & .header {
     margin: 0 0 100px;
     padding: 70px 0;
