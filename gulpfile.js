@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 const shell = require('gulp-shell');
 const sourcemaps = require('gulp-sourcemaps');
 const _ = require('lodash');
+const colorHwb = require('postcss-color-hwb');
 const atImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
 const scss = require('postcss-scss');
@@ -29,6 +30,7 @@ gulp.task('css:build', () => {
           resolve: id => _.trimStart(id, '~/'),
           path: [process.cwd()],
         }),
+        colorHwb(),
         postcssPresetEnv({
           stage: 0,
           features: {
