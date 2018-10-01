@@ -13,7 +13,7 @@ html.home {
     font-size: 32px;
     font-weight: 800;
     line-height: 1.38;
-    color: #ffffff;
+    color: var(--white);
     text-shadow: 2px 2px 4px rgba(33, 37, 41, 0.5);
   }
 
@@ -24,7 +24,7 @@ html.home {
     line-height: 1.71;
     letter-spacing: -0.3px;
     text-align: center;
-    color: #9ea7ad;
+    color: var(--slategray_40);
   }
 
   & .section {
@@ -50,7 +50,7 @@ html.home {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
-    color: #303538;
+    color: var(--slategray_90);
   }
 
   & .section__description {
@@ -58,7 +58,7 @@ html.home {
     font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.3px;
-    color: #303538;
+    color: var(--slategray_90);
   }
 
   & .section-principles {
