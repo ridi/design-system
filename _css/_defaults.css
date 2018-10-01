@@ -120,6 +120,7 @@ pre {
 code {
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;
+  letter-spacing: 0;
 }
 
 img {
