@@ -16,11 +16,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 48px;
   font-weight: 800;
   letter-spacing: 0;
   color: var(--slategray_100);
+
+  & small {
+    margin-top: 8px;
+    display: block;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+  }
 }
 
 h2 {
@@ -127,4 +138,9 @@ img {
   display: block;
   width: 100%;
   margin: 20px 0;
+}
+
+hr {
+  margin: 60px 0;
+  border: 1px solid var(--slategray_5);
 }
