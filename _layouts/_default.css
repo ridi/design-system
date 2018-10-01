@@ -30,6 +30,10 @@
   color: inherit;
   font-weight: inherit;
   text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
 }
 
 .site-title__ridi {
@@ -160,6 +164,10 @@
   font-weight: inherit;
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
 }
 
 .site-main {

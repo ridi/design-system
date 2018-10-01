@@ -42,11 +42,8 @@ html.home {
     display: inline-block;
     margin: 0 auto;
     padding-top: 80px;
+    font-weight: normal;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   & .section__title {
