@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+
+:root {
+  --site-header-height: 74px;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #fff;
+}
+
+body {
+  margin-top: var(--site-header-height);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--site-header-height);
+  background: #fff;
+  color: #212529;
+  border-bottom: 1px solid #e6e8eb;
+  z-index: 10;
+}
+
+.site-title {
+  margin: 0;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.site-title__link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title__ridi {
+  display: inline-block;
+  text-indent: -100%;
+  background-color: currentColor;
+  mask: url('/assets/img/ridi.svg') center no-repeat;
+  width: 36px;
+  height: 15px;
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+.site-title__design-system {
+  margin-left: -4px;
+}
+
+.site-menu {
+  height: 100%;
+}
+
+.site-menu__toggle-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 64px;
+  height: 100%;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+
+  & .site-menu__toggle-button-content, &:before, &:after {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    height: 0;
+    border: 1px solid currentColor;
+    border-radius: 1px;
+  }
+
+  & .site-menu__toggle-button-content {
+    width: 24px;
+    font-size: 0;
+    transition: opacity .2s;
+  }
+
+  &:before, &:after {
+    content: "";
+    width: 18px;
+    transition: transform .2s;
+  }
+
+  &:before {
+    transform: translateY(-7px);
+  }
+
+  &:after {
+    transform: translateY(7px);
+  }
+}
+
+.site-menu__toggle-button_pressed {
+  &:before {
+    transform: rotateZ(45deg) scaleX(1.414);
+  }
+
+  &:after {
+    transform: rotateZ(-45deg) scaleX(1.414);
+  }
+
+  & .site-menu__toggle-button-content {
+    opacity: 0;
+  }
+}
+
+.site-menu__list {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: var(--site-header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #fff;
+  color: #40474d;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+
+  & .site-menu__list {
+    display: none;
+  }
+}
+
+.site-menu__list_animated {
+  transition: opacity .2s, visibility .2s;
+}
+
+.site-menu__list_visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.site-menu__item {
+  display: block;
+}
+
+.site-menu__item_active {
+  color: #212529;
+  font-weight: bold;
+  border-bottom: 2px solid currentColor;
+}
+
+.site-menu__link {
+  display: block;
+  padding: 8px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer {
+  border-top: 1px solid #e6e8eb;
+  padding: 34px 0;
+  text-align: center;
+  background: #f7fafc;
+}
+
+.site-link-list {
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.site-link-list-official {
+  margin-bottom: 36px;
+}
+
+.site-link-list__item {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    &:after {
+      content: "";
+      margin: 0 12px;
+      display: block;
+      width: 3px;
+      height: 3px;
+      background: #ccd9e6;
+      border-radius: 50%;
+    }
+  }
+}
+
+.site-link-list__link {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #8c9dad;
+
+  &:hover {
+    color: #70808F;
+  }
+}
+
+.site-link-list__link-ridicorp {
+  color: #636c73;
+  font-weight: normal;
+
+  &:before {
+    content: "\00a9 ";
+  }
+}
+
+.site-link-list-products__link {
+  display: inline-block;
+  background-color: currentColor;
+  mask: center no-repeat;
+  height: 11px;
+  text-indent: -99999px;
+  overflow: hidden;
+}
+
+.site-link-list__link-ridibooks {
+  mask-image: url('/assets/img/ridibooks.svg');
+  width: 71px;
+}
+
+.site-link-list__link-ridiselect {
+  mask-image: url('/assets/img/ridiselect.svg');
+  width: 67px;
+}
+
+.site-link-list__link-paper {
+  mask-image: url('/assets/img/paper.svg');
+  width: 42px;
+}

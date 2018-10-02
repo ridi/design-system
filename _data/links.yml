@@ -1,0 +1,30 @@
+official:
+  - name: ridicorp
+    title: RIDI Corp.
+    url: https://www.ridicorp.com
+
+products:
+  - name: ridibooks
+    title: RIDIBOOKS
+    url: https://ridibooks.com
+
+  - name: ridiselect
+    title: RIDI Select
+    url: https://select.ridibooks.com
+
+  - name: paper
+    title: PAPER
+    url: https://paper.ridibooks.com
+
+misc:
+  - name: blog
+    title: blog
+    url: https://www.ridicorp.com/blog
+
+  - name: dribbble
+    title: dribbble
+    url: https://dribbble.com/ridi-design
+
+  - name: design-system-github
+    title: github
+    url: https://github.com/ridi/design-system
