@@ -25,6 +25,7 @@ body {
   height: var(--site-header-height);
   background: #fff;
   color: #212529;
+  border-bottom: 1px solid #e6e8eb;
   z-index: 10;
 }
 
