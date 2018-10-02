@@ -44,6 +44,12 @@ html.home {
     padding-top: 80px;
     font-weight: normal;
     text-decoration: none;
+
+    &:hover {
+      & .section__title {
+        color: var(--slategray_60);
+      }
+    }
   }
 
   & .section__title {
