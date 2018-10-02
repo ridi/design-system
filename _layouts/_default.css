@@ -7,7 +7,7 @@
 
 html {
   font-family: 'Noto Sans KR', sans-serif;
-  background: #fff;
+  background: var(--white);
 }
 
 body {
@@ -23,9 +23,9 @@ body {
   justify-content: space-between;
   align-items: center;
   height: var(--site-header-height);
-  background: #fff;
-  color: #212529;
-  border-bottom: 1px solid #e6e8eb;
+  background: var(--white);
+  color: var(--slategray_100);
+  border-bottom: 1px solid var(--slategray_10);
   z-index: 10;
 }
 
@@ -135,8 +135,8 @@ body {
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
-  background: #fff;
-  color: #40474d;
+  background: var(--white);
+  color: var(--slategray_80);
   font-family: 'Open Sans', sans-serif;
   font-size: 22px;
 
@@ -159,7 +159,7 @@ body {
 }
 
 .site-menu__item_active {
-  color: #212529;
+  color: var(--slategray_100);
   font-weight: bold;
   border-bottom: 2px solid currentColor;
 }
@@ -172,10 +172,10 @@ body {
 }
 
 .site-footer {
-  border-top: 1px solid #e6e8eb;
+  border-top: 1px solid var(--slategray_10);
   padding: 34px 0;
   text-align: center;
-  background: #f7fafc;
+  background: var(--lightsteelblue_5);
 }
 
 .site-link-list {
@@ -200,7 +200,7 @@ body {
       display: block;
       width: 3px;
       height: 3px;
-      background: #ccd9e6;
+      background: var(--lightsteelblue_40);
       border-radius: 50%;
     }
   }
@@ -211,15 +211,15 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 15px;
-  color: #8c9dad;
+  color: var(--lightsteelblue_80);
 
   &:hover {
-    color: #70808F;
+    color: var(--lightsteelblue_100);
   }
 }
 
 .site-link-list__link-ridicorp {
-  color: #636c73;
+  color: var(--slategray_60);
   font-weight: normal;
 
   &:before {
