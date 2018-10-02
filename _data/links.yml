@@ -21,9 +21,9 @@ misc:
     title: blog
     url: https://www.ridicorp.com/blog
 
-  - name: dribble
-    title: dribble
-    url: https://dribbble.com/ridicorp
+  - name: dribbble
+    title: dribbble
+    url: https://dribbble.com/ridi-design
 
   - name: design-system-github
     title: github

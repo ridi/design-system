@@ -41,7 +41,9 @@ html.home {
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      & .section__title {
+        color: #636C73;
+      }
     }
   }
 
