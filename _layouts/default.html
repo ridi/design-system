@@ -1,4 +1,5 @@
 {% assign page_url = page.url | remove: '/index' %}
+{% assign root_path = page.url | remove_first: '/' | split: '/' | first | prepend: '/' %}
 <!DOCTYPE html>
 <html lang="ko" class="{{ page.root_class }}">
 <head>
@@ -24,27 +25,47 @@
 
       <ul id="site-menu-list" class="site-menu__list">
         {% for item in site.data.navigation %}
-          <li class="site-menu__item{% if item.url == page_url %} site-menu__item_active{% endif %}">
+          {% if item.url == page_url or item.url == root_path %}
+            {% assign active = true %}
+            {% assign active_menu = item %}
+          {% else %}
+            {% assign active = false %}
+          {% endif %}
+          <li class="site-menu__item{% if active %} site-menu__item_active{% endif %}">
             <a class="site-menu__link" href="{{ item.url | relative_url }}">
               {{ item.title }}
             </a>
-
-            {% if item.children %}
-              <ul class="site-menu__list">
-                {% for sub_item in item.children %}
-                  <li class="site-menu__item{% if item.url == page_url %} site-menu__item_active{% endif %}">
-                    <a class="site-menu__link" href="{{ sub_item.url | relative_url }}">
-                      {{ sub_item.title }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
           </li>
         {% endfor %}
       </ul>
     </nav>
   </header>
+
+  {% if active_menu.children %}
+    <aside class="site-aside">
+      <nav id="site-submenu" class="site-submenu">
+        <ul class="site-submenu__list">
+          {% for item in active_menu.children %}
+            {% if item.url == page_url %}
+              {% assign active = true %}
+            {% else %}
+              {% assign active = false %}
+            {% endif %}
+            <li class="site-submenu__item{% if active %} site-submenu__item_active{% endif %}">
+              <a
+                class="site-submenu__link"
+                {% unless active %}
+                  href="{{ item.url | relative_url }}"
+                {% endunless %}
+              >
+                {{ item.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </aside>
+  {% endif %}
 
   <main class="site-main">
     {{ content }}
@@ -72,13 +93,44 @@
 
   <script>
     (function initSiteMenuToggleButton() {
-      var toggleMenuButton = document.getElementById('site-menu-toggle-button');
+      var toggleButton = document.getElementById('site-menu-toggle-button');
       var menuList = document.getElementById('site-menu-list');
 
-      toggleMenuButton.addEventListener('click', function () {
-        toggleMenuButton.classList.toggle('site-menu__toggle-button_pressed');
+      toggleButton.addEventListener('click', function () {
+        toggleButton.classList.toggle('site-menu__toggle-button_pressed');
         menuList.classList.add('site-menu__list_animated');
         menuList.classList.toggle('site-menu__list_visible');
+      });
+    })();
+
+    (function initSiteSubmenu() {
+      var submenu = document.getElementById('site-submenu');
+
+      if (!submenu) {
+        return;
+      }
+
+      submenu.addEventListener('click', function (event) {
+        submenu.classList.toggle('site-submenu_opened');
+        event.stopPropagation();
+      });
+
+      var items = submenu.getElementsByClassName('site-submenu__item');
+
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+
+        if (item.classList.contains('site-submenu__item_active')) {
+          continue;
+        }
+
+        item.addEventListener('click', function (event) {
+          event.stopPropagation();
+        });
+      }
+
+      window.addEventListener('click', function () {
+        submenu.classList.remove('site-submenu_opened');
       });
     })();
   </script>
