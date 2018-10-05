@@ -59,3 +59,7 @@
     - name: motion
       title: Motion
       url: /app/motion
+
+- name: sample
+  title: Sample
+  url: /sample
