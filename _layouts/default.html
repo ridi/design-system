@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 {% assign page_url = page.url | remove: '/index' %}
+<!DOCTYPE html>
 <html lang="ko" class="{{ page.root_class }}">
 <head>
   <meta charset="UTF-8">
@@ -24,23 +24,23 @@
 
       <ul id="site-menu-list" class="site-menu__list">
         {% for item in site.data.navigation %}
-        <li class="site-menu__item{% if item.url == page_url %} site-menu__item_active{% endif %}">
-          <a class="site-menu__link" href="{{ item.url | relative_url }}">
-            {{ item.title }}
-          </a>
+          <li class="site-menu__item{% if item.url == page_url %} site-menu__item_active{% endif %}">
+            <a class="site-menu__link" href="{{ item.url | relative_url }}">
+              {{ item.title }}
+            </a>
 
-          {% if item.children %}
-          <ul class="site-menu__list">
-            {% for sub_item in item.children %}
-            <li class="site-menu__item{% if item.url == page_url %} site-menu__item_active{% endif %}">
-              <a class="site-menu__link" href="{{ sub_item.url | relative_url }}">
-                {{ sub_item.title }}
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-        </li>
+            {% if item.children %}
+              <ul class="site-menu__list">
+                {% for sub_item in item.children %}
+                  <li class="site-menu__item{% if item.url == page_url %} site-menu__item_active{% endif %}">
+                    <a class="site-menu__link" href="{{ sub_item.url | relative_url }}">
+                      {{ sub_item.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
         {% endfor %}
       </ul>
     </nav>
@@ -52,21 +52,21 @@
 
   <footer class="site-footer">
     {% for link_list_hash in site.data.links %}
-    {% assign link_category = link_list_hash[0] %}
-    {% assign link_list = link_list_hash[1] %}
-    <ul class="site-link-list site-link-list-{{ link_category }}">
-      {%- for item in link_list -%}
-      <li class="site-link-list__item site-link-list-{{ link_category }}__item site-link-list__item-{{ item.name }}">
-        <a
-          class="site-link-list__link site-link-list-{{ link_category }}__link site-link-list__link-{{ item.name }}"
-          href="{{ item.url }}"
-          target="_blank"
-        >
-          {{ item.title }}
-        </a>
-      </li>
-      {%- endfor -%}
-    </ul>
+      {% assign link_category = link_list_hash[0] %}
+      {% assign link_list = link_list_hash[1] %}
+      <ul class="site-link-list site-link-list-{{ link_category }}">
+        {%- for item in link_list -%}
+          <li class="site-link-list__item site-link-list-{{ link_category }}__item site-link-list__item-{{ item.name }}">
+            <a
+              class="site-link-list__link site-link-list-{{ link_category }}__link site-link-list__link-{{ item.name }}"
+              href="{{ item.url }}"
+              target="_blank"
+            >
+              {{ item.title }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
     {% endfor %}
   </footer>
 
