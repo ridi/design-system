@@ -236,7 +236,7 @@
 }
 
 .site-submenu_opened {
-  &::before {
+  &::after {
     transform: rotate(180deg);
   }
 
