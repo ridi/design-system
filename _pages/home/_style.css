@@ -1,10 +1,12 @@
 html.home {
   & .site-main {
-    padding: 0;
+    &::before {
+      display: none;
+    }
   }
 
   & .header {
-    margin: 0 0 100px;
+    margin: -20px -20px 100px;
     padding: 70px 0;
     text-align: center;
     background: url('./img/home_bg_m.png');
@@ -32,7 +34,7 @@ html.home {
   }
 
   & .section {
-    margin: 0 0 80px;
+    margin: 80px 0;
     background-size: 80px 50px;
     background: no-repeat center top;
     text-align: center;

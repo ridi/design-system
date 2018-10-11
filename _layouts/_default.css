@@ -1,6 +1,19 @@
 :root {
   --site-header-height: 74px;
   --site-submenu-height: 52px;
+  --site-footer-height: 180px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-top: var(--site-header-height);
+  padding-bottom: var(--site-footer-height);
 }
 
 .site-header {
@@ -20,7 +33,6 @@
 
 .site-title {
   margin: 0;
-  padding: 20px;
   font-size: 18px;
   font-weight: normal;
   font-family: 'Open Sans', sans-serif;
@@ -28,6 +40,7 @@
 
 .site-title__link {
   display: inline-block;
+  padding: 25px 20px;
   color: inherit;
   font-weight: inherit;
   text-decoration: none;
@@ -247,11 +260,29 @@
 
 .site-main {
   padding: 20px;
+
+  &::before {
+    display: block;
+    content: "";
+    margin-bottom: 80px;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    margin-top: 80px;
+  }
 }
 
 .site-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  height: var(--site-footer-height);
   border-top: 1px solid var(--slategray_10);
-  padding: 34px 0;
+  padding: 30px 0;
   text-align: center;
   background: var(--lightsteelblue_5);
 }
@@ -259,6 +290,7 @@
 .site-link-list {
   margin: 0 0 18px;
   padding: 0;
+  line-height: 0;
 }
 
 .site-link-list-official {
