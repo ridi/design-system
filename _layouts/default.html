@@ -44,9 +44,21 @@
   {% if active_menu.children %}
     <aside class="site-aside">
       <nav id="site-submenu" class="site-submenu">
+        {% for item in active_menu.children %}
+          {% if item.url == page_url %}
+            {% assign active_submenu = item %}
+            <div class="site-submenu__item site-submenu__item_active site-submenu__placeholder">
+              <a class="site-submenu__link">
+                {{ item.title }}
+              </a>
+            </div>
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
         <ul class="site-submenu__list">
           {% for item in active_menu.children %}
-            {% if item.url == page_url %}
+            {% if item == active_submenu %}
               {% assign active = true %}
             {% else %}
               {% assign active = false %}

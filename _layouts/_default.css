@@ -1,6 +1,5 @@
 :root {
   --site-header-height: 74px;
-  --site-submenu-height: 52px;
   --site-footer-height: 180px;
 }
 
@@ -190,7 +189,8 @@ body {
 
 .site-submenu {
   position: relative;
-  height: var(--site-submenu-height);
+  border: 1px solid var(--slategray_20);
+  background: var(--submenu-background-color);
 
   &::after {
     position: absolute;
@@ -199,7 +199,7 @@ body {
     bottom: 0;
     display: inline-block;
     content: "";
-    width: var(--site-submenu-height);
+    width: 52px;
     background: var(--slategray_50);
     mask: url("~@ridi/rsg/svg/icons/arrow_5_down.svg") center no-repeat;
     mask-size: 12px 7px;
@@ -208,11 +208,11 @@ body {
 }
 
 .site-submenu__list {
+  display: none;
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
-  margin: 0;
+  margin: 0 -1px;
   padding: 0;
   border: 1px solid var(--slategray_20);
   background: var(--submenu-background-color);
@@ -220,7 +220,7 @@ body {
 }
 
 .site-submenu__item {
-  display: none;
+  display: block;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
@@ -233,9 +233,9 @@ body {
 }
 
 .site-submenu__item_active {
-  display: block;
   font-weight: bold;
   color: var(--lightsteelblue_100);
+  background: var(--submenu-active-item-background-color);
 }
 
 .site-submenu__link {
@@ -248,12 +248,17 @@ body {
   }
 }
 
+.site-submenu__placeholder {
+  display: block;
+  background: none;
+}
+
 .site-submenu_opened {
   &::after {
     transform: rotate(180deg);
   }
 
-  & .site-submenu__item {
+  & .site-submenu__list {
     display: block;
   }
 }
