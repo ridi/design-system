@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 const shell = require('gulp-shell');
 const sourcemaps = require('gulp-sourcemaps');
 const _ = require('lodash');
+const path = require('path');
 const colorHwb = require('postcss-color-hwb');
 const atImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
@@ -15,7 +16,7 @@ const runSequence = require('run-sequence');
 
 const config = {
   css: {
-    src: '_css/index.css',
+    src: 'assets/_css/index.css',
     dest: 'assets/css',
   },
 };
@@ -33,13 +34,18 @@ gulp.task('css:build', () => {
         colorHwb(),
         postcssPresetEnv({
           stage: 0,
-          features: {
-            'color-mod-function': true,
-          },
         }),
         url([
           {
-            filter: asset => _.startsWith(asset.url, '/'),
+            filter: asset => _.startsWith(asset.url, '~'),
+            url: asset => {
+              asset.pathname = path.join('/node_modules', _.trimStart(asset.url, '~'));
+              return asset.pathname;
+            },
+            multi: true,
+          },
+          {
+            filter: asset => _.startsWith(asset.url, '/') || _.startsWith(asset.url, '~'),
             url: 'inline',
             basePath: process.cwd(),
           },
@@ -47,7 +53,21 @@ gulp.task('css:build', () => {
             url: 'inline',
           },
         ]),
-        cssnano(),
+        cssnano({
+          preset: ['default', {
+            svgo: {
+              plugins: [
+                {
+                  addAttributesToSVGElement: {
+                    attributes: [
+                      { xmlns: 'http://www.w3.org/2000/svg' },
+                    ],
+                  },
+                },
+              ],
+            },
+          }],
+        }),
       ], {
         parser: scss,
       }))

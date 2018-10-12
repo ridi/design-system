@@ -1,0 +1,7 @@
+@import "~@ridi/rsg/colors/colors.css";
+
+:root {
+  --white: #fff;
+  --submenu-background-color: #f9fafb;
+  --submenu-active-item-background-color: #e5eaf0;
+}
