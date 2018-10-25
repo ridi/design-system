@@ -85,7 +85,7 @@ gulp.task('css:watch', ['css:build'], () => {
 });
 
 gulp.task('jekyll:build', shell.task('bundle exec jekyll build'));
-gulp.task('jekyll:serve', shell.task('bundle exec jekyll liveserve'));
+gulp.task('jekyll:serve', shell.task('bundle exec jekyll liveserve --host=0.0.0.0'));
 
 gulp.task('build', callback => runSequence('css:build', 'jekyll:build', callback));
 gulp.task('start', ['css:watch', 'jekyll:serve']);
