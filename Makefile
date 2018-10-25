@@ -1,17 +1,15 @@
 .PHONY: install
 install:
-	gem install bundler --conservative
-	bundle install
-	npm install
+	make -C docs install
 
 .PHONY: start
 start:
-	npm start
+	make -C docs start
 
 .PHONY: build
 build:
-	npm run build
+	make -C docs build
 
 .PHONY: clean
 clean:
-	git clean -xdf --exclude=node_modules .
+	make -C docs clean
