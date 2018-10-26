@@ -68,9 +68,8 @@
             <li class="site-submenu__item{% if active %} site-submenu__item_active{% endif %}">
               <a
                 class="site-submenu__link"
-                {% unless active %}
-                  href="{{ item.url | relative_url }}"
-                {% endunless %}
+                href="{{ item.url | relative_url }}"
+                title="{{ item.title }}"
               >
                 {{ item.title }}
               </a>

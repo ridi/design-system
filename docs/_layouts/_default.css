@@ -212,7 +212,7 @@ body {
 }
 
 .site-aside {
-  padding: 20px;
+  padding: var(--container-padding-x);
 }
 
 .site-submenu {
@@ -270,6 +270,15 @@ body {
   display: block;
   padding: 14px 20px;
   font-weight: inherit;
+
+  &::after {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
 
   &, &:hover {
     color: inherit;
