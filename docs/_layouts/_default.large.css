@@ -1,0 +1,82 @@
+:root {
+  --site-header-height: 120px;
+  --site-footer-height: 120px;
+}
+
+body {
+  padding-top: 0;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.site-header {
+  position: static;
+  padding: 0 20px;
+}
+
+.site-title {
+  font-size: 22px;
+}
+
+.site-title__link {
+  padding: 25px 0;
+}
+
+.site-title__ridi {
+  width: 44px;
+  height: 18px;
+}
+
+.site-menu {
+  height: auto;
+}
+
+.site-menu__toggle-button {
+  display: none;
+}
+
+.site-menu__list {
+  visibility: visible;
+  opacity: 1;
+  position: static;
+  display: block;
+}
+
+.site-menu__item {
+  display: inline-block;
+  margin: 0;
+  font-size: 18px;
+  color: var(--slategray_100);
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.site-footer {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.site-footer__content {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.site-link-list {
+  margin-bottom: 0;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.site-link-list-products {
+  flex: 1;
+}
+
