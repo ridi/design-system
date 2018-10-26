@@ -19,5 +19,4 @@
 //@import "/_pages/web/principles/_style.css";
 //@import "/_pages/web/typography/_style.css";
 //@import "/_pages/writings/_style.css";
-
-@import "/_layouts/_default.large.css" (min-width: 769px);
+@import "index.large.css" (min-width: 769px);

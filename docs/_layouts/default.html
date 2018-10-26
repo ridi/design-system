@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-header__content container">
+  <header class="site-header container">
+    <div class="site-header__content content">
       <h1 class="site-title">
         <a class="site-title__link" href="{{ '/' | relative_url }}">
           <span class="site-title__text site-title__ridi">RIDI</span>
@@ -81,12 +81,12 @@
     </aside>
   {% endif %}
 
-  <main class="site-main">
+  <main class="site-main container">
     {{ content }}
   </main>
 
-  <footer class="site-footer">
-    <div class="site-footer__content container">
+  <footer class="site-footer container">
+    <div class="site-footer__content content">
       {% for link_list_hash in site.data.links %}
         {% assign link_category = link_list_hash[0] %}
         {% assign link_list = link_list_hash[1] %}

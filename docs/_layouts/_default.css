@@ -1,6 +1,9 @@
 :root {
   --site-header-height: 74px;
   --site-footer-height: 180px;
+  --container-padding-x: 20px;
+  --container-padding-y: 0;
+  --container-padding: var(--container-padding-y) var(--container-padding-x);
 }
 
 html {
@@ -15,12 +18,21 @@ body {
   padding-bottom: var(--site-footer-height);
 }
 
+.container {
+  padding: var(--container-padding);
+}
+
+.content {
+  margin: 0 auto;
+}
+
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: var(--site-header-height);
+  padding: 0;
   background: var(--white);
   color: var(--slategray_100);
   border-bottom: 1px solid var(--slategray_10);
@@ -280,7 +292,7 @@ body {
 }
 
 .site-main {
-  padding: 20px;
+  padding: var(--container-padding-x);
 
   &::before {
     display: block;

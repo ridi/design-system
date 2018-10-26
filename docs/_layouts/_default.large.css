@@ -7,14 +7,13 @@ body {
   padding-top: 0;
 }
 
-.container {
+.content {
   max-width: 1024px;
-  margin: 0 auto;
 }
 
 .site-header {
   position: static;
-  padding: 0 20px;
+  padding: var(--container-padding);
 }
 
 .site-title {
@@ -57,7 +56,7 @@ body {
 }
 
 .site-footer {
-  padding: 0 20px;
+  padding: var(--container-padding);
   text-align: left;
 }
 

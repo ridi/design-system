@@ -1,0 +1,49 @@
+html.home {
+  & .site-main {
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  & .header {
+    margin: 0;
+    padding: 120px var(--container-padding-x);
+    background-image: url('./img/home_bg.png');
+  }
+
+  & .header__title {
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 58px;
+    line-height: 1.28;
+  }
+
+  & .header__description {
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--slategray_30);
+
+    & > br:nth-child(odd) {
+      display: none;
+    }
+  }
+
+  & .site-content-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    padding: 110px 0;
+  }
+
+  & .site-content {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: var(--container-padding-x);
+    }
+  }
+}
