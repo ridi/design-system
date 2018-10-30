@@ -7,6 +7,10 @@ html.home {
     }
   }
 
+  & .site-main__content {
+    max-width: none;
+  }
+
   & .header {
     margin: 0 0 100px;
     padding: 70px 0;
