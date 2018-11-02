@@ -1,7 +1,14 @@
 import * as React from 'react';
 
 export interface WorldProps {
+  /**
+   * A `string` to be attached before **"World"**
+   */
   prefix?: string;
+
+  /**
+   * A `string` to be attached after **"World"**
+   */
   postfix?: string;
 
   [key: string]: any;

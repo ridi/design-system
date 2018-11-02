@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "babel-node node_modules/.bin/webpack",
+    "styleguide": "babel-node node_modules/.bin/styleguidist server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -20,6 +21,9 @@
     "babel-plugin-add-module-exports": "^1.0.0",
     "clean-webpack-plugin": "^0.1.19",
     "react": "^16.6.0",
+    "react-docgen-typescript": "^1.11.0",
+    "react-dom": "^16.6.0",
+    "react-styleguidist": "^8.0.2",
     "tslint": "^5.11.0",
     "tslint-loader": "^3.5.4",
     "typescript": "^3.1.4",

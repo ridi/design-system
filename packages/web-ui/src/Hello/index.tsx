@@ -1,7 +1,14 @@
 import * as React from 'react';
 
 export interface HelloProps {
+  /**
+   * A `string` to be attached before **"Hello"**
+   */
   prefix?: string;
+
+  /**
+   * A `string` to be attached after **"Hello"**
+   */
   postfix?: string;
 
   [key: string]: any;
