@@ -31,7 +31,7 @@ const handleClick = event => {
 #### Function as Prop
 ```jsx
 <Button
-  render={(children, ...props) => (
+  render={({ children, ...props }) => (
     <a {...props}>{children}</a>
   )}
   href="#"
