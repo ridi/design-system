@@ -46,3 +46,28 @@ const handleClick = (event, value) => {
   </Tab>
 </Tabs>
 ```
+
+### With Group
+```jsx
+const Values = {
+  A: 'a',
+  B: 'b',
+  C: 'c',
+  D: 'd',
+};
+
+initialState = {
+  selectedValue: Values.A,
+};
+
+const handleChange = (event, value) => {
+  setState({ selectedValue: value });
+};
+
+<Tab.Group selectedValue={state.selectedValue} onChange={handleChange}>
+  <Tab value={Values.A}>일반도서</Tab>
+  <Tab value={Values.B}>로맨스</Tab>
+  <Tab value={Values.C}>판타지 무협</Tab>
+  <Tab value={Values.D}>만화</Tab>
+</Tab.Group>
+```
