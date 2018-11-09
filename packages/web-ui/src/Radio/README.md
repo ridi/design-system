@@ -1,70 +1,49 @@
-### RSG
+### Basic Usage
 ```jsx
-const Values = {
-  A: 'a',
-  B: 'b',
-  C: 'c',
-};
-
-initialState = {
-  selectedValue: Values.A,
-};
-
-const onChange = e => {
+const handleChange = (event) => {
   setState({
-    selectedValue: e.target.value,
+    value: event.target.value,
   });
 };
 
 <div>
   <Radio
-    value={Values.A}
-    checked={state.selectedValue === Values.A}
-    onChange={onChange}
+    value="a"
+    checked={state.value === 'a'}
+    onChange={handleChange}
   >
-    리디북스
+    A
   </Radio>
 
   <Radio
-    value={Values.B}
-    checked={state.selectedValue === Values.B}
-    onChange={onChange}
+    value="b"
+    checked={state.value === 'b'}
+    onChange={handleChange}
   >
-    리디북스
+    B
   </Radio>
 
   <Radio
-    value={Values.C}
-    checked={state.selectedValue === Values.C}
+    value="c"
+    checked={state.value === 'c'}
     disabled
-    onChange={onChange}
+    onChange={handleChange}
   >
-    리디북스
+    C
   </Radio>
 </div>
 ```
 
 ### With Group
 ```jsx
-const Values = {
-  A: 'a',
-  B: 'b',
-  C: 'c',
-};
-
-initialState = {
-  selectedValue: Values.A,
-};
-
-const handleChange = (event) => {
-  setState({
-    selectedValue: event.target.value,
-  });
-};
-
-<Radio.Group selectedValue={state.selectedValue} onChange={handleChange}>
-  <Radio value={Values.A}>리디북스</Radio>
-  <Radio value={Values.B}>리디북스</Radio>
-  <Radio value={Values.C}>리디북스</Radio>
+<Radio.Group
+  value={state.value}
+  onChange={(event) => {
+    setState({ value: event.target.value });
+  }}
+>
+  <Radio value="a">A</Radio>
+  <Radio value="b">B</Radio>
+  <Radio value="c">C</Radio>
 </Radio.Group>
 ```

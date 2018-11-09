@@ -1,5 +1,3 @@
-### Using Render Props
-
 #### Simple Implementation
 ```jsx
 const Button = ({ 
@@ -17,7 +15,7 @@ const Button = ({
 };
 ```
 
-#### Simple Use Case
+### Basic Usage
 ```jsx
 const handleClick = event => {
   // Do something.
