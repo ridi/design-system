@@ -11,3 +11,4 @@
   Alert content.
 </Alert>
 ```
+> See `Modal` for more details.

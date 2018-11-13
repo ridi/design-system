@@ -16,42 +16,37 @@ const Caution = ({
   ...restProps
 }) => (
   <Panel {...restProps}>
-    <h1 className={titleClassName}>
-      <Icon className="titleIconClassName" name={iconName} />
-      {title}
-    <h1>
+    <Panel.Header>
+      <h1>
+        <Icon name={iconName} /> {title}
+      </h1>
+    </Panel.Header>
 
-    <div className="descriptionClassName">
-      {description}
-    </div>
+    <Panel.Body>
+      <p>
+        {description}
+      </p>
+      <div>
+        {inlineLink}
+      </div>
+    </Panel.Body>
 
-    <div className="inlineLinkContainerClassName">
-      {inlineLink}
-    </div>
-
-    <Group className="buttonGroupClassName">
-      {buttons}
-    </Group>
+    <Panel.Footer>
+      <Group>
+        {buttons}
+      </Group>
+    </Panel.Footer>
   </Panel>
 );
 
 Caution.InlineLink = ({ className, children, ...restProps }) => (
-  <Button
-    className={classNames('inlineLinkClassName', className)}
-    {...restProps}
-  >
+  <Button className={classNames('inlineLinkClassName', className)} {...restProps}>
     {children}
-    <Icon
-      className='inlineLinkIconClassName'
-      name='inlineLinkIconName'
-    />
+    <Icon className="inlineLinkIconClassName" name='arrow_9_right' />
   </Button>
 );
 
 Caution.Button = ({ className, ...restProps }) => (
-  <Button
-    className={classNames('buttonClassName', className)}
-    {...restProps}
-  />
+  <Button className={classNames('buttonClassName', className)} {...restProps} />
 );
 ```

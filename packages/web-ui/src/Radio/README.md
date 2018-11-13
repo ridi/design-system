@@ -8,42 +8,47 @@ const handleChange = (event) => {
 
 <div>
   <Radio
-    value="a"
-    checked={state.value === 'a'}
+    checked={state.value === 'apple'}
+    value="apple"
     onChange={handleChange}
   >
-    A
+    Apple
   </Radio>
 
   <Radio
-    value="b"
-    checked={state.value === 'b'}
+    checked={state.value === 'banana'}
+    value="banana"
     onChange={handleChange}
   >
-    B
+    Banana
   </Radio>
 
   <Radio
-    value="c"
-    checked={state.value === 'c'}
+    checked={state.value === 'cherry'}
     disabled
+    value="cherry"
     onChange={handleChange}
   >
-    C
+    Cherry
   </Radio>
 </div>
 ```
 
-### With Group
+### Using Label & Input Separately
 ```jsx
-<Radio.Group
-  value={state.value}
-  onChange={(event) => {
-    setState({ value: event.target.value });
-  }}
+<Radio.Label
+  disabled={false}
 >
-  <Radio value="a">A</Radio>
-  <Radio value="b">B</Radio>
-  <Radio value="c">C</Radio>
-</Radio.Group>
+  <Radio.Input
+    name="radioName"
+    value="radioValue"
+    checked={state.checked}
+    disabled={false}
+    onChange={(event) => {
+      setState({ checked: event.target.checked });
+    }}
+  />
+  Radio
+</Radio.Label>
 ```
+> This example shows how to pass props for each component explicitly.

@@ -14,3 +14,4 @@
   Confirm content.
 </Confirm>
 ```
+> See `Modal` for more details.

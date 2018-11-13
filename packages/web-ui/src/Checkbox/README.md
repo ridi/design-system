@@ -13,63 +13,21 @@
 </Checkbox>
 ```
 
-### Without Internal `label`
+### Using Label & Input Separately
 ```jsx
-const CheckboxLabel = ({
-  name,
-  value,
-  checked,
-  disabled,
-  children,
-  onChange,
-  ...restProps
-}) => (
-  <Label {...restProps}>
-    <Checkbox
-      name={name}
-      value={value}
-      checked={checked}
-      disabled={disabled}
-      onChange={onChange}
-    />
-    {children}
-  </Label>
-);
+<Checkbox.Label
+  disabled={false}
+>
+  <Checkbox.Input
+    name="checkboxName"
+    value="checkboxValue"
+    checked={state.checked}
+    disabled={false}
+    onChange={(event) => {
+      setState({ checked: event.target.checked });
+    }}
+  />
+  Checkbox
+</Checkbox.Label>
 ```
-
-```jsx
-const CheckboxLabel = ({
-  checkboxProps,
-  children,
-  ...restProps
-}) => (
-  <Label {...restProps}>
-    <Checkbox {...checkboxProps}/>
-    {children}
-  </Label>
-);
-```
-
-```jsx
-const CheckboxLabel = ({
-  name,
-  value,
-  checked,
-  disabled,
-  children,
-  onChange,
-  renderCheckbox: CustomCheckbox = Checkbox
-  ...restProps
-}) => (
-  <Label {...restProps}>
-    <CustomCheckbox
-      name={name}
-      value={value}
-      checked={checked}
-      disabled={disabled}
-      onChange={onChange}
-    />
-    {children}
-  </Label>
-);
-```
+> This example shows how to pass props for each component explicitly.

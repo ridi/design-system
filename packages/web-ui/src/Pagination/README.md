@@ -8,8 +8,12 @@
   showLastButton
   showPrevButton
   showNextButton
-  renderButton={({ type, page, ...restProps }) => ( // props: { type, page, className, children }
-    <a {...restProps} href={`/url-to-page?page=${page}`} />
+  renderButton={({ type, page, ...restProps }) => ( // props: { type, page, children }
+    <Pagination.Button
+      {...restProps}
+      render="a"
+      href={`#url-to-page?page=${page}`}
+    />
   )}
 />
 ```

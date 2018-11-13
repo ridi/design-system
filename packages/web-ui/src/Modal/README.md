@@ -17,12 +17,12 @@ const Alert = ({
   caution,
   children,
   onClose,
-  ...restProps,
+  ...restProps
 }) => (
-  <Modal {...restProps}>
+  <Modal onClose={onClose} {...restProps}>
     <Modal.Header>
-      <h1 className={titleClassName}>{title}</h1>
-      <div className={confirmClassName}>{caution}</div>
+      <h1>{title}</h1>
+      <div>{caution}</div>
     </Modal.Header>
 
     <Modal.Body>
@@ -30,7 +30,7 @@ const Alert = ({
     </Modal.Body>
 
     <Modal.Footer>
-      <Button className={okButtonClassName} onClick={onClose}>OK</Button>
+      <Button onClick={onClose}>OK</Button>
     </Modal.Footer>
   </Modal>
 );
@@ -44,12 +44,12 @@ const Confirm = ({
   children,
   onConfirm,
   onCancel,
-  ...restProps,
+  ...restProps
 }) => (
   <Modal onClose={onCancel} {...restProps}>
     <Modal.Header>
-      <h1 className={titleClassName}>{title}</h1>
-      <div className={confirmClassName}>{caution}</div>
+      <h1>{title}</h1>
+      <div>{caution}</div>
     </Modal.Header>
 
     <Modal.Body>

@@ -1,18 +1,14 @@
 #### Simple Implementation
 ```jsx
 const Button = ({ 
-  render = 'button',
+  render: Component = 'button',
   children,
   ...props
-}) => {
-  const Component = render;
-
-  return (
-    <Component {...props}>
-      {children}
-    </Component>
-  );
-};
+}) => (
+  <Component {...props}>
+    {children}
+  </Component>
+);
 ```
 
 ### Basic Usage
