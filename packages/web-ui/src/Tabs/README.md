@@ -1,7 +1,7 @@
 ### Basic Usage
 ```jsx
 const handleClick = (event) => {
-  setState({ value: event.target.value});
+  setState({ value: event.target.value });
 };
 
 <Tabs>

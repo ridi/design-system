@@ -1,9 +1,7 @@
 ### Basic Usage
 ```jsx
 const handleChange = (event) => {
-  setState({
-    value: event.target.value,
-  });
+  setState({ value: event.target.value });
 };
 
 <div>

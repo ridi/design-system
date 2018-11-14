@@ -3,9 +3,9 @@
 const Button = ({ 
   render: Component = 'button',
   children,
-  ...props
+  ...restProps
 }) => (
-  <Component {...props}>
+  <Component {...restProps}>
     {children}
   </Component>
 );
@@ -13,7 +13,7 @@ const Button = ({
 
 ### Basic Usage
 ```jsx
-const handleClick = event => {
+const handleClick = (event) => {
   // Do something.
 };
 
@@ -25,8 +25,8 @@ const handleClick = event => {
 #### Function as Prop
 ```jsx
 <Button
-  render={({ children, ...props }) => (
-    <a {...props}>{children}</a>
+  render={({ children, ...restProps }) => (
+    <a {...restProps}>{children}</a>
   )}
   href="#"
 >
@@ -36,8 +36,8 @@ const handleClick = event => {
 
 #### Component as Prop
 ```jsx
-const Anchor = ({ children, ...props }) => (
-  <a {...props}>{children}</a>
+const Anchor = ({ children, ...restProps }) => (
+  <a {...restProps}>{children}</a>
 );
 
 <Button render={Anchor} href="#">
