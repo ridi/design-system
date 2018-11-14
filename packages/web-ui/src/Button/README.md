@@ -1,4 +1,4 @@
-#### Simple Implementation
+### Simple Implementation
 ```jsx
 const Button = ({ 
   render: Component = 'button',
@@ -22,7 +22,7 @@ const handleClick = (event) => {
 </Button>
 ```
 
-#### Function as Prop
+### Function as Prop
 ```jsx
 <Button
   render={({ children, ...restProps }) => (
@@ -34,7 +34,7 @@ const handleClick = (event) => {
 </Button>
 ```
 
-#### Component as Prop
+### Component as Prop
 ```jsx
 const Anchor = ({ children, ...restProps }) => (
   <a {...restProps}>{children}</a>
@@ -45,7 +45,7 @@ const Anchor = ({ children, ...restProps }) => (
 </Button>
 ```
 
-#### Tag string as Prop
+### Tag String as Prop
 ```jsx
 <Button render="a" href="#">
   Button
