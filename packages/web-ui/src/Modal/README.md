@@ -10,6 +10,28 @@
 </Modal>
 ```
 
+### Using Sections
+```jsx
+<Modal
+  show={state.show}
+  onClose={() => {
+    setState({ show: false });
+  }}
+>
+  <Modal.Header>
+    Modal header.
+  </Modal.Header>
+
+  <Modal.Body>
+    Modal body.
+  </Modal.Body>
+
+  <Modal.Footer>
+    Modal footer.
+  </Modal.Footer>
+</Modal>
+```
+
 ### Implementing Alert
 ```jsx
 const Alert = ({
