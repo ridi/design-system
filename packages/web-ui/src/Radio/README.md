@@ -35,7 +35,8 @@ const handleChange = (event) => {
 ### Using Label & Input Separately
 ```jsx
 <Label disabled={state.disabled}>
-  <RadioInput
+  <Input
+    type="radio"
     checked={state.value === 'radioValue'}
     disabled={state.disabled}
     value="radioValue"

@@ -14,7 +14,8 @@
 ### Using Label & Input Separately
 ```jsx
 <Label disabled={state.disabled}>
-  <CheckboxInput
+  <Input
+    type="checkbox"
     checked={state.checked}
     disabled={state.disabled}
     onChange={(event) => {
