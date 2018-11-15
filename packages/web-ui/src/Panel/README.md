@@ -28,8 +28,8 @@ const Caution = ({
   iconName,
   title,
   description,
-  inlineLink,
-  buttons,
+  textLink,
+  button,
   ...restProps
 }) => (
   <Panel {...restProps}>
@@ -44,22 +44,20 @@ const Caution = ({
         {description}
       </p>
       <div>
-        {inlineLink}
+        {textLink}
       </div>
     </Panel.Body>
 
     <Panel.Footer>
-      <Group>
-        {buttons}
-      </Group>
+      {button}
     </Panel.Footer>
   </Panel>
 );
 
-Caution.InlineLink = ({ className, children, ...restProps }) => (
-  <Button className={classNames('inlineLinkClassName', className)} {...restProps}>
+Caution.TextLink = ({ className, children, ...restProps }) => (
+  <Button className={classNames('textLinkClassName', className)} {...restProps}>
     {children}
-    <Icon className="inlineLinkIconClassName" name='arrow_9_right' />
+    <Icon className="textLinkIconClassName" name='arrow_9_right' />
   </Button>
 );
 
