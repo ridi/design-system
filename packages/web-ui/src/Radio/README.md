@@ -34,19 +34,16 @@ const handleChange = (event) => {
 
 ### Using Label & Input Separately
 ```jsx
-<Radio.Label
-  disabled={false}
->
-  <Radio.Input
-    name="radioName"
+<Label disabled={state.disabled}>
+  <RadioInput
+    checked={state.value === 'radioValue'}
+    disabled={state.disabled}
     value="radioValue"
-    checked={state.checked}
-    disabled={false}
     onChange={(event) => {
-      setState({ checked: event.target.checked });
+      setState({ value: event.target.value });
     }}
   />
   Radio
-</Radio.Label>
+</Label>
 ```
 > This example shows how to pass props for each component explicitly.
