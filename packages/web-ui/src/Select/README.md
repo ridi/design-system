@@ -6,13 +6,13 @@
     setState({ value: event.target.value });
   }}
 >
-  <option value="1">Option 1</option>
-  <option value="2">Option 2</option>
-  <option value="3">Option 3</option>
-  <optgroup label="Sub Option">
-    <option value="4">Sub Option 1</option>
-    <option value="5">Sub Option 2</option>
-    <option value="6">Sub Option 3</option>
-  </optgroup>
+  <Select.Option value="1">Option 1</Select.Option>
+  <Select.Option value="2">Option 2</Select.Option>
+  <Select.Option value="3">Option 3</Select.Option>
+  <Select.OptionGroup label="Sub Option">
+    <Select.Option value="4">Sub Option 1</Select.Option>
+    <Select.Option value="5">Sub Option 2</Select.Option>
+    <Select.Option value="6">Sub Option 3</Select.Option>
+  </Select.OptionGroup>
 </Select>
 ```
