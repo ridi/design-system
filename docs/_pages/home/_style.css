@@ -1,18 +1,17 @@
 html.home {
   & .site-main {
-    padding: 0 0 var(--container-padding-x);
-
-    &::before {
+    &::before, &::after {
       display: none;
     }
   }
 
-  & .site-main__content {
+  & .site-main__container {
     max-width: none;
   }
 
   & .header {
-    margin: 0 0 100px;
+    margin: calc(-1 * var(--site-padding));
+    margin-bottom: 0;
     padding: 70px 0;
     background: url('./img/home_bg_m.png') center center no-repeat;
     background-size: cover;
@@ -40,9 +39,13 @@ html.home {
     color: var(--slategray_40);
   }
 
+  & .site-content-nav {
+    margin: 100px 0;
+  }
+
   & .site-content-list {
-    list-style: none;
     padding: 0;
+    list-style: none;
   }
 
   & .site-content {

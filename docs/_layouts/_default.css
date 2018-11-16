@@ -1,9 +1,7 @@
 :root {
   --site-header-height: 74px;
   --site-footer-height: 180px;
-  --container-padding-x: 20px;
-  --container-padding-y: 0;
-  --container-padding: var(--container-padding-y) var(--container-padding-x);
+  --site-padding: 20px;
 }
 
 html {
@@ -19,10 +17,6 @@ body {
 }
 
 .container {
-  padding: var(--container-padding);
-}
-
-.content {
   margin: 0 auto;
 }
 
@@ -39,7 +33,7 @@ body {
   z-index: 10;
 }
 
-.site-header__content {
+.site-header__container {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -52,6 +46,7 @@ body {
   font-size: 18px;
   font-weight: normal;
   font-family: 'Open Sans', sans-serif;
+  white-space: nowrap;
   border: none;
 }
 
@@ -214,7 +209,7 @@ body {
 }
 
 .site-aside {
-  padding: var(--container-padding-x);
+  padding: var(--site-padding);
 }
 
 .site-submenu {
@@ -303,7 +298,7 @@ body {
 }
 
 .site-main {
-  padding: var(--container-padding-x);
+  padding: var(--site-padding);
 
   &::before {
     display: block;

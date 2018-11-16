@@ -1,23 +1,23 @@
 :root {
   --site-header-height: 120px;
   --site-footer-height: 120px;
-  --content-max-width: 1024px;
 }
 
 body {
   padding-top: 0;
 }
 
-.content {
-  max-width: var(--content-max-width);
+.container {
+  max-width: 1024px;
 }
 
 .site-header {
   position: static;
-  padding: var(--container-padding);
+  padding: 0 var(--site-padding);
 }
 
 .site-title {
+  margin-right: 20px;
   font-size: 22px;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 .site-submenu {
-  padding: 0 var(--container-padding-x);
+  padding: 0 var(--site-padding);
   border: none;
   border-bottom: 1px solid var(--slategray_5);
   pointer-events: none;
@@ -73,7 +73,6 @@ body {
 
 .site-submenu__list {
   margin: 0 auto;
-  max-width: var(--content-max-width);
   display: block;
   position: static;
   border: none;
@@ -108,11 +107,11 @@ body {
 }
 
 .site-footer {
-  padding: var(--container-padding);
+  padding: 0 var(--site-padding);
   text-align: left;
 }
 
-.site-footer__content {
+.site-footer__container {
   height: 100%;
   display: flex;
   flex-flow: row nowrap;
