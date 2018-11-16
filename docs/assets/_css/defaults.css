@@ -52,10 +52,9 @@ h5 {
 
 h6 {
   margin-top: 20px;
-  text-align: center;
   font-size: 14px;
   font-weight: normal;
-  color: var(--slategray_60);
+  line-height: 1.75;
 }
 
 p {
@@ -135,6 +134,14 @@ img {
   display: block;
   width: 100%;
   margin: 20px 0;
+}
+
+figcaption {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--slategray_60);
 }
 
 hr {
