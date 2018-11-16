@@ -120,7 +120,7 @@ a {
 }
 
 pre {
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: 30px;
   background: var(--lightsteelblue_5);
 }
