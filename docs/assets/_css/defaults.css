@@ -12,12 +12,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  margin-bottom: 60px;
+  padding-bottom: 40px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 48px;
   font-weight: 800;
   letter-spacing: 0;
   color: var(--slategray_100);
+  border-bottom: 2px solid var(--slategray_5);
 
   & small {
     margin: 8px 0;

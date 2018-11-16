@@ -48,9 +48,11 @@ body {
 
 .site-title {
   margin: 0;
+  padding: 0;
   font-size: 18px;
   font-weight: normal;
   font-family: 'Open Sans', sans-serif;
+  border: none;
 }
 
 .site-title__link {
