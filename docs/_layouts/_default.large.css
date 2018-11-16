@@ -106,6 +106,55 @@ body {
   display: none;
 }
 
+.site-main__container {
+  display: flex;
+}
+
+.site-main__content {
+  order: 0;
+  flex: 1;
+}
+
+.site-main__aside {
+  order: 1;
+  margin-top: 206px;
+  margin-left: 80px;
+  display: block;
+  box-sizing: border-box;
+  width: 180px;
+}
+
+.site-toc {
+  position: sticky;
+  top: 20px;
+}
+
+.site-toc-list {
+  margin: -16px 0;
+  padding: 0;
+}
+
+.site-toc-list__item {
+  margin: 16px 0;
+  list-style: none;
+}
+
+.site-toc-list__link {
+  display: block;
+  font-size: 15px;
+  font-weight: normal;
+  color: var(--slategray_50);
+
+  &:hover {
+    color: var(--slategray_80);
+  }
+
+  &:active {
+    font-weight: bold;
+    color: var(--slategray_80);
+  }
+}
+
 .site-footer {
   padding: 0 var(--site-padding);
   text-align: left;

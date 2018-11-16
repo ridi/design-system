@@ -12,6 +12,9 @@ defaults:
       path: ""
     values:
       layout: default
+      toc:
+        h_min: 2
+        h_max: 2
 exclude:
   - node_modules
   - Gemfile

@@ -313,6 +313,10 @@ body {
   }
 }
 
+.site-main__aside {
+  display: none;
+}
+
 .site-footer {
   position: absolute;
   left: 0;

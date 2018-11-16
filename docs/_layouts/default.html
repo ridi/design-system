@@ -82,7 +82,17 @@
 
   <main class="site-main">
     <div class="site-main__container container">
-      {{ content }}
+      {% if page.toc %}
+        <aside class="site-main__aside">
+          <nav class="site-toc">
+            {% include toc.html html=content class='site-toc-list' item_class='site-toc-list__item' anchor_class='site-toc-list__link' h_min=page.toc.h_min h_max=page.toc.h_max %}
+          </nav>
+        </aside>
+      {% endif %}
+
+      <div class="site-main__content">
+        {{ content }}
+      </div>
     </div>
   </main>
 
