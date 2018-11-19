@@ -52,5 +52,5 @@
 ```
 
 ### Image
-![](home/img/home_icon_principles.png)
+![](home/img/home_bg.png){:data-action='zoom'}
 <figcaption>리디북스 서점, 리디셀렉트, 페이퍼샵에서 공통으로 사용하는 UI 컴포넌트입니다.</figcaption>
