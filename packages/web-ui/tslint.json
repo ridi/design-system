@@ -1,6 +1,10 @@
 {
   "extends": [
-    "@ridi/tslint-config"
+    "@ridi/tslint-config",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
   ],
   "rules": {
     "trailing-comma": [
