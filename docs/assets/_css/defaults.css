@@ -118,17 +118,27 @@ a {
   }
 }
 
-pre {
-  overflow-x: auto;
-  padding: 30px;
+code {
+  padding: 2px 4px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0;
   background: var(--lightsteelblue_5);
 }
 
-code {
-  font-family: 'Roboto Mono', monospace;
+pre {
+  overflow-x: auto;
+  padding: 30px;
   font-size: 12px;
-  letter-spacing: 0;
+  background: var(--lightsteelblue_5);
+
+  & code {
+    padding: 0;
+    font-size: inherit;
+    background: none;
+  }
 }
+
 
 img {
   display: block;
