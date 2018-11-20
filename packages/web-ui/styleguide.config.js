@@ -1,7 +1,7 @@
-import { parse as propsParser } from 'react-docgen-typescript';
-import webpackConfig from './webpack.config';
+const { parse: propsParser } = require('react-docgen-typescript');
+const webpackConfig = require('./webpack.config');
 
-export default {
+module.exports = {
   components: 'src/*/index.{ts,tsx}',
   propsParser,
   usageMode: 'expand',

@@ -1,7 +1,7 @@
-import CleanWebpackPlugin from 'clean-webpack-plugin';
-import path from 'path';
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path');
 
-export default {
+module.exports = {
   entry: './src/index.ts',
   output: {
     filename: 'index.js',
@@ -18,9 +18,9 @@ export default {
   module: {
     rules: [
       {
+        enforce: 'pre',
         test: /\.(ts|tsx)$/,
         use: ['tslint-loader'],
-        enforce: 'pre',
       },
       {
         test: /\.(ts|tsx)$/,

@@ -8,8 +8,8 @@
     "url": "git+https://github.com/ridi/design-system.git"
   },
   "scripts": {
-    "build": "babel-node node_modules/.bin/webpack",
-    "styleguide": "babel-node node_modules/.bin/styleguidist server",
+    "build": "webpack",
+    "styleguide": "styleguidist server",
     "lint": "tslint src/**/*.{ts,tsx} -c ./tslint.json --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,13 +19,9 @@
     }
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
     "@ridi/tslint-config": "^0.1.0",
     "@types/react": "^16.4.18",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-plugin-add-module-exports": "^1.0.0",
     "clean-webpack-plugin": "^0.1.19",
     "husky": "^1.1.4",
     "lint-staged": "^8.0.5",
