@@ -106,13 +106,8 @@ body {
   display: none;
 }
 
-.site-main__container {
-  display: flex;
-}
-
 .site-main__content {
   order: 0;
-  flex: 1;
 }
 
 .site-main__aside {

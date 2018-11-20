@@ -313,6 +313,15 @@ body {
   }
 }
 
+.site-main__container {
+  display: flex;
+}
+
+.site-main__content {
+  flex: 1;
+  width: 0;
+}
+
 .site-main__aside {
   display: none;
 }
