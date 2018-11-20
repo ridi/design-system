@@ -1,11 +1,14 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 
+const srcDir = path.join(__dirname, 'src');
+const outDir = path.join(__dirname, 'dist');
+
 module.exports = {
-  entry: './src/index.ts',
+  entry: path.join(srcDir, 'index.ts'),
   output: {
+    path: outDir,
     filename: 'index.js',
-    path: path.join(__dirname, 'dist'),
   },
   mode: 'production',
   devtool: 'source-map',
@@ -20,15 +23,17 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.(ts|tsx)$/,
+        include: srcDir,
         use: ['tslint-loader'],
       },
       {
         test: /\.(ts|tsx)$/,
-        use: ['awesome-typescript-loader'],
+        include: srcDir,
+        use: ['babel-loader', 'awesome-typescript-loader'],
       },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin([outDir]),
   ],
 };
