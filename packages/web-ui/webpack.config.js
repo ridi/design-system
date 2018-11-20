@@ -1,4 +1,5 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader');
 const path = require('path');
 
 const srcDir = path.join(__dirname, 'src');
@@ -35,5 +36,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin([outDir]),
+    new CheckerPlugin(),
   ],
 };
