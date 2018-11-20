@@ -67,7 +67,7 @@
 
 ### Interpolator란?
 Android 애니메이션에서 State를 시간에 따라 어떤 양상으로 변화시킬 지 나타내는 function입니다. 각 Interpolator에 factor를 바꾸어 쉽게 변형할 수 있습니다. 또는 Interpolator 자체를 원하는 대로 만들어 사용할 수도 있습니다. <br> 
-![Interpolator](motion_interpolator.png)
+![Interpolator](motion_interpolator.png){:data-action='zoom'}
 <figcaption>Graph 출처 : http://antoine-merle.com/images/interpolators2.png</figcaption>
 
 ### 리디북스 앱에서 사용하고 있는 Interpolator의 종류 
