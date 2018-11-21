@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="48px" viewBox="0 0 56 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+  <title>spinner</title>
+  <desc>Created with Sketch.</desc>
+  <defs></defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="spinner" fill="#000000">
+      <g id="레이어_1">
+        <path d="M24.4,0 C37.4,0 48,10.4 48.3,23.4 L55.5,23.4 L44.7,35.4 L34,23.4 L42.4,23.4 C42,13.7 34.1,6 24.4,6 C14.5,6 6.5,14.1 6.5,24 C6.5,33.9 14.5,42 24.4,42 C28.4,42 32,40.7 35,38.5 L39.1,42.9 C35.1,46.1 30,48 24.4,48 C11.2,48 0.5,37.3 0.5,24 C0.5,10.7 11.2,0 24.4,0 L24.4,0 L24.4,0 Z" id="Shape"></path>
+      </g>
+    </g>
+  </g>
+</svg>

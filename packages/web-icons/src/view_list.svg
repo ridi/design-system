@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+  <title>view_list</title>
+  <desc>Created with Sketch.</desc>
+  <defs></defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="view_list" fill="#000000">
+      <g id="레이어_1">
+        <polygon id="Shape" points="0 0 10.7 0 10.7 10.7 0 10.7"></polygon>
+        <polygon id="Shape" points="0 18.3 10.7 18.3 10.7 29 0 29"></polygon>
+        <polygon id="Shape" points="0 37.3 10.7 37.3 10.7 48 0 48"></polygon>
+        <polygon id="Shape" points="16 0 48 0 48 10.7 16 10.7"></polygon>
+        <polygon id="Shape" points="16 18.3 48 18.3 48 29 16 29"></polygon>
+        <polygon id="Shape" points="16 37.3 48 37.3 48 48 16 48"></polygon>
+      </g>
+    </g>
+  </g>
+</svg>
