@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "build": "webpack",
-    "styleguide": "styleguidist server",
+    "watch": "styleguidist server",
     "lint": "tslint src/**/*.{ts,tsx} -c ./tslint.json --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

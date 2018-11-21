@@ -2,6 +2,7 @@
   "scripts": {
     "clean": "lerna run clean",
     "build": "lerna run build",
+    "watch": "lerna run watch --parallel",
     "postinstall": "lerna bootstrap"
   },
   "devDependencies": {
