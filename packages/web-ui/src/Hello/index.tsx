@@ -1,3 +1,4 @@
+import * as colors from '@ridi/colors/colors.json';
 import { css, cx } from 'emotion';
 import * as React from 'react';
 
@@ -21,7 +22,7 @@ export interface HelloProps {
 }
 
 const helloClassName = css`
-  color: hotpink;
+  color: ${colors.dodgerblue[5].hex};
 `;
 
 export const Hello: React.SFC<HelloProps> = ({

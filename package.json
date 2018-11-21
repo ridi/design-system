@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "clean": "lerna run clean",
+    "build": "lerna run build",
+    "postinstall": "lerna bootstrap"
+  },
   "devDependencies": {
     "lerna": "^2.9.0"
   }

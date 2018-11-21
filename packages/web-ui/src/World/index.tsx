@@ -1,3 +1,4 @@
+import * as colors from '@ridi/colors/colors.json';
 import { css, cx } from 'emotion';
 import * as React from 'react';
 
@@ -21,7 +22,7 @@ export interface WorldProps {
 }
 
 const worldClassName = css({
-  color: 'turquoise',
+  color: colors.orange[5].hex,
 });
 
 export const World: React.SFC<WorldProps> = ({

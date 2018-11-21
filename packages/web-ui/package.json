@@ -8,6 +8,7 @@
     "url": "git+https://github.com/ridi/design-system.git"
   },
   "scripts": {
+    "clean": "git clean -xdf --exclude=node_modules .",
     "build": "webpack",
     "styleguide": "styleguidist server",
     "lint": "tslint src/**/*.{ts,tsx} -c ./tslint.json --fix",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
+    "@ridi/colors": "*",
     "@ridi/tslint-config": "^0.1.0",
     "@types/react": "^16.4.18",
     "awesome-typescript-loader": "^5.2.1",
