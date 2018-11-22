@@ -22,6 +22,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@ridi/colors": "*",
+    "@ridi/web-icons": "*",
     "@ridi/tslint-config": "^0.1.0",
     "@types/react": "^16.4.18",
     "awesome-typescript-loader": "^5.2.1",
