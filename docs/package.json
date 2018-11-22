@@ -7,8 +7,10 @@
     "url": "git+https://github.com/ridi/design-system.git"
   },
   "scripts": {
+    "clean": "git clean -xdf --exclude=node_modules .",
     "build": "gulp build",
-    "start": "gulp start"
+    "start": "gulp start",
+    "prepare": "gem install bundler --conservative && bundle install"
   },
   "devDependencies": {
     "@ridi/rsg": "^2.0.9",
@@ -19,7 +21,6 @@
     "gulp-postcss": "^8.0.0",
     "gulp-shell": "^0.6.5",
     "gulp-sourcemaps": "^2.6.4",
-    "lodash": "^4.17.10",
     "normalize.css": "^8.0.0",
     "postcss-color-hwb": "^3.0.0",
     "postcss-import": "^12.0.0",
@@ -27,5 +28,9 @@
     "postcss-scss": "^2.0.0",
     "postcss-url": "^8.0.0",
     "run-sequence": "^2.2.1"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
   }
 }
