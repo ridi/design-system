@@ -7,5 +7,9 @@
   },
   "devDependencies": {
     "lerna": "^2.9.0"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
   }
 }

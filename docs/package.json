@@ -27,9 +27,5 @@
     "postcss-scss": "^2.0.0",
     "postcss-url": "^8.0.0",
     "run-sequence": "^2.2.1"
-  },
-  "engines": {
-    "node": ">=8.11 <9",
-    "npm": ">=5.6 <6"
   }
 }
