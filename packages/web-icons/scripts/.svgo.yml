@@ -3,16 +3,13 @@ plugins:
   - removeTitle: true
   - removeXMLNS: true
   - removeDimensions: true
+  - removeViewBox: false
   - removeAttrs:
       attrs:
         - 'fill'
         - 'fill-rule'
         - 'stroke'
         - 'version'
-        - 'class'
-  - sortAttrs:
-      order:
-        - 'viewBox'
         - 'class'
   - collapseGroups: true
   - addClassesToSVGElement:

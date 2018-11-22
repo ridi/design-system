@@ -23,6 +23,7 @@ if (process.mainModule.filename === __filename) {
     onBuildFinish: () => {
       console.log(chalk.bold.green('Build finished!'));
     },
+    onBuildError: console.error,
   });
 } else {
   module.exports = build;
