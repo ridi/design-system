@@ -3,7 +3,7 @@
     "clean": "lerna run clean",
     "build": "lerna run build",
     "watch": "lerna run watch --parallel",
-    "postinstall": "lerna bootstrap"
+    "postinstall": "lerna bootstrap --hoist"
   },
   "devDependencies": {
     "lerna": "^2.9.0"
