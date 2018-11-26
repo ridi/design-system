@@ -6,7 +6,7 @@
     "postinstall": "lerna bootstrap --hoist"
   },
   "devDependencies": {
-    "lerna": "^2.9.0"
+    "lerna": "^3.4.3"
   },
   "engines": {
     "node": ">=10",
