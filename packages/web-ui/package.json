@@ -22,13 +22,14 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@ridi/colors": "*",
-    "@ridi/web-icons": "*",
     "@ridi/tslint-config": "^0.1.0",
+    "@ridi/web-icons": "*",
     "@types/react": "^16.4.18",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^9.2.11",
     "clean-webpack-plugin": "^0.1.19",
+    "emotion": "^9.2.12",
     "husky": "^1.1.4",
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2",
@@ -43,8 +44,5 @@
     "typescript": "^3.1.4",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
-  },
-  "dependencies": {
-    "emotion": "^9.2.12"
   }
 }
