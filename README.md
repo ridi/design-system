@@ -1,32 +1,34 @@
 # Design System
 
-## Website
+## Development
 
-### Requirements
+### Website
+
+#### Requirements
 - [Ruby Development Environment](https://jekyllrb.com/docs/installation)
 - [Node](https://nodejs.org) >= 10
 
-### Quick Start
+#### Quick Start
 ```shell
 $ cd docs
 $ npm install
 $ npm start
 ```
 
-## Packages
+### Packages
 
-### Requirements
+#### Requirements
 - [Node](https://nodejs.org) >= 10
 - [Lerna](https://lernajs.io) (optional for adding dependencies)
 
-### Quick Start
+#### Quick Start
 ```shell
 $ npm install
 $ npm start
 ```
 
-### Adding Dependencies
-To add a dependency to specific package, you should use `lerna add` instead of `npm install`.
+#### Adding Dependencies
+To add a dependency to a specific package, you should use `lerna add` instead of `npm install`.
 
 For example:
 ```shell
