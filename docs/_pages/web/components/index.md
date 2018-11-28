@@ -232,12 +232,10 @@
 ### 사용
 
 #### Desktop
-
- [![](pagination_pc.png)](#)
+![](pagination_pc.png){:data-action='zoom'}
 
 #### Mobile
-
- [![](pagination_mobile.png)](#)
+![](pagination_mobile.png){:data-action='zoom'}
 
 ### 동작
 
