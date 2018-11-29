@@ -1,0 +1,29 @@
+.ThumbnailImage {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+}
+
+.ThumbnailImage_Image {
+  width: 100%;
+}
+
+.ThumbnailImage::after {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, .2) 0,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(0, 0, 0, 0) 95%,
+      rgba(0, 0, 0, .2) 100%
+    );
+  border: solid 1px rgba(0, 0, 0, .1);
+  content: '';
+}

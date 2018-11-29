@@ -1,0 +1,11 @@
+.UnReadDot {
+  @apply --reset-layout;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  font-size: 0;
+  overflow: hidden;
+  color: #339cf2;
+  background: #339cf2;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="48px" viewBox="0 0 54 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>message_1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="message_1" fill="#000000">
+            <g id="레이어_1">
+                <polygon id="Shape" points="33 16.3 33 0 16.7 16.3"></polygon>
+                <polygon id="Shape" points="37.3 0 37.3 16.3 53.6 16.3"></polygon>
+                <path d="M0.4,20.6 L33,20.6 L33,35 L0.5,35 C0.4,35.1 0.4,20.6 0.4,20.6 Z" id="Shape"></path>
+                <path d="M16.7,39 L33,39 L33,48 L16.7,48 L16.7,39 Z" id="Shape"></path>
+                <polygon id="Shape" points="37.3 36.8 53.6 20.6 37.3 20.6"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

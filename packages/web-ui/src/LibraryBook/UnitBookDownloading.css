@@ -1,0 +1,77 @@
+.UnitBookDownloading_Wrapper {
+  cursor: pointer;
+
+  @nest .Thumbnail & {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, .4);
+  }
+}
+
+.UnitBookDownloading_Wrapper-blocked {
+  @nest .Thumbnail & {
+    background: rgba(0, 0, 0, .4);
+  }
+}
+
+.UnitBookDownloading-size-small {
+  --UnitBookDownloading-size: 32px;
+  --UnitBookDownloading_Dot-size: 4px;
+  --UnitBookDonwloading_Dot-position: 14px;
+  --UnitBookDownloading_Dot-gap: 3px;
+}
+
+.UnitBookDownloading-size-large {
+  --UnitBookDownloading-size: 44px;
+  --UnitBookDownloading_Dot-size: 4px;
+  --UnitBookDonwloading_Dot-position: 20px;
+  --UnitBookDownloading_Dot-gap: 4px;
+}
+
+.UnitBookDownloading {
+  position: relative;
+  border-radius: 50%;
+  background: #1f8ce6;
+  margin: 50% auto;
+  width: var(--UnitBookDownloading-size);
+  height: var(--UnitBookDownloading-size);
+}
+
+.UnitBookDownloading_Dots,
+.UnitBookDownloading_Dots::before,
+.UnitBookDownloading_Dots::after {
+  position: absolute;
+  content: '';
+  width: var(--UnitBookDownloading_Dot-size);
+  height: var(--UnitBookDownloading_Dot-size);
+  top: var(--UnitBookDonwloading_Dot-position);
+  left: var(--UnitBookDonwloading_Dot-position);
+  border-radius: 50%;
+  background-color: #fff;
+  animation: dotFlashing 1.5s infinite linear alternate;
+  animation-delay: .5s;
+}
+
+.UnitBookDownloading_Dots::before {
+  animation-delay: 0s;
+  top: 0;
+  left: calc((var(--UnitBookDownloading_Dot-size) + var(--UnitBookDownloading_Dot-gap)) * -1);
+}
+.UnitBookDownloading_Dots::after {
+  animation-delay: 1s;
+  top: 0;
+  left: calc(var(--UnitBookDownloading_Dot-size) + var(--UnitBookDownloading_Dot-gap));
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  50%, 100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}

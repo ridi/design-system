@@ -1,0 +1,41 @@
+.Checkbox {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  cursor: pointer;
+  background: rgba(0, 0, 0, .4);
+}
+
+.Checkbox_Input {
+  @apply --reset-appearance;
+  @apply --reset-layout;
+  width: 0;
+  height: 0;
+}
+.Checkbox_IconWrapper {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 44px; 
+  border: 2px solid rgba(0, 0, 0, .3);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  overflow: hidden;
+}
+
+.Checkbox_Icon {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  fill: white;
+  background: rgba(0, 0, 0, .3);  
+  @nest .active & {
+    background: #1f8ce6;
+  }
+}

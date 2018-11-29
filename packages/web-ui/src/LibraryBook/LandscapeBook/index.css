@@ -1,0 +1,21 @@
+.LandscapeBook {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  font-size: 0;
+}
+.LandscapeBook_Thumbnail {
+  flex: 0 1 0;
+  padding-right: 16px;
+  align-self: flex-end;
+}
+.LandscapeBook_Metadata {
+  flex: 1 1 0;
+  padding: 10px 0;
+}
+.LandscapeBook_Buttons {
+  flex: 0 1 0;
+  text-align: right;
+  padding-left: 20px;
+}

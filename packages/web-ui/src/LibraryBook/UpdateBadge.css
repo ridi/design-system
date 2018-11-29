@@ -1,0 +1,15 @@
+.UpdateBadge {
+  @apply --reset-font;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 5px;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1em;
+  color: white;
+  background: rgba(0, 119, 217, .95);
+  border-bottom-right-radius: 4px;
+}

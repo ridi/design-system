@@ -1,0 +1,20 @@
+.PortraitBook {
+  max-width: 100px;
+}
+
+.PortraitBook_Thumbnail {
+  position: relative;
+  line-height: 0;
+  width: 100%;
+  height: auto;
+  /* width : height = 1: 1.618 */
+  padding-bottom: 162%;
+  & .Thumbnail {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.PortraitBook_Metadata {
+  margin-top: 5px;
+}

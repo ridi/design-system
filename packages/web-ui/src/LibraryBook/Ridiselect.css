@@ -1,0 +1,39 @@
+.Ridiselect {
+  @apply --reset-font;
+  @apply --reset-layout;
+
+  position: relative;
+  font-size: 12px;
+  height: 1em;
+  line-height: 1em;
+  color: #0077d9;
+  padding: 0 0 0 16px;
+  margin-top: 4px;
+  white-space: nowrap;
+  @nest .Thumbnail & {
+    position: absolute;
+    padding: 0 0 0 18px;
+    margin-top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+  }
+}
+.Ridiselect_Icon {
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  width: 10px;
+  height: 10px;
+  fill: #0077d9;
+  @nest .Thumbnail & {
+    left: 3px;
+    fill: white;
+  }
+}

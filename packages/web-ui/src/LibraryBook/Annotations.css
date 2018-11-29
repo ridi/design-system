@@ -1,0 +1,39 @@
+.Annotations {
+  @apply --reset-layout;
+  list-style: none;
+  white-space: nowrap;
+  font-size: 0;
+  margin-top: 8px;
+}
+.Annotation_Item {
+  @apply --reset-layout;
+  @apply --reset-font;
+  display: inline-block;
+  color: #808991;
+  font-size: 12px;
+  margin-left: 12px;
+}
+.Annotation_Title {
+  display: block;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  color: transparent;
+}
+.Annotation_Icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  vertical-align: top;
+  fill: #9ea7ad;
+  &.Annotation_Icon-bookMark {
+    width: 9px;
+  }
+  &.Annotation_Icon-highlight {
+    width: 10px;
+  }
+  &.Annotation_Icon-memo {
+    width: 12px;
+  }
+}

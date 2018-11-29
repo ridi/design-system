@@ -1,0 +1,56 @@
+.UnitBookCount {
+  @apply --reset-layout;
+  @apply --reset-font;
+  @apply --reset-appearance;
+
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  @nest .Thumbnail & {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.UnitBookCount_Count {
+  display: block;
+  padding:3px 15px 4px 7px;
+  border: 1px solid #9ea7ad;
+  height: 1em;
+  line-height: 1em;
+  font-size: 11px;
+  font-weight: 600;
+  color: #525a61;
+  border-radius: 50px;
+  background: white;
+  white-space: nowrap;
+
+  @nest .Thumbnail & {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate3d(-50%, 0, 0);
+    border-color: white;
+    font-weight: 700;
+    color: white;
+    background: rgba(0, 0, 0, .7);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .7);
+  }
+}
+
+.UnitBookCount_Icon {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  width: 5px;
+  height: 5px;
+  fill: #636c73;
+  @nest .Thumbnail & {
+    fill: white;
+  }
+}

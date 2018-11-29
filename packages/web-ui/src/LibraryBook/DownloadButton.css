@@ -1,0 +1,130 @@
+.DownloadButton_Wrapper {
+  @apply --reset-layout;
+  text-align: right;
+  padding-top: 20px;
+
+  @nest .Thumbnail & {
+    padding-top: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+}
+
+.DownloadButton_Wrapper-blocked {
+  @nest .Thumbnail & {
+    background: rgba(0, 0, 0, .4);
+  }
+}
+
+.DownloadButton-size-small {
+  --DownloadingButton-size: 28px;
+}
+
+.DownloadButton-size-large {
+  --DownloadingButton-size: 32px;
+}
+
+.DownloadButton {
+  @apply --reset-appearance;
+  @apply --reset-font;
+  @apply --reset-layout;
+
+  background-color: unset;
+  width: var(--DownloadingButton-size);
+  height: var(--DownloadingButton-size);
+  cursor: pointer;
+  outline: transparent;
+}
+
+.DownloadButton-downloading {
+  position: relative;
+  border-radius: 50%;
+  background: #1F8CE6;
+
+  @nest .Thumbnail & {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+  }
+
+  & .mask,
+  & .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform .5s;
+    transform: rotate(0deg);
+  }
+
+  & .mask {
+    clip: rect(0, var(--DownloadingButton-size), var(--DownloadingButton-size), calc(var(--DownloadingButton-size) / 2));
+  }
+  & .fill {
+    background: #0077d9;
+    clip: rect(0, calc(var(--DownloadingButton-size) / 2), var(--DownloadingButton-size), 0);
+  }
+  & .stop {
+    position: absolute;
+    top: calc((var(--DownloadingButton-size) - (var(--DownloadingButton-size) / 3.5)) / 2);
+    left: calc((var(--DownloadingButton-size) - (var(--DownloadingButton-size) / 3.5)) / 2);
+    width: calc(var(--DownloadingButton-size) / 3.5);
+    height: calc(var(--DownloadingButton-size) / 3.5);
+    box-shadow: 0 1px 2px 0 #0077d9;
+    background-color: #ffffff;
+  }
+}
+
+.DownloadButton-downloadable {
+  & .Downloadable_icon {
+    width: 100%;
+    height: 100%;
+    & circle {
+      fill: #000000;
+      fill-opacity: .5;
+      stroke: #FFFFFF;
+    }
+    & path {
+      fill: #FFFFFF;
+    }
+  }
+}
+
+.DownloadButton-waiting {
+  & .Waiting_icon {
+    width: 100%;
+    height: 100%;
+    & circle {
+      fill: #F2F4F5;
+      fill-opacity: .8;
+    }
+    & path {
+      fill: #9EA7AD;
+      fill-opacity: .8;
+    }
+  }
+}
+
+.DownloadSize {
+  @apply --reset-font;
+  @apply --reset-layout;
+  color: #808991;
+  font-size: 12px;
+  margin-top: 5px;
+  line-height: 1.25em;
+  @nest .Thumbnail & {
+    margin-top: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    line-height: 0;
+    color: transparent;
+  }
+}

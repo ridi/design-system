@@ -1,0 +1,9 @@
+.Author {
+  @apply --reset-font;
+  @apply --reset-layout;
+  @apply --lineClamp-2line;
+  margin-top: 4px;
+  color: #808991;
+  font-size: 12px;
+  line-height: 1.4em;
+}
