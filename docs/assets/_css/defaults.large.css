@@ -1,0 +1,7 @@
+h1 {
+  text-align: left;
+
+  & small {
+    display: inline-block;
+  }
+}

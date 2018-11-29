@@ -3,8 +3,6 @@
 
 # Principles <small>디자인 공통 원칙</small>
 
----
-
 ## H2
 ##### H5 사용자가 클릭하거나 터치할 때 발생하는 동작에 대한 피드백을 제공합니다. 버튼 내 텍스트 레이블은 사용자가 명확하게 이해할 수 있도록 직관적이고 간결하게 작성합니다. 
 
@@ -54,6 +52,5 @@
 ```
 
 ### Image
-![](home/img/home_icon_principles.png)
-
-###### H6 리디북스 서점, 리디셀렉트, 페이퍼샵에서 공통으로 사용하는 UI 컴포넌트입니다.
+![](home/img/home_bg.png){:data-action='zoom'}
+<figcaption>리디북스 서점, 리디셀렉트, 페이퍼샵에서 공통으로 사용하는 UI 컴포넌트입니다.</figcaption>

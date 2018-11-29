@@ -12,12 +12,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  margin-bottom: 60px;
+  padding-bottom: 40px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 48px;
   font-weight: 800;
   letter-spacing: 0;
   color: var(--slategray_100);
+  border-bottom: 2px solid var(--slategray_5);
 
   & small {
     margin: 8px 0;
@@ -49,10 +52,9 @@ h5 {
 
 h6 {
   margin-top: 20px;
-  text-align: center;
   font-size: 14px;
   font-weight: normal;
-  color: var(--slategray_60);
+  line-height: 1.75;
 }
 
 p {
@@ -116,22 +118,40 @@ a {
   }
 }
 
-pre {
-  overflow-x: scroll;
-  padding: 30px;
+code {
+  padding: 2px 4px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0;
   background: var(--lightsteelblue_5);
 }
 
-code {
-  font-family: 'Roboto Mono', monospace;
+pre {
+  overflow-x: auto;
+  padding: 30px;
   font-size: 12px;
-  letter-spacing: 0;
+  background: var(--lightsteelblue_5);
+
+  & code {
+    padding: 0;
+    font-size: inherit;
+    background: none;
+  }
 }
+
 
 img {
   display: block;
-  width: 100%;
-  margin: 20px 0;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+figcaption {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--slategray_60);
 }
 
 hr {

@@ -1,26 +1,32 @@
 html.home {
   & .site-main {
-    &::before {
+    &::before, &::after {
       display: none;
     }
   }
 
+  & .site-main__container {
+    max-width: none;
+  }
+
   & .header {
-    margin: -20px -20px 100px;
+    margin: calc(-1 * var(--site-padding));
+    margin-bottom: 0;
     padding: 70px 0;
-    text-align: center;
-    background: url('./img/home_bg_m.png');
+    background: url('./img/home_bg_m.png') center center no-repeat;
     background-size: cover;
   }
 
   & .header__title {
     margin: 0 0 20px;
+    padding: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
     font-weight: 800;
     line-height: 1.38;
     color: var(--white);
     text-shadow: 2px 2px 4px rgba(33, 37, 41, 0.5);
+    border: none;
   }
 
   & .header__description {
@@ -33,14 +39,24 @@ html.home {
     color: var(--slategray_40);
   }
 
-  & .section {
+  & .site-content-nav {
+    margin: 100px 0;
+  }
+
+  & .site-content-list {
+    padding: 0;
+    list-style: none;
+  }
+
+  & .site-content {
     margin: 80px 0;
     background: no-repeat center top;
     background-size: 80px 50px;
     text-align: center;
+    line-height: normal;
   }
 
-  & .section__link {
+  & .site-content__link {
     display: inline-block;
     margin: 0 auto;
     padding-top: 80px;
@@ -48,21 +64,24 @@ html.home {
     text-decoration: none;
 
     &:hover {
-      & .section__title {
+      & .site-content__title {
         color: var(--slategray_60);
       }
     }
   }
 
-  & .section__title {
+  & .site-content__title {
     margin: 0 0 12px;
+    padding: 0;
+    text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: var(--slategray_90);
+    border: none;
   }
 
-  & .section__description {
+  & .site-content__description {
     margin: 0;
     font-size: 14px;
     line-height: 1.29;
@@ -70,23 +89,23 @@ html.home {
     color: var(--slategray_90);
   }
 
-  & .section-principles {
+  & .site-content-principles {
     background-image: url('./img/home_icon_principles.png');
   }
 
-  & .section-writings {
+  & .site-content-writings {
     background-image: url('./img/home_icon_writings.png');
   }
 
-  & .section-colors {
+  & .site-content-colors {
     background-image: url('./img/home_icon_colors.png');
   }
 
-  & .section-web {
+  & .site-content-web {
     background-image: url('./img/home_icon_web.png');
   }
 
-  & .section-app {
+  & .site-content-app {
     background-image: url('./img/home_icon_app.png');
   }
 }
