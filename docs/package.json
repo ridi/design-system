@@ -1,11 +1,5 @@
 {
-  "name": "@ridi/design-system",
-  "description": "RIDI Design System",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ridi/design-system.git"
-  },
+  "private": true,
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "build": "gulp build",
@@ -30,7 +24,6 @@
     "run-sequence": "^2.2.1"
   },
   "engines": {
-    "node": ">=10",
-    "npm": ">=6"
+    "node": ">=10"
   }
 }

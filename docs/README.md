@@ -42,10 +42,10 @@ GitHub 연동과 관련한 자세한 문서는 [이곳](https://help.github.com/
 
 ### 요구사항
 - [Ruby Development Environment](https://jekyllrb.com/docs/installation)
-- [Node](https://nodejs.org) >= 10
+- [Yarn](https://yarnpkg.com)
 
 ### 실행하기
 ```shell
-$ npm install  # 의존성 설치하기
-$ npm start    # 빌드 및 실행하기
+$ yarn        # 의존성 설치하기
+$ yarn start  # 빌드 및 실행하기
 ```

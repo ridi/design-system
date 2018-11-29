@@ -35,8 +35,8 @@ html.home {
 
   & .section {
     margin: 80px 0;
-    background-size: 80px 50px;
     background: no-repeat center top;
+    background-size: 80px 50px;
     text-align: center;
   }
 

@@ -6,32 +6,22 @@
 
 #### Requirements
 - [Ruby Development Environment](https://jekyllrb.com/docs/installation)
-- [Node](https://nodejs.org) >= 10
+- [Yarn](https://yarnpkg.com)
 
 #### Quick Start
 ```shell
 $ cd docs
-$ npm install
-$ npm start
+$ yarn
+$ yarn start
 ```
 
 ### Packages
 
 #### Requirements
-- [Node](https://nodejs.org) >= 10
-- [Lerna](https://lernajs.io) (optional for adding dependencies)
+- [Yarn](https://yarnpkg.com)
 
 #### Quick Start
 ```shell
-$ npm install
-$ npm start
+$ yarn
+$ yarn start
 ```
-
-#### Adding Dependencies
-To add a dependency to a specific package, you should use `lerna add` instead of `npm install`.
-
-For example:
-```shell
-$ lerna add lodash --scope=@ridi/web-ui
-``` 
-Please see [`@lerna/add`](https://github.com/lerna/lerna/tree/master/commands/add#readme) for more details.
