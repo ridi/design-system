@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="48px" viewBox="0 0 47 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+  <title>arrow_3_right</title>
+  <desc>Created with Sketch.</desc>
+  <defs></defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="arrow_3_right" fill="#000000">
+      <g id="레이어_1">
+        <path d="M22.2,0 C23.3,0 24.2,0.4 25,1.1 L45.1,21.2 C45.9,22 46.2,22.9 46.2,24 C46.2,25.1 45.8,26 45.1,26.8 L25,46.8 C24.3,47.6 23.3,48 22.2,48 C21.1,48 20.2,47.6 19.4,46.8 L17.1,44.5 C16.3,43.7 16,42.8 16,41.7 C16,40.6 16.4,39.7 17.1,38.9 L26.2,29.8 L4.5,29.8 C3.4,29.8 2.5,29.4 1.7,28.6 C0.9,27.8 0.5,27 0.5,26 L0.5,22 C0.5,20.9 0.9,20 1.7,19.2 C2.5,18.4 3.4,18 4.5,18 L26.2,18 L17.1,9 C16.3,8.3 16,7.3 16,6.2 C16,5.1 16.4,4.2 17.1,3.4 L19.4,1.1 C20.2,0.4 21.1,0 22.2,0 Z" id="Shape"></path>
+      </g>
+    </g>
+  </g>
+</svg>

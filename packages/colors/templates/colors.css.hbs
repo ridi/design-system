@@ -1,0 +1,10 @@
+:root {
+{{#each json as |array|}}
+  {{#each array as |color|}}
+    --{{color.name}}: {{toHwb color}};
+  {{/each}}
+
+{{/each}}
+}
+
+/* stylelint-enable */

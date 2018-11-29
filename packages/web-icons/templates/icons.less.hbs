@@ -1,0 +1,8 @@
+{{#each svgList as |svg name|}}
+  .svg_{{name}}(@color) {
+  @svg: escape('{{{replace svg.path 'class="ridi_icon"' 'xmlns="http://www.w3.org/2000/svg" fill="@{color}"'}}}');
+  display: inline-block; text-indent: -444px; font-size: 0; overflow: hidden;
+  background: url('data:image/svg+xml,@{svg}') center center no-repeat;
+  background-size: 100% 100%;
+  }
+{{/each}}

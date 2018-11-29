@@ -1,0 +1,16 @@
+---
+plugins:
+  - removeTitle: true
+  - removeXMLNS: true
+  - removeDimensions: true
+  - removeViewBox: false
+  - removeAttrs:
+      attrs:
+        - 'fill'
+        - 'fill-rule'
+        - 'stroke'
+        - 'version'
+        - 'class'
+  - collapseGroups: true
+  - addClassesToSVGElement:
+      classNames: ['ridi_icon']

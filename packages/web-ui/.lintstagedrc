@@ -1,0 +1,5 @@
+{
+  "linters": {
+    "src/**/*.{ts,tsx}": ["tslint -c ./tslint.json", "git add"]
+  }
+}

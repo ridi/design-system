@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "lerna run clean",
+    "build": "lerna run build",
+    "start": "lerna run watch --parallel"
+  },
+  "devDependencies": {
+    "lerna": "^3.5.0"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}

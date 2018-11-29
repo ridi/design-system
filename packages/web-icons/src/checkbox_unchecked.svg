@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+  <title>checkbox_unchecked</title>
+  <desc>Created with Sketch.</desc>
+  <defs></defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="checkbox_unchecked" fill="#000000">
+      <g id="레이어_1">
+        <path d="M0,0 L0,48 L48,48 L48,0 L0,0 Z M45,45 L3,45 L3,3 L45,3 L45,45 Z" id="Shape"></path>
+      </g>
+    </g>
+  </g>
+</svg>

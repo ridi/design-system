@@ -1,0 +1,128 @@
+module.exports = [
+  { '@color_blue1': 'dodgerblue[40]' },
+  { '@color_blue2': 'dodgerblue[50]' },
+  { '@color_blue3': 'dodgerblue[60]' },
+
+  { '@color_dodgerblue_1': 'dodgerblue[50]' },
+  { '@color_dodgerblue_2': 'dodgerblue[80]' },
+  { '@color_dodgerblue_3': 'dodgerblue[50]' },
+  { '@color_dodgerblue_4': 'dodgerblue[60]' },
+  { '@color_dodgerblue_5': 'dodgerblue[30]' },
+  { '@color_dodgerblue_6': 'dodgerblue[20]' },
+  { '@color_dodgerblue_7': 'dodgerblue[60]' },
+  { '@color_dodgerblue_8': 'dodgerblue[40]' },
+  { '@color_dodgerblue_9': 'dodgerblue[70]' },
+  { '@color_dodgerblue_10': 'dodgerblue[90]' },
+
+  { '@color_bluejean_1': '#5382b9' },
+  { '@color_bluejean_2': '#4076b5' },
+  { '@color_bluejean_3': '#87b4e9' },
+
+  { '@color_facebookblue_1': 'facebookblue[1]' },
+  { '@color_facebookblue_2': 'facebookblue[2]' },
+
+  { '@color_sapphireblue_1': 'dodgerblue[80]' },
+
+  { '@color_lightskyblue_1': 'dodgerblue[5]' },
+  { '@color_lightskyblue_2': 'dodgerblue[10]' },
+
+  { '@color_lightsteelblue_1': 'dodgerblue[5]' },
+  { '@color_lightsteelblue_2': 'lightsteelblue[50]' },
+  { '@color_lightsteelblue_3': 'dodgerblue[5]' },
+  { '@color_lightsteelblue_4': 'lightsteelblue[10]' },
+  { '@color_lightsteelblue_5': 'dodgerblue[5]' },
+  { '@color_lightsteelblue_6': 'lightsteelblue[60]' },
+  { '@color_lightsteelblue_7': 'lightsteelblue[30]' },
+  { '@color_lightsteelblue_8': 'lightsteelblue[5]' },
+
+  { '@color_bluegray_1': 'slategray[40]' },
+  { '@color_bluegray_2': 'lightsteelblue[90]' },
+  { '@color_bluegray_3': 'bluegray[40]' },
+  { '@color_bluegray_4': 'bluegray[30]' },
+  { '@color_bluegray_5': 'bluegray[10]' },
+  { '@color_bluegray_6': 'bluegray[30]' },
+  { '@color_bluegray_7': 'bluegray[70]' },
+  { '@color_bluegray_8': 'bluegray[80]' },
+  { '@color_bluegray_9': 'bluegray[90]' },
+  { '@color_bluegray_10': 'bluegray[90]' },
+  { '@color_bluegray_11': 'bluegray[100]' },
+  { '@color_bluegray_12': 'bluegray[80]' },
+  { '@color_bluegray_13': 'bluegray[70]' },
+  { '@color_bluegray_14': 'bluegray[50]' },
+  { '@color_bluegray_15': 'bluegray[60]' },
+  { '@color_bluegray_16': 'slategray[60]' },
+  { '@color_bluegray_17': 'bluegray[40]' },
+
+  { '@color_slategray_1': 'slategray[60]' },
+  { '@color_slategray_2': 'slategray[90]' },
+  { '@color_slategray_3': 'slategray[80]' },
+  { '@color_slategray_4': 'slategray[20]' },
+  { '@color_slategray_5': 'slategray[50]' },
+  { '@color_slategray_6': 'slategray[5]' },
+  { '@color_slategray_7': 'slategray[100]' },
+  { '@color_slategray_8': 'slategray[10]' },
+  { '@color_slategray_9': 'slategray[30]' },
+  { '@color_slategray_10': 'slategray[20]' },
+  { '@color_slategray_11': 'slategray[60]' },
+  { '@color_slategray_12': 'lightsteelblue[10]' },
+  { '@color_slategray_13': 'slategray[20]' },
+  { '@color_slategray_14': 'lightsteelblue[5]' },
+  { '@color_slategray_15': 'slategray[70]' },
+
+  { '@color_turquoise_1': '#1eafce' },
+  { '@color_turquoise_2': '#13a2c0' },
+
+  { '@color_darkcyan_1': '#36b2ba' },
+
+  { '@color_grapefruit_1': 'red[50]' },
+  { '@color_grapefruit_2': 'red[60]' },
+  { '@color_grapefruit_3': 'red[30]' },
+  { '@color_grapefruit_4': 'red[80]' },
+  { '@color_grapefruit_5': 'red[40]' },
+
+  { '@color_carrot_1': 'orange[40]' },
+
+  { '@color_pink_1': '#f77a87' },
+  { '@color_pink_2': '#f88792' },
+  { '@color_pink_3': '#ff5751' },
+
+  { '@color_beige_1': 'brown[5]' },
+  { '@color_beige_2': 'brown[10]' },
+  { '@color_beige_3': 'brown[20]' },
+
+  { '@color_brown_1': 'brown[50]' },
+  { '@color_brown_2': 'brown[60]' },
+  { '@color_brown_3': 'brown[70]' },
+
+  { '@color_greengrape_1': 'green[40]' },
+  { '@color_greengrape_2': 'green[30]' },
+  { '@color_greengrape_3': 'green[60]' },
+
+  { '@color_lemon_1': '[lemon_1]' },
+
+  { '@color_green_1': 'green[5]' },
+  { '@color_green_2': 'green[50]' },
+  { '@color_green_3': 'green[60]' },
+  { '@color_green_4': 'green[10]' },
+
+  { '@color_gray3': 'gray[80]' },
+  { '@color_gray6': 'gray[60]' },
+  { '@color_gray9': 'gray[40]' },
+  { '@color_grayb': 'gray[30]' },
+  { '@color_grayc': 'gray[20]' },
+  { '@color_grayd': 'gray[10]' },
+
+  { '@color_red_1': 'orange[50]' },
+
+  { '@color_highlighter_yellow': 'highlighter[yellow]' },
+  { '@color_highlighter_green': 'highlighter[green]' },
+  { '@color_highlighter_purple': 'highlighter[purple]' },
+  { '@color_highlighter_blue': 'highlighter[blue]' },
+  { '@color_highlighter_pink': 'highlighter[pink]' },
+  { '@color_highlighter_red': 'highlighter[red]' },
+
+  { '@color_hello': '[hello]' },
+  { '@color_comic': '[comic]' },
+  { '@color_fanmu': '[fanmu]' }
+];
+

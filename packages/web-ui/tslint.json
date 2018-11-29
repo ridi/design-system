@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "@ridi/tslint-config",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ],
+  "rules": {
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "esSpecCompliant": true
+      }
+    ]
+  },
+  "linterOptions": {
+    "exclude": [
+      "**/node_modules/**",
+      "**/__tests__/**"
+    ]
+  }
+}
