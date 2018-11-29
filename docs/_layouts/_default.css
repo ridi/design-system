@@ -298,19 +298,7 @@ body {
 }
 
 .site-main {
-  padding: var(--site-padding);
-
-  &::before {
-    display: block;
-    content: "";
-    margin-bottom: 80px;
-  }
-
-  &::after {
-    display: block;
-    content: "";
-    margin-top: 80px;
-  }
+  padding: 60px var(--site-padding) 80px;
 }
 
 .site-main__container {

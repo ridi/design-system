@@ -1,8 +1,6 @@
 html.home {
   & .site-main {
-    &::before, &::after {
-      display: none;
-    }
+    padding: var(--site-padding);
   }
 
   & .site-main__container {

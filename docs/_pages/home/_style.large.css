@@ -1,7 +1,4 @@
 html.home {
-  & .site-main {
-  }
-
   & .header {
     padding: 120px var(--site-padding);
     background-image: url('./img/home_bg.png');
