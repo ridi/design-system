@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="52px" height="48px" viewBox="0 0 52 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-  <title>home_2</title>
-  <desc>Created with Sketch.</desc>
-  <defs></defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="home_2" fill="#000000">
-      <g id="Layer_2">
-        <path d="M52,29.4 L26,0 L0,29.4 L9,29.4 L9,48 L22.2,48 L22.2,33.8 C22.2,33 22.8,32.2 23.8,32.2 L28.4,32.2 C29.2,32.2 30,32.8 30,33.8 L30,48 L43.2,48 L43.2,29.4 L52,29.4 Z M32.8,45 L32.8,32.4 C32.8,30.8 31.4,29.4 29.8,29.4 L22.2,29.4 C20.6,29.4 19.2,30.8 19.2,32.4 L19.2,45 L12,45 L12,26.4 L6.8,26.4 L26,4.6 L45.8,26.4 L40,26.4 L40,45 L32.8,45 Z" id="Shape"></path>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg viewBox="0 0 52 48" xmlns="http://www.w3.org/2000/svg" class="ridi_icon"><path d="M52 29.4L26 0 0 29.4h9V48h13.2V33.8c0-.8.6-1.6 1.6-1.6h4.6c.8 0 1.6.6 1.6 1.6V48h13.2V29.4H52zM32.8 45V32.4c0-1.6-1.4-3-3-3h-7.6c-1.6 0-3 1.4-3 3V45H12V26.4H6.8L26 4.6l19.8 21.8H40V45h-7.2z"/></svg>

@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-  <title>plus_1</title>
-  <desc>Created with Sketch.</desc>
-  <defs></defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="plus_1" fill="#000000">
-      <g id="레이어_1">
-        <polygon id="Shape" points="48 19.5 28.5 19.5 28.5 0 19.5 0 19.5 19.5 0 19.5 0 28.5 19.5 28.5 19.5 48 28.5 48 28.5 28.5 48 28.5"></polygon>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="ridi_icon"><path d="M48 19.5H28.5V0h-9v19.5H0v9h19.5V48h9V28.5H48z"/></svg>

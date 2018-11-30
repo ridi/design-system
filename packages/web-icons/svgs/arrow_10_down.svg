@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="48px" viewBox="0 0 18 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-  <title>arrow_10_down</title>
-  <desc>Created with Sketch.</desc>
-  <defs></defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="arrow_10_down" fill="#000000">
-      <g id="레이어_1">
-        <polygon id="Shape" points="7.2 0 10.7 0 10.7 30.2 17.8 30.2 9 48 0.2 30.2 7.3 30.2"></polygon>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg viewBox="0 0 18 48" xmlns="http://www.w3.org/2000/svg" class="ridi_icon"><path d="M7.2 0h3.5v30.2h7.1L9 48 .2 30.2h7.1z"/></svg>

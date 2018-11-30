@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="45px" height="49px" viewBox="0 0 45 49" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-  <title>reverse_1</title>
-  <desc>Created with Sketch.</desc>
-  <defs></defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="reverse_1" fill="#231F20">
-      <g id="Layer_1">
-        <g id="Group">
-          <polygon id="Shape" points="0.6 18.6 7.3 18.6 7.3 36.8 15.3 36.8 15.3 18.6 22 18.6 11.3 0.3"></polygon>
-          <polygon id="Shape" points="37.5 30.1 37.5 11.9 29.4 11.9 29.4 30.1 22.8 30.1 33.4 48.3 44.1 30.1"></polygon>
-        </g>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg viewBox="0 0 45 49" xmlns="http://www.w3.org/2000/svg" class="ridi_icon"><path d="M.6 18.6h6.7v18.2h8V18.6H22L11.3.3zm36.9 11.5V11.9h-8.1v18.2h-6.6l10.6 18.2 10.7-18.2z"/></svg>

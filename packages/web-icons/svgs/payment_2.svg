@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="35px" viewBox="0 0 48 35" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-  <title>payment_2</title>
-  <desc>Created with Sketch.</desc>
-  <defs></defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="payment_2" fill="#000000">
-      <g id="Layer_1">
-        <path d="M43.4,0.1 L4.6,0.1 C2.1,0.1 0,2.1 0,4.7 L0,6.5 L48,6.5 L48,4.7 C48,2.1 45.9,0.1 43.4,0.1 Z" id="Shape"></path>
-        <path d="M0,30.3 C0,32.9 2.1,34.9 4.6,34.9 L43.3,34.9 C45.9,34.9 47.9,32.8 47.9,30.3 L47.9,11.4 L0,11.4 L0,30.3 Z M6.4,20.4 C6.4,19.9 6.9,19.4 7.4,19.4 L14.6,19.4 C15.1,19.4 15.6,19.9 15.6,20.4 L15.6,27.6 C15.6,28.1 15.1,28.6 14.6,28.6 L7.4,28.6 C6.9,28.6 6.4,28.1 6.4,27.6 L6.4,20.4 L6.4,20.4 Z" id="Shape"></path>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg viewBox="0 0 48 35" xmlns="http://www.w3.org/2000/svg" class="ridi_icon"><path d="M43.4.1H4.6C2.1.1 0 2.1 0 4.7v1.8h48V4.7C48 2.1 45.9.1 43.4.1zM0 30.3c0 2.6 2.1 4.6 4.6 4.6h38.7c2.6 0 4.6-2.1 4.6-4.6V11.4H0v18.9zm6.4-9.9c0-.5.5-1 1-1h7.2c.5 0 1 .5 1 1v7.2c0 .5-.5 1-1 1H7.4c-.5 0-1-.5-1-1v-7.2z"/></svg>

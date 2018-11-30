@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-  <title>pencil_1</title>
-  <desc>Created with Sketch.</desc>
-  <defs></defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="pencil_1" fill="#444444">
-      <g id="레이어_1">
-        <path d="M36,0 C35.2,0 34.4,0.3 33.9,0.9 L0.9,33.9 C0.3,34.4 0,35.2 0,36 L0,48 L12,48 C12.8,48 13.6,47.7 14.1,47.1 L47.1,14.1 C47.7,13.6 48,12.8 48,12 C48,5.4 42.6,0 36,0 L36,0 Z M6,45 C6,43.3 4.7,42 3,42 L3,36 C8,36 12,40 12,45 L6,45 Z" id="Shape"></path>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="ridi_icon"><path d="M36 0c-.8 0-1.6.3-2.1.9l-33 33c-.6.5-.9 1.3-.9 2.1v12h12c.8 0 1.6-.3 2.1-.9l33-33c.6-.5.9-1.3.9-2.1 0-6.6-5.4-12-12-12zM6 45c0-1.7-1.3-3-3-3v-6c5 0 9 4 9 9H6z"/></svg>

@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="47px" height="48px" viewBox="0 0 47 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-  <title>book_mark_1</title>
-  <desc>Created with Sketch.</desc>
-  <defs></defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="book_mark_1" fill="#000000">
-      <g id="레이어_1">
-        <path d="M4.3,0 L42.7,0 C44.6,0 46.2,1.5 46.2,3.4 L46.2,44.5 C46.2,46.4 46.4,47.9 44.5,47.9 C44.5,47.9 44.2,48.1 41.4,46 C34.7,41 23.3,34.2 23.3,34.2 C23.3,34.2 12,41.2 5.4,46.2 C2.7,48.2 2.6,48 2.6,48 C0.7,48 0.9,46.5 0.9,44.6 L0.9,3.5 C0.8,1.5 2.4,0 4.3,0 Z" id="Shape"></path>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg viewBox="0 0 47 48" xmlns="http://www.w3.org/2000/svg" class="ridi_icon"><path d="M4.3 0h38.4c1.9 0 3.5 1.5 3.5 3.4v41.1c0 1.9.2 3.4-1.7 3.4 0 0-.3.2-3.1-1.9-6.7-5-18.1-11.8-18.1-11.8s-11.3 7-17.9 12c-2.7 2-2.8 1.8-2.8 1.8C.7 48 .9 46.5.9 44.6V3.5C.8 1.5 2.4 0 4.3 0z"/></svg>

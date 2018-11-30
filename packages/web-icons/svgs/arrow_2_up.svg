@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="29px" viewBox="0 0 48 29" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-  <title>arrow_2_up</title>
-  <desc>Created with Sketch.</desc>
-  <defs></defs>
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="arrow_2_up" transform="translate(-1.000000, 0.000000)" fill="#000000">
-      <g id="레이어_1">
-        <path d="M47.7,20.4 C46,18.7 28.3,1.8 28.3,1.8 C27.4,0.9 26.2,0.4 25,0.4 C23.8,0.4 22.6,0.9 21.7,1.8 C21.7,1.8 4,18.7 2.3,20.4 C0.6,22.1 0.5,25.2 2.3,27.1 C4.1,28.9 6.6,29.1 8.8,27.1 L25,11.6 L41.2,27.1 C43.4,29.1 45.9,28.9 47.7,27.1 C49.5,25.2 49.4,22.1 47.7,20.4 L47.7,20.4 Z" id="Shape"></path>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg viewBox="0 0 48 29" xmlns="http://www.w3.org/2000/svg" class="ridi_icon"><path d="M46.7 20.4C45 18.7 27.3 1.8 27.3 1.8 26.4.9 25.2.4 24 .4c-1.2 0-2.4.5-3.3 1.4 0 0-17.7 16.9-19.4 18.6-1.7 1.7-1.8 4.8 0 6.7 1.8 1.8 4.3 2 6.5 0L24 11.6l16.2 15.5c2.2 2 4.7 1.8 6.5 0 1.8-1.9 1.7-5 0-6.7z"/></svg>
