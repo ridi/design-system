@@ -8,7 +8,7 @@
     "url": "git+https://github.com/ridi/design-system.git"
   },
   "scripts": {
-    "svgo": "svgo --config=.svgo.yml --folder=src"
+    "svgo": "svgo --config=.svgo.yml --folder=svgs"
   },
   "devDependencies": {
     "svgo": "^1.1.1"
