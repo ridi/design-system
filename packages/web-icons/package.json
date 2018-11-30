@@ -8,17 +8,9 @@
     "url": "git+https://github.com/ridi/design-system.git"
   },
   "scripts": {
-    "clean": "git clean -xdf --exclude=node_modules .",
-    "build": "node scripts/build.js",
-    "watch": "node scripts/watch.js"
+    "svgo": "svgo --config=.svgo.yml --folder=src"
   },
   "devDependencies": {
-    "chalk": "^2.4.1",
-    "chokidar": "^2.0.4",
-    "debounce-async": "0.0.2",
-    "decache": "^4.5.0",
-    "handlebars": "^4.0.12",
-    "svgo": "^1.1.1",
-    "yamljs": "^0.3.0"
+    "svgo": "^1.1.1"
   }
 }

@@ -1,7 +1,5 @@
----
 plugins:
   - removeTitle: true
-  - removeXMLNS: true
   - removeDimensions: true
   - removeViewBox: false
   - removeAttrs:
