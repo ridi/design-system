@@ -1,7 +1,6 @@
 plugins:
-  - removeTitle: true
-  - removeDimensions: true
   - removeViewBox: false
+  - removeDimensions: true
   - removeAttrs:
       attrs:
         - 'fill'
@@ -9,6 +8,5 @@ plugins:
         - 'stroke'
         - 'version'
         - 'class'
-  - collapseGroups: true
   - addClassesToSVGElement:
       classNames: ['ridi_icon']
