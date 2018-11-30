@@ -32,6 +32,10 @@ module.exports = {
         include: srcDir,
         use: ['babel-loader', 'awesome-typescript-loader'],
       },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
     ],
   },
   plugins: [

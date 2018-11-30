@@ -7,10 +7,15 @@
     "type": "git",
     "url": "git+https://github.com/ridi/design-system.git"
   },
+  "main": "index.js",
   "scripts": {
+    "build": "node build.js",
+    "watch": "chokidar 'svgs/*.svg' -c 'node build.js' --initial --silent",
     "precommit": "lint-staged"
   },
   "devDependencies": {
+    "chalk": "^2.4.1",
+    "chokidar-cli": "^1.2.1",
     "lint-staged": "^8.1.0",
     "svgo": "^1.1.1"
   }

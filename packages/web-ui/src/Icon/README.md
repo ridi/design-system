@@ -1,9 +1,9 @@
 ```jsx
-const icons = require('@ridi/web-icons/dist/icons');
+const svgs = require('@ridi/web-icons');
 
 <div>
   {
-    Object.keys(icons).map((name) => (
+    Object.keys(svgs).map((name) => (
       <div
         key={name} 
         style={{
