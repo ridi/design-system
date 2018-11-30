@@ -12,12 +12,7 @@
     "build": "webpack",
     "watch": "styleguidist server",
     "lint": "tslint src/**/*.{ts,tsx} -c ./tslint.json --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -30,7 +25,6 @@
     "babel-plugin-emotion": "^9.2.11",
     "clean-webpack-plugin": "^0.1.19",
     "emotion": "^9.2.12",
-    "husky": "^1.1.4",
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2",
     "react": "^16.6.0",
