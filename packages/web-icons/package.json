@@ -8,9 +8,10 @@
     "url": "git+https://github.com/ridi/design-system.git"
   },
   "scripts": {
-    "svgo": "svgo --config=.svgo.yml --folder=svgs"
+    "precommit": "lint-staged"
   },
   "devDependencies": {
+    "lint-staged": "^8.1.0",
     "svgo": "^1.1.1"
   }
 }

@@ -1,0 +1,5 @@
+{
+  "linters": {
+    "svgs/**/*.svg": ["svgo --config=.svgo.yml", "git add"]
+  }
+}
