@@ -1,6 +1,9 @@
 import * as icons from '@ridi/web-icons';
 import * as React from 'react';
 
+/**
+ * @deprecated Use `@ridi/web-icons` directly instead.
+ */
 export interface IconProps {
   /**
    * Icon name
@@ -10,6 +13,9 @@ export interface IconProps {
   [key: string]: any;
 }
 
+/**
+ * @deprecated Use `@ridi/web-icons` directly instead.
+ */
 export const Icon: React.SFC<IconProps> = ({
   name,
   ...restProps
