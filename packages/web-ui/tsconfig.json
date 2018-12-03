@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "declaration": true,
     "declarationDir": "dist",
     "jsx": "react",
@@ -11,6 +12,10 @@
     "noImplicitReturns": true,
     "resolveJsonModule": true,
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "paths": {
+      "@ridi/colors": ["../colors"],
+      "@ridi/web-icons": ["../web-icons"]
+    }
   }
 }
