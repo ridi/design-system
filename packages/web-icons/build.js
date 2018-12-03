@@ -12,7 +12,7 @@ const fileNames = fs.readdirSync('svgs').filter(name => /\.svg$/.test(name));
 
   fs.writeFileSync('index.js', data);
 
-  console.log('Generated index.js');
+  console.log('- Generated index.js');
 })();
 
 (() => {
@@ -23,7 +23,7 @@ const fileNames = fs.readdirSync('svgs').filter(name => /\.svg$/.test(name));
 
   fs.writeFileSync('index.d.ts', data);
 
-  console.log('Generated index.d.ts');
+  console.log('- Generated index.d.ts');
 })();
 
 console.log(chalk.bold.green('Build finished!'));
