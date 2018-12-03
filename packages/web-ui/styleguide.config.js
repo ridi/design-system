@@ -1,5 +1,5 @@
 const path = require('path');
-const { parse: propsParser } = require('react-docgen-typescript');
+const { parse: propsParser } = require('react-docgen-typescript').withDefaultConfig();
 const webpackConfig = require('./webpack.config');
 const pkg = require('./package.json');
 
@@ -9,7 +9,7 @@ module.exports = {
     const componentName = path.basename(path.dirname(componentPath));
     return `import { ${componentName} } from '${pkg.name}';`;
   },
-  propsParser,
+  // propsParser,
   usageMode: 'expand',
   exampleMode: 'expand',
   editorConfig: {
