@@ -1,13 +1,9 @@
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core';
 import * as colors from '@ridi/colors/colors.json';
-import { css, cx } from 'emotion';
 import * as React from 'react';
 
 export interface HelloProps {
-  /**
-   * A CSS class to be appended to default `Hello`'s class
-   */
-  className?: string;
-
   /**
    * A `string` to be attached before **"Hello"**
    */
@@ -21,18 +17,17 @@ export interface HelloProps {
   [key: string]: any;
 }
 
-const helloClassName = css`
+const style = css`
   color: ${colors.dodgerblue[5].hex};
 `;
 
 export const Hello: React.SFC<HelloProps> = ({
-  className,
   prefix,
   postfix,
   ...restProps
 }) => (
   <span
-    className={cx(helloClassName, className)}
+    css={style}
     {...restProps}
   >
     {prefix}Hello{postfix}

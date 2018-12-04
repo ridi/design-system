@@ -8,7 +8,13 @@
     "build": "lerna run build",
     "start": "lerna run watch --parallel"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run precommit"
+    }
+  },
   "devDependencies": {
+    "husky": "^1.2.0",
     "lerna": "^3.5.0"
   },
   "engines": {
