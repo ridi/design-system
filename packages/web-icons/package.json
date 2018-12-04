@@ -7,18 +7,18 @@
     "type": "git",
     "url": "git+https://github.com/ridi/design-system.git"
   },
+  "main": "index.js",
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
-    "build": "node scripts/build.js",
-    "watch": "node scripts/watch.js"
+    "build": "node build.js",
+    "watch": "chokidar 'svgs/*.svg' -c 'node build.js' --initial --silent",
+    "svgo": "svgo --config=.svgo.yml --folder=svgs --multipass",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "chalk": "^2.4.1",
-    "chokidar": "^2.0.4",
-    "debounce-async": "0.0.2",
-    "decache": "^4.5.0",
-    "handlebars": "^4.0.12",
-    "svgo": "^1.1.1",
-    "yamljs": "^0.3.0"
+    "chokidar-cli": "^1.2.1",
+    "lint-staged": "^8.1.0",
+    "svgo": "^1.1.1"
   }
 }

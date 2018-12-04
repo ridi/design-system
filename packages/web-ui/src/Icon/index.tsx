@@ -1,35 +1,26 @@
-import { default as Icons, Icons as IconsInterface } from '@ridi/web-icons/dist/icons';
+import * as icons from '@ridi/web-icons';
 import * as React from 'react';
 
+/**
+ * @deprecated Use `@ridi/web-icons` directly instead.
+ */
 export interface IconProps {
   /**
    * Icon name
    */
-  name: keyof IconsInterface;
+  name: keyof typeof icons;
 
   [key: string]: any;
 }
 
+/**
+ * @deprecated Use `@ridi/web-icons` directly instead.
+ */
 export const Icon: React.SFC<IconProps> = ({
   name,
   ...restProps
 }) => {
-  const icon = Icons[name];
+  const Component = icons[name];
 
-  if (!icon) {
-    return null;
-  }
-
-  const [width, height, contents] = icon;
-  const viewBox = `0 0 ${width} ${height}`;
-
-  return (
-    <svg
-      viewBox={viewBox}
-      width={width}
-      height={height}
-      dangerouslySetInnerHTML={{ __html: contents }}
-      {...restProps}
-    />
-  );
+  return <Component {...restProps} />;
 };

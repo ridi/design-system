@@ -1,5 +1,3 @@
 /node_modules
-/dist
-/icons
-/icons.*
-/rendered.less
+/index.d.ts
+/index.js
