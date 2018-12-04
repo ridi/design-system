@@ -1,13 +1,9 @@
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core';
 import colors from '@ridi/colors';
-import { css, cx } from 'emotion';
 import * as React from 'react';
 
 export interface WorldProps {
-  /**
-   * A CSS class to be appended to default `World`'s class
-   */
-  className?: string;
-
   /**
    * A `string` to be attached before **"World"**
    */
@@ -21,18 +17,17 @@ export interface WorldProps {
   [key: string]: any;
 }
 
-const worldClassName = css({
+const style = css({
   color: colors.orange_50,
 });
 
 export const World: React.SFC<WorldProps> = ({
-  className,
   prefix,
   postfix,
   ...restProps
 }) => (
   <span
-    className={cx(worldClassName, className)}
+    css={style}
     {...restProps}
   >
     {prefix}World{postfix}
