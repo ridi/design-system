@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
+    "@emotion/core": "^10.0.2",
     "@ridi/colors": "*",
     "@ridi/tslint-config": "^0.1.0",
     "@ridi/web-icons": "*",
@@ -24,7 +25,6 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^10.0.2",
     "clean-webpack-plugin": "^0.1.19",
-    "emotion": "^10.0.2",
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2",
     "react": "^16.6.0",
