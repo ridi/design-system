@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import * as colors from '@ridi/colors/colors.json';
+import colors from '@ridi/colors';
 import * as React from 'react';
 
 export interface WorldProps {
@@ -18,7 +18,7 @@ export interface WorldProps {
 }
 
 const style = css({
-  color: colors.orange[5].hex,
+  color: colors.orange_50,
 });
 
 export const World: React.SFC<WorldProps> = ({
