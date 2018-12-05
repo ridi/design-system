@@ -2,6 +2,8 @@ import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 
+const radioSize = 18;
+
 export default css(
   resetAppearance,
   resetFont,
@@ -20,6 +22,38 @@ export default css(
 
     padding: '.6em',
     lineHeight: '1em',
+
+    '&[type=radio]': {
+      padding: 0,
+      width: radioSize,
+      height: radioSize,
+      borderRadius: '50%',
+      color: 'white',
+      textAlign: 'center',
+      cursor: 'pointer',
+
+      '&::after': {
+        content: '""',
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        width: '50%',
+        height: '50%',
+        borderRadius: '50%',
+        background: 'currentColor',
+      },
+
+      '&:not(:checked)': {
+        color: 'transparent',
+      },
+
+      '&:checked': {
+        '&:not(:disabled)': {
+          borderColor: colors.dodgerblue_60,
+          background: colors.dodgerblue_50,
+        },
+      },
+
+    },
 
     '&:hover': formElementHover,
     '&:focus': formElementFocus,
