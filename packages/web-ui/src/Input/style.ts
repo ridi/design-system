@@ -1,8 +1,7 @@
 import { css } from '@emotion/core';
 import colors from '@ridi/colors';
-import { check_1 } from '@ridi/web-icons';
+import { check_1, dot_1 } from '@ridi/web-icons';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
-import circle from './circle.svg';
 
 const buttonSize = 18;
 
@@ -68,7 +67,7 @@ export default css(
       borderRadius: '50%',
 
       '&::after': {
-        maskImage: `url(${circle})`,
+        maskImage: `url(${dot_1})`,
         transform: 'scale(.5)',
       },
     },
