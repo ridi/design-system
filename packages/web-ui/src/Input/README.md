@@ -7,7 +7,17 @@
 </div>
 ```
 
-### Radio
+### `type="checkbox"`
+```jsx
+<div>
+  <Input type="checkbox" />
+  <Input type="checkbox" defaultChecked />
+  <Input type="checkbox" disabled />
+  <Input type="checkbox" disabled defaultChecked />
+</div>
+```
+
+### `type="radio"`
 ```jsx
 <div>
   <Input name="example1" type="radio" />
