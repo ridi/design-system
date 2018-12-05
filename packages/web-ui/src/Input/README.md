@@ -1,13 +1,8 @@
 ### Basic Usage
 ```jsx
-<Input
-  type="text"
-  name="inputName"
-  value={state.value}
-  disabled={false}
-  placeholder="Enter Something."
-  onChange={(event) => {
-    setState({ value: event.target.value });
-  }}
-/>
+<div>
+  <Input placeholder="Enter Something" />
+  <Input value="This is read only" readOnly />
+  <Input value="This is disabled" disabled />
+</div>
 ```
