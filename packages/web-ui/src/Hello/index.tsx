@@ -22,7 +22,7 @@ const style = css`
   color: ${colors.dodgerblue_50};
 `;
 
-export const Hello: React.SFC<HelloProps> = ({
+export const Hello: React.FunctionComponent<HelloProps> = ({
   prefix,
   postfix,
   ...restProps

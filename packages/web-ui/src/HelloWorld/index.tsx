@@ -6,7 +6,7 @@ export interface HelloWorldProps {
   [key: string]: any;
 }
 
-export const HelloWorld: React.SFC<HelloWorldProps> = ({
+export const HelloWorld: React.FunctionComponent<HelloWorldProps> = ({
   ...restProps
 }) => (
   <span {...restProps}>

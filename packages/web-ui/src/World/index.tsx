@@ -22,7 +22,7 @@ const style = css({
   color: colors.orange_50,
 });
 
-export const World: React.SFC<WorldProps> = ({
+export const World: React.FunctionComponent<WorldProps> = ({
   prefix,
   postfix,
   ...restProps

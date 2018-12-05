@@ -16,7 +16,7 @@ export interface IconProps {
 /**
  * @deprecated Use `@ridi/web-icons` directly instead.
  */
-export const Icon: React.SFC<IconProps> = ({
+export const Icon: React.FunctionComponent<IconProps> = ({
   name,
   ...restProps
 }) => {
