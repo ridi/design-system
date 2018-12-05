@@ -3,8 +3,9 @@
 import { css, jsx } from '@emotion/core';
 import colors from '@ridi/colors';
 import * as React from 'react';
+import { BaseProps } from '../BaseProps';
 
-export interface WorldProps {
+export interface WorldProps extends BaseProps {
   /**
    * A `string` to be attached before **"World"**
    */
@@ -14,8 +15,6 @@ export interface WorldProps {
    * A `string` to be attached after **"World"**
    */
   postfix?: string;
-
-  [key: string]: any;
 }
 
 const style = css({
@@ -25,16 +24,18 @@ const style = css({
 export const World: React.FunctionComponent<WorldProps> = ({
   prefix,
   postfix,
+  render: Component,
   ...restProps
 }) => (
-  <span
+  <Component
     css={style}
     {...restProps}
   >
     {prefix}World{postfix}
-  </span>
+  </Component>
 );
 
 World.defaultProps = {
   postfix: '!',
+  render: 'span',
 };

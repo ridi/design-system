@@ -3,8 +3,9 @@
 import { css, jsx } from '@emotion/core';
 import colors from '@ridi/colors';
 import * as React from 'react';
+import { BaseProps } from '../BaseProps';
 
-export interface HelloProps {
+export interface HelloProps extends BaseProps {
   /**
    * A `string` to be attached before **"Hello"**
    */
@@ -14,8 +15,6 @@ export interface HelloProps {
    * A `string` to be attached after **"Hello"**
    */
   postfix?: string;
-
-  [key: string]: any;
 }
 
 const style = css`
@@ -25,16 +24,18 @@ const style = css`
 export const Hello: React.FunctionComponent<HelloProps> = ({
   prefix,
   postfix,
+  render: Component,
   ...restProps
 }) => (
-  <span
+  <Component
     css={style}
     {...restProps}
   >
     {prefix}Hello{postfix}
-  </span>
+  </Component>
 );
 
 Hello.defaultProps = {
   postfix: '!',
+  render: 'span',
 };
