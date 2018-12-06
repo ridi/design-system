@@ -16,6 +16,7 @@
   <Input type="checkbox" disabled defaultChecked />
 </div>
 ```
+> Consider using [`Checkbox`](#checkbox) for convenience.
 
 ### `type="radio"`
 ```jsx

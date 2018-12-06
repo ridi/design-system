@@ -1,28 +1,24 @@
 ### Basic Usage
 ```jsx
-<Checkbox
-  checked={state.checked}
-  disabled={state.disabled}
-  onChange={(event) => {
-    setState({ checked: event.target.checked });
-  }}
->
-  Checkbox
-</Checkbox>
-```
+initialState = { checked: false };
 
-### Using Label & Input Separately
-```jsx
-<Label disabled={state.disabled}>
-  <Input
-    type="checkbox"
+<div>
+  <Checkbox
     checked={state.checked}
-    disabled={state.disabled}
     onChange={(event) => {
       setState({ checked: event.target.checked });
     }}
-  />
-  Checkbox
-</Label>
+  >
+    Checkbox
+  </Checkbox>
+  
+  <Checkbox
+    checked={state.checked}
+    disabled
+  >
+    Checkbox
+  </Checkbox>
+</div>
 ```
-> This example shows how to pass props for each component explicitly.
+> If you want more control over `input`,
+> please consider using [`Label`](#label) and [`Input`](#input) directly.
