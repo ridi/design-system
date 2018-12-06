@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+initialState = { value: 'apple' };
+
 const handleChange = (event) => {
   setState({ value: event.target.value });
 };
@@ -31,20 +33,5 @@ const handleChange = (event) => {
   </Radio>
 </div>
 ```
-
-### Using Label & Input Separately
-```jsx
-<Label disabled={state.disabled}>
-  <Input
-    type="radio"
-    checked={state.value === 'radioValue'}
-    disabled={state.disabled}
-    value="radioValue"
-    onChange={(event) => {
-      setState({ value: event.target.value });
-    }}
-  />
-  Radio
-</Label>
-```
-> This example shows how to pass props for each component explicitly.
+> If you want more control over `input`,
+> please consider using [`Label`](#label) and [`Input`](#input) directly.

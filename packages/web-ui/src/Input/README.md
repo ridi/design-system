@@ -27,3 +27,4 @@
   <Input name="inputExample2" type="radio" disabled defaultChecked />
 </div>
 ```
+> Consider using [`Radio`](#radio) for convenience.
