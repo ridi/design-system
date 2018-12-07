@@ -7,6 +7,7 @@
     "tslint-plugin-prettier"
   ],
   "rules": {
+    "no-empty-interface": false,
     "trailing-comma": [
       true,
       {
