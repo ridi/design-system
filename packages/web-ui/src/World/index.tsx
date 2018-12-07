@@ -3,7 +3,7 @@
 import { css, jsx } from '@emotion/core';
 import colors from '@ridi/colors';
 import * as React from 'react';
-import { BaseProps } from '../BaseProps';
+import { Base, BaseProps } from '../Base';
 
 export interface WorldProps extends BaseProps {
   /**
@@ -24,15 +24,11 @@ const style = css({
 export const World: React.FunctionComponent<WorldProps> = ({
   prefix,
   postfix,
-  render: Component,
   ...restProps
 }) => (
-  <Component
-    css={style}
-    {...restProps}
-  >
+  <Base css={style} {...restProps}>
     {prefix}World{postfix}
-  </Component>
+  </Base>
 );
 
 World.defaultProps = {

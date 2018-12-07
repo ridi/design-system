@@ -11,3 +11,14 @@ export interface BaseProps {
    */
   [key: string]: any;
 }
+
+export const Base: React.FunctionComponent<BaseProps> = ({
+  render: Component,
+  ...restProps
+}) => (
+  <Component {...restProps} />
+);
+
+Base.defaultProps = {
+  render: 'div',
+};

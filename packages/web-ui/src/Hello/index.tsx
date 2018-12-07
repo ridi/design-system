@@ -3,7 +3,7 @@
 import { css, jsx } from '@emotion/core';
 import colors from '@ridi/colors';
 import * as React from 'react';
-import { BaseProps } from '../BaseProps';
+import { Base, BaseProps } from '../Base';
 
 export interface HelloProps extends BaseProps {
   /**
@@ -24,15 +24,11 @@ const style = css`
 export const Hello: React.FunctionComponent<HelloProps> = ({
   prefix,
   postfix,
-  render: Component,
   ...restProps
 }) => (
-  <Component
-    css={style}
-    {...restProps}
-  >
+  <Base css={style} {...restProps}>
     {prefix}Hello{postfix}
-  </Component>
+  </Base>
 );
 
 Hello.defaultProps = {

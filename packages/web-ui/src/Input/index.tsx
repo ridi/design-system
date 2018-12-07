@@ -2,19 +2,13 @@
 // noinspection ES6UnusedImports
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { BaseProps } from '../BaseProps';
+import { Base, BaseProps } from '../Base';
 import style from './style';
 
 export interface InputProps extends BaseProps {}
 
-export const Input: React.FunctionComponent<InputProps> = ({
-  render: Component,
-  ...restProps
-}) => (
-  <Component
-    css={style}
-    {...restProps}
-  />
+export const Input: React.FunctionComponent<InputProps> = (props) => (
+  <Base css={style} {...props} />
 );
 
 Input.defaultProps = {
