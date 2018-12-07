@@ -1,6 +1,4 @@
-/** @jsx jsx */
-// noinspection ES6UnusedImports
-import { css, jsx } from '@emotion/core';
+import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import * as React from 'react';
 import { Base, BaseProps } from '../Base';

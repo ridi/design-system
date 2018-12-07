@@ -1,3 +1,6 @@
+/** @jsx jsx */
+// noinspection ES6UnusedImports
+import { jsx } from '@emotion/core';
 import * as React from 'react';
 
 export interface BaseProps {
