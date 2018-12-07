@@ -1,16 +1,17 @@
 import * as React from 'react';
+import { Base, BaseProps } from '../Base';
 import { Hello } from '../Hello';
 import { World } from '../World';
 
-export interface HelloWorldProps {
-  [key: string]: any;
-}
+export interface HelloWorldProps extends BaseProps {}
 
-export const HelloWorld: React.SFC<HelloWorldProps> = ({
-  ...restProps
-}) => (
-  <span {...restProps}>
+export const HelloWorld: React.FunctionComponent<HelloWorldProps> = (props) => (
+  <Base {...props}>
     <Hello postfix=" " />
     <World />
-  </span>
+  </Base>
 );
+
+HelloWorld.defaultProps = {
+  render: 'span',
+};

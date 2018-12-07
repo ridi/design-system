@@ -1,9 +1,9 @@
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import * as React from 'react';
+import { Base, BaseProps } from '../Base';
 
-export interface WorldProps {
+export interface WorldProps extends BaseProps {
   /**
    * A `string` to be attached before **"World"**
    */
@@ -13,27 +13,23 @@ export interface WorldProps {
    * A `string` to be attached after **"World"**
    */
   postfix?: string;
-
-  [key: string]: any;
 }
 
 const style = css({
   color: colors.orange_50,
 });
 
-export const World: React.SFC<WorldProps> = ({
+export const World: React.FunctionComponent<WorldProps> = ({
   prefix,
   postfix,
   ...restProps
 }) => (
-  <span
-    css={style}
-    {...restProps}
-  >
+  <Base css={style} {...restProps}>
     {prefix}World{postfix}
-  </span>
+  </Base>
 );
 
 World.defaultProps = {
   postfix: '!',
+  render: 'span',
 };
