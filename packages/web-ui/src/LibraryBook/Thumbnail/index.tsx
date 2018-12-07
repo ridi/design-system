@@ -1,19 +1,21 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 import {
   AdultBadge,
-  BOOK_COUNT_UNIT,
   BookCountProps,
+  BookCountUnit,
   Checkbox,
-  DOWNLOAD_STATUS,
   DownloadButton,
+  DownloadStatus,
   DownloadStatusProps,
   Expired,
   ExpiredAt,
   NotAvailable,
-  READING_STATUS,
   ReadingProgressBar,
   ReadingProgressBarProps,
+  ReadingStatus,
   Ridiselect,
   SelectProps,
   ThumbnailImage,
@@ -22,37 +24,41 @@ import {
   UnitBookDownloading,
   UnReadDot,
   UpdateBadge,
-  VIEW_TYPE,
+  ViewType,
 } from '../';
+import { DownloadButtonSize } from '../DownloadButton/styles';
+import { UnitBookDownloadingSize } from '../UnitBookDownloading/styles';
+import * as styles from './styles';
 
 export interface ThumbnailProps extends
   BookCountProps,
   DownloadStatusProps,
   ReadingProgressBarProps,
-  SelectProps,
   ThumbnailImageProps {
     adultBadge?: boolean;
-    bookId: string;
     children?: React.ReactNode;
     className?: string;
     expired?: boolean;
     expiredAt?: string;
     notAvailable?: boolean;
-    readingStatus?: READING_STATUS;
+    onSelectedChange?: (e: React.SyntheticEvent<any>) => void;
+    selectMode?: boolean;
+    selected?: boolean;
+    readingStatus?: ReadingStatus;
     ridiSelect?: boolean;
     unitBook?: boolean;
     updateBadge?: boolean;
-    viewType?: VIEW_TYPE;
+    viewType?: ViewType;
     thumbnailWidth?: number;
     [extraKey: string]: any;
   }
 
-export const Thumbnail: React.SFC<ThumbnailProps> = (props) => {
+export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   const {
     adultBadge = false,
     bookCount = 0,
     bookCountLinkUrl,
-    bookCountUnit = BOOK_COUNT_UNIT.Single,
+    bookCountUnit = BookCountUnit.Single,
     bookCountWrapper,
     children,
     className,
@@ -61,7 +67,7 @@ export const Thumbnail: React.SFC<ThumbnailProps> = (props) => {
     expired = false,
     expiredAt,
     notAvailable = false,
-    onSelected,
+    onSelectedChange,
     readingProgress,
     readingStatus,
     ridiselect,
@@ -71,39 +77,37 @@ export const Thumbnail: React.SFC<ThumbnailProps> = (props) => {
     thumbnailWidth,
     unitBook = false,
     updateBadge = false,
-    viewType = VIEW_TYPE.Portrait,
+    viewType = ViewType.Portrait,
     ...extraProps
   } = props;
-  const width = { width: `${thumbnailWidth}px` };
 
   return (
     <div
+      css={[styles.thumbnail, thumbnailWidth && styles.thumbnailWidth(thumbnailWidth)]}
       className={classNames(['Thumbnail', className])}
-      style={thumbnailWidth ? width : {}}
       {...extraProps}
     >
-      {readingStatus && <>
-        {readingStatus === READING_STATUS.New ? (
+      {readingStatus && <React.Fragment>
+        {readingStatus === ReadingStatus.New ? (
           <UnReadDot />
-        ) : readingStatus === READING_STATUS.Opened && viewType === VIEW_TYPE.Portrait ? (
+        ) : readingStatus === ReadingStatus.Opened && viewType === ViewType.Portrait ? (
           <ReadingProgressBar readingProgress={readingProgress} />
         ) : null}
-      </>}
-      <div className="Thumbnail_ThumbnailImageWrapper">
+      </React.Fragment>}
+      <div css={styles.thumbnailImageWrapper}>
         {selectMode &&
           <Checkbox
-            onSelected={(e) => {onSelected(e); }}
-            selectMode={selectMode}
-            selected={selected}
+            onChange={onSelectedChange}
+            checked={selected}
           />
         }
         <ThumbnailImage thumbnailUrl={thumbnailUrl} />
         {adultBadge && <AdultBadge />}
         {updateBadge && <UpdateBadge />}
-        {viewType === VIEW_TYPE.Portrait &&
-          <>
+        {viewType === ViewType.Portrait &&
+          <React.Fragment>
             {unitBook ? (
-              <>
+              <React.Fragment>
                 {bookCount &&
                   <UnitBookCount
                     bookCount={bookCount}
@@ -111,15 +115,15 @@ export const Thumbnail: React.SFC<ThumbnailProps> = (props) => {
                     bookCountWrapper={bookCountWrapper}
                   />
                 }
-                {downloadStatus === DOWNLOAD_STATUS.Downloading && <UnitBookDownloading size="large" />}
-              </>
+                {downloadStatus === DownloadStatus.Downloading && <UnitBookDownloading size={UnitBookDownloadingSize.Large} />}
+              </React.Fragment>
             ) : (
-              <>
+              <React.Fragment>
                 {!notAvailable &&
                   <DownloadButton
                     downloadStatus={downloadStatus}
                     downloadProgress={downloadProgress}
-                    size="large"
+                    size={DownloadButtonSize.Large}
                   />
                 }
                 {ridiselect ? (
@@ -129,9 +133,9 @@ export const Thumbnail: React.SFC<ThumbnailProps> = (props) => {
                 ) : expiredAt ? (
                   <ExpiredAt expiredAt={expiredAt} />
                 ) : null}
-              </>
+              </React.Fragment>
             )}
-          </>
+          </React.Fragment>
         }
         {children}
         {notAvailable && <NotAvailable />}

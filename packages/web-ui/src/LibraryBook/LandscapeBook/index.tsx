@@ -1,6 +1,9 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 import * as LibraryBook from '../';
+import * as styles from './styles';
 
 export interface LandscapeBookProps extends
   LibraryBook.AnnotationsProps,
@@ -11,7 +14,7 @@ export interface LandscapeBookProps extends
     [extraKey: string]: any;
   }
 
-export const LandscapeBook: React.SFC<LandscapeBookProps> = (props) => {
+export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props) => {
   const {
     adultBadge,
     annotations = {
@@ -31,7 +34,7 @@ export const LandscapeBook: React.SFC<LandscapeBookProps> = (props) => {
     expired = false,
     expiredAt,
     notAvailable = false,
-    onSelected,
+    onSelectedChange,
     readingProgress,
     readingStatus,
     ridiselect,
@@ -47,24 +50,24 @@ export const LandscapeBook: React.SFC<LandscapeBookProps> = (props) => {
 
   return (
     <div
+      css={styles.landscapeBook}
       className={classNames(['LandscapeBook', className])}
       {...extraProps}
     >
-      <div className="LandscapeBook_Thumbnail">
+      <div css={styles.thumbnail}>
         <LibraryBook.Thumbnail
           adultBadge={adultBadge}
-          bookId={bookId}
-          onSelected={(e) => {onSelected(e); }}
+          onSelectedChange={onSelectedChange}
           readingStatus={readingStatus}
           selected={selected}
           selectMode={selectMode}
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
           updateBadge={updateBadge}
-          viewType={LibraryBook.VIEW_TYPE.Landscape}
+          viewType={LibraryBook.ViewType.Landscape}
         />
       </div>
-      <div className="LandscapeBook_Metadata">
+      <div css={styles.metadata}>
         {title && <LibraryBook.Title title={title}/>}
         {author && <LibraryBook.Author author={author}/>}
         {ridiselect ? (
@@ -75,9 +78,9 @@ export const LandscapeBook: React.SFC<LandscapeBookProps> = (props) => {
           <LibraryBook.ExpiredAt expiredAt={expiredAt} />
         ) : null}
       </div>
-      <div className="LandscapeBook_Buttons">
+      <div css={styles.buttons}>
         {unitBook ? (
-          downloadStatus === LibraryBook.DOWNLOAD_STATUS.Downloading ? (
+          downloadStatus === LibraryBook.DownloadStatus.Downloading ? (
             <LibraryBook.UnitBookDownloading />
           ) : (
             bookCount ? (
@@ -89,20 +92,20 @@ export const LandscapeBook: React.SFC<LandscapeBookProps> = (props) => {
             ) : null
           )
         ) : (
-          readingStatus === LibraryBook.READING_STATUS.Opened ? (
-            <>
+          readingStatus === LibraryBook.ReadingStatus.Opened ? (
+            <React.Fragment>
               <LibraryBook.ReadingProgressBar readingProgress={readingProgress} />
               <LibraryBook.Annotations annotations={annotations} />
-            </>
+            </React.Fragment>
           ) : (
             !notAvailable ? (
-              <>
+              <React.Fragment>
                 <LibraryBook.DownloadButton
                   downloadProgress={downloadProgress}
                   downloadSize={downloadSize}
                   downloadStatus={downloadStatus}
                 />
-              </>
+              </React.Fragment>
             ) : null
           )
         )}

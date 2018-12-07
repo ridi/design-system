@@ -1,8 +1,8 @@
-export enum VIEW_TYPE {
+export enum ViewType {
   Portrait = 'portrait',
   Landscape = 'landscape',
 }
-export enum READING_STATUS {
+export enum ReadingStatus {
   New = 'new',
   Opened = 'opened',
 }
@@ -16,12 +16,12 @@ export * from './Expired';
 export * from './ExpiredAt';
 export * from './NotAvailable';
 export * from './ReadingProgressBar';
-export * from './Ridiselect';
+export * from './RidiSelect';
 export * from './ThumbnailImage';
 export * from './Title';
 export * from './UnitBookCount';
 export * from './UnitBookDownloading';
-export * from './UnReadDot';
+export * from './UnreadDot';
 export * from './UpdateBadge';
 
 export * from './LandscapeBook';

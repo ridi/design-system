@@ -1,6 +1,9 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 import * as LibraryBook from '../';
+import * as styles from './styles';
 
 export interface PortraitBookProps extends
   LibraryBook.AuthorProps,
@@ -10,7 +13,7 @@ export interface PortraitBookProps extends
     [extraKey: string]: any;
   }
 
-export const PortraitBook: React.SFC<PortraitBookProps> = (props) => {
+export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) => {
   const {
     adultBadge,
     author,
@@ -24,7 +27,7 @@ export const PortraitBook: React.SFC<PortraitBookProps> = (props) => {
     expired = false,
     expiredAt,
     notAvailable = false,
-    onSelected,
+    onSelectedChange,
     readingProgress,
     readingStatus,
     ridiselect,
@@ -40,10 +43,11 @@ export const PortraitBook: React.SFC<PortraitBookProps> = (props) => {
 
   return (
     <div
+      css={styles.portraitBook}
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
-      <div className="PortraitBook_Thumbnail">
+      <div css={styles.thumbnail}>
         <LibraryBook.Thumbnail
           adultBadge={adultBadge}
           bookCount={bookCount}
@@ -55,7 +59,7 @@ export const PortraitBook: React.SFC<PortraitBookProps> = (props) => {
           expired={expired}
           expiredAt={expiredAt}
           notAvailable={notAvailable}
-          onSelected={(e) => {onSelected(e); }}
+          onSelectedChange={onSelectedChange}
           readingProgress={readingProgress}
           readingStatus={readingStatus}
           ridiselect={ridiselect}
@@ -65,10 +69,10 @@ export const PortraitBook: React.SFC<PortraitBookProps> = (props) => {
           thumbnailWidth={thumbnailWidth}
           unitBook={unitBook}
           updateBadge={updateBadge}
-          viewType={LibraryBook.VIEW_TYPE.Portrait}
+          viewType={LibraryBook.ViewType.Portrait}
         />
       </div>
-      <div className="PortraitBook_Metadata">
+      <div css={styles.metadata}>
         {title && <LibraryBook.Title title={title}/>}
         {author && <LibraryBook.Author author={author}/>}
       </div>

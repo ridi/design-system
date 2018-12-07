@@ -2,14 +2,14 @@
 ```jsx
 const selected = true;
 <LibraryBook.Thumbnail
-  viewType={LibraryBook.VIEW_TYPE.Portrait}
+  viewType={LibraryBook.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
   ridiselect
   unitBook
   bookCount={50}
-  bookCountUnit={LibraryBook.BOOK_COUNT_UNIT.Serial}
+  bookCountUnit={LibraryBook.BookCountUnit.Serial}
   bookCountWrapper={{
     wrapper: 'a',
     getProps() {
@@ -20,13 +20,13 @@ const selected = true;
   }}
   selectMode
   selected={selected}
-  onSelected={() => {console.log('selected!')}}
-  readingStatus={LibraryBook.READING_STATUS.New}
+  onSelectedChange={() => {console.log('selected!')}}
+  readingStatus={LibraryBook.ReadingStatus.New}
 />
 ```
 ```jsx
 <LibraryBook.Thumbnail
-  viewType={LibraryBook.VIEW_TYPE.Portrait}
+  viewType={LibraryBook.ViewType.Portrait}
   thumbnailUrl="//misc.ridibooks.com/cover/425063833/xlarge"
   adultBadge
   updateBadge
@@ -34,7 +34,7 @@ const selected = true;
   notAvailable={true}
   unitBook
   bookCount={50}
-  bookCountUnit={LibraryBook.BOOK_COUNT_UNIT.Serial}
+  bookCountUnit={LibraryBook.BookCountUnit.Serial}
   bookCountWrapper={{
     wrapper: 'a',
     getProps() {
@@ -43,20 +43,20 @@ const selected = true;
       };
     },
   }}
-  onSelected={() => {console.log('selected!')}}
-  readingStatus={LibraryBook.READING_STATUS.New}
+  onSelectedChange={() => {console.log('selected!')}}
+  readingStatus={LibraryBook.ReadingStatus.New}
 />
 ```
 ```jsx
 <LibraryBook.Thumbnail
-  viewType={LibraryBook.VIEW_TYPE.Portrait}
+  viewType={LibraryBook.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
   ridiselect
   unitBook
   bookCount={50}
-  bookCountUnit={LibraryBook.BOOK_COUNT_UNIT.Serial}
+  bookCountUnit={LibraryBook.BookCountUnit.Serial}
   bookCountWrapper={{
     wrapper: 'a',
     getProps() {
@@ -65,26 +65,26 @@ const selected = true;
       };
     },
   }}
-  readingStatus={LibraryBook.READING_STATUS.Opened}
+  readingStatus={LibraryBook.ReadingStatus.Opened}
   readingProgress={20}
 />
 ```
 ```jsx
 <LibraryBook.Thumbnail
-  viewType={LibraryBook.VIEW_TYPE.Portrait}
+  viewType={LibraryBook.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
   ridiselect
   unitBook
   bookCount={50}
-  bookCountUnit={LibraryBook.BOOK_COUNT_UNIT.Serial}
-  downloadStatus={LibraryBook.DOWNLOAD_STATUS.Downloading}
+  bookCountUnit={LibraryBook.BookCountUnit.Serial}
+  downloadStatus={LibraryBook.DownloadStatus.Downloading}
 />
 ```
 ```jsx
 <LibraryBook.Thumbnail
-  viewType={LibraryBook.VIEW_TYPE.Portrait}
+  viewType={LibraryBook.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
@@ -94,7 +94,7 @@ const selected = true;
 ```
 ```jsx
 <LibraryBook.Thumbnail
-  viewType={LibraryBook.VIEW_TYPE.Portrait}
+  viewType={LibraryBook.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
@@ -107,7 +107,7 @@ const selected = true;
 <LibraryBook.PortraitBook
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   title="위대한 소설가"
-  downloadStatus={LibraryBook.DOWNLOAD_STATUS.Downloading}
+  downloadStatus={LibraryBook.DownloadStatus.Downloading}
   downloadProgress={80}
 />
 ```
@@ -116,7 +116,7 @@ const selected = true;
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   title="위대한 소설가"
   author="임한백"
-  downloadStatus={LibraryBook.DOWNLOAD_STATUS.Downloading}
+  downloadStatus={LibraryBook.DownloadStatus.Downloading}
   downloadProgress={80}
 />
 ```
@@ -127,7 +127,7 @@ const selected = true;
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
     thumbnailWidth={50}
     title="위대한 소설가"
-    downloadStatus={LibraryBook.DOWNLOAD_STATUS.Downloading}
+    downloadStatus={LibraryBook.DownloadStatus.Downloading}
     downloadProgress={80}
     downloadSize={13.4}
     expiredAt="21일 4시간 남음"
@@ -142,7 +142,7 @@ const selected = true;
     title="위대한 소설가"
     author="임한백"
     adultBadge
-    readingStatus={LibraryBook.READING_STATUS.Opened}
+    readingStatus={LibraryBook.ReadingStatus.Opened}
     readingProgress={30}
     annotations={{
       bookMarkCount: 4,
@@ -162,9 +162,9 @@ const selected = true;
     author="임한백"
     unitBook
     updateBadge
-    readingStatus={LibraryBook.READING_STATUS.New}
+    readingStatus={LibraryBook.ReadingStatus.New}
     bookCount={50}
-    bookCountUnit={LibraryBook.BOOK_COUNT_UNIT.Serial}
+    bookCountUnit={LibraryBook.BookCountUnit.Serial}
     bookCountWrapper={{
       wrapper: 'a',
       getProps() {
@@ -186,13 +186,13 @@ const selected = true;
 ```
 ```jsx
 <LibraryBook.DownloadButton
-  downloadStatus={LibraryBook.DOWNLOAD_STATUS.Downloadable}
+  downloadStatus={LibraryBook.DownloadStatus.Downloadable}
 />
 <LibraryBook.DownloadButton
-  downloadStatus={LibraryBook.DOWNLOAD_STATUS.Wating}
+  downloadStatus={LibraryBook.DownloadStatus.Wating}
 />
 <LibraryBook.DownloadButton
-  downloadStatus={LibraryBook.DOWNLOAD_STATUS.Downloading}
+  downloadStatus={LibraryBook.DownloadStatus.Downloading}
   downloadProgress={80}
 />
 ```
