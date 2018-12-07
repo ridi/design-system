@@ -90,13 +90,13 @@ export const circle = css({
 
 export const progressMask = (size: DownloadButtonSize, deg?: number) => css([circle, {
   clip: `rect(0, ${size}px, ${size}px, ${size / 2}px)`,
-}, deg ? {
+}, deg && {
   transform: `rotate(${deg}deg)`,
-} : {}]);
+}]);
 
 export const progressFill = (size: DownloadButtonSize, deg: number) => css([circle, {
   background: '#0077d9',
-  clip: `rect(0, ${size / 2}px, ${size}px, 0`,
+  clip: `rect(0, ${size / 2}px, ${size}px, 0)`,
   transform: `rotate(${deg}deg)`,
 }]);
 
