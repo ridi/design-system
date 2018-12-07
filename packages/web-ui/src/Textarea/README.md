@@ -1,12 +1,8 @@
 ### Basic Usage
 ```jsx
-<Textarea
-  name="textareaName"
-  value={state.value}
-  disabled={false}
-  placeholder="Enter Something."
-  onChange={(event) => {
-    setState({ value: event.target.value });
-  }}
-/>
+<div>
+  <Textarea placeholder="Enter Something" />
+  <Textarea value="This is read only" readOnly />
+  <Textarea value="This is disabled" disabled />
+</div>
 ```
