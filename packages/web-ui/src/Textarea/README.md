@@ -1,7 +1,7 @@
 ### Basic Usage
 ```jsx
-<TextArea
-  name="textAreaName"
+<Textarea
+  name="textareaName"
   value={state.value}
   disabled={false}
   placeholder="Enter Something."
