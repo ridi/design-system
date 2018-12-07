@@ -33,18 +33,19 @@ export const dotsWrapper = css({
   left: '50%',
   top: '50%',
   transform: 'translate3d(-50%, -50%, 0)',
+  whiteSpace: 'nowrap',
 });
 
 const dotSize = () => 4;
 const dotGap = (size: UnitBookDownloadingSize) => size === UnitBookDownloadingSize.Small ? 3 : 4;
-const dotFlashing = keyframes`
-  0% {
-    background-color: rgba(255, 255, 255, 1);
-  }
-  50%, 100% {
-    background-color: rgba(255, 255, 255, 0);
-  }
-`;
+const dotFlashing = keyframes({
+  '0%': {
+    backgroundColor: 'rgba(255, 255, 255, 1)',
+  },
+  '50%, 100%': {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+  },
+});
 
 export const dot = (size: UnitBookDownloadingSize, index: number) => css({
   display: 'inline-block',
