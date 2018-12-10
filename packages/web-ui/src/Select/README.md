@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+initialState = { value: '1' };
+
 <Select
   value={state.value}
   onChange={(event) => {
