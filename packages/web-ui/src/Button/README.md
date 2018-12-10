@@ -1,14 +1,8 @@
-### Simple Implementation
 ```jsx
-const Button = ({ 
-  render: Component = 'button',
-  children,
-  ...restProps
-}) => (
-  <Component {...restProps}>
-    {children}
-  </Component>
-);
+<div>
+  <Button>Button</Button>
+  <Button disabled>Button</Button>
+</div>
 ```
 
 ### Basic Usage
