@@ -1,7 +1,13 @@
 ### Basic Usage
 ```jsx
+initialState = { value: 1 };
+
+const handleChange = (event) => {
+  setState({ value: event.target.value });
+};
+
 <div>
-  <Select>
+  <Select value={state.value} onChange={handleChange}>
     <Select.Option value="1">Option 1</Select.Option>
     <Select.Option value="2">Option 2</Select.Option>
     <Select.Option value="3">Option 3</Select.Option>
@@ -13,9 +19,7 @@
     </Select.OptionGroup>
   </Select>
 
-  <br />
-
-  <Select disabled>
+  <Select value={state.value} onChange={handleChange} disabled>
     <Select.Option value="1">Option 1</Select.Option>
     <Select.Option value="2">Option 2</Select.Option>
     <Select.Option value="3">Option 3</Select.Option>
@@ -26,10 +30,19 @@
       <Select.Option value="6">Sub Option 3</Select.Option>
     </Select.OptionGroup>
   </Select>
-  
-  <br />
+</div>
+```
 
-  <Select outline>
+### Outline
+```jsx
+initialState = { value: 1 };
+
+const handleChange = (event) => {
+  setState({ value: event.target.value });
+};
+
+<div>
+  <Select value={state.value} onChange={handleChange} outline>
     <Select.Option value="1">Option 1</Select.Option>
     <Select.Option value="2">Option 2</Select.Option>
     <Select.Option value="3">Option 3</Select.Option>
@@ -40,10 +53,8 @@
       <Select.Option value="6">Sub Option 3</Select.Option>
     </Select.OptionGroup>
   </Select>
-  
-  <br />
 
-  <Select outline disabled>
+  <Select value={state.value} onChange={handleChange} outline disabled>
     <Select.Option value="1">Option 1</Select.Option>
     <Select.Option value="2">Option 2</Select.Option>
     <Select.Option value="3">Option 3</Select.Option>
