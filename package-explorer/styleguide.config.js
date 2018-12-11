@@ -1,13 +1,13 @@
 const path = require('path');
 const { parse: propsParser } = require('react-docgen-typescript');
-const webpackConfig = require('./webpack.config');
-const pkg = require('./package.json');
+const webpackConfig = require('../packages/web-ui/webpack.config');
+const webUiPackage = require('../packages/web-ui/package.json');
 
 module.exports = {
-  components: 'src/*/index.{ts,tsx}',
+  components: '../packages/web-ui/src/*/index.{ts,tsx}',
   getComponentPathLine: (componentPath) => {
     const componentName = path.basename(path.dirname(componentPath));
-    return `import { ${componentName} } from '${pkg.name}';`;
+    return `import { ${componentName} } from '${webUiPackage.name}';`;
   },
   propsParser,
   usageMode: 'expand',

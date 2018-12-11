@@ -10,7 +10,6 @@
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "build": "webpack",
-    "watch": "styleguidist server",
     "lint": "tslint src/**/*.{ts,tsx} -c ./tslint.json --fix",
     "precommit": "lint-staged"
   },
@@ -31,9 +30,7 @@
     "polished": "^2.3.1",
     "prettier": "^1.15.2",
     "react": "^16.6.0",
-    "react-docgen-typescript": "^1.11.0",
     "react-dom": "^16.6.0",
-    "react-styleguidist": "^8.0.2",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.16.0",
     "tslint-loader": "^3.5.4",

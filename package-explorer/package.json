@@ -1,12 +1,13 @@
 {
   "private": true,
-  "name": "@ridi/design-system-pacakge-explorer",
+  "name": "pacakge-explorer",
   "version": "0.0.0",
   "scripts": {
-    "start": "styleguidist server"
+    "start": "styleguidist server",
+    "watch": "yarn start"
   },
   "devDependencies": {
-    "react-styleguidist": "^8.0.6",
-    "webpack": "^4.27.1"
+    "react-docgen-typescript": "^1.12.2",
+    "react-styleguidist": "^8.0.6"
   }
 }

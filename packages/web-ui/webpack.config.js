@@ -30,7 +30,15 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         include: srcDir,
-        use: ['babel-loader', 'awesome-typescript-loader'],
+        use: [
+          'babel-loader',
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              configFileName: path.join(__dirname, 'tsconfig.json'),
+            },
+          },
+        ],
       },
       {
         test: /\.svg$/,
