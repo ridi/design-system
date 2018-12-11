@@ -7,19 +7,16 @@
     "type": "git",
     "url": "git+https://github.com/ridi/design-system.git"
   },
+  "main": "hex.json",
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
-    "build": "node scripts/build.js",
-    "watch": "node scripts/watch.js"
+    "build": "node build.js",
+    "watch": "chokidar 'hwb.json' -c 'node build.js' --initial --silent"
   },
   "devDependencies": {
-    "ase-utils": "^0.1.1",
-    "async": "^2.6.1",
     "chalk": "^2.4.1",
-    "chokidar": "^2.0.4",
-    "debounce-async": "0.0.2",
-    "decache": "^4.5.0",
-    "handlebars": "^4.0.12",
+    "chokidar-cli": "^1.2.1",
+    "color": "^3.1.0",
     "lodash": "^4.17.11"
   }
 }
