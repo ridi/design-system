@@ -42,7 +42,6 @@ module.exports = {
               svgo: false,
             },
           },
-          'url-loader',
         ],
       },
     ],
