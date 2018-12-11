@@ -39,7 +39,6 @@ module.exports = {
             loader: '@svgr/webpack',
             options: {
               prettier: false,
-              svgo: false,
             },
           },
         ],
