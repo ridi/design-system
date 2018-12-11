@@ -4,12 +4,12 @@ import * as React from 'react';
 import CheckIcon from '../svgs/check_5.svg';
 import * as styles from './styles';
 
-export interface SelectProps {
+export interface ThumbnailCheckboxProps {
   checked: boolean;
   onChange: (e: React.SyntheticEvent<any>) => void;
 }
 
-export const Checkbox: React.FunctionComponent<SelectProps> = (props) => {
+export const ThumbnailCheckbox: React.FunctionComponent<ThumbnailCheckboxProps> = (props) => {
   const {
     checked,
     onChange,

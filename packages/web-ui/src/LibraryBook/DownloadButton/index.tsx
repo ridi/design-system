@@ -12,7 +12,7 @@ export enum DownloadStatus {
   Downloaded = 'downloaded',
 }
 
-export interface DownloadStatusProps {
+export interface DownloadButtonProps {
   downloadSize?: number;
   downloadStatus?: DownloadStatus;
   downloadProgress?: number;
@@ -21,7 +21,7 @@ export interface DownloadStatusProps {
   onStopDownload?: () => void;
 }
 
-export const DownloadButton: React.FunctionComponent<DownloadStatusProps> = ({
+export const DownloadButton: React.FunctionComponent<DownloadButtonProps> = ({
   downloadSize,
   downloadStatus,
   downloadProgress,

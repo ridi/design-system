@@ -4,12 +4,10 @@ import classNames from 'classnames';
 import * as React from 'react';
 import {
   AdultBadge,
-  BookCountProps,
   BookCountUnit,
-  Checkbox,
   DownloadButton,
+  DownloadButtonProps,
   DownloadStatus,
-  DownloadStatusProps,
   Expired,
   ExpiredAt,
   NotAvailable,
@@ -17,10 +15,11 @@ import {
   ReadingProgressBarProps,
   ReadingStatus,
   Ridiselect,
-  SelectProps,
+  ThumbnailCheckbox,
   ThumbnailImage,
   ThumbnailImageProps,
   UnitBookCount,
+  UnitBookCountProps,
   UnitBookDownloading,
   UnReadDot,
   UpdateBadge,
@@ -31,10 +30,10 @@ import { UnitBookDownloadingSize } from '../UnitBookDownloading/styles';
 import * as styles from './styles';
 
 export interface ThumbnailProps extends
-  BookCountProps,
-  DownloadStatusProps,
+  DownloadButtonProps,
   ReadingProgressBarProps,
-  ThumbnailImageProps {
+  ThumbnailImageProps,
+  UnitBookCountProps {
     adultBadge?: boolean;
     children?: React.ReactNode;
     className?: string;
@@ -96,7 +95,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
       </React.Fragment>}
       <div css={styles.thumbnailImageWrapper}>
         {selectMode &&
-          <Checkbox
+          <ThumbnailCheckbox
             onChange={onSelectedChange}
             checked={selected}
           />

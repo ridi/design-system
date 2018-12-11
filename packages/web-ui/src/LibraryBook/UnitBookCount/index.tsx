@@ -9,7 +9,7 @@ export enum BookCountUnit {
   Serial = '화',
 }
 
-export interface BookCountProps {
+export interface UnitBookCountProps {
   bookCount?: number;
   bookCountUnit?: BookCountUnit;
   bookCountWrapper?: {
@@ -18,7 +18,7 @@ export interface BookCountProps {
   };
 }
 
-export const UnitBookCount: React.FunctionComponent<BookCountProps> = (props) => {
+export const UnitBookCount: React.FunctionComponent<UnitBookCountProps> = (props) => {
   const {
     bookCount,
     bookCountUnit,
