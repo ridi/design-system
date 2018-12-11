@@ -22,10 +22,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
-      },
-      {
         enforce: 'pre',
         test: /\.(ts|tsx)$/,
         include: srcDir,

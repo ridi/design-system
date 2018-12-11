@@ -26,7 +26,6 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     bookCount,
     bookCountUnit,
     bookCountWrapper,
-    bookId,
     className,
     downloadProgress,
     downloadSize,

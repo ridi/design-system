@@ -20,7 +20,6 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     bookCount,
     bookCountUnit,
     bookCountWrapper,
-    bookId,
     className,
     downloadProgress,
     downloadStatus,
@@ -53,7 +52,6 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           bookCount={bookCount}
           bookCountUnit={bookCountUnit}
           bookCountWrapper={bookCountWrapper}
-          bookId={bookId}
           downloadProgress={downloadProgress}
           downloadStatus={downloadStatus}
           expired={expired}
