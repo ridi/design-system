@@ -19,13 +19,5 @@ export const Icon: React.FunctionComponent<IconProps> = ({
   name,
   ...restProps
 }) => (
-  <Base
-    src={icons[name]}
-    alt={name}
-    {...restProps}
-  />
+  <Base render={icons[name]} {...restProps} />
 );
-
-Icon.defaultProps = {
-  render: 'img',
-};

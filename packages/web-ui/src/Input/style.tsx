@@ -1,8 +1,11 @@
 import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import { check_1, dot_1 } from '@ridi/web-icons';
+import * as React from 'react';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
+import { Svg } from '../Svg';
 
+const borderWidth = 1;
 const buttonSize = 18;
 
 export default css(
@@ -12,7 +15,7 @@ export default css(
   {
     boxSizing: 'border-box',
     display: 'inline-block',
-    border: `1px solid ${colors.slategray_20}`,
+    border: `${borderWidth}px solid ${colors.slategray_20}`,
     borderRadius: '3px',
     outline: 'none',
     background: 'white',
@@ -22,19 +25,16 @@ export default css(
     transition: 'color .2s, background .2s, border-color .2s, box-shadow .2s',
 
     padding: '.6em',
-    lineHeight: '1em',
 
     '&[type=checkbox], &[type=radio]': {
       padding: 0,
-      width: buttonSize,
-      height: buttonSize,
+      width: `${buttonSize}px`,
+      lineHeight: `${buttonSize - borderWidth * 2}px`,
       color: 'white',
 
       '&::after': {
-        content: '""',
-        display: 'inline-block',
-        width: '100%',
-        height: '100%',
+        content: '"\\00a0"',
+        display: 'block',
         background: 'currentColor',
         mask: 'center no-repeat',
         maskSize: 'contain',
@@ -58,8 +58,8 @@ export default css(
 
     '&[type=checkbox]': {
       '&::after': {
-        maskImage: `url(${check_1})`,
-        transform: 'scale(.64)',
+        maskImage: `url('${Svg.renderToDataUri(<Svg render={check_1} />)}')`,
+        transform: 'scale(.625)',
       },
     },
 
@@ -67,7 +67,7 @@ export default css(
       borderRadius: '50%',
 
       '&::after': {
-        maskImage: `url(${dot_1})`,
+        maskImage: `url(${Svg.renderToDataUri(<Svg render={dot_1} />)})`,
         transform: 'scale(.5)',
       },
     },
