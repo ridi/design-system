@@ -11,7 +11,6 @@ module.exports = {
   },
   propsParser,
   usageMode: 'expand',
-  exampleMode: 'expand',
   editorConfig: {
     theme: 'dracula',
     smartIndent: true,
