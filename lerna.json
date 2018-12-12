@@ -7,10 +7,10 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "allowBranch": "master"
+      "gitTagVersion": false
     },
     "version": {
-      "amend": true
+      "gitTagVersion": false
     }
   }
 }
