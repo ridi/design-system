@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import DownloadableIcon from '@ridi/web-icons/svgs/btn_downloadable.svg';
-import WaitingIcon from '@ridi/web-icons/svgs/btn_waiting.svg';
+import {
+  btn_downloadable as DownloadableIcon,
+  btn_waiting as WaitingIcon,
+} from '@ridi/web-icons';
 import * as React from 'react';
 import * as styles from './styles';
 

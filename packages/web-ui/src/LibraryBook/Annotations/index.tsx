@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import BookMarkIcon from '@ridi/web-icons/svgs/book_mark_1.svg';
-import MessageIcon from '@ridi/web-icons/svgs/message_1.svg';
-import PencilIcon from '@ridi/web-icons/svgs/pencil_2.svg';
+import {
+  book_mark_1 as BookMarkIcon,
+  message_1 as MessageIcon,
+  pencil_2 as PencilIcon,
+} from '@ridi/web-icons';
 import * as React from 'react';
 import * as styles from './styles';
 
