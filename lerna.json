@@ -4,5 +4,10 @@
     "packages/*"
   ],
   "npmClient": "yarn",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "amend": true
+    }
+  }
 }
