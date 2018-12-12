@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import DownloadableIcon from '@ridi/web-icons/svgs/btn_downloadable.svg';
+import WaitingIcon from '@ridi/web-icons/svgs/btn_waiting.svg';
 import * as React from 'react';
-import DownloadableIcon from '../svgs/btn_downloadable.svg';
-import WaitingIcon from '../svgs/btn_waiting.svg';
 import * as styles from './styles';
 
 export enum DownloadStatus {

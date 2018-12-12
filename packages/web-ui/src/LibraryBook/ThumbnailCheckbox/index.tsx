@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import CheckIcon from '@ridi/web-icons/svgs/check_5.svg';
 import * as React from 'react';
-import CheckIcon from '../svgs/check_5.svg';
 import * as styles from './styles';
 
 export interface ThumbnailCheckboxProps {

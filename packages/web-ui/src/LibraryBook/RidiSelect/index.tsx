@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import RidiselectIcon from '@ridi/web-icons/svgs/logo_ridiselect_2.svg';
 import * as React from 'react';
-import RidiselectIcon from '../svgs/logo_ridiselect_2.svg';
 import * as styles from './styles';
 
 export const Ridiselect: React.FunctionComponent = () => (

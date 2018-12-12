@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import TimerIcon from '@ridi/web-icons/svgs/timer.svg';
 import * as React from 'react';
-import TimerIcon from '../svgs/timer.svg';
 import * as styles from './styles';
 
 export const Expired: React.FunctionComponent = () => (

@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import BookMarkIcon from '@ridi/web-icons/svgs/book_mark_1.svg';
+import MessageIcon from '@ridi/web-icons/svgs/message_1.svg';
+import PencilIcon from '@ridi/web-icons/svgs/pencil_2.svg';
 import * as React from 'react';
-import BookMarkIcon from '../svgs/book_mark_1.svg';
-import MessageIcon from '../svgs/message_1.svg';
-import PencilIcon from '../svgs/pencil_2.svg';
 import * as styles from './styles';
 
 export interface AnnotationsProps {
