@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/ridi/design-system.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "files": [
     "svgs",
