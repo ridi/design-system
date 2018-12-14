@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: outDir,
     filename: 'index.js',
+    libraryTarget: 'commonjs2',
   },
   mode: 'production',
   devtool: 'source-map',
