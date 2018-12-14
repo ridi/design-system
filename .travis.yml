@@ -1,4 +1,12 @@
 language: node_js
 node_js: '10'
 cache: yarn
+
 script: yarn build
+
+deploy:
+  on:
+    repo: ridi/design-system
+  skip_cleanup: true
+  provider: script
+  script: "lerna publish from-git --yes"
