@@ -8,6 +8,7 @@ deploy:
   on:
     repo: ridi/design-system
     branch: master
+    tags: true
   skip_cleanup: true
   provider: script
-  script: "lerna publish from-git --yes"
+  script: lerna publish from-git --yes
