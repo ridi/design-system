@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/ridi/design-system.git"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "build": "webpack",

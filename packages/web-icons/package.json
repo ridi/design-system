@@ -8,6 +8,11 @@
     "url": "git+https://github.com/ridi/design-system.git"
   },
   "main": "index.js",
+  "files": [
+    "svgs",
+    "index.d.ts",
+    "index.js"
+  ],
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "build": "node build.js",
