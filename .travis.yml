@@ -7,7 +7,7 @@ script: yarn build
 deploy:
   on:
     repo: ridi/design-system
-    branch: setup-deployment
+    branch: master
   skip_cleanup: true
   provider: script
   script: "lerna publish from-git --yes"
