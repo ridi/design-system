@@ -8,11 +8,7 @@
   "command": {
     "publish": {
       "allowBranch": "master",
-      "gitTagVersion": false
-    },
-    "version": {
-      "allowBranch": "*",
-      "gitTagVersion": false
+      "push": false
     }
   }
 }
