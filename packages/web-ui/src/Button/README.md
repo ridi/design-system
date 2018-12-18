@@ -12,12 +12,23 @@ const handleClick = (event) => {
 ### Variations
 ```jsx
 <div>
-  <Button color="gray">Button</Button>
-  <Button color="blue">Button</Button>
-  <Button color="brown">Button</Button>
-  <Button color="gray" disabled>Button</Button>
-  <Button color="blue" disabled>Button</Button>
-  <Button color="brown" disabled>Button</Button>
+  <div>
+    <Button color="gray">Button</Button>
+    <Button color="blue">Button</Button>
+    <Button color="brown">Button</Button>
+    <Button color="gray" disabled>Button</Button>
+    <Button color="blue" disabled>Button</Button>
+    <Button color="brown" disabled>Button</Button>
+  </div>
+
+  <div>
+    <Button color="gray" outline>Button</Button>
+    <Button color="blue" outline>Button</Button>
+    <Button color="brown" outline>Button</Button>
+    <Button color="gray" outline disabled>Button</Button>
+    <Button color="blue" outline disabled>Button</Button>
+    <Button color="brown" outline disabled>Button</Button>
+  </div>
 </div>
 ```
 
