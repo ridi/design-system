@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" stroke="#000" viewBox="0 0 64 64">
+  <g stroke-linecap="round" stroke-width="4">
+    <path d="M32 20v-8">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1" />
+    </path>
+    <path d="M38 21.608l4-6.929">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values="0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0" />
+    </path>
+    <path d="M42.392 26l6.929-4">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values=".1;0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1" />
+    </path>
+    <path d="M44 32h8">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values=".15;.1;0;1;.85;.7;.65;.55;.45;.35;.25;.15" />
+    </path>
+    <path d="M42.392 38l6.929 4">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values=".25;.15;.1;0;1;.85;.7;.65;.55;.45;.35;.25" />
+    </path>
+    <path d="M38 42.392l4 6.929">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values=".35;.25;.15;.1;0;1;.85;.7;.65;.55;.45;.35" />
+    </path>
+    <path d="M32 44v8">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values=".45;.35;.25;.15;.1;0;1;.85;.7;.65;.55;.45" />
+    </path>
+    <path d="M26 42.392l-4 6.929">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values=".55;.45;.35;.25;.15;.1;0;1;.85;.7;.65;.55" />
+    </path>
+    <path d="M21.608 38l-6.929 4">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values=".65;.55;.45;.35;.25;.15;.1;0;1;.85;.7;.65" />
+    </path>
+    <path d="M20 32h-8">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values=".7;.65;.55;.45;.35;.25;.15;.1;0;1;.85;.7" />
+    </path>
+    <path d="M21.608 26l-6.929-4">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values=".85;.7;.65;.55;.45;.35;.25;.15;.1;0;1;.85" />
+    </path>
+    <path d="M26 21.608l-4-6.929">
+      <animate attributeName="stroke-opacity" dur="1000ms" repeatCount="indefinite" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1" />
+    </path>
+  </g>
+</svg>

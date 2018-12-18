@@ -14,6 +14,11 @@ export interface ButtonProps extends BaseProps {
   outline?: boolean;
 
   /**
+   * If `true`, `Button` will be rendered with spinner icon inside instead of given children.
+   */
+  spinner?: boolean;
+
+  /**
    * If `true`, `Button` will be rendered with thick border.
    */
   thickBorder?: boolean;
@@ -22,15 +27,17 @@ export interface ButtonProps extends BaseProps {
 export const Button: React.FunctionComponent<ButtonProps> = ({
   color,
   outline,
+  spinner,
   thickBorder,
   ...restProps
 }) => (
-  <Base css={style({ color, outline, thickBorder })} {...restProps} />
+  <Base css={style({ color, outline, spinner, thickBorder })} {...restProps} />
 );
 
 Button.defaultProps = {
   color: 'gray',
   outline: false,
+  spinner: false,
   thickBorder: false,
   render: 'button',
 };

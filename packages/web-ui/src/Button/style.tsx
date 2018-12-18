@@ -1,8 +1,11 @@
 import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import { rgba } from 'polished';
+import * as React from 'react';
 import { resetAppearance, resetFont, resetLayout } from '../styles';
+import { Svg } from '../Svg';
 import { ButtonProps } from './index';
+import Spinner from './spinner.svg';
 
 const buttonColors = {
   blue_10: colors.dodgerblue_10,
@@ -28,7 +31,7 @@ const boxShadow = {
   gray_50: `0 1px 1px 0 ${rgba(buttonColors.gray_50, .3)}`,
 };
 
-export default ({ color, outline, thickBorder }: ButtonProps) => {
+export default ({ color, outline, thickBorder, spinner }: ButtonProps) => {
   const borderWidth = thickBorder ? 2 : 1;
 
   return css(
@@ -141,5 +144,42 @@ export default ({ color, outline, thickBorder }: ButtonProps) => {
           };
       }
     })(),
+
+    spinner && {
+      position: 'relative',
+      color: 'transparent',
+
+      '& > *': {
+        opacity: 0,
+      },
+
+      '&::after': {
+        content: '""',
+        display: 'block',
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        bottom: 0,
+        right: 0,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
+        backgroundImage: `url(${Svg.renderToDataUri(<Spinner stroke={(() => {
+          if (!outline) {
+            return 'white';
+          }
+
+          switch (color) {
+            case 'blue':
+              return buttonColors.blue_50;
+            case 'brown':
+              return buttonColors.brown_50;
+            case 'gray':
+            default:
+              return buttonColors.gray_50;
+          }
+        })()} />)})`,
+      },
+    },
   );
 }

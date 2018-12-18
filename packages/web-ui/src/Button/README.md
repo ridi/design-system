@@ -38,6 +38,15 @@ const handleClick = (event) => {
     <Button color="blue" thickBorder disabled>Button</Button>
     <Button color="brown" thickBorder disabled>Button</Button>
   </div>
+
+  <div>
+    <Button color="gray" spinner>Button</Button>
+    <Button color="blue" spinner>Button</Button>
+    <Button color="brown" spinner>Button</Button>
+    <Button color="gray" spinner outline>Button</Button>
+    <Button color="blue" spinner outline>Button</Button>
+    <Button color="brown" spinner outline>Button</Button>
+  </div>
 </div>
 ```
 
