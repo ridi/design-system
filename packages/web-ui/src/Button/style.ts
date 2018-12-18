@@ -28,114 +28,118 @@ const boxShadow = {
   gray_50: `0 1px 1px 0 ${rgba(buttonColors.gray_50, .3)}`,
 };
 
-export default ({ color, outline }: ButtonProps) => css(
-  resetAppearance,
-  resetFont,
-  resetLayout,
+export default ({ color, outline, thickBorder }: ButtonProps) => {
+  const borderWidth = thickBorder ? 2 : 1;
 
-  {
-    WebkitTapHighlightColor: 'transparent',
-    boxSizing: 'border-box',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '0 20px',
-    border: '1px solid',
-    borderRadius: '4px',
-    fontSize: '13px',
-    fontWeight: 700,
-    lineHeight: '32px',
-    textAlign: 'center',
-    whiteSpace: 'nowrap',
-    userSelect: 'none',
-    verticalAlign: 'baseline',
-    textDecoration: 'none',
-    transition: 'background .2s, color .2s',
+  return css(
+    resetAppearance,
+    resetFont,
+    resetLayout,
 
-    '&:not(:disabled)': {
-      cursor: 'pointer',
+    {
+      WebkitTapHighlightColor: 'transparent',
+      boxSizing: 'border-box',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: `0 ${20 - (borderWidth - 1)}px`,
+      border: `${borderWidth}px solid`,
+      borderRadius: '4px',
+      fontSize: '13px',
+      fontWeight: 700,
+      lineHeight: `${32 - 2 * (borderWidth - 1)}px`,
+      textAlign: 'center',
+      whiteSpace: 'nowrap',
+      userSelect: 'none',
+      verticalAlign: 'baseline',
+      textDecoration: 'none',
+      transition: 'background .2s, color .2s',
+
+      '&:not(:disabled)': {
+        cursor: 'pointer',
+      },
+
+      '&:disabled': {
+        opacity: .5,
+      },
     },
 
-    '&:disabled': {
-      opacity: .5,
-    },
-  },
+    (() => {
+      switch (color) {
+        case 'blue':
+          return outline ? {
+            color: buttonColors.blue_50,
+            backgroundColor: 'white',
+            borderColor: buttonColors.blue_50,
+            boxShadow: boxShadow.blue_50,
 
-  (() => {
-    switch (color) {
-      case 'blue':
-        return outline ? {
-          color: buttonColors.blue_50,
-          backgroundColor: 'white',
-          borderColor: buttonColors.blue_50,
-          boxShadow: boxShadow.blue_50,
-
-          '&:not(:disabled)': {
-            '&:hover': {
-              backgroundColor: buttonColors.blue_10,
+            '&:not(:disabled)': {
+              '&:hover': {
+                backgroundColor: buttonColors.blue_10,
+              },
             },
-          },
-        } : {
-          color: 'white',
-          backgroundColor: buttonColors.blue_50,
-          borderColor: buttonColors.blue_60,
-          boxShadow: boxShadow.blue_50,
+          } : {
+            color: 'white',
+            backgroundColor: buttonColors.blue_50,
+            borderColor: buttonColors.blue_60,
+            boxShadow: boxShadow.blue_50,
 
-          '&:not(:disabled)': {
-            '&:hover': {
-              backgroundColor: buttonColors.blue_60,
+            '&:not(:disabled)': {
+              '&:hover': {
+                backgroundColor: buttonColors.blue_60,
+              },
             },
-          },
-        };
-      case 'brown':
-        return outline ? {
-          color: buttonColors.brown_50,
-          backgroundColor: 'white',
-          borderColor: buttonColors.brown_50,
-          boxShadow: boxShadow.brown_50,
+          };
+        case 'brown':
+          return outline ? {
+            color: buttonColors.brown_50,
+            backgroundColor: 'white',
+            borderColor: buttonColors.brown_50,
+            boxShadow: boxShadow.brown_50,
 
-          '&:not(:disabled)': {
-            '&:hover': {
-              backgroundColor: buttonColors.brown_10,
+            '&:not(:disabled)': {
+              '&:hover': {
+                backgroundColor: buttonColors.brown_10,
+              },
             },
-          },
-        } : {
-          color: 'white',
-          backgroundColor: buttonColors.brown_50,
-          borderColor: buttonColors.brown_60,
-          boxShadow: boxShadow.brown_50,
+          } : {
+            color: 'white',
+            backgroundColor: buttonColors.brown_50,
+            borderColor: buttonColors.brown_60,
+            boxShadow: boxShadow.brown_50,
 
-          '&:not(:disabled)': {
-            '&:hover': {
-              backgroundColor: buttonColors.brown_60,
+            '&:not(:disabled)': {
+              '&:hover': {
+                backgroundColor: buttonColors.brown_60,
+              },
             },
-          },
-        };
-      case 'gray':
-      default:
-        return outline ? {
-          color: buttonColors.gray_50,
-          backgroundColor: 'white',
-          borderColor: buttonColors.gray_20,
-          boxShadow: boxShadow.gray_20,
+          };
+        case 'gray':
+        default:
+          return outline ? {
+            color: buttonColors.gray_50,
+            backgroundColor: 'white',
+            borderColor: buttonColors.gray_20,
+            boxShadow: boxShadow.gray_20,
 
-          '&:not(:disabled)': {
-            '&:hover': {
-              backgroundColor: buttonColors.gray_10,
+            '&:not(:disabled)': {
+              '&:hover': {
+                backgroundColor: buttonColors.gray_10,
+              },
             },
-          },
-        } : {
-          color: 'white',
-          backgroundColor: buttonColors.gray_50,
-          borderColor: buttonColors.gray_60,
-          boxShadow: boxShadow.gray_50,
+          } : {
+            color: 'white',
+            backgroundColor: buttonColors.gray_50,
+            borderColor: buttonColors.gray_60,
+            boxShadow: boxShadow.gray_50,
 
-          '&:not(:disabled)': {
-            '&:hover': {
-              backgroundColor: buttonColors.gray_60,
+            '&:not(:disabled)': {
+              '&:hover': {
+                backgroundColor: buttonColors.gray_60,
+              },
             },
-          },
-        };
-    }
-  })(),
-);
+          };
+      }
+    })(),
+  );
+}

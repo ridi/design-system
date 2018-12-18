@@ -29,6 +29,15 @@ const handleClick = (event) => {
     <Button color="blue" outline disabled>Button</Button>
     <Button color="brown" outline disabled>Button</Button>
   </div>
+
+  <div>
+    <Button color="gray" thickBorder>Button</Button>
+    <Button color="blue" thickBorder>Button</Button>
+    <Button color="brown" thickBorder>Button</Button>
+    <Button color="gray" thickBorder disabled>Button</Button>
+    <Button color="blue" thickBorder disabled>Button</Button>
+    <Button color="brown" thickBorder disabled>Button</Button>
+  </div>
 </div>
 ```
 
