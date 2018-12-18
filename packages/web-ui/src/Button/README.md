@@ -50,6 +50,15 @@ const handleClick = (event) => {
 </div>
 ```
 
+### Sizes
+```jsx
+<div>
+  <Button size="small">Button</Button>
+  <Button size="medium">Button</Button>
+  <Button size="large">Button</Button>
+</div>
+```
+
 ### Using `render` Prop
 
 #### Function as Prop

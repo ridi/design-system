@@ -31,8 +31,20 @@ const boxShadow = {
   gray_50: `0 1px 1px 0 ${rgba(buttonColors.gray_50, .3)}`,
 };
 
-export default ({ color, outline, thickBorder, spinner }: ButtonProps) => {
+export default ({ color, outline, size, spinner, thickBorder }: ButtonProps) => {
   const borderWidth = thickBorder ? 2 : 1;
+
+  const height = (() => {
+    switch (size) {
+      case 'small':
+        return 26;
+      case 'large':
+        return 42;
+      case 'medium':
+      default:
+        return 32;
+    }
+  })();
 
   return css(
     resetAppearance,
@@ -45,12 +57,12 @@ export default ({ color, outline, thickBorder, spinner }: ButtonProps) => {
       display: 'inline-flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: `0 ${20 - (borderWidth - 1)}px`,
+      padding: `0 ${20 - borderWidth}px`,
       border: `${borderWidth}px solid`,
       borderRadius: '4px',
       fontSize: '13px',
       fontWeight: 700,
-      lineHeight: `${32 - 2 * (borderWidth - 1)}px`,
+      lineHeight: `${height - 2 * borderWidth}px`,
       textAlign: 'center',
       whiteSpace: 'nowrap',
       userSelect: 'none',
