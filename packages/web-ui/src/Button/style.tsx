@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css, keyframes } from '@emotion/core';
 import colors from '@ridi/colors';
 import { rgba } from 'polished';
 import * as React from 'react';
@@ -31,6 +31,22 @@ const boxShadow = {
   gray_50: `0 1px 1px 0 ${rgba(buttonColors.gray_50, .3)}`,
 };
 
+const stepRotation = keyframes({
+  '0%': { transform: 'translate3d(-50%, -50%, 0) rotate(0deg)' },
+  '8%': { transform: 'translate3d(-50%, -50%, 0) rotate(30deg)' },
+  '17%': { transform: 'translate3d(-50%, -50%, 0) rotate(60deg)' },
+  '25%': { transform: 'translate3d(-50%, -50%, 0) rotate(90deg)' },
+  '33%': { transform: 'translate3d(-50%, -50%, 0) rotate(120deg)' },
+  '42%': { transform: 'translate3d(-50%, -50%, 0) rotate(150deg)' },
+  '50%': { transform: 'translate3d(-50%, -50%, 0) rotate(180deg)' },
+  '58%': { transform: 'translate3d(-50%, -50%, 0) rotate(210deg)' },
+  '67%': { transform: 'translate3d(-50%, -50%, 0) rotate(240deg)' },
+  '75%': { transform: 'translate3d(-50%, -50%, 0) rotate(270deg)' },
+  '83%': { transform: 'translate3d(-50%, -50%, 0) rotate(300deg)' },
+  '92%': { transform: 'translate3d(-50%, -50%, 0) rotate(330deg)' },
+  '100%': { transform: 'translate3d(-50%, -50%, 0) rotate(360deg)' },
+});
+
 export default ({ color, outline, size, spinner, thickBorder }: ButtonProps) => {
   const borderWidth = thickBorder ? 2 : 1;
 
@@ -45,6 +61,8 @@ export default ({ color, outline, size, spinner, thickBorder }: ButtonProps) => 
         return 32;
     }
   })();
+
+  const lineHeight = `${height - 2 * borderWidth}px`;
 
   return css(
     resetAppearance,
@@ -62,7 +80,7 @@ export default ({ color, outline, size, spinner, thickBorder }: ButtonProps) => 
       borderRadius: '4px',
       fontSize: '13px',
       fontWeight: 700,
-      lineHeight: `${height - 2 * borderWidth}px`,
+      lineHeight,
       textAlign: 'center',
       whiteSpace: 'nowrap',
       userSelect: 'none',
@@ -169,10 +187,10 @@ export default ({ color, outline, size, spinner, thickBorder }: ButtonProps) => 
         content: '""',
         display: 'block',
         position: 'absolute',
-        left: 0,
-        top: 0,
-        bottom: 0,
-        right: 0,
+        left: '50%',
+        top: '50%',
+        width: lineHeight,
+        height: lineHeight,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
@@ -191,6 +209,8 @@ export default ({ color, outline, size, spinner, thickBorder }: ButtonProps) => 
               return buttonColors.gray_50;
           }
         })()} />)})`,
+        transform: 'translate3d(-50%, -50%, 0)',
+        animation: `${stepRotation} 1s step-start forwards infinite`,
       },
     },
   );
