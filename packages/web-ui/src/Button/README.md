@@ -1,14 +1,7 @@
-```jsx
-<div>
-  <Button>Button</Button>
-  <Button disabled>Button</Button>
-</div>
-```
-
 ### Basic Usage
 ```jsx
 const handleClick = (event) => {
-  // Do something.
+  alert('Button Clicked!');
 };
 
 <Button onClick={handleClick}>
@@ -16,7 +9,21 @@ const handleClick = (event) => {
 </Button>
 ```
 
-### Function as Prop
+### Variations
+```jsx
+<div>
+  <Button color="gray">Button</Button>
+  <Button color="blue">Button</Button>
+  <Button color="brown">Button</Button>
+  <Button color="gray" disabled>Button</Button>
+  <Button color="blue" disabled>Button</Button>
+  <Button color="brown" disabled>Button</Button>
+</div>
+```
+
+### Using `render` Prop
+
+#### Function as Prop
 ```jsx
 <Button
   render={({ children, ...restProps }) => (
@@ -28,7 +35,7 @@ const handleClick = (event) => {
 </Button>
 ```
 
-### Component as Prop
+#### Component as Prop
 ```jsx
 const Anchor = ({ children, ...restProps }) => (
   <a {...restProps}>{children}</a>
@@ -39,7 +46,7 @@ const Anchor = ({ children, ...restProps }) => (
 </Button>
 ```
 
-### Tag String as Prop
+#### Tag String as Prop
 ```jsx
 <Button render="a" href="#">
   Button
