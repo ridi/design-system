@@ -1,3 +1,18 @@
 language: node_js
 node_js: '10'
-script: yarn build
+cache: yarn
+
+script:
+  - yarn build
+
+before_deploy:
+  - printf "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+
+deploy:
+  provider: script
+  script: lerna publish from-git --yes
+  skip_cleanup: true
+  on:
+    repo: ridi/design-system
+    branch: master
+    tags: true

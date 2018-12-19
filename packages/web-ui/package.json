@@ -7,6 +7,13 @@
     "type": "git",
     "url": "git+https://github.com/ridi/design-system.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "build": "webpack",
