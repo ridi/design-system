@@ -4,5 +4,11 @@
     "packages/*"
   ],
   "npmClient": "yarn",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "allowBranch": "master",
+      "push": false
+    }
+  }
 }
