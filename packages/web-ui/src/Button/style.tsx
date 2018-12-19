@@ -178,6 +178,7 @@ export default ({ color, outline, size, spinner, thickBorder }: ButtonProps) => 
     spinner && {
       position: 'relative',
       color: 'transparent',
+      overflow: 'hidden',
 
       '& > *': {
         opacity: 0,
