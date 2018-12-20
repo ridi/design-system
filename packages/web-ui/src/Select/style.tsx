@@ -1,6 +1,6 @@
-import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import { arrow_1_down } from '@ridi/web-icons';
+import { BoxSizingProperty, PositionProperty } from 'csstype';
 import * as React from 'react';
 import { formElementDisabled, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg, SvgProps } from '../Svg';
@@ -10,17 +10,17 @@ const ArrowIcon = (props: SvgProps) => (
   <Svg render={arrow_1_down} {...props} />
 );
 
-export default ({ outline }: SelectProps) => css(
-  resetAppearance,
-  resetFont,
-  resetLayout,
+export default ({ outline }: SelectProps) => ({
+  ...resetAppearance,
+  ...resetFont,
+  ...resetLayout,
 
-  {
+  ...{
     display: 'inline-block',
-    position: 'relative',
+    position: 'relative' as PositionProperty,
     cursor: 'pointer',
 
-    boxSizing: 'border-box',
+    boxSizing: 'border-box' as BoxSizingProperty,
     padding: '.7em 0',
     paddingRight: '1.7em',
     outline: 'none',
@@ -41,12 +41,10 @@ export default ({ outline }: SelectProps) => css(
     },
 
     '&:not(:disabled)': {
-      '&:hover, &:active': css(
-        formElementHover,
-        {
-          color: colors.slategray_90,
-        },
-      ),
+      '&:hover, &:active': {
+        ...formElementHover,
+        color: colors.slategray_90,
+      },
     },
 
     '&:disabled': {
@@ -56,12 +54,12 @@ export default ({ outline }: SelectProps) => css(
     },
   },
 
-  outline && {
+  ...(outline && {
     padding: '.6em',
     paddingRight: '1.7em',
     border: `1px solid ${colors.slategray_20}`,
     borderRadius: '3px',
 
     '&:disabled': formElementDisabled,
-  },
-);
+  }),
+});

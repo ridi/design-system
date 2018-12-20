@@ -1,6 +1,6 @@
-import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import { check_1, dot_1 } from '@ridi/web-icons';
+import { BoxSizingProperty } from 'csstype';
 import * as React from 'react';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg } from '../Svg';
@@ -8,12 +8,13 @@ import { Svg } from '../Svg';
 const borderWidth = 1;
 const buttonSize = 18;
 
-export default css(
-  resetAppearance,
-  resetFont,
-  resetLayout,
-  {
-    boxSizing: 'border-box',
+export default {
+  ...resetAppearance,
+  ...resetFont,
+  ...resetLayout,
+
+  ...{
+    boxSizing: 'border-box' as BoxSizingProperty,
     display: 'inline-block',
     border: `${borderWidth}px solid ${colors.slategray_20}`,
     borderRadius: '3px',
@@ -76,4 +77,4 @@ export default css(
     '&:focus': formElementFocus,
     '&:disabled': formElementDisabled,
   },
-);
+};
