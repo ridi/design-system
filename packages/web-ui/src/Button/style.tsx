@@ -1,5 +1,6 @@
-import { css, keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/core';
 import colors from '@ridi/colors';
+import { merge } from 'lodash';
 import { rgba } from 'polished';
 import * as React from 'react';
 import { resetAppearance, resetFont, resetLayout } from '../styles';
@@ -64,7 +65,7 @@ export default ({ color, outline, size, spinner, thickBorder }: ButtonProps) => 
 
   const lineHeight = `${height - 2 * borderWidth}px`;
 
-  return css(
+  return merge({},
     resetAppearance,
     resetFont,
     resetLayout,
