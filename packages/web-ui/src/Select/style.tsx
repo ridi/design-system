@@ -58,6 +58,7 @@ export default ({ outline }: SelectProps) => css(
 
   outline && {
     padding: '.6em',
+    paddingRight: '1.7em',
     border: `1px solid ${colors.slategray_20}`,
     borderRadius: '3px',
 
