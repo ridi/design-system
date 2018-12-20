@@ -1,61 +1,82 @@
 ### Basic Usage
 ```jsx
 const handleClick = (event) => {
-  alert('Button Clicked!');
+  alert('Clicked!');
 };
 
-<Button onClick={handleClick}>
-  Button
-</Button>
+<div>
+  <Button onClick={handleClick} color="gray">Button</Button>
+  <Button onClick={handleClick} color="blue">Button</Button>
+  <Button onClick={handleClick} color="brown">Button</Button>
+  <Button onClick={handleClick} color="gray" disabled>Button</Button>
+  <Button onClick={handleClick} color="blue" disabled>Button</Button>
+  <Button onClick={handleClick} color="brown" disabled>Button</Button>
+</div>
 ```
 
-### Variations
+### Outline
 ```jsx
 <div>
-  <div>
-    <Button color="gray">Button</Button>
-    <Button color="blue">Button</Button>
-    <Button color="brown">Button</Button>
-    <Button color="gray" disabled>Button</Button>
-    <Button color="blue" disabled>Button</Button>
-    <Button color="brown" disabled>Button</Button>
-  </div>
+  <Button outline color="gray">Button</Button>
+  <Button outline color="blue">Button</Button>
+  <Button outline color="brown">Button</Button>
+  <Button outline color="gray" disabled>Button</Button>
+  <Button outline color="blue" disabled>Button</Button>
+  <Button outline color="brown" disabled>Button</Button>
+</div>
+```
 
-  <div>
-    <Button color="gray" outline>Button</Button>
-    <Button color="blue" outline>Button</Button>
-    <Button color="brown" outline>Button</Button>
-    <Button color="gray" outline disabled>Button</Button>
-    <Button color="blue" outline disabled>Button</Button>
-    <Button color="brown" outline disabled>Button</Button>
-  </div>
+### Thick Border
+```jsx
+<div>
+  <Button thickBorder color="gray">Button</Button>
+  <Button thickBorder color="blue">Button</Button>
+  <Button thickBorder color="brown">Button</Button>
+  <Button thickBorder color="gray" disabled>Button</Button>
+  <Button thickBorder color="blue" disabled>Button</Button>
+  <Button thickBorder color="brown" disabled>Button</Button>
+</div>
+```
 
-  <div>
-    <Button color="gray" thickBorder>Button</Button>
-    <Button color="blue" thickBorder>Button</Button>
-    <Button color="brown" thickBorder>Button</Button>
-    <Button color="gray" thickBorder disabled>Button</Button>
-    <Button color="blue" thickBorder disabled>Button</Button>
-    <Button color="brown" thickBorder disabled>Button</Button>
-  </div>
-
-  <div>
-    <Button color="gray" spinner>Button</Button>
-    <Button color="blue" spinner>Button</Button>
-    <Button color="brown" spinner>Button</Button>
-    <Button color="gray" spinner outline>Button</Button>
-    <Button color="blue" spinner outline>Button</Button>
-    <Button color="brown" spinner outline>Button</Button>
-  </div>
+### Spinner
+```jsx
+<div>
+  <Button spinner color="gray">Button</Button>
+  <Button spinner color="blue">Button</Button>
+  <Button spinner color="brown">Button</Button>
+  <Button spinner color="gray" disabled>Button</Button>
+  <Button spinner color="blue" disabled>Button</Button>
+  <Button spinner color="brown" disabled>Button</Button>
 </div>
 ```
 
 ### Sizes
 ```jsx
 <div>
-  <Button size="small">Button</Button>
-  <Button size="medium">Button</Button>
-  <Button size="large">Button</Button>
+  <div>
+    <Button size="small" color="gray">Button</Button>
+    <Button size="small" color="blue">Button</Button>
+    <Button size="small" color="brown">Button</Button>
+    <Button size="small" color="gray" disabled>Button</Button>
+    <Button size="small" color="blue" disabled>Button</Button>
+    <Button size="small" color="brown" disabled>Button</Button>
+  </div>
+  <div>
+    <Button size="medium" color="gray">Button</Button>
+    <Button size="medium" color="blue">Button</Button>
+    <Button size="medium" color="brown">Button</Button>
+    <Button size="medium" color="gray" disabled>Button</Button>
+    <Button size="medium" color="blue" disabled>Button</Button>
+    <Button size="medium" color="brown" disabled>Button</Button>
+  </div>
+  <div>
+    <Button size="large" color="gray">Button</Button>
+    <Button size="large" color="blue">Button</Button>
+    <Button size="large" color="brown">Button</Button>
+    <Button size="large" color="gray" disabled>Button</Button>
+    <Button size="large" color="blue" disabled>Button</Button>
+    <Button size="large" color="brown" disabled>Button</Button>
+  </div>
 </div>
 ```
 
