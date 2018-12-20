@@ -1,11 +1,10 @@
 import colors from '@ridi/colors';
-import { AppearanceProperty } from 'csstype';
 import { rgba } from 'polished';
 
 const defaultFontFamily = `Helvetica Neue, Apple SD Gothic Neo, arial, '나눔고딕', Nanum Gothic, '돋움', Dotum, Tahoma, Geneva, sans-serif`;
 
 export const resetAppearance = {
-  appearance: 'none' as AppearanceProperty,
+  appearance: 'none',
   border: 'none',
 };
 

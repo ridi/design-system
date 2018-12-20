@@ -1,6 +1,5 @@
 import colors from '@ridi/colors';
 import { arrow_1_down } from '@ridi/web-icons';
-import { BoxSizingProperty, PositionProperty } from 'csstype';
 import * as React from 'react';
 import { formElementDisabled, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg, SvgProps } from '../Svg';
@@ -17,10 +16,10 @@ export default ({ outline }: SelectProps) => Object.assign({},
 
   {
     display: 'inline-block',
-    position: 'relative' as PositionProperty,
+    position: 'relative',
     cursor: 'pointer',
 
-    boxSizing: 'border-box' as BoxSizingProperty,
+    boxSizing: 'border-box',
     padding: '.7em 0',
     paddingRight: '1.7em',
     outline: 'none',

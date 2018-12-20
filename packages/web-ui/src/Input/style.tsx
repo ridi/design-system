@@ -1,6 +1,5 @@
 import colors from '@ridi/colors';
 import { check_1, dot_1 } from '@ridi/web-icons';
-import { BoxSizingProperty } from 'csstype';
 import * as React from 'react';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg } from '../Svg';
@@ -14,7 +13,7 @@ export default Object.assign({},
   resetLayout,
 
   {
-    boxSizing: 'border-box' as BoxSizingProperty,
+    boxSizing: 'border-box',
     display: 'inline-block',
     border: `${borderWidth}px solid ${colors.slategray_20}`,
     borderRadius: '3px',
