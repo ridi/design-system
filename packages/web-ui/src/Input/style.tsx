@@ -8,12 +8,12 @@ import { Svg } from '../Svg';
 const borderWidth = 1;
 const buttonSize = 18;
 
-export default {
-  ...resetAppearance,
-  ...resetFont,
-  ...resetLayout,
+export default Object.assign({},
+  resetAppearance,
+  resetFont,
+  resetLayout,
 
-  ...{
+  {
     boxSizing: 'border-box' as BoxSizingProperty,
     display: 'inline-block',
     border: `${borderWidth}px solid ${colors.slategray_20}`,
@@ -77,4 +77,4 @@ export default {
     '&:focus': formElementFocus,
     '&:disabled': formElementDisabled,
   },
-};
+);

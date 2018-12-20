@@ -10,12 +10,12 @@ const ArrowIcon = (props: SvgProps) => (
   <Svg render={arrow_1_down} {...props} />
 );
 
-export default ({ outline }: SelectProps) => ({
-  ...resetAppearance,
-  ...resetFont,
-  ...resetLayout,
+export default ({ outline }: SelectProps) => Object.assign({},
+  resetAppearance,
+  resetFont,
+  resetLayout,
 
-  ...{
+  {
     display: 'inline-block',
     position: 'relative' as PositionProperty,
     cursor: 'pointer',
@@ -54,12 +54,12 @@ export default ({ outline }: SelectProps) => ({
     },
   },
 
-  ...(outline && {
+  outline && {
     padding: '.6em',
     paddingRight: '1.7em',
     border: `1px solid ${colors.slategray_20}`,
     borderRadius: '3px',
 
     '&:disabled': formElementDisabled,
-  }),
-});
+  },
+);

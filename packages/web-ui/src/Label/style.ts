@@ -2,12 +2,12 @@ import colors from '@ridi/colors';
 import { LabelProps } from '.';
 import { resetAppearance, resetFont, resetLayout } from '../styles';
 
-export default ({ active, disabled }: LabelProps) => ({
-  ...resetAppearance,
-  ...resetFont,
-  ...resetLayout,
+export default ({ active, disabled }: LabelProps) => Object.assign({},
+  resetAppearance,
+  resetFont,
+  resetLayout,
 
-  ...{
+  {
     display: 'inline-block',
     fontSize: '13px',
     color: colors.slategray_60,
@@ -15,19 +15,19 @@ export default ({ active, disabled }: LabelProps) => ({
     WebkitTapHighlightColor: 'transparent',
   },
 
-  ...(!disabled && {
+  !disabled && {
     cursor: 'pointer',
 
     '&:hover, &:active': {
       color: colors.slategray_90,
     },
-  }),
+  },
 
-  ...(!disabled && active && {
+  !disabled && active && {
     color: colors.slategray_90,
-  }),
+  },
 
-  ...(disabled && {
+  disabled && {
     color: colors.slategray_20,
-  }),
-});
+  },
+);
