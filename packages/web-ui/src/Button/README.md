@@ -53,30 +53,12 @@ const handleClick = (event) => {
 ### Sizes
 ```jsx
 <div>
-  <div>
-    <Button size="small" color="gray">Button</Button>
-    <Button size="small" color="blue">Button</Button>
-    <Button size="small" color="brown">Button</Button>
-    <Button size="small" color="gray" disabled>Button</Button>
-    <Button size="small" color="blue" disabled>Button</Button>
-    <Button size="small" color="brown" disabled>Button</Button>
-  </div>
-  <div>
-    <Button size="medium" color="gray">Button</Button>
-    <Button size="medium" color="blue">Button</Button>
-    <Button size="medium" color="brown">Button</Button>
-    <Button size="medium" color="gray" disabled>Button</Button>
-    <Button size="medium" color="blue" disabled>Button</Button>
-    <Button size="medium" color="brown" disabled>Button</Button>
-  </div>
-  <div>
-    <Button size="large" color="gray">Button</Button>
-    <Button size="large" color="blue">Button</Button>
-    <Button size="large" color="brown">Button</Button>
-    <Button size="large" color="gray" disabled>Button</Button>
-    <Button size="large" color="blue" disabled>Button</Button>
-    <Button size="large" color="brown" disabled>Button</Button>
-  </div>
+  <Button size="small">Button</Button>
+  <Button size="medium">Button</Button>
+  <Button size="large">Button</Button>
+  <Button size="small" spinner>Button</Button>
+  <Button size="medium" spinner>Button</Button>
+  <Button size="large" spinner>Button</Button>
 </div>
 ```
 
