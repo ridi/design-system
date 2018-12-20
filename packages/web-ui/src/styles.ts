@@ -1,4 +1,5 @@
 import colors from '@ridi/colors';
+import _ from 'lodash';
 import { rgba } from 'polished';
 
 const defaultFontFamily = `Helvetica Neue, Apple SD Gothic Neo, arial, '나눔고딕', Nanum Gothic, '돋움', Dotum, Tahoma, Geneva, sans-serif`;
@@ -34,4 +35,15 @@ export const formElementDisabled = {
   borderColor: colors.slategray_20,
   backgroundColor: colors.slategray_5,
   color: colors.slategray_20,
+};
+
+export const mergeStyles = (...styles: Array<object | ((style: object) => object)>) => {
+  return _.reduce(
+    styles,
+    (mergedStyle, style) => {
+      const overridingStyle = (style instanceof Function) ? style(mergedStyle) : style;
+      return _.merge(mergedStyle, overridingStyle);
+    },
+    {},
+  );
 };

@@ -1,9 +1,8 @@
 import { keyframes } from '@emotion/core';
 import colors from '@ridi/colors';
-import { merge } from 'lodash';
 import { rgba } from 'polished';
 import * as React from 'react';
-import { resetAppearance, resetFont, resetLayout } from '../styles';
+import { mergeStyles, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg } from '../Svg';
 import { ButtonProps } from './index';
 import Spinner from './spinner.svg';
@@ -65,7 +64,7 @@ export default ({ color, outline, size, spinner, thickBorder }: ButtonProps) => 
 
   const lineHeight = `${height - 2 * borderWidth}px`;
 
-  return merge({},
+  return mergeStyles(
     resetAppearance,
     resetFont,
     resetLayout,
