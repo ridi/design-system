@@ -8,17 +8,14 @@ const selected = true;
   updateBadge
   ridiselect
   unitBook
-  bookCount={50}
-  bookCountUnit={LibraryBook.BookCountUnit.Serial}
-  bookCountWrapper={{
-    wrapper: 'a',
-    getProps() {
-      return {
-        href: '#',
-      };
-    },
-  }}
-  selectMode
+  renderUnitBookCount={(props) => (
+    <LibraryBook.UnitBookCount
+      bookCount={60}
+      bookCountUnit={LibraryBook.BookCountUnit.Serial}
+      render="button"
+    />
+  )}
+  selectMode  
   selected={selected}
   onSelectedChange={() => {console.log('selected!')}}
   readingStatus={LibraryBook.ReadingStatus.New}
@@ -33,16 +30,12 @@ const selected = true;
   ridiselect
   notAvailable={true}
   unitBook
-  bookCount={50}
-  bookCountUnit={LibraryBook.BookCountUnit.Serial}
-  bookCountWrapper={{
-    wrapper: 'a',
-    getProps() {
-      return {
-        href: '#',
-      };
-    },
-  }}
+  renderUnitBookCount={() => (
+    <LibraryBook.UnitBookCount
+      bookCount={30}
+      bookCountUnit={LibraryBook.BookCountUnit.Single}
+    />
+  )}
   onSelectedChange={() => {console.log('selected!')}}
   readingStatus={LibraryBook.ReadingStatus.New}
 />
@@ -55,16 +48,14 @@ const selected = true;
   updateBadge
   ridiselect
   unitBook
-  bookCount={50}
-  bookCountUnit={LibraryBook.BookCountUnit.Serial}
-  bookCountWrapper={{
-    wrapper: 'a',
-    getProps() {
-      return {
-        href: '#',
-      };
-    },
-  }}
+  renderUnitBookCount={() => (
+    <LibraryBook.UnitBookCount
+      bookCount={30}
+      bookCountUnit={LibraryBook.BookCountUnit.Single}
+      render="a"
+      href="/"
+    />
+  )}
   readingStatus={LibraryBook.ReadingStatus.Opened}
   readingProgress={20}
 />
@@ -77,8 +68,12 @@ const selected = true;
   updateBadge
   ridiselect
   unitBook
-  bookCount={50}
-  bookCountUnit={LibraryBook.BookCountUnit.Serial}
+  renderUnitBookCount={() => (
+    <LibraryBook.UnitBookCount
+      bookCount={30}
+      bookCountUnit={LibraryBook.BookCountUnit.Single}
+    />
+  )}
   downloadStatus={LibraryBook.DownloadStatus.Downloading}
 />
 ```
@@ -163,16 +158,14 @@ const selected = true;
     unitBook
     updateBadge
     readingStatus={LibraryBook.ReadingStatus.New}
-    bookCount={50}
-    bookCountUnit={LibraryBook.BookCountUnit.Serial}
-    bookCountWrapper={{
-      wrapper: 'a',
-      getProps() {
-        return {
-          href: '#',
-        };
-      },
-    }}
+    renderUnitBookCount={() => (
+      <LibraryBook.UnitBookCount
+        bookCount={30}
+        bookCountUnit={LibraryBook.BookCountUnit.Single}
+        render="a"
+        href="/"
+      />
+    )}
   />
 </div>
 ```

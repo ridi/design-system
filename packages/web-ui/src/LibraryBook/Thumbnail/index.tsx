@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import * as React from 'react';
 import {
   AdultBadge,
-  BookCountUnit,
   DownloadButton,
   DownloadButtonProps,
   DownloadStatus,
@@ -18,7 +17,6 @@ import {
   ThumbnailCheckbox,
   ThumbnailImage,
   ThumbnailImageProps,
-  UnitBookCount,
   UnitBookCountProps,
   UnitBookDownloading,
   UnReadDot,
@@ -32,8 +30,7 @@ import * as styles from './styles';
 export interface ThumbnailProps extends
   DownloadButtonProps,
   ReadingProgressBarProps,
-  ThumbnailImageProps,
-  UnitBookCountProps {
+  ThumbnailImageProps {
     adultBadge?: boolean;
     children?: React.ReactNode;
     className?: string;
@@ -44,6 +41,7 @@ export interface ThumbnailProps extends
     selectMode?: boolean;
     selected?: boolean;
     readingStatus?: ReadingStatus;
+    renderUnitBookCount?: React.FunctionComponent<UnitBookCountProps>;
     ridiSelect?: boolean;
     unitBook?: boolean;
     updateBadge?: boolean;
@@ -55,10 +53,6 @@ export interface ThumbnailProps extends
 export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   const {
     adultBadge = false,
-    bookCount = 0,
-    bookCountLinkUrl,
-    bookCountUnit = BookCountUnit.Single,
-    bookCountWrapper,
     children,
     className,
     downloadProgress,
@@ -69,6 +63,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     onSelectedChange,
     readingProgress,
     readingStatus,
+    renderUnitBookCount,
     ridiselect,
     selected = false,
     selectMode = false,
@@ -107,13 +102,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
           <React.Fragment>
             {unitBook ? (
               <React.Fragment>
-                {bookCount &&
-                  <UnitBookCount
-                    bookCount={bookCount}
-                    bookCountUnit={bookCountUnit}
-                    bookCountWrapper={bookCountWrapper}
-                  />
-                }
+                {unitBook && renderUnitBookCount({})}
                 {downloadStatus === DownloadStatus.Downloading && <UnitBookDownloading size={UnitBookDownloadingSize.Large} />}
               </React.Fragment>
             ) : (

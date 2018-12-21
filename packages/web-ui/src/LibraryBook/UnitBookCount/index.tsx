@@ -12,33 +12,27 @@ export enum BookCountUnit {
 export interface UnitBookCountProps {
   bookCount?: number;
   bookCountUnit?: BookCountUnit;
-  bookCountWrapper?: {
-    wrapper?: React.ReactType;
-    getProps?: () => any;
-  };
+  render?: any;
+  [key: string]: any;
 }
 
 export const UnitBookCount: React.FunctionComponent<UnitBookCountProps> = (props) => {
   const {
     bookCount,
     bookCountUnit,
-    bookCountWrapper = {},
+    render: BookCountWRapper = 'p',
+    ...restProps
   } = props;
-  const {
-    wrapper = 'p',
-    getProps = () => ({}),
-  } = bookCountWrapper;
-  const BookCountWrapper = wrapper;
 
   return Number(bookCount) > 0 ? (
-    <BookCountWrapper
+    <BookCountWRapper
       css={styles.unitBookCount}
-      {...getProps()}
+      {...restProps}
     >
       <span css={styles.count}>
         총 {bookCount}{bookCountUnit}
         <ArrowIcon css={styles.icon}/>
       </span>
-    </BookCountWrapper>
+    </BookCountWRapper>
   ) : null;
 };

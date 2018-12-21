@@ -19,7 +19,6 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     author,
     bookCount,
     bookCountUnit,
-    bookCountWrapper,
     className,
     downloadProgress,
     downloadStatus,
@@ -29,6 +28,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     onSelectedChange,
     readingProgress,
     readingStatus,
+    renderUnitBookCount,
     ridiselect,
     selected,
     selectMode,
@@ -51,7 +51,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           adultBadge={adultBadge}
           bookCount={bookCount}
           bookCountUnit={bookCountUnit}
-          bookCountWrapper={bookCountWrapper}
+          renderUnitBookCount={renderUnitBookCount}
           downloadProgress={downloadProgress}
           downloadStatus={downloadStatus}
           expired={expired}

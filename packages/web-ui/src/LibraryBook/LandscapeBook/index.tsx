@@ -23,9 +23,6 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
       memoCount: 0,
     },
     author,
-    bookCount,
-    bookCountUnit,
-    bookCountWrapper,
     className,
     downloadProgress,
     downloadSize,
@@ -36,6 +33,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     onSelectedChange,
     readingProgress,
     readingStatus,
+    renderUnitBookCount,
     ridiselect,
     selected,
     selectMode,
@@ -81,15 +79,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
         {unitBook ? (
           downloadStatus === LibraryBook.DownloadStatus.Downloading ? (
             <LibraryBook.UnitBookDownloading />
-          ) : (
-            bookCount ? (
-              <LibraryBook.UnitBookCount
-                bookCount={bookCount}
-                bookCountUnit={bookCountUnit}
-                bookCountWrapper={bookCountWrapper}
-              />
-            ) : null
-          )
+          ) : renderUnitBookCount({})
         ) : (
           readingStatus === LibraryBook.ReadingStatus.Opened ? (
             <React.Fragment>
