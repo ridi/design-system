@@ -2,7 +2,7 @@ import colors from '@ridi/colors';
 import { merge } from 'lodash';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 
-export default merge(
+export default merge({},
   resetAppearance,
   resetFont,
   resetLayout,
