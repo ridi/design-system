@@ -1,7 +1,7 @@
-import css from "@emotion/css";
+import { merge } from 'lodash';
 import { resetFont, resetLayout } from "../../styles";
 
-export const expiredAt = css([resetFont, resetLayout, {
+export const expiredAt = merge({}, resetFont, resetLayout, {
   position: 'relative',
   fontSize: 12,
   height: '1em',
@@ -23,9 +23,9 @@ export const expiredAt = css([resetFont, resetLayout, {
     background: 'rgba(0, 0, 0, .5)',
     color: 'white',
   },
-}]);
+});
 
-export const expiredAtIcon = css({
+export const expiredAtIcon = {
   position: 'absolute',
   left: 2,
   top: '50%',
@@ -37,4 +37,4 @@ export const expiredAtIcon = css({
     left: 3,
     fill: 'white',
   },
-});
+};

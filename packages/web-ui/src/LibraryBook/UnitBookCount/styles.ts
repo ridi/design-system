@@ -1,7 +1,8 @@
-import css from "@emotion/css";
+import { DisplayProperty, PositionProperty, WhiteSpaceProperty } from 'csstype';
+import { merge } from 'lodash';
 import { resetAppearance, resetFont, resetLayout } from "../../styles";
 
-export const unitBookCount = css([resetAppearance, resetFont, resetLayout, {
+export const unitBookCount = merge({}, resetAppearance, resetFont, resetLayout, {
   display: 'inline-block',
   position: 'relative',
   textDecoration: 'none',
@@ -13,9 +14,9 @@ export const unitBookCount = css([resetAppearance, resetFont, resetLayout, {
     width: '100%',
     height: '100%',
   },
-}]);
+});
 
-export const count = css({
+export const count = {
   display: 'block',
   padding: '3px 15px 4px 7px',
   border: '1px solid #9ea7ad',
@@ -26,9 +27,9 @@ export const count = css({
   color: '#525a61',
   borderRadius: 50,
   background: 'white',
-  whiteSpace: 'nowrap',
+  whiteSpace: 'nowrap' as WhiteSpaceProperty,
   '.Thumbnail & ': {
-    position: 'absolute',
+    position: 'absolute' as PositionProperty,
     left: '50%',
     bottom: 10,
     transform: 'translate3d(-50%, 0, 0)',
@@ -38,9 +39,9 @@ export const count = css({
     background: 'rgba(0, 0, 0, .7)',
     boxShadow: '0 0 0 1px rgba(0, 0, 0, .7)',
   },
-});
+};
 
-export const icon = css({
+export const icon = {
   position: 'absolute',
   right: 7,
   top: '50%',
@@ -51,4 +52,4 @@ export const icon = css({
   '.Thumbnail & ': {
     fill: 'white',
   },
-});
+};

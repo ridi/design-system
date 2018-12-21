@@ -1,21 +1,21 @@
-import { css } from '@emotion/core';
+import { merge } from 'lodash';
 import { resetFont, resetLayout } from '../../styles';
 
-export const annotations = css([resetLayout, {
+export const annotations = merge({}, resetLayout, {
   listStyle: 'none',
   whiteSpace: 'nowrap',
   fontSize: 0,
   marginTop: 8,
-}]);
+});
 
-export const annotationItem = css([resetFont, resetLayout, {
+export const annotationItem = merge({}, resetFont, resetLayout, {
   display: 'inline-block',
   color: '#808991',
   fontSize: 12,
   marginLeft: 12,
-}]);
+});
 
-export const annotationTitle = css({
+export const annotationTitle = ({
   display: 'block',
   width: 0,
   height: 0,
@@ -32,14 +32,14 @@ const annotationIcon = {
   fill: '#9ea7ad',
 };
 
-export const bookMarkIcon = css([annotationIcon, {
+export const bookMarkIcon = merge({}, annotationIcon, {
   width: 9,
-}]);
+});
 
-export const hightlightIcon = css([annotationIcon, {
+export const hightlightIcon = merge({}, annotationIcon, {
   width: 10,
-}]);
+});
 
-export const memoIcon = css([annotationIcon, {
+export const memoIcon = merge({}, annotationIcon, {
   width: 12,
-}]);
+});

@@ -1,13 +1,13 @@
-import css from "@emotion/css";
+import { BoxSizingProperty, PositionProperty } from "csstype";
 
-export const thumbnailImage = css({
+export const thumbnailImage = {
   display: 'inline-block',
-  position: 'relative',
+  position: 'relative' as PositionProperty,
   lineHeight: 0,
   '&::after': {
     display: 'block',
-    boxSizing: 'border-box',
-    position: 'absolute',
+    boxSizing: 'border-box' as BoxSizingProperty,
+    position: 'absolute' as PositionProperty,
     top: 0,
     left: 0,
     width: '100%',
@@ -22,8 +22,8 @@ export const thumbnailImage = css({
     border: 'solid 1px rgba(0, 0, 0, .1)',
     content: `''`,
   },
-});
+};
 
-export const image = css({
+export const image = {
   width: '100%',
-});
+};

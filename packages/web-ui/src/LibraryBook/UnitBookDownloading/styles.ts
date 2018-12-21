@@ -1,14 +1,15 @@
-import {css, keyframes} from "@emotion/core";
+import { keyframes } from "@emotion/core";
+import { PositionProperty, WhiteSpaceProperty } from "csstype";
 
 export enum UnitBookDownloadingSize {
   Small,
   Large,
 };
 
-export const wrapper = css({
+export const wrapper = {
   cursor: 'pointer',
   '.Thumbnail & ': {
-    position: 'absolute',
+    position: 'absolute' as PositionProperty,
     left: 0,
     top: 0,
     width: '100%',
@@ -16,11 +17,11 @@ export const wrapper = css({
     zIndex: 100,
     background: 'rgba(0, 0, 0, .4)',
   },
-});
+};
 
 const wrapperSize = (size: UnitBookDownloadingSize) => size === UnitBookDownloadingSize.Small ? 32 : 44;
-export const downloading = (size: UnitBookDownloadingSize) => css({
-  position: 'relative',
+export const downloading = (size: UnitBookDownloadingSize) => ({
+  position: 'relative' as PositionProperty,
   borderRadius: '50%',
   background: '#1f8ce6',
   margin: '50% auto',
@@ -28,13 +29,13 @@ export const downloading = (size: UnitBookDownloadingSize) => css({
   height: wrapperSize(size),
 });
 
-export const dotsWrapper = css({
-  position: 'absolute',
+export const dotsWrapper = {
+  position: 'absolute' as PositionProperty,
   left: '50%',
   top: '50%',
   transform: 'translate3d(-50%, -50%, 0)',
-  whiteSpace: 'nowrap',
-});
+  whiteSpace: 'nowrap' as WhiteSpaceProperty,
+};
 
 const dotSize = () => 4;
 const dotGap = (size: UnitBookDownloadingSize) => size === UnitBookDownloadingSize.Small ? 3 : 4;
@@ -47,7 +48,7 @@ const dotFlashing = keyframes({
   },
 });
 
-export const dot = (size: UnitBookDownloadingSize, index: number) => css({
+export const dot = (size: UnitBookDownloadingSize, index: number) => ({
   display: 'inline-block',
   width: dotSize(),
   height: dotSize(),

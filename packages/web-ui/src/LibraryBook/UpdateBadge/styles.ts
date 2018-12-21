@@ -1,7 +1,7 @@
-import css from "@emotion/css";
+import { merge } from 'lodash';
 import { resetFont } from "../../styles";
 
-export const updateBadge = css([resetFont, {
+export const updateBadge = merge({}, resetFont, {
   position: 'absolute',
   left: 0,
   top: 0,
@@ -13,4 +13,4 @@ export const updateBadge = css([resetFont, {
   color: 'white',
   background: 'rgba(0, 119, 217, .95)',
   borderBottomRightRadius: 4,
-}]);
+});

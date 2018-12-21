@@ -1,7 +1,7 @@
-import css from "@emotion/css";
+import { merge } from 'lodash';
 import { lineClamp, resetFont, resetLayout } from "../../styles";
 
-export const title = css([lineClamp(), resetFont, resetLayout, {
+export const title = merge({}, lineClamp(), resetFont, resetLayout, {
   color: '#212529',
   fontSize: 15,
   fontWeight: 'bold',
@@ -9,5 +9,4 @@ export const title = css([lineClamp(), resetFont, resetLayout, {
   '.PortraitBook & ': {
     fontSize: 13,
   },
-}]);
-
+});

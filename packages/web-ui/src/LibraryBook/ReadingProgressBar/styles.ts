@@ -1,24 +1,25 @@
-import css from "@emotion/css";
+import { PositionProperty } from 'csstype';
+import { merge } from 'lodash';
 import { resetFont, resetLayout } from "../../styles";
 
-export const readingProgressBar = css([resetLayout, {
+export const readingProgressBar = merge({}, resetLayout, {
   position: 'relative',
   lineHeight: 0,
   '.Thumbnail & ': {
     marginBottom: 8,
   },
-}]);
+});
 
-export const title = css({
+export const title = {
   display: 'block',
   fontSize: 0,
   width: 0,
   height: 0,
   overflow: 'hidden',
   color: 'transparent',
-});
+};
 
-export const percentage = css([resetFont, {
+export const percentage = merge({}, resetFont, {
   display: 'block',
   fontSize: 12,
   color: '#808991',
@@ -33,24 +34,24 @@ export const percentage = css([resetFont, {
     overflow: 'hidden',
     color: 'transparent',
   },
-}]);
+});
 
-export const progressBG = css({
+export const progressBG = {
   display: 'inline-block',
   borderRadius: 4,
   background: '#d1d5d9',
   overflow: 'hidden',
-  position: 'relative',
+  position: 'relative' as PositionProperty,
   width: 80,
   height: 4,
   '.Thumbnail & ': {
     width: '100%',
   },
-});
+};
 
-export const progress = css({
+export const progress = {
   display: 'block',
-  position: 'absolute',
+  position: 'absolute' as PositionProperty,
   left: 0,
   top: 0,
   width: 0,
@@ -58,4 +59,4 @@ export const progress = css({
   borderRadius: 4,
   background: '#808991',
   color: '#808991',
-});
+};

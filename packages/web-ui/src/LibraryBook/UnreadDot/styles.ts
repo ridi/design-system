@@ -1,7 +1,7 @@
-import css from "@emotion/css";
+import { merge } from 'lodash';
 import { resetLayout } from "../../styles";
 
-export const unReadDot = css([resetLayout, {
+export const unReadDot = merge({}, resetLayout, {
   width: 6,
   height: 6,
   borderRadius: 6,
@@ -10,4 +10,4 @@ export const unReadDot = css([resetLayout, {
   color: '#339cf2',
   background: '#339cf2',
   marginBottom: 8,
-}]);
+});

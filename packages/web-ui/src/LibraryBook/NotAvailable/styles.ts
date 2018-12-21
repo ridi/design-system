@@ -1,7 +1,7 @@
-import css from "@emotion/css";
+import { merge } from 'lodash';
 import { displayHidden, resetLayout } from "../../styles";
 
-export const notAvailable = css([resetLayout, {
+export const notAvailable = merge({}, resetLayout, {
   position: 'absolute',
   left: 0,
   top: 0,
@@ -10,9 +10,9 @@ export const notAvailable = css([resetLayout, {
   background: 'black',
   opacity: .4,
   zIndex: 200,
-}]);
+});
 
-export const icon = css({
+export const icon = {
   position: 'absolute',
   left: '50%',
   top: '50%',
@@ -23,6 +23,6 @@ export const icon = css({
   padding: 2,
   borderRadius: 44,
   background: '#f3f4f5',
-});
+};
 
 export const text = displayHidden;

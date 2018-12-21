@@ -17,8 +17,6 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
   const {
     adultBadge,
     author,
-    bookCount,
-    bookCountUnit,
     className,
     downloadProgress,
     downloadStatus,
@@ -49,8 +47,6 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
       <div css={styles.thumbnail}>
         <LibraryBook.Thumbnail
           adultBadge={adultBadge}
-          bookCount={bookCount}
-          bookCountUnit={bookCountUnit}
           renderUnitBookCount={renderUnitBookCount}
           downloadProgress={downloadProgress}
           downloadStatus={downloadStatus}

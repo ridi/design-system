@@ -1,16 +1,16 @@
-import css from "@emotion/css";
+import { PositionProperty } from "csstype";
 
-export const thumbnail = css({
+export const thumbnail = {
   maxWidth: 100,
   lineHeight: 0,
-});
+};
 
-export const thumbnailWidth = (width: number) => css({
+export const thumbnailWidth = (width: number) => ({
   width,
 });
 
-export const thumbnailImageWrapper = css({
+export const thumbnailImageWrapper = {
   display: 'inline-block',
-  position: 'relative',
+  position: 'relative' as PositionProperty,
   lineHeight: 0,
-});
+};
