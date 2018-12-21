@@ -7,27 +7,31 @@ html.home {
     max-width: none;
   }
 
-  & .header {
+  & .hero {
     margin: calc(-1 * var(--site-padding));
     margin-bottom: 0;
-    padding: 70px 0;
-    background: url('./img/home_bg_m.png') center center no-repeat;
+    padding: 160px 20px;
+  }
+
+  & .hero__logo {
+    width: 420px;
+    height: 45px;
+    background: url(../../assets/img/RIDIDesignSystem.svg) no-repeat;
     background-size: cover;
   }
 
-  & .header__title {
-    margin: 0 0 20px;
+  & .hero__title {
+    margin: 20px 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 1.38;
-    color: var(--white);
-    text-shadow: 2px 2px 4px rgba(33, 37, 41, 0.5);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    color: var(--slategray_60);
     border: none;
   }
 
-  & .header__description {
+  & .hero__description {
     margin: 0;
     font-size: 14px;
     font-weight: 300;
@@ -38,26 +42,26 @@ html.home {
   }
 
   & .site-content-nav {
-    margin: 100px 0;
+    margin: 60px 0;
   }
 
   & .site-content-list {
-    padding: 0;
+    padding: 20px;
     list-style: none;
   }
 
   & .site-content {
-    margin: 80px 0;
+    margin: 40px 0;
     background: no-repeat center top;
-    background-size: 80px 50px;
-    text-align: center;
+    background-size: 316px 200px;
+    text-align: left;
     line-height: normal;
   }
 
   & .site-content__link {
     display: inline-block;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 230px;
     font-weight: normal;
     text-decoration: none;
 
@@ -69,11 +73,10 @@ html.home {
   }
 
   & .site-content__title {
-    margin: 0 0 12px;
+    margin: 0 0 30px;
     padding: 0;
-    text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: 27px;
     font-weight: bold;
     color: var(--slategray_90);
     border: none;
@@ -81,29 +84,41 @@ html.home {
 
   & .site-content__description {
     margin: 0;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.3px;
+    font-size: 17px;
+    line-height: 1.65;
+    letter-spacing: -0.4px;
     color: var(--slategray_90);
   }
 
+  & .site-content__btn-more {
+    padding-top: 20px;
+    font-size: 15px;
+    color: var(--slategray_50);
+    letter-spacing: -0.3px;
+    text-decoration: underline;
+    
+    &:hover {
+      color: var(--dodgerblue_50);
+    }
+  }
+
   & .site-content-principles {
-    background-image: url('./img/home_icon_principles.png');
+    background-image: url('./img/1_Principle.png');
   }
 
   & .site-content-writings {
-    background-image: url('./img/home_icon_writings.png');
+    background-image: url('./img/2_Writings.png');
   }
 
   & .site-content-colors {
-    background-image: url('./img/home_icon_colors.png');
+    background-image: url('./img/3_Color.png');
   }
 
   & .site-content-web {
-    background-image: url('./img/home_icon_web.png');
+    background-image: url('./img/4_web.png');
   }
 
   & .site-content-app {
-    background-image: url('./img/home_icon_app.png');
+    background-image: url('./img/5_App.png');
   }
 }
