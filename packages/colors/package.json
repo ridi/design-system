@@ -7,7 +7,16 @@
     "type": "git",
     "url": "git+https://github.com/ridi/design-system.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "hex.json",
+  "files": [
+    "hex.json",
+    "hsl.json",
+    "hwb.json",
+    "rgb.json"
+  ],
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "build": "node build.js",

@@ -10,11 +10,14 @@ module.exports = {
   output: {
     path: outDir,
     filename: 'index.js',
+    libraryTarget: 'commonjs2',
   },
   mode: 'production',
   devtool: 'source-map',
   externals: {
-    react: 'React',
+    react: 'react',
+    'react-dom': 'react-dom',
+    'react-dom/server': 'react-dom/server',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
