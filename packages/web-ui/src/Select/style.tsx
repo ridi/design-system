@@ -1,6 +1,6 @@
-import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import { arrow_1_down } from '@ridi/web-icons';
+import { merge } from 'lodash';
 import * as React from 'react';
 import { formElementDisabled, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg, SvgProps } from '../Svg';
@@ -10,7 +10,7 @@ const ArrowIcon = (props: SvgProps) => (
   <Svg render={arrow_1_down} {...props} />
 );
 
-export default ({ outline }: SelectProps) => css(
+export default ({ outline }: SelectProps) => merge({},
   resetAppearance,
   resetFont,
   resetLayout,
@@ -41,12 +41,10 @@ export default ({ outline }: SelectProps) => css(
     },
 
     '&:not(:disabled)': {
-      '&:hover, &:active': css(
-        formElementHover,
-        {
-          color: colors.slategray_90,
-        },
-      ),
+      '&:hover, &:active': {
+        ...formElementHover,
+        color: colors.slategray_90,
+      },
     },
 
     '&:disabled': {
