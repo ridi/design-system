@@ -1,4 +1,3 @@
-import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import { rgba } from 'polished';
 
@@ -15,57 +14,57 @@ export const defaultFontFamily = [
   'sans-serif',
 ].join(', ');
 
-export const resetAppearance = css({
+export const resetAppearance = {
   appearance: 'none',
   background: 'none',
   boxShadow: 'none',
   border: 0,
-});
+};
 
-export const resetFont = css({
+export const resetFont = {
   color: 'black',
   fontFamily: defaultFontFamily,
   fontWeight: 400,
   letterSpacing: '-.4px',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
-});
+};
 
-export const resetLayout = css({
+export const resetLayout = {
   padding: 0,
   margin: 0,
-});
+};
 
-export const formElementHover = css({
+export const formElementHover = {
   borderColor: colors.slategray_50,
-});
+};
 
-export const formElementFocus = css({
+export const formElementFocus = {
   borderColor: colors.dodgerblue_50,
   boxShadow: `0 0 4px ${rgba(colors.dodgerblue_50, .1)}`,
-});
+};
 
-export const formElementDisabled = css({
+export const formElementDisabled = {
   borderColor: colors.slategray_20,
   background: colors.slategray_5,
   color: colors.slategray_20,
-});
+};
 
-export const cursorDefault = css({
+export const cursorDefault = {
   cursor: 'default',
-});
+};
 
-export const cursorPointer = css({
+export const cursorPointer = {
   cursor: 'pointer',
-});
+};
 
-export const inheritFont = css({
+export const inheritFont = {
   color: 'inherit',
   letterSpacing: 'inherit',
   fontFamily: 'inherit',
-});
+};
 
-export const displayHidden = css({
+export const displayHidden = {
   display: 'inline-block',
   width: 0,
   height: 0,
@@ -78,10 +77,10 @@ export const displayHidden = css({
   lineHeight: 0,
   opacity: 0,
   clip: 'rect(0, 0, 0, 0)',
-});
+};
 
-export const lineClamp = (lineNum?: number) => css({
-  display: 'box',
+export const lineClamp = (lineNum?: number) => ({
+  display: '-webkit-box',
   WebkitBoxOrient: 'vertical',
   overflow: 'hidden',
   whiteSpace: 'normal',
