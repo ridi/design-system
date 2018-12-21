@@ -1,11 +1,12 @@
-import { css } from '@emotion/core';
 import colors from '@ridi/colors';
+import { merge } from 'lodash';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 
-export default css(
+export default merge(
   resetAppearance,
   resetFont,
   resetLayout,
+
   {
     boxSizing: 'border-box',
     display: 'inline-block',
