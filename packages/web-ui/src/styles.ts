@@ -37,7 +37,7 @@ export const formElementDisabled = {
   color: colors.slategray_20,
 };
 
-export const mergeStyles = (...styles: Array<object | ((style: object) => object)>) => {
+export const mergeStyles = (...styles: Array<object | ((style: any) => object)>) => {
   return _.reduce(
     styles,
     (mergedStyle, style) => {
