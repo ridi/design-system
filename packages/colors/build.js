@@ -7,15 +7,13 @@ const pkg = require('./package.json');
 
 const sourceColors = require('./hwb.json');
 
-const generateModuleDefinition = () => {
-  const fileName = 'index.d.ts';
-
-  const statements = _.map(sourceColors, (color, name) => (
+const generateModuleDefinition = (moduleName, colors, fileName) => {
+  const statements = _.map(colors, (color, name) => (
     `  const ${name}: string;`
   )).join('\n');
 
   const data = `\
-declare module '${pkg.name}' {
+declare module '${moduleName}' {
 ${statements}
 }
 `;
@@ -33,7 +31,7 @@ const convertColors = (colors, converter, fileName) => {
   console.log(`- Generated ${fileName}`);
 };
 
-generateModuleDefinition();
+generateModuleDefinition(pkg.name, sourceColors, 'index.d.ts');
 convertColors(sourceColors, color => Color(color).hex(), 'hex.json');
 convertColors(sourceColors, color => Color(color).rgb().string(), 'rgb.json');
 convertColors(sourceColors, color => Color(color).hsl().string(), 'hsl.json');
