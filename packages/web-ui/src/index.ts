@@ -4,3 +4,4 @@ export * from './Label';
 export * from './LibraryBook';
 export * from './Radio';
 export * from './Select';
+export * from './Textarea';
