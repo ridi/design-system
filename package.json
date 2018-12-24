@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "husky": "^1.2.0",
-    "lerna": "^3.5.0"
+    "lerna": "^3.6.0"
   },
   "engines": {
     "node": ">=10"

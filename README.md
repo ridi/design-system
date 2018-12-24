@@ -25,3 +25,13 @@ $ yarn start
 $ yarn
 $ yarn start
 ```
+
+#### Deployment
+To publish the packages, please follow the steps:
+
+1. Checkout `master` branch.
+2. Update `CHANGELOG.md` and commit.
+3. Run `lerna version` to update the packages' version. This will automatically *commit version changes* and *add a tag*.
+4. Push the commit & tag to `mater` branch.
+
+> CI will be triggered to start deployment process after pushing the tag.

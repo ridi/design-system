@@ -1,6 +1,6 @@
-import { css } from '@emotion/core';
 import colors from '@ridi/colors';
 import { check_1, dot_1 } from '@ridi/web-icons';
+import { merge } from 'lodash';
 import * as React from 'react';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg } from '../Svg';
@@ -8,10 +8,11 @@ import { Svg } from '../Svg';
 const borderWidth = 1;
 const buttonSize = 18;
 
-export default css(
+export default merge({},
   resetAppearance,
   resetFont,
   resetLayout,
+
   {
     boxSizing: 'border-box',
     display: 'inline-block',
