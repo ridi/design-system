@@ -5,7 +5,7 @@ import * as React from 'react';
 import { mergeStyles, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg } from '../Svg';
 import { ButtonProps } from './index';
-import Spinner from './spinner.svg';
+import SpinnerIcon from './spinner.svg';
 
 const buttonColors = {
   blue10: colors.dodgerblue_10,
@@ -197,7 +197,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'contain',
-      backgroundImage: `url(${Svg.renderToDataUri(<Spinner stroke={style.color} />)})`,
+      backgroundImage: `url(${Svg.renderToDataUri(<SpinnerIcon stroke={style.color} />)})`,
       transform: 'translate3d(-50%, -50%, 0)',
       animation: `${(
         keyframes({
