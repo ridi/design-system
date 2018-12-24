@@ -1,4 +1,5 @@
 /node_modules
+/index.d.ts
 /hex.json
 /hsl.json
 /rgb.json
