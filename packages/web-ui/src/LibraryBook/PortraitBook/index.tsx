@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
-import * as LibraryBook from '../';
+import { LibraryBook } from '../';
 import * as styles from './styles';
 
 export interface PortraitBookProps extends
