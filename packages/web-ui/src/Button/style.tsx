@@ -37,11 +37,8 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
   resetLayout,
 
   {
-    WebkitTapHighlightColor: 'transparent',
+    display: 'inline-block',
     boxSizing: 'border-box',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
     borderStyle: 'solid',
     borderWidth: 1,
     borderRadius: 4,
@@ -53,6 +50,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
     verticalAlign: 'baseline',
     textDecoration: 'none',
     transition: 'background .2s, color .2s',
+    WebkitTapHighlightColor: 'transparent',
 
     '&:not(:disabled)': {
       cursor: 'pointer',
