@@ -46,7 +46,7 @@ export const formElementFocus = {
 
 export const formElementDisabled = {
   borderColor: colors.slategray_20,
-  background: colors.slategray_5,
+  backgroundColor: colors.slategray_5,
   color: colors.slategray_20,
 };
 
