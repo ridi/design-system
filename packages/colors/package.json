@@ -12,6 +12,7 @@
   },
   "main": "hex.json",
   "files": [
+    "index.d.ts",
     "hex.json",
     "hsl.json",
     "hwb.json",
