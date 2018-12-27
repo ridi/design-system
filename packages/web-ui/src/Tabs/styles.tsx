@@ -4,25 +4,36 @@ import * as React from 'react';
 import { resetAppearance, resetFont, resetLayout } from '../styles';
 import { Tabs, TabsProps } from './index';
 
-export const tabs = ({}: TabsProps) => merge({},
+export const tabs = ({ flex }: TabsProps) => merge({},
   resetLayout,
 
   {
     display: 'block',
     listStyle: 'none',
     borderBottom: `2px solid ${colors.slategray_20}`,
+
+    '& > *': merge({},
+      resetLayout,
+      resetFont,
+
+      {
+        display: 'inline-block',
+        marginLeft: 16,
+
+        '&:first-of-type': {
+          marginLeft: 0,
+        },
+      },
+    ),
   },
-);
 
-export const itemWrapper = () => merge({},
-  resetLayout,
-  resetFont,
+  flex && {
+    display: 'flex',
+    justifyContent: 'center',
 
-  {
-    display: 'inline-block',
-
-    '&:not(:first-of-type)': {
-      marginLeft: '1em',
+    '& > *': {
+      flex: '1 0 auto',
+      marginLeft: 0,
     },
   },
 );
@@ -36,10 +47,12 @@ export const item = ({ active, activeColor }: Tabs.ItemProps) => merge({},
     display: 'block',
     position: 'relative',
     padding: '8px 0',
+    width: '100%',
     color: colors.slategray_50,
     fontSize: 15,
     fontWeight: 700,
     lineHeight: '16px',
+    textAlign: 'center',
     textDecoration: 'none',
     cursor: 'pointer',
     transition: 'color .2s',

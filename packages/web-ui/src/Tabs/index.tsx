@@ -8,6 +8,11 @@ export interface TabsProps extends BaseProps {
    */
   activeColor?: 'black' | 'blue';
 
+  /**
+   * If `true`, use CSS flexbox for layout.
+   */
+  flex?: boolean;
+
   children?: Array<React.ReactElement<Tabs.ItemProps>>;
 }
 
@@ -15,19 +20,21 @@ export class Tabs extends React.Component<TabsProps> {
   public static defaultProps = {
     render: 'ul',
     activeColor: 'black',
+    flex: false,
   };
 
   public render() {
     const {
       activeColor,
       children,
+      flex,
       ...restProps
     } = this.props;
 
     return (
-      <Base css={styles.tabs({})} {...restProps}>
+      <Base css={styles.tabs({ flex })} {...restProps}>
         {React.Children.map(children, (child) => (
-          <Base render="li" css={styles.itemWrapper()}>
+          <Base render="li">
             {React.cloneElement(child, { activeColor, ...child.props })}
           </Base>
         ))}
