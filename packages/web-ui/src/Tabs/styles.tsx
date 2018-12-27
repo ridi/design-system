@@ -55,6 +55,7 @@ export const item = ({ active, activeColor }: Tabs.ItemProps) => merge({},
     textAlign: 'center',
     textDecoration: 'none',
     cursor: 'pointer',
+    outline: 'none',
     transition: 'color .2s',
 
     '&::before': {
@@ -90,7 +91,7 @@ export const item = ({ active, activeColor }: Tabs.ItemProps) => merge({},
   },
 
   !active && {
-    '&:active': {
+    '&:focus, &:active': {
       color: colors.slategray_70,
     },
 
