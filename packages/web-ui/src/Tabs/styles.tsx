@@ -21,7 +21,7 @@ export const itemWrapper = () => merge({},
   {
     display: 'inline-block',
 
-    '&:not(:first-child)': {
+    '&:not(:first-of-type)': {
       marginLeft: '1em',
     },
   },
