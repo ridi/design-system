@@ -1,6 +1,5 @@
 import colors from '@ridi/colors';
 import { merge } from 'lodash';
-import * as React from 'react';
 import { resetAppearance, resetFont, resetLayout } from '../styles';
 import { Tabs, TabsProps } from './index';
 
