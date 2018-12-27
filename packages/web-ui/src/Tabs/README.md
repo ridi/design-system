@@ -1,12 +1,14 @@
 ### Basic Usage
 ```jsx
+initialState = { value: 'apple' };
+
 const handleClick = (event) => {
   setState({ value: event.target.value });
 };
 
 <Tabs>
   <Tabs.Item
-    selected={state.value === 'apple'}
+    active={state.value === 'apple'}
     value="apple"
     onClick={handleClick}
   >
@@ -14,7 +16,7 @@ const handleClick = (event) => {
   </Tabs.Item>
 
   <Tabs.Item
-    selected={state.value === 'banana'}
+    active={state.value === 'banana'}
     value="banana"
     onClick={handleClick}
   >
@@ -22,7 +24,7 @@ const handleClick = (event) => {
   </Tabs.Item>
 
   <Tabs.Item
-    selected={state.value === 'cherry'}
+    active={state.value === 'cherry'}
     value="cherry"
     onClick={handleClick}
   >
@@ -33,9 +35,11 @@ const handleClick = (event) => {
 
 ### Using Anchor
 ```jsx
+initialState = { value: 'apple' };
+
 <Tabs>
   <Tabs.Item
-    selected={state.value === 'apple'}
+    active={state.value === 'apple'}
     render="a"
     href="#"
   >
@@ -43,7 +47,7 @@ const handleClick = (event) => {
   </Tabs.Item>
 
   <Tabs.Item
-    selected={state.value === 'banana'}
+    active={state.value === 'banana'}
     render="a"
     href="#"
   >
@@ -51,7 +55,7 @@ const handleClick = (event) => {
   </Tabs.Item>
 
   <Tabs.Item
-    selected={state.value === 'cherry'}
+    active={state.value === 'cherry'}
     render="a"
     href="#"
   >
