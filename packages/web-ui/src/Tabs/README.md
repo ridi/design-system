@@ -140,31 +140,55 @@ const handleClick = (event) => {
 
 ### Using Anchor
 ```jsx
-initialState = { value: 'apple' };
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleHashChange = this.handleHashChange.bind(this);
+    this.state = { hash: window.location.hash };
+  }
 
-<Tabs>
-  <Tabs.Item
-    active={state.value === 'apple'}
-    render="a"
-    href="#"
-  >
-    Apple
-  </Tabs.Item>
+  componentDidMount() {
+    window.addEventListener('hashchange', this.handleHashChange);
+  }
 
-  <Tabs.Item
-    active={state.value === 'banana'}
-    render="a"
-    href="#"
-  >
-    Banana
-  </Tabs.Item>
+  componentWillUnmount() {
+    window.removeEventListener('hashchange', this.handleHashChange);
+  }
 
-  <Tabs.Item
-    active={state.value === 'cherry'}
-    render="a"
-    href="#"
-  >
-    Cherry
-  </Tabs.Item>
-</Tabs>
+  handleHashChange() {
+    this.setState({ hash: window.location.hash });
+  };
+
+  render() {
+    return (
+      <Tabs>
+        <Tabs.Item
+          render="a"
+          href="#tabs/apple"
+          active={this.state.hash === '#tabs/apple'}
+        >
+          Apple
+        </Tabs.Item>
+
+        <Tabs.Item
+          render="a"
+          href="#tabs/banana"
+          active={this.state.hash === '#tabs/banana'}
+        >
+          Banana
+        </Tabs.Item>
+
+        <Tabs.Item
+          render="a"
+          href="#tabs/cherry"
+          active={this.state.hash === '#tabs/cherry'}
+        >
+          Cherry
+        </Tabs.Item>
+      </Tabs>
+    );
+  }
+}
+
+<Example />
 ```
