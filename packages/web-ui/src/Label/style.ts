@@ -1,8 +1,9 @@
 import colors from '@ridi/colors';
+import { merge } from 'lodash';
 import { LabelProps } from '.';
-import { mergeStyles, resetAppearance, resetFont, resetLayout } from '../styles';
+import { resetAppearance, resetFont, resetLayout } from '../styles';
 
-export default ({ active, disabled }: LabelProps) => mergeStyles(
+export default ({ active, disabled }: LabelProps) => merge({},
   resetAppearance,
   resetFont,
   resetLayout,
