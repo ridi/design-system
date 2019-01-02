@@ -52,12 +52,14 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
     transition: 'background .2s, color .2s',
     WebkitTapHighlightColor: 'transparent',
 
-    '&:not(:disabled)': {
+    '&:not([disabled])': {
       cursor: 'pointer',
     },
 
-    '&:disabled': {
+    '&[disabled]': {
       opacity: .5,
+      cursor: 'not-allowed',
+      outline: 'none',
     },
   },
 
@@ -96,7 +98,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
           borderColor: buttonColors.blue60,
           boxShadow: boxShadow.blue50,
 
-          '&:not(:disabled)': {
+          '&:not([disabled])': {
             '&:hover': {
               backgroundColor: buttonColors.blue60,
             },
@@ -109,7 +111,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
           borderColor: buttonColors.brown60,
           boxShadow: boxShadow.brown50,
 
-          '&:not(:disabled)': {
+          '&:not([disabled])': {
             '&:hover': {
               backgroundColor: buttonColors.brown60,
             },
@@ -123,7 +125,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
           borderColor: buttonColors.gray60,
           boxShadow: boxShadow.gray50,
 
-          '&:not(:disabled)': {
+          '&:not([disabled])': {
             '&:hover': {
               backgroundColor: buttonColors.gray60,
             },
@@ -141,7 +143,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
           borderColor: buttonColors.blue50,
           boxShadow: boxShadow.blue50,
 
-          '&:not(:disabled)': {
+          '&:not([disabled])': {
             '&:hover': {
               backgroundColor: buttonColors.blue10,
             },
@@ -154,7 +156,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
           borderColor: buttonColors.brown50,
           boxShadow: boxShadow.brown50,
 
-          '&:not(:disabled)': {
+          '&:not([disabled])': {
             '&:hover': {
               backgroundColor: buttonColors.brown10,
             },
@@ -168,7 +170,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
           borderColor: buttonColors.gray20,
           boxShadow: boxShadow.gray20,
 
-          '&:not(:disabled)': {
+          '&:not([disabled])': {
             '&:hover': {
               backgroundColor: buttonColors.gray10,
             },

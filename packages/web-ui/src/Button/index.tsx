@@ -29,22 +29,50 @@ export interface ButtonProps extends BaseProps {
   thickBorder?: boolean;
 }
 
-export const Button: React.FunctionComponent<ButtonProps> = ({
-  color,
-  outline,
-  size,
-  spinner,
-  thickBorder,
-  ...restProps
-}) => (
-  <Base css={style({ color, outline, size, spinner, thickBorder })} {...restProps} />
-);
+export class Button extends React.Component<ButtonProps> {
+  public static defaultProps = {
+    color: 'gray',
+    outline: false,
+    size: 'medium',
+    spinner: false,
+    thickBorder: false,
+    render: 'button',
+  };
 
-Button.defaultProps = {
-  color: 'gray',
-  outline: false,
-  size: 'medium',
-  spinner: false,
-  thickBorder: false,
-  render: 'button',
-};
+  private handleClick = (event: React.MouseEvent) => {
+    const { disabled, onClick } = this.props;
+
+    if (disabled) {
+      event.preventDefault();
+      return;
+    }
+
+    if (onClick) {
+      onClick(event);
+    }
+  };
+
+  public render = () => {
+    const {
+      color,
+      disabled,
+      outline,
+      size,
+      spinner,
+      tabIndex,
+      thickBorder,
+      onClick,
+      ...restProps
+    } = this.props;
+
+    return (
+      <Base
+        css={style({ color, outline, size, spinner, thickBorder })}
+        disabled={disabled}
+        tabIndex={disabled ? -1 : tabIndex}
+        onClick={this.handleClick}
+        {...restProps}
+      />
+    );
+  };
+}
