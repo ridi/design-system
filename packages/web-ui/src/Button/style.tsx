@@ -5,7 +5,7 @@ import * as React from 'react';
 import { mergeStyles, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg } from '../Svg';
 import { ButtonProps } from './index';
-import SpinnerIcon from './spinner.svg';
+import LoadingIcon from './spinner.svg';
 
 const buttonColors = {
   blue10: colors.dodgerblue_10,
@@ -31,7 +31,7 @@ const boxShadow = {
   gray50: `0 1px 1px 0 ${rgba(buttonColors.gray50, .3)}`,
 };
 
-export default ({ color, disabled, outline, size, spinner, thickBorder }: ButtonProps) => mergeStyles(
+export default ({ color, disabled, outline, size, loading, thickBorder }: ButtonProps) => mergeStyles(
   resetAppearance,
   resetFont,
   resetLayout,
@@ -179,7 +179,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
     }
   }),
 
-  spinner && ((style) => ({
+  loading && ((style) => ({
     position: 'relative',
     color: 'transparent',
 
@@ -198,7 +198,7 @@ export default ({ color, disabled, outline, size, spinner, thickBorder }: Button
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'contain',
-      backgroundImage: `url(${Svg.renderToDataUri(<SpinnerIcon stroke={style.color} />)})`,
+      backgroundImage: `url(${Svg.renderToDataUri(<LoadingIcon stroke={style.color} />)})`,
       transform: 'translate3d(-50%, -50%, 0) scale(0.7)',
       animation: `${(
         keyframes({

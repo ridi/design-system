@@ -38,15 +38,15 @@ const handleClick = (event) => {
 </div>
 ```
 
-### Spinner
+### Loading Icon
 ```jsx
 <div>
-  <Button spinner color="gray">Button</Button>
-  <Button spinner color="blue">Button</Button>
-  <Button spinner color="brown">Button</Button>
-  <Button spinner color="gray" disabled>Button</Button>
-  <Button spinner color="blue" disabled>Button</Button>
-  <Button spinner color="brown" disabled>Button</Button>
+  <Button loading color="gray">Button</Button>
+  <Button loading color="blue">Button</Button>
+  <Button loading color="brown">Button</Button>
+  <Button loading color="gray" outline>Button</Button>
+  <Button loading color="blue" outline>Button</Button>
+  <Button loading color="brown" outline>Button</Button>
 </div>
 ```
 
@@ -56,9 +56,9 @@ const handleClick = (event) => {
   <Button size="small">Button</Button>
   <Button size="medium">Button</Button>
   <Button size="large">Button</Button>
-  <Button size="small" spinner>Button</Button>
-  <Button size="medium" spinner>Button</Button>
-  <Button size="large" spinner>Button</Button>
+  <Button size="small" loading>Button</Button>
+  <Button size="medium" loading>Button</Button>
+  <Button size="large" loading>Button</Button>
 </div>
 ```
 

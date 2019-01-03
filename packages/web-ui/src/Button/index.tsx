@@ -17,6 +17,11 @@ export interface ButtonProps extends BaseProps {
   disabled?: boolean;
 
   /**
+   * If `true`, `Button` will be rendered with loading icon inside.
+   */
+  loading?: boolean;
+
+  /**
    * If `true`, `Button` will be rendered with colored border and white background.
    */
   outline?: boolean;
@@ -25,11 +30,6 @@ export interface ButtonProps extends BaseProps {
    * The size of `Button`
    */
   size?: 'small' | 'medium' | 'large';
-
-  /**
-   * If `true`, `Button` will be rendered with spinner icon inside instead of given children.
-   */
-  spinner?: boolean;
 
   /**
    * If `true`, `Button` will be rendered with thick border.
@@ -44,9 +44,9 @@ const cancelEvent = (event: React.MouseEvent) => {
 export const Button: React.FunctionComponent<ButtonProps> = ({
   color,
   disabled,
+  loading,
   outline,
   size,
-  spinner,
   tabIndex,
   thickBorder,
   onClick,
@@ -54,7 +54,7 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
   ...restProps
 }) => (
   <Base
-    css={style({ color, outline, size, spinner, thickBorder })}
+    css={style({ color, outline, size, loading, thickBorder })}
     disabled={disabled}
     tabIndex={disabled ? -1 : tabIndex}
     onClick={disabled ? cancelEvent : onClick}
