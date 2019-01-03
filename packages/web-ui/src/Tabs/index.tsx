@@ -34,7 +34,7 @@ export class Tabs extends React.Component<TabsProps> {
     return (
       <Base css={styles.tabs({ flex })} {...restProps}>
         {React.Children.map(children, (child) => (
-          <Base render="li">
+          <Base render="li" css={styles.itemWrapper({ flex })}>
             {React.cloneElement(child, { activeColor, ...child.props })}
           </Base>
         ))}

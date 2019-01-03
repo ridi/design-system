@@ -10,30 +10,28 @@ export const tabs = ({ flex }: TabsProps) => merge({},
     display: 'block',
     listStyle: 'none',
     borderBottom: `2px solid ${colors.slategray_20}`,
-
-    '& > *': merge({},
-      resetLayout,
-      resetFont,
-
-      {
-        display: 'inline-block',
-        marginLeft: 16,
-
-        '&:first-of-type': {
-          marginLeft: 0,
-        },
-      },
-    ),
   },
 
   flex && {
     display: 'flex',
-    justifyContent: 'center',
+  },
+);
 
-    '& > *': {
-      flex: '1 0 auto',
+export const itemWrapper = ({ flex }: TabsProps) => merge({},
+  resetLayout,
+
+  {
+    display: 'inline-block',
+    marginLeft: 16,
+
+    '&:first-of-type': {
       marginLeft: 0,
     },
+  },
+
+  flex && {
+    flex: '1 0 auto',
+    marginLeft: 0,
   },
 );
 
