@@ -103,41 +103,6 @@ const handleClick = (event) => {
 </Tabs>
 ```
 
-### Active Color + Flex
-```jsx
-initialState = { value: 'apple' };
-
-const handleClick = (event) => {
-  setState({ value: event.target.value });
-};
-
-<Tabs activeColor="blue" flex>
-  <Tabs.Item
-    active={state.value === 'apple'}
-    value="apple"
-    onClick={handleClick}
-  >
-    Apple
-  </Tabs.Item>
-
-  <Tabs.Item
-    active={state.value === 'banana'}
-    value="banana"
-    onClick={handleClick}
-  >
-    Banana
-  </Tabs.Item>
-
-  <Tabs.Item
-    active={state.value === 'cherry'}
-    value="cherry"
-    onClick={handleClick}
-  >
-    Cherry
-  </Tabs.Item>
-</Tabs>
-```
-
 ### Using Anchor
 ```jsx
 class Example extends React.Component {
