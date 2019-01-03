@@ -17,17 +17,29 @@ body {
 }
 
 .site-title {
-  margin-right: 20px;
-  font-size: 22px;
+  float: left;
+  display: block;
+}
+
+.site-title__logo {
+  width: 187px;
+  height: 20px;
+  object-fit: contain;
+  background: url(../../assets/img/RIDIDesignSystem.svg) no-repeat;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.site-title__beta {
+  width: 45px;
+  height: 24px;
+  object-fit: contain;
+  background: url(../../assets/img/tag_beta.png) no-repeat;
+  background-size: cover;
 }
 
 .site-title__link {
-  padding: 25px 0;
-}
-
-.site-title__ridi {
-  width: 44px;
-  height: 18px;
+  padding: 30px 0;
 }
 
 .site-menu {

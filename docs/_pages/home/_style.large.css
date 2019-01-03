@@ -4,40 +4,41 @@ html.home {
     background-image: url('./img/home_bg.png');
   }
 
-  & .header__title {
-    margin-bottom: 30px;
-    text-align: left;
-    font-size: 58px;
-    line-height: 1.28;
+  & .hero__logo {
+    width: 420px;
+    height: 45px;
+    background: url(../../assets/img/RIDIDesignSystem.svg) no-repeat;
+    background-size: cover;
   }
 
-  & .header__description {
-    text-align: left;
-    font-size: 20px;
-    line-height: 1.6;
-    color: var(--slategray_30);
-
-    & > br:nth-child(odd) {
-      display: none;
-    }
-  }
-
-  & .site-content-nav {
-    margin: 110px 0;
+  & .hero__title {
+    margin: 20px 0;
+    padding: 0;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    color: var(--slategray_50);
+    border: none;
   }
 
   & .site-content-list {
     display: flex;
-    flex-flow: row nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
+
+    &:after {
+      content: "";
+      flex: auto;
+    }
   }
 
   & .site-content {
-    margin: 0;
+    margin-right: 38px;
 
-    &:not(:last-child) {
-      margin-right: 20px;
+    &:nth-child(3){
+      margin-right: 0;
     }
   }
 }

@@ -10,48 +10,21 @@ html.home {
   & .hero {
     margin: calc(-1 * var(--site-padding));
     margin-bottom: 0;
-    padding: 160px 20px;
-  }
-
-  & .hero__logo {
-    width: 420px;
-    height: 45px;
-    background: url(../../assets/img/RIDIDesignSystem.svg) no-repeat;
-    background-size: cover;
-  }
-
-  & .hero__title {
-    margin: 20px 0;
-    padding: 0;
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: -0.5px;
-    color: var(--slategray_60);
-    border: none;
-  }
-
-  & .hero__description {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    letter-spacing: -0.3px;
-    text-align: center;
-    color: var(--slategray_40);
+    padding: 160px 20px 80px;
   }
 
   & .site-content-nav {
-    margin: 60px 0;
+    margin: 0 0 60px;
   }
 
   & .site-content-list {
-    padding: 20px;
     list-style: none;
+    padding: 0;
   }
 
   & .site-content {
-    margin: 40px 0;
+    width: calc(33.333% - 26px);
+    margin: 80px 0 0;
     background: no-repeat center top;
     background-size: 316px 200px;
     text-align: left;
@@ -67,7 +40,7 @@ html.home {
 
     &:hover {
       & .site-content__title {
-        color: var(--slategray_60);
+        color: var(--slategray_70);
       }
     }
   }
