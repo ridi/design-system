@@ -67,10 +67,10 @@ const handleClick = (event) => {
 #### Function as Prop
 ```jsx
 <Button
-  render={({ children, ...restProps }) => (
-    <a {...restProps}>{children}</a>
+  render={(props) => (
+    <a {...props} />
   )}
-  href="#"
+  href="#button/example"
 >
   Button
 </Button>
@@ -78,18 +78,18 @@ const handleClick = (event) => {
 
 #### Component as Prop
 ```jsx
-const Anchor = ({ children, ...restProps }) => (
-  <a {...restProps}>{children}</a>
+const Anchor = (props) => (
+  <a {...props} />
 );
 
-<Button render={Anchor} href="#">
+<Button render={Anchor} href="#button/example">
   Button
 </Button>
 ```
 
 #### Tag String as Prop
 ```jsx
-<Button render="a" href="#">
+<Button render="a" href="#button/example">
   Button
 </Button>
 ```
