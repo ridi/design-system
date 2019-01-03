@@ -9,6 +9,14 @@ export interface ButtonProps extends BaseProps {
   color?: 'gray' | 'blue' | 'brown';
 
   /**
+   * Disabled state.
+   *
+   * If `true`, `tabIndex` is set to `-1` and `event.preventDefault()` is called inside `onClick` event handler
+   * to explicitly disable `Button`'s functionality.
+   */
+  disabled?: boolean;
+
+  /**
    * If `true`, `Button` will be rendered with colored border and white background.
    */
   outline?: boolean;
@@ -29,50 +37,32 @@ export interface ButtonProps extends BaseProps {
   thickBorder?: boolean;
 }
 
-export class Button extends React.Component<ButtonProps> {
-  public static defaultProps = {
-    color: 'gray',
-    outline: false,
-    size: 'medium',
-    spinner: false,
-    thickBorder: false,
-    render: 'button',
-  };
+const handleDisabledClick = (event: React.MouseEvent) => {
+  event.preventDefault();
+};
 
-  private handleClick = (event: React.MouseEvent) => {
-    const { disabled, onClick } = this.props;
+export const Button: React.FunctionComponent<ButtonProps> = ({
+  color,
+  disabled,
+  outline,
+  size,
+  spinner,
+  tabIndex,
+  thickBorder,
+  onClick,
+  ...restProps
+}) => (
+  <Base
+    css={style({ color, outline, size, spinner, thickBorder })}
+    disabled={disabled}
+    tabIndex={disabled ? -1 : tabIndex}
+    onClick={disabled ? handleDisabledClick : onClick}
+    {...restProps}
+  />
+);
 
-    if (disabled) {
-      event.preventDefault();
-      return;
-    }
-
-    if (onClick) {
-      onClick(event);
-    }
-  };
-
-  public render = () => {
-    const {
-      color,
-      disabled,
-      outline,
-      size,
-      spinner,
-      tabIndex,
-      thickBorder,
-      onClick,
-      ...restProps
-    } = this.props;
-
-    return (
-      <Base
-        css={style({ color, outline, size, spinner, thickBorder })}
-        disabled={disabled}
-        tabIndex={disabled ? -1 : tabIndex}
-        onClick={this.handleClick}
-        {...restProps}
-      />
-    );
-  };
-}
+Button.defaultProps = {
+  render: 'button',
+  color: 'gray',
+  size: 'medium',
+};
