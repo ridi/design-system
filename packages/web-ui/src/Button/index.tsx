@@ -11,7 +11,7 @@ export interface ButtonProps extends BaseProps {
   /**
    * Disabled state.
    *
-   * If `true`, `tabIndex` is set to `-1` and `event.preventDefault()` is called inside `onClick` event handler
+   * If `true`, `tabIndex` is set to `-1` and `event.preventDefault()` is called inside `onClick`, `onContextMenu` event handler
    * to explicitly disable `Button`'s functionality.
    */
   disabled?: boolean;
@@ -37,7 +37,7 @@ export interface ButtonProps extends BaseProps {
   thickBorder?: boolean;
 }
 
-const handleDisabledClick = (event: React.MouseEvent) => {
+const cancelEvent = (event: React.MouseEvent) => {
   event.preventDefault();
 };
 
@@ -50,13 +50,15 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
   tabIndex,
   thickBorder,
   onClick,
+  onContextMenu,
   ...restProps
 }) => (
   <Base
     css={style({ color, outline, size, spinner, thickBorder })}
     disabled={disabled}
     tabIndex={disabled ? -1 : tabIndex}
-    onClick={disabled ? handleDisabledClick : onClick}
+    onClick={disabled ? cancelEvent : onClick}
+    onContextMenu={disabled ? cancelEvent : onContextMenu}
     {...restProps}
   />
 );
