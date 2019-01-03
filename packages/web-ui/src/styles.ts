@@ -5,7 +5,9 @@ const defaultFontFamily = `Helvetica Neue, Apple SD Gothic Neo, arial, '나눔�
 
 export const resetAppearance = {
   appearance: 'none',
+  background: 'none',
   border: 'none',
+  boxShadow: 'none',
 };
 
 export const resetFont = {
