@@ -3,7 +3,7 @@ import { merge } from 'lodash';
 import { resetAppearance, resetFont, resetLayout } from '../styles';
 import { Tabs, TabsProps } from './index';
 
-export const tabs = ({ flex }: TabsProps) => merge({},
+export const tabs = ({ stretchItems }: TabsProps) => merge({},
   resetLayout,
 
   {
@@ -12,12 +12,12 @@ export const tabs = ({ flex }: TabsProps) => merge({},
     borderBottom: `2px solid ${colors.slategray_20}`,
   },
 
-  flex && {
+  stretchItems && {
     display: 'flex',
   },
 );
 
-export const itemWrapper = ({ flex }: TabsProps) => merge({},
+export const itemWrapper = ({ stretchItems }: TabsProps) => merge({},
   resetLayout,
 
   {
@@ -29,7 +29,7 @@ export const itemWrapper = ({ flex }: TabsProps) => merge({},
     },
   },
 
-  flex && {
+  stretchItems && {
     flex: '1 0 auto',
     marginLeft: 0,
   },

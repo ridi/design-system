@@ -68,7 +68,7 @@ const handleClick = (event) => {
 </Tabs>
 ```
 
-### Flex
+### Stretch Items
 ```jsx
 initialState = { value: 'apple' };
 
@@ -76,7 +76,7 @@ const handleClick = (event) => {
   setState({ value: event.target.value });
 };
 
-<Tabs flex>
+<Tabs stretchItems>
   <Tabs.Item
     active={state.value === 'apple'}
     value="apple"
