@@ -4,11 +4,18 @@ html.home {
     background-image: url('./img/home_bg.png');
   }
 
+  & .hero {
+    margin: calc(-1 * var(--site-padding));
+    margin-bottom: 0;
+    padding: 160px 20px 60px;
+  }
+
   & .hero__logo {
     width: 420px;
     height: 45px;
     background: url(../../assets/img/RIDIDesignSystem.svg) no-repeat;
     background-size: cover;
+    margin: 0;
   }
 
   & .hero__title {
@@ -17,7 +24,7 @@ html.home {
     font-size: 28px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.5px;
     color: var(--slategray_50);
     border: none;
   }
@@ -35,10 +42,13 @@ html.home {
   }
 
   & .site-content {
+    width: calc(33.333% - 26px);
+    margin: 80px 0 0;
     margin-right: 38px;
 
     &:nth-child(3){
       margin-right: 0;
     }
   }
+  
 }

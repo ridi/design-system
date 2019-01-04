@@ -16,28 +16,6 @@ body {
   padding: 0 var(--site-padding);
 }
 
-.site-title {
-  float: left;
-  display: block;
-}
-
-.site-title__logo {
-  width: 187px;
-  height: 20px;
-  object-fit: contain;
-  background: url(../../assets/img/RIDIDesignSystem.svg) no-repeat;
-  background-size: cover;
-  margin-right: 10px;
-}
-
-.site-title__beta {
-  width: 45px;
-  height: 24px;
-  object-fit: contain;
-  background: url(../../assets/img/tag_beta.png) no-repeat;
-  background-size: cover;
-}
-
 .site-title__link {
   padding: 30px 0;
 }
@@ -55,13 +33,13 @@ body {
   opacity: 1;
   position: static;
   display: block;
+  margin-top: 2px;
 }
 
 .site-menu__item {
   display: inline-block;
   margin: 0;
-  font-size: 18px;
-  color: var(--slategray_100);
+  font-size: 16px;
 
   &:not(:last-child) {
     margin-right: 50px;
