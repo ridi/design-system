@@ -6,6 +6,37 @@ import { resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg } from '../Svg';
 import { Options, OptionsProps } from './index';
 
+const getSeparatorStyle = (separator: OptionsProps['separator']) => merge(
+  {
+    display: 'inline-block',
+    width: 16,
+    height: 12,
+
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+
+    verticalAlign: 'middle',
+
+    content: '""',
+  },
+
+  (() => {
+    switch (separator) {
+      case 'dot':
+        return {
+          backgroundSize: '3px',
+          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot_1} fill={colors.slategray_20} />)})`,
+        };
+      case 'pipe':
+      default:
+        return {
+          backgroundSize: '1px 100%',
+          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot_2} fill={colors.slategray_10} preserveAspectRatio="none" />)})`,
+        };
+    }
+  })(),
+);
+
 export const options = ({}: OptionsProps) => merge({},
   resetLayout,
 
@@ -21,36 +52,7 @@ export const itemWrapper = ({ separator }: OptionsProps) => merge({},
   {
     display: 'inline-block',
 
-    ':not(:first-of-type)': {
-      '::before': {
-        display: 'inline-block',
-        width: 16,
-        height: 12,
-
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-
-        verticalAlign: 'middle',
-
-        content: '""',
-
-        ...(() => {
-          switch (separator) {
-            case 'dot':
-              return {
-                backgroundSize: '3px',
-                backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot_1} fill={colors.slategray_20} />)})`,
-              };
-            case 'pipe':
-            default:
-              return {
-                backgroundSize: '1px 100%',
-                backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot_2} fill={colors.slategray_10} preserveAspectRatio="none" />)})`,
-              };
-          }
-        })(),
-      },
-    },
+    ':not(:first-of-type)::before': getSeparatorStyle(separator),
   },
 );
 
