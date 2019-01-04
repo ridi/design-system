@@ -8,30 +8,6 @@ import { Svg } from '../Svg';
 import { ButtonProps } from './index';
 import LoadingIcon from './spinner.svg';
 
-const buttonColors = {
-  blue10: colors.dodgerblue_10,
-  blue50: colors.dodgerblue_50,
-  blue60: colors.dodgerblue_60,
-
-  brown10: colors.brown_10,
-  brown50: colors.brown_50,
-  brown60: colors.brown_60,
-
-  gray10: colors.slategray_10,
-  gray20: colors.slategray_20,
-  gray50: colors.slategray_50,
-  gray60: colors.slategray_60,
-};
-
-const boxShadow = {
-  blue50: `0 1px 1px 0 ${rgba(buttonColors.blue50, .3)}`,
-
-  brown50: `0 1px 1px 0 ${rgba(buttonColors.brown50, .3)}`,
-
-  gray20: `0 1px 1px 0 ${rgba(buttonColors.gray20, .3)}`,
-  gray50: `0 1px 1px 0 ${rgba(buttonColors.gray50, .3)}`,
-};
-
 export default ({
   color,
   disabled,
@@ -122,13 +98,13 @@ export default ({
           style,
           {
             color: 'white',
-            backgroundColor: buttonColors.blue50,
-            borderColor: buttonColors.blue60,
-            boxShadow: boxShadow.blue50,
+            backgroundColor: colors.dodgerblue_50,
+            borderColor: colors.dodgerblue_60,
+            boxShadow: `0 1px 1px 0 ${rgba(colors.dodgerblue_50, .3)}`,
 
             '&:not([disabled])': {
               '&:hover': {
-                backgroundColor: buttonColors.blue60,
+                backgroundColor: colors.dodgerblue_60,
               },
             },
           },
@@ -138,13 +114,13 @@ export default ({
           style,
           {
             color: 'white',
-            backgroundColor: buttonColors.brown50,
-            borderColor: buttonColors.brown60,
-            boxShadow: boxShadow.brown50,
+            backgroundColor: colors.brown_50,
+            borderColor: colors.brown_60,
+            boxShadow: `0 1px 1px 0 ${rgba(colors.brown_50, .3)}`,
 
             '&:not([disabled])': {
               '&:hover': {
-                backgroundColor: buttonColors.brown60,
+                backgroundColor: colors.brown_60,
               },
             },
           },
@@ -155,13 +131,13 @@ export default ({
           style,
           {
             color: 'white',
-            backgroundColor: buttonColors.gray50,
-            borderColor: buttonColors.gray60,
-            boxShadow: boxShadow.gray50,
+            backgroundColor: colors.slategray_50,
+            borderColor: colors.slategray_60,
+            boxShadow: `0 1px 1px 0 ${rgba(colors.slategray_50, .3)}`,
 
             '&:not([disabled])': {
               '&:hover': {
-                backgroundColor: buttonColors.gray60,
+                backgroundColor: colors.slategray_60,
               },
             },
           },
@@ -179,14 +155,14 @@ export default ({
         return merge(
           style,
           {
-            color: buttonColors.blue50,
+            color: colors.dodgerblue_50,
             backgroundColor: 'white',
-            borderColor: buttonColors.blue50,
-            boxShadow: boxShadow.blue50,
+            borderColor: colors.dodgerblue_50,
+            boxShadow: `0 1px 1px 0 ${rgba(colors.dodgerblue_50, .3)}`,
 
             '&:not([disabled])': {
               '&:hover': {
-                backgroundColor: buttonColors.blue10,
+                backgroundColor: colors.dodgerblue_10,
               },
             },
           },
@@ -195,14 +171,14 @@ export default ({
         return merge(
           style,
           {
-            color: buttonColors.brown50,
+            color: colors.brown_50,
             backgroundColor: 'white',
-            borderColor: buttonColors.brown50,
-            boxShadow: boxShadow.brown50,
+            borderColor: colors.brown_50,
+            boxShadow: `0 1px 1px 0 ${rgba(colors.brown_50, .3)}`,
 
             '&:not([disabled])': {
               '&:hover': {
-                backgroundColor: buttonColors.brown10,
+                backgroundColor: colors.brown_10,
               },
             },
           },
@@ -212,14 +188,14 @@ export default ({
         return merge(
           style,
           {
-            color: buttonColors.gray50,
+            color: colors.slategray_50,
             backgroundColor: 'white',
-            borderColor: buttonColors.gray20,
-            boxShadow: boxShadow.gray20,
+            borderColor: colors.slategray_20,
+            boxShadow: `0 1px 1px 0 ${rgba(colors.slategray_20, .3)}`,
 
             '&:not([disabled])': {
               '&:hover': {
-                backgroundColor: buttonColors.gray10,
+                backgroundColor: colors.slategray_10,
               },
             },
           },
