@@ -2,14 +2,14 @@
 import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
-import { LibraryBook } from '../';
+import { Book } from '../';
 import * as styles from './styles';
 
 export interface LandscapeBookProps extends
-  LibraryBook.AnnotationsProps,
-  LibraryBook.AuthorProps,
-  LibraryBook.ThumbnailProps,
-  LibraryBook.TitleProps {
+  Book.AnnotationsProps,
+  Book.AuthorProps,
+  Book.ThumbnailProps,
+  Book.TitleProps {
     className?: string;
     [extraKey: string]: any;
   }
@@ -52,7 +52,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
       {...extraProps}
     >
       <div css={styles.thumbnail}>
-        <LibraryBook.Thumbnail
+        <Book.Thumbnail
           adultBadge={adultBadge}
           onSelectedChange={onSelectedChange}
           readingStatus={readingStatus}
@@ -61,35 +61,35 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
           updateBadge={updateBadge}
-          viewType={LibraryBook.ViewType.Landscape}
+          viewType={Book.ViewType.Landscape}
         />
       </div>
       <div css={styles.metadata}>
-        {title && <LibraryBook.Title title={title}/>}
-        {author && <LibraryBook.Author author={author}/>}
+        {title && <Book.Title title={title}/>}
+        {author && <Book.Author author={author}/>}
         {ridiselect ? (
-          <LibraryBook.Ridiselect />
+          <Book.Ridiselect />
         ) : expired ? (
-          <LibraryBook.Expired />
+          <Book.Expired />
         ) : expiredAt ? (
-          <LibraryBook.ExpiredAt expiredAt={expiredAt} />
+          <Book.ExpiredAt expiredAt={expiredAt} />
         ) : null}
       </div>
       <div css={styles.buttons}>
         {unitBook ? (
-          downloadStatus === LibraryBook.DownloadStatus.Downloading ? (
-            <LibraryBook.UnitBookDownloading />
+          downloadStatus === Book.DownloadStatus.Downloading ? (
+            <Book.UnitBookDownloading />
           ) : renderUnitBookCount({})
         ) : (
-          readingStatus === LibraryBook.ReadingStatus.Opened ? (
+          readingStatus === Book.ReadingStatus.Opened ? (
             <React.Fragment>
-              <LibraryBook.ReadingProgressBar readingProgress={readingProgress} />
-              <LibraryBook.Annotations annotations={annotations} />
+              <Book.ReadingProgressBar readingProgress={readingProgress} />
+              <Book.Annotations annotations={annotations} />
             </React.Fragment>
           ) : (
             !notAvailable ? (
               <React.Fragment>
-                <LibraryBook.DownloadButton
+                <Book.DownloadButton
                   downloadProgress={downloadProgress}
                   downloadSize={downloadSize}
                   downloadStatus={downloadStatus}

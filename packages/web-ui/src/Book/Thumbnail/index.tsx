@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
-import { DownloadButtonSize } from '../DownloadButton/styles';
 import {
   AdultBadge,
   DownloadButton,
@@ -23,7 +22,8 @@ import {
   UnReadDot,
   UpdateBadge,
   ViewType,
-} from '../LibraryBook';
+} from '../Book';
+import { DownloadButtonSize } from '../DownloadButton/styles';
 import { UnitBookDownloadingSize } from '../UnitBookDownloading/styles';
 import * as styles from './styles';
 

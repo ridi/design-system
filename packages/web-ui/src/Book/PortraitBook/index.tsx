@@ -2,13 +2,13 @@
 import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
-import { LibraryBook } from '../';
+import { Book } from '../';
 import * as styles from './styles';
 
 export interface PortraitBookProps extends
-  LibraryBook.AuthorProps,
-  LibraryBook.ThumbnailProps,
-  LibraryBook.TitleProps {
+  Book.AuthorProps,
+  Book.ThumbnailProps,
+  Book.TitleProps {
     className?: string;
     [extraKey: string]: any;
   }
@@ -45,7 +45,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
       {...extraProps}
     >
       <div css={styles.thumbnail}>
-        <LibraryBook.Thumbnail
+        <Book.Thumbnail
           adultBadge={adultBadge}
           renderUnitBookCount={renderUnitBookCount}
           downloadProgress={downloadProgress}
@@ -63,12 +63,12 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           thumbnailWidth={thumbnailWidth}
           unitBook={unitBook}
           updateBadge={updateBadge}
-          viewType={LibraryBook.ViewType.Portrait}
+          viewType={Book.ViewType.Portrait}
         />
       </div>
       <div css={styles.metadata}>
-        {title && <LibraryBook.Title title={title}/>}
-        {author && <LibraryBook.Author author={author}/>}
+        {title && <Book.Title title={title}/>}
+        {author && <Book.Author author={author}/>}
       </div>
     </div>
   );

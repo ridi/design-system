@@ -12,15 +12,15 @@ module.exports = {
     {
       name: 'Components',
       components: 'src/*/index.{ts,tsx}',
-      ignore: 'src/LibraryBook/index.{ts,tsx}',
+      ignore: 'src/Book/index.{ts,tsx}',
     },
     {
-      name: 'LibraryBook',
-      content: 'src/LibraryBook/README.md',
+      name: 'Book',
+      content: 'src/Book/README.md',
     },
   ],
   context: {
-    LibraryBook: path.join(__dirname, 'src/LibraryBook/LibraryBook'),
+    Book: path.join(__dirname, 'src/Book/Book'),
   },
   propsParser,
   usageMode: 'expand',

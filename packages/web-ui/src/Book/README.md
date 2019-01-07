@@ -1,29 +1,29 @@
 ### Thumbnail
 ```jsx
 const selected = true;
-<LibraryBook.Thumbnail
-  viewType={LibraryBook.ViewType.Portrait}
+<Book.Thumbnail
+  viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
   ridiselect
   unitBook
   renderUnitBookCount={(props) => (
-    <LibraryBook.UnitBookCount
+    <Book.UnitBookCount
       bookCount={60}
-      bookCountUnit={LibraryBook.BookCountUnit.Serial}
+      bookCountUnit={Book.BookCountUnit.Serial}
       render="button"
     />
   )}
   selectMode  
   selected={selected}
   onSelectedChange={() => {console.log('selected!')}}
-  readingStatus={LibraryBook.ReadingStatus.New}
+  readingStatus={Book.ReadingStatus.New}
 />
 ```
 ```jsx
-<LibraryBook.Thumbnail
-  viewType={LibraryBook.ViewType.Portrait}
+<Book.Thumbnail
+  viewType={Book.ViewType.Portrait}
   thumbnailUrl="//misc.ridibooks.com/cover/425063833/xlarge"
   adultBadge
   updateBadge
@@ -31,55 +31,55 @@ const selected = true;
   notAvailable={true}
   unitBook
   renderUnitBookCount={() => (
-    <LibraryBook.UnitBookCount
+    <Book.UnitBookCount
       bookCount={30}
-      bookCountUnit={LibraryBook.BookCountUnit.Single}
+      bookCountUnit={Book.BookCountUnit.Single}
     />
   )}
   onSelectedChange={() => {console.log('selected!')}}
-  readingStatus={LibraryBook.ReadingStatus.New}
+  readingStatus={Book.ReadingStatus.New}
 />
 ```
 ```jsx
-<LibraryBook.Thumbnail
-  viewType={LibraryBook.ViewType.Portrait}
+<Book.Thumbnail
+  viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
   ridiselect
   unitBook
   renderUnitBookCount={() => (
-    <LibraryBook.UnitBookCount
+    <Book.UnitBookCount
       bookCount={30}
-      bookCountUnit={LibraryBook.BookCountUnit.Single}
+      bookCountUnit={Book.BookCountUnit.Single}
       render="a"
       href="/"
     />
   )}
-  readingStatus={LibraryBook.ReadingStatus.Opened}
+  readingStatus={Book.ReadingStatus.Opened}
   readingProgress={20}
 />
 ```
 ```jsx
-<LibraryBook.Thumbnail
-  viewType={LibraryBook.ViewType.Portrait}
+<Book.Thumbnail
+  viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
   ridiselect
   unitBook
   renderUnitBookCount={() => (
-    <LibraryBook.UnitBookCount
+    <Book.UnitBookCount
       bookCount={30}
-      bookCountUnit={LibraryBook.BookCountUnit.Single}
+      bookCountUnit={Book.BookCountUnit.Single}
     />
   )}
-  downloadStatus={LibraryBook.DownloadStatus.Downloading}
+  downloadStatus={Book.DownloadStatus.Downloading}
 />
 ```
 ```jsx
-<LibraryBook.Thumbnail
-  viewType={LibraryBook.ViewType.Portrait}
+<Book.Thumbnail
+  viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
@@ -88,8 +88,8 @@ const selected = true;
 />
 ```
 ```jsx
-<LibraryBook.Thumbnail
-  viewType={LibraryBook.ViewType.Portrait}
+<Book.Thumbnail
+  viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   adultBadge
   updateBadge
@@ -99,30 +99,30 @@ const selected = true;
 ```
 ### PortraitBook
 ```jsx
-<LibraryBook.PortraitBook
+<Book.PortraitBook
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   title="위대한 소설가"
-  downloadStatus={LibraryBook.DownloadStatus.Downloading}
+  downloadStatus={Book.DownloadStatus.Downloading}
   downloadProgress={80}
 />
 ```
 ```jsx
-<LibraryBook.PortraitBook
+<Book.PortraitBook
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   title="위대한 소설가"
   author="임한백"
-  downloadStatus={LibraryBook.DownloadStatus.Downloading}
+  downloadStatus={Book.DownloadStatus.Downloading}
   downloadProgress={80}
 />
 ```
 ### LandscapeBook
 ```jsx
 <div style={{ border: '1px dotted magenta' }}>
-  <LibraryBook.LandscapeBook
+  <Book.LandscapeBook
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
     thumbnailWidth={50}
     title="위대한 소설가"
-    downloadStatus={LibraryBook.DownloadStatus.Downloading}
+    downloadStatus={Book.DownloadStatus.Downloading}
     downloadProgress={80}
     downloadSize={13.4}
     expiredAt="21일 4시간 남음"
@@ -131,13 +131,13 @@ const selected = true;
 ```
 ```jsx
 <div style={{ border: '1px dotted magenta' }}>
-  <LibraryBook.LandscapeBook
+  <Book.LandscapeBook
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
     thumbnailWidth={60}
     title="위대한 소설가"
     author="임한백"
     adultBadge
-    readingStatus={LibraryBook.ReadingStatus.Opened}
+    readingStatus={Book.ReadingStatus.Opened}
     readingProgress={30}
     annotations={{
       bookMarkCount: 4,
@@ -150,18 +150,18 @@ const selected = true;
 ```
 ```jsx
 <div style={{ border: '1px dotted magenta' }}>
-  <LibraryBook.LandscapeBook
+  <Book.LandscapeBook
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
     thumbnailWidth={60}
     title="위대한 소설가"
     author="임한백"
     unitBook
     updateBadge
-    readingStatus={LibraryBook.ReadingStatus.New}
+    readingStatus={Book.ReadingStatus.New}
     renderUnitBookCount={() => (
-      <LibraryBook.UnitBookCount
+      <Book.UnitBookCount
         bookCount={30}
-        bookCountUnit={LibraryBook.BookCountUnit.Single}
+        bookCountUnit={Book.BookCountUnit.Single}
         render="a"
         href="/"
       />
@@ -172,20 +172,20 @@ const selected = true;
 ### Custom
 ```jsx
 <div className="CustomBook">
-  <LibraryBook.ThumbnailImage
+  <Book.ThumbnailImage
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   />
 </div>
 ```
 ```jsx
-<LibraryBook.DownloadButton
-  downloadStatus={LibraryBook.DownloadStatus.Downloadable}
+<Book.DownloadButton
+  downloadStatus={Book.DownloadStatus.Downloadable}
 />
-<LibraryBook.DownloadButton
-  downloadStatus={LibraryBook.DownloadStatus.Wating}
+<Book.DownloadButton
+  downloadStatus={Book.DownloadStatus.Wating}
 />
-<LibraryBook.DownloadButton
-  downloadStatus={LibraryBook.DownloadStatus.Downloading}
+<Book.DownloadButton
+  downloadStatus={Book.DownloadStatus.Downloading}
   downloadProgress={80}
 />
 ```
