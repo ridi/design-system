@@ -4,10 +4,23 @@ const webpackConfig = require('./webpack.config');
 const pkg = require('./package.json');
 
 module.exports = {
-  components: 'src/*/index.{ts,tsx}',
   getComponentPathLine: (componentPath) => {
     const componentName = path.basename(path.dirname(componentPath));
     return `import { ${componentName} } from '${pkg.name}';`;
+  },
+  sections: [
+    {
+      name: 'Components',
+      components: 'src/*/index.{ts,tsx}',
+      ignore: 'src/Book/index.{ts,tsx}',
+    },
+    {
+      name: 'Book',
+      content: 'src/Book/README.md',
+    },
+  ],
+  context: {
+    Book: path.join(__dirname, 'src/Book/Book'),
   },
   propsParser,
   usageMode: 'expand',
