@@ -16,11 +16,11 @@ export default merge({},
   {
     boxSizing: 'border-box',
     display: 'inline-block',
-    border: `${borderWidth}px solid ${colors.slategray_20}`,
+    border: `${borderWidth}px solid ${colors.slateGray20}`,
     borderRadius: '3px',
     outline: 'none',
     background: 'white',
-    color: colors.slategray_90,
+    color: colors.slateGray90,
     fontSize: '13px',
     fontWeight: 700,
     transition: 'color .2s, background .2s, border-color .2s, box-shadow .2s',
@@ -47,8 +47,8 @@ export default merge({},
 
       '&:checked': {
         '&:not(:disabled)': {
-          borderColor: colors.dodgerblue_60,
-          background: colors.dodgerblue_50,
+          borderColor: colors.dodgerBlue60,
+          background: colors.dodgerBlue50,
         },
       },
 
