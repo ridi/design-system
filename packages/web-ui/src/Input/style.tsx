@@ -1,5 +1,5 @@
 import colors from '@ridi/colors';
-import { check_1, dot_1 } from '@ridi/web-icons';
+import { check1, dot1 } from '@ridi/web-icons';
 import { merge } from 'lodash';
 import * as React from 'react';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
@@ -59,7 +59,7 @@ export default merge({},
 
     '&[type=checkbox]': {
       '&::after': {
-        maskImage: `url('${Svg.renderToDataUri(<Svg render={check_1} />)}')`,
+        maskImage: `url('${Svg.renderToDataUri(<Svg render={check1} />)}')`,
         transform: 'scale(.625)',
       },
     },
@@ -68,7 +68,7 @@ export default merge({},
       borderRadius: '50%',
 
       '&::after': {
-        maskImage: `url(${Svg.renderToDataUri(<Svg render={dot_1} />)})`,
+        maskImage: `url(${Svg.renderToDataUri(<Svg render={dot1} />)})`,
         transform: 'scale(.5)',
       },
     },
