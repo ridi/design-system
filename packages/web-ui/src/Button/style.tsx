@@ -15,12 +15,15 @@ export default ({
   size,
   loading,
   thickBorder,
-}: ButtonProps) => flow(
-  () => merge({},
+}: ButtonProps) => {
+  const resetStyle = () => merge({},
     resetAppearance,
     resetFont,
     resetLayout,
+  );
 
+  const defaultStyle = (style: any) => merge(
+    style,
     {
 
       display: 'inline-block',
@@ -48,23 +51,23 @@ export default ({
         outline: 'none',
       },
     },
-  ),
+  );
 
-  (style) => merge(
+  const borderStyle = (style: any) => merge(
     style,
     thickBorder && {
       borderWidth: 2,
     },
-  ),
+  );
 
-  (style) => merge(
+  const paddingStyle = (style: any) => merge(
     style,
     {
       padding: `0 ${20 - style.borderWidth}px`,
     },
-  ),
+  );
 
-  (style) => {
+  const lineHeightStyle = (style: any) => {
     switch (size) {
       case 'small':
         return merge(
@@ -89,9 +92,9 @@ export default ({
           },
         );
     }
-  },
+  };
 
-  (style) => {
+  const colorStyle = (style: any) => {
     switch (color) {
       case 'blue':
         return merge(
@@ -143,9 +146,9 @@ export default ({
           },
         );
     }
-  },
+  };
 
-  (style) => {
+  const outlineStyle = (style: any) => {
     if (!outline) {
       return style;
     }
@@ -201,9 +204,9 @@ export default ({
           },
         );
     }
-  },
+  };
 
-  (style) => merge(
+  const loadingStyle = (style: any) => merge(
     style,
     loading && {
       position: 'relative',
@@ -245,5 +248,16 @@ export default ({
         )} 1s step-start forwards infinite`,
       },
     },
-  ),
-)();
+  );
+
+  return flow(
+    resetStyle,
+    defaultStyle,
+    borderStyle,
+    paddingStyle,
+    lineHeightStyle,
+    colorStyle,
+    outlineStyle,
+    loadingStyle,
+  )();
+}
