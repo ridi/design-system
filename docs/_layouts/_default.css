@@ -58,7 +58,7 @@ body {
 .site-title__beta {
   width: 45px;
   height: 24px;
-  margin-top: 2px;
+  margin-top: 1px;
   object-fit: contain;
   background: url(../../assets/img/tag_beta.png) no-repeat;
   background-size: cover;
@@ -173,15 +173,17 @@ body {
   line-height: 1.5;
   color: var(--slategray_100);
   text-align: center;
+  transition: opacity 0.2s;
 
   &:hover {
-    color: var(--slategray_60);
+    opacity: 0.5;
   }
 }
 
 .site-menu__item_active {
   color: var(--slategray_100);
   font-weight: 700;
+  border-top: 2px solid white;
   border-bottom: 2px solid currentColor;
 }
 
