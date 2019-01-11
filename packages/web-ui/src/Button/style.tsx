@@ -1,6 +1,6 @@
 import { keyframes } from '@emotion/core';
 import colors from '@ridi/colors';
-import { flow, map, merge, reduce } from 'lodash';
+import { merge, reduce } from 'lodash';
 import { rgba } from 'polished';
 import * as React from 'react';
 import { resetAppearance, resetFont, resetLayout } from '../styles';
@@ -200,20 +200,7 @@ export default ({
     },
   }));
 
-  return flow([
-    (values) => map(
-      values,
-      value => (value instanceof Function) ? value : (() => value),
-    ),
-    (funcs) => reduce(
-      funcs,
-      (mergedValue, func) => {
-        const overridingValue = func(mergedValue);
-        return merge(mergedValue, overridingValue);
-      },
-      {},
-    ),
-  ])([
+  const styles = [
     resetAppearance,
     resetFont,
     resetLayout,
@@ -225,5 +212,11 @@ export default ({
     colorStyle,
     outlineStyle,
     loadingStyle,
-  ]);
+  ];
+
+  return reduce<object | ((style: object) => object), any>(
+    styles,
+    (merged, v) => merge(merged, (v instanceof Function) ? v(merged) : v),
+    {},
+  );
 }
