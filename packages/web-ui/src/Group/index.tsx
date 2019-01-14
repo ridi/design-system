@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Base, BaseProps } from '../Base';
-import style from './style';
+import * as styles from './styles';
 
 export interface GroupProps extends BaseProps {
   /**
@@ -9,11 +9,21 @@ export interface GroupProps extends BaseProps {
   orientation?: 'vertical' | 'horizontal';
 }
 
-export const Group: React.FunctionComponent<GroupProps> = (props) => (
-  <Base css={style(props)} {...props} />
+export const Group: React.FunctionComponent<GroupProps> = ({
+  children,
+  orientation,
+  ...restProps
+}) => (
+  <Base css={styles.group({ orientation })} {...restProps}>
+    {React.Children.map(children, (child) => (
+      <Base render="li" css={styles.itemWrapper({ orientation })}>
+        {child}
+      </Base>
+    ))}
+  </Base>
 );
 
 Group.defaultProps = {
-  render: 'div',
+  render: 'ul',
   orientation: 'horizontal',
 };
