@@ -22,3 +22,12 @@
   <Button>Button</Button>
 </Group>
 ```
+
+### Vertical Orientation
+```jsx
+<Group orientation="vertical">
+  <Input placeholder="Input placeholder." />
+  <Input placeholder="Input placeholder." />
+  <Button>Button</Button>
+</Group>
+```
