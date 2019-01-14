@@ -9,16 +9,18 @@
 
 ```jsx
 <Group>
-  <Input placeholder="Input placeholder." />
-  <Input placeholder="Input placeholder." />
-  <Input placeholder="Input placeholder." />
+  <Input placeholder="Enter something" />
+  <Input placeholder="Enter something" />
+  <Input placeholder="Enter something" />
 </Group>
 ```
 
 ```jsx
 <Group>
-  <Input placeholder="Input placeholder." />
-  <Input placeholder="Input placeholder." />
+  <Select outline>
+    <Select.Option>Option</Select.Option>
+  </Select>
+  <Input placeholder="Enter something" />
   <Button>Button</Button>
 </Group>
 ```
@@ -26,8 +28,10 @@
 ### Vertical Orientation
 ```jsx
 <Group orientation="vertical">
-  <Input placeholder="Input placeholder." />
-  <Input placeholder="Input placeholder." />
+  <Select outline>
+    <Select.Option>Option</Select.Option>
+  </Select>
+  <Input placeholder="Enter something" />
   <Button>Button</Button>
 </Group>
 ```

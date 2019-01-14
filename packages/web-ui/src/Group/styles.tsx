@@ -55,21 +55,18 @@ export const itemWrapper = ({ orientation }: GroupProps) => merge({},
             display: 'block',
             width: '100%',
             margin: 0,
-            borderRadius: 0,
+            borderRadius,
           },
 
           ':not(:first-of-type) > *': {
             marginTop: -1,
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
           },
 
-          ':first-of-type > *': {
-            borderTopLeftRadius: borderRadius,
-            borderTopRightRadius: borderRadius,
-          },
-
-          ':last-of-type > *': {
-            borderBottomLeftRadius: borderRadius,
-            borderBottomRightRadius: borderRadius,
+          ':not(:last-of-type) > *': {
+            borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
           },
 
         };
@@ -80,21 +77,18 @@ export const itemWrapper = ({ orientation }: GroupProps) => merge({},
           '& > *': {
             display: 'inline-block',
             margin: 0,
-            borderRadius: 0,
+            borderRadius,
           },
 
           ':not(:first-of-type) > *': {
             marginLeft: -1,
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 0,
           },
 
-          ':first-of-type > *': {
-            borderTopLeftRadius: borderRadius,
-            borderBottomLeftRadius: borderRadius,
-          },
-
-          ':last-of-type > *': {
-            borderTopRightRadius: borderRadius,
-            borderBottomRightRadius: borderRadius,
+          ':not(:last-of-type) > *': {
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 0,
           },
         };
     }
