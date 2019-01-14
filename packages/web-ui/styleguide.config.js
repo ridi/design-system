@@ -1,5 +1,9 @@
 const path = require('path');
-const { parse: propsParser } = require('react-docgen-typescript');
+const { parse: propsParser } = require('react-docgen-typescript').withDefaultConfig({
+  propFilter: {
+    skipPropsWithoutDoc: true,
+  },
+});
 const webpackConfig = require('./webpack.config');
 const pkg = require('./package.json');
 
