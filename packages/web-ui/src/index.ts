@@ -5,4 +5,5 @@ export * from './Label';
 export * from './Book';
 export * from './Radio';
 export * from './Select';
+export * from './Tabs';
 export * from './Textarea';
