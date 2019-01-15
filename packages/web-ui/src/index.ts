@@ -6,4 +6,5 @@ export * from './Label';
 export * from './Options';
 export * from './Radio';
 export * from './Select';
+export * from './Tabs';
 export * from './Textarea';
