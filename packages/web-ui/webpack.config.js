@@ -7,6 +7,7 @@ const outDir = path.join(__dirname, 'dist');
 
 module.exports = {
   entry: path.join(srcDir, 'index.ts'),
+  target: 'node',
   output: {
     path: outDir,
     filename: 'index.js',
