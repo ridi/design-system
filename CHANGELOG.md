@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- Add `Options` component.
+- Implement `Options` component. (#33)
 
 ## [0.0.1] - 2019-01-18
 - Initial release.
