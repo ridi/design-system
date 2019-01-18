@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.0.2] - 2019-01-18
 ### Added
 - Implement `Options` component. (#33)
-- Add webpack target `node` (#36)
+
+### Fixed
+- Fix server side rendering error. (#36)
 
 ## [0.0.1] - 2019-01-18
 - Initial release.
