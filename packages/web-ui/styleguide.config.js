@@ -1,6 +1,6 @@
 const path = require('path');
 const { parse: propsParser } = require('react-docgen-typescript');
-const webpackConfig = require('./webpack.config');
+const webpackConfig = require('./webpack.config.web');
 const pkg = require('./package.json');
 
 module.exports = {
