@@ -1,12 +1,14 @@
 ### Basic Usage
 ```jsx
+initialState = { value: 'apple' };
+
 const handleClick = (event) => {
   setState({ value: event.target.value });
 };
 
 <Options>
   <Options.Item
-    selected={state.value === 'apple'}
+    active={state.value === 'apple'}
     value="apple"
     onClick={handleClick}
   >
@@ -14,7 +16,7 @@ const handleClick = (event) => {
   </Options.Item>
 
   <Options.Item
-    selected={state.value === 'banana'}
+    active={state.value === 'banana'}
     value="banana"
     onClick={handleClick}
   >
@@ -22,7 +24,42 @@ const handleClick = (event) => {
   </Options.Item>
 
   <Options.Item
-    selected={state.value === 'cherry'}
+    active={state.value === 'cherry'}
+    value="cherry"
+    onClick={handleClick}
+  >
+    Cherry
+  </Options.Item>
+</Options>
+```
+
+### Dot Separator
+```jsx
+initialState = { value: 'apple' };
+
+const handleClick = (event) => {
+  setState({ value: event.target.value });
+};
+
+<Options separator="dot">
+  <Options.Item
+    active={state.value === 'apple'}
+    value="apple"
+    onClick={handleClick}
+  >
+    Apple
+  </Options.Item>
+
+  <Options.Item
+    active={state.value === 'banana'}
+    value="banana"
+    onClick={handleClick}
+  >
+    Banana
+  </Options.Item>
+
+  <Options.Item
+    active={state.value === 'cherry'}
     value="cherry"
     onClick={handleClick}
   >
@@ -33,29 +70,55 @@ const handleClick = (event) => {
 
 ### Using Anchor
 ```jsx
-<Options>
-  <Options.Item
-    selected={state.value === 'apple'}
-    render="a"
-    href="#"
-  >
-    Apple
-  </Options.Item>
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleHashChange = this.handleHashChange.bind(this);
+    this.state = { hash: window.location.hash };
+  }
 
-  <Options.Item
-    selected={state.value === 'banana'}
-    render="a"
-    href="#"
-  >
-    Banana
-  </Options.Item>
+  componentDidMount() {
+    window.addEventListener('hashchange', this.handleHashChange);
+  }
 
-  <Options.Item
-    selected={state.value === 'cherry'}
-    render="a"
-    href="#"
-  >
-    Cherry
-  </Options.Item>
-</Options>
+  componentWillUnmount() {
+    window.removeEventListener('hashchange', this.handleHashChange);
+  }
+
+  handleHashChange() {
+    this.setState({ hash: window.location.hash });
+  };
+
+  render() {
+    return (
+      <Options>
+        <Options.Item
+          render="a"
+          href="#options/apple"
+          active={this.state.hash === '#options/apple'}
+        >
+          Apple
+        </Options.Item>
+
+        <Options.Item
+          render="a"
+          href="#options/banana"
+          active={this.state.hash === '#options/banana'}
+        >
+          Banana
+        </Options.Item>
+
+        <Options.Item
+          render="a"
+          href="#options/cherry"
+          active={this.state.hash === '#options/cherry'}
+        >
+          Cherry
+        </Options.Item>
+      </Options>
+    );
+  }
+}
+
+<Example />
 ```
