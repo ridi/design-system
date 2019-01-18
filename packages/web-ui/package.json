@@ -1,6 +1,6 @@
 {
   "name": "@ridi/web-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "RIDI Web UI",
   "license": "MIT",
   "repository": {
@@ -24,9 +24,9 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@emotion/core": "^10.0.2",
-    "@ridi/colors": "*",
+    "@ridi/colors": "^0.0.1",
     "@ridi/tslint-config": "^0.1.0",
-    "@ridi/web-icons": "*",
+    "@ridi/web-icons": "^0.0.1",
     "@svgr/webpack": "^4.1.0",
     "@types/classnames": "^2.2.6",
     "@types/lodash": "^4.14.119",
