@@ -379,7 +379,8 @@ body {
   }
 }
 
-.site-link-list-products__link {
+.site-link-list-products__link,
+.site-link-list-misc__link {
   display: inline-block;
   background-color: currentColor;
   mask: center no-repeat;
@@ -401,4 +402,22 @@ body {
 .site-link-list__link-paper {
   mask-image: url('/assets/img/paper.svg');
   width: 42px;
+}
+
+.site-link-list__link-blog {
+  mask-image: url('/assets/img/footer_icon_ridi.svg');
+  width: 32px;
+  height: 32px;
+}
+
+.site-link-list__link-dribbble {
+  mask-image: url('/assets/img/footer_icon_dribbble.svg');
+  width: 32px;
+  height: 32px;
+}
+
+.site-link-list__link-github {;
+  mask-image: url('/assets/img/footer_icon_github.svg');
+  width: 32px;
+  height: 32px;
 }

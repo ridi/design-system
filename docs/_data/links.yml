@@ -1,7 +1,7 @@
-official:
-  - name: ridicorp
-    title: RIDI Corp.
-    url: https://www.ridicorp.com
+# official:
+#   - name: ridicorp
+#     title: RIDI Corp.
+#     url: https://www.ridicorp.com
 
 products:
   - name: ridibooks
@@ -25,6 +25,6 @@ misc:
     title: dribbble
     url: https://dribbble.com/ridi-design
 
-  - name: design-system-github
+  - name: github
     title: github
     url: https://github.com/ridi/design-system
