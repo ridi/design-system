@@ -9,7 +9,7 @@ export const notAvailable = merge({}, resetLayout, {
   height: '100%',
   background: 'black',
   opacity: .4,
-  zIndex: 200,
+  zIndex: 100,
 });
 
 export const icon = {

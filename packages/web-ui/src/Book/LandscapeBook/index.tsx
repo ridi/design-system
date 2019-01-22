@@ -33,6 +33,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     onSelectedChange,
     readingProgress,
     readingStatus,
+    renderThunmbnailLink,
     renderUnitBookCount,
     ridiselect,
     selected,
@@ -56,6 +57,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           adultBadge={adultBadge}
           onSelectedChange={onSelectedChange}
           readingStatus={readingStatus}
+          renderThunmbnailLink={renderThunmbnailLink}
           selected={selected}
           selectMode={selectMode}
           thumbnailUrl={thumbnailUrl}
