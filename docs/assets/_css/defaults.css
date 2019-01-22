@@ -12,15 +12,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin-bottom: 60px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 0;
   color: var(--slategray_100);
-  border-bottom: 2px solid var(--slategray_5);
+  border-bottom: 1px solid var(--slategray_5);
 
   & small {
     margin: 8px 0;
@@ -33,7 +32,7 @@ h1 {
 
 h2 {
   font-size: 28px;
-  margin: 80px 0 20px;
+  margin: 60px 0 20px;
 }
 
 h3 {
@@ -76,10 +75,10 @@ li {
 }
 
 blockquote {
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0 0 0 20px;
   border-left: 4px solid var(--lightsteelblue_20);
-  color: var(--slategray_60);
+  color: var(--slategray_50);
 }
 
 table {
@@ -91,7 +90,7 @@ table, th, td {
 }
 
 th, td {
-  padding: 10px 30px;
+  padding: 10px 16px;
 }
 
 thead {

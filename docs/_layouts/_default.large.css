@@ -1,6 +1,6 @@
 :root {
   --site-header-height: 80px;
-  --site-footer-height: 200px;
+  --site-footer-height: 180px;
 }
 
 body {
@@ -151,11 +151,12 @@ body {
 }
 
 .site-link-wrapper {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .site-copyright {
-  padding-top: 110px;
+  padding-top: 100px;
+  text-align: right;
 }
 
 .site-link-list {
@@ -167,8 +168,8 @@ body {
 }
 
 .site-link-list-products {
-  width: 50%;
   float: left;
+  padding: 10px 0;
 }
 
 .site-link-list-misc {

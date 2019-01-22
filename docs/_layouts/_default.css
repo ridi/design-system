@@ -299,7 +299,7 @@ body {
 }
 
 .site-main {
-  padding: 60px var(--site-padding) 80px;
+  padding: 40px var(--site-padding) 80px;
 }
 
 .site-main__container {
@@ -323,7 +323,7 @@ body {
   box-sizing: border-box;
   height: var(--site-footer-height);
   border-top: 1px solid var(--slategray_10);
-  padding: 20px 0;
+  padding: 10px 0 20px;
   text-align: center;
   background: var(--lightsteelblue_10);
 }
@@ -335,7 +335,7 @@ body {
 }
 
 .site-copyright {
-  padding-top: 10px;
+  padding-top: 20px;
   width: 100%;
   text-align: center;
   font-size: 12px;
@@ -344,8 +344,8 @@ body {
 }
 
 .site-link-list {
-  margin: 0 0 18px;
-  padding: 20px 0 0;
+  margin: 0;
+  padding: 20px 0 20px;
   line-height: 0;
 }
 
