@@ -33,15 +33,15 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     onSelectedChange,
     readingProgress,
     readingStatus,
-    renderThumbnailLink,
-    renderUnitBookCount,
     ridiselect,
     selected,
     selectMode,
+    thumbnailLink,
     thumbnailUrl,
     thumbnailWidth,
     title,
     unitBook = false,
+    unitBookCount,
     updateBadge,
     ...extraProps
   } = props;
@@ -57,9 +57,9 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           adultBadge={adultBadge}
           onSelectedChange={onSelectedChange}
           readingStatus={readingStatus}
-          renderThumbnailLink={renderThumbnailLink}
           selected={selected}
           selectMode={selectMode}
+          thumbnailLink={thumbnailLink}
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
           updateBadge={updateBadge}
@@ -81,7 +81,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
         {unitBook ? (
           downloadStatus === Book.DownloadStatus.Downloading ? (
             <Book.UnitBookDownloading />
-          ) : renderUnitBookCount({})
+          ) : unitBookCount
         ) : (
           readingStatus === Book.ReadingStatus.Opened ? (
             <React.Fragment>
