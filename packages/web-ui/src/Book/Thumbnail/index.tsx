@@ -41,12 +41,13 @@ export interface ThumbnailProps extends
     selectMode?: boolean;
     selected?: boolean;
     readingStatus?: ReadingStatus;
-    renderUnitBookCount?: React.FunctionComponent<UnitBookCountProps>;
     ridiSelect?: boolean;
+    thumbnailLink?: React.ReactElement<any>;
+    thumbnailWidth?: number;
     unitBook?: boolean;
+    unitBookCount?: React.ReactElement<UnitBookCountProps>;
     updateBadge?: boolean;
     viewType?: ViewType;
-    thumbnailWidth?: number;
     [extraKey: string]: any;
   }
 
@@ -63,13 +64,14 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     onSelectedChange,
     readingProgress,
     readingStatus,
-    renderUnitBookCount,
     ridiselect,
     selected = false,
     selectMode = false,
+    thumbnailLink,
     thumbnailUrl,
     thumbnailWidth,
     unitBook = false,
+    unitBookCount,
     updateBadge = false,
     viewType = ViewType.Portrait,
     ...extraProps
@@ -102,7 +104,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
           <React.Fragment>
             {unitBook ? (
               <React.Fragment>
-                {unitBook && renderUnitBookCount({})}
+                {unitBookCount}
                 {downloadStatus === DownloadStatus.Downloading && <UnitBookDownloading size={UnitBookDownloadingSize.Large} />}
               </React.Fragment>
             ) : (
@@ -127,6 +129,9 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
         }
         {children}
         {notAvailable && <NotAvailable />}
+        {thumbnailLink && (
+          <div css={styles.thumbnailLink}>{thumbnailLink}</div>
+        )}
       </div>
     </div>
   );

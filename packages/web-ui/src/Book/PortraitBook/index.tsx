@@ -26,14 +26,15 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     onSelectedChange,
     readingProgress,
     readingStatus,
-    renderUnitBookCount,
     ridiselect,
     selected,
     selectMode,
+    thumbnailLink,
     thumbnailUrl,
     thumbnailWidth,
     title,
     unitBook = false,
+    unitBookCount,
     updateBadge,
     ...extraProps
   } = props;
@@ -47,7 +48,6 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
       <div css={styles.thumbnail}>
         <Book.Thumbnail
           adultBadge={adultBadge}
-          renderUnitBookCount={renderUnitBookCount}
           downloadProgress={downloadProgress}
           downloadStatus={downloadStatus}
           expired={expired}
@@ -59,9 +59,11 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           ridiselect={ridiselect}
           selected={selected}
           selectMode={selectMode}
+          thumbnailLink={thumbnailLink}
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
           unitBook={unitBook}
+          unitBookCount={unitBookCount}
           updateBadge={updateBadge}
           viewType={Book.ViewType.Portrait}
         />

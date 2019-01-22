@@ -7,14 +7,15 @@ const selected = true;
   adultBadge
   updateBadge
   ridiselect
+  thumbnailLink={<a href="/">Thumbnail link</a>}
   unitBook
-  renderUnitBookCount={(props) => (
+  unitBookCount={
     <Book.UnitBookCount
-      bookCount={60}
+      bookCount={40}
       bookCountUnit={Book.BookCountUnit.Serial}
       render="button"
     />
-  )}
+  }
   selectMode  
   selected={selected}
   onSelectedChange={() => {console.log('selected!')}}
@@ -30,12 +31,12 @@ const selected = true;
   ridiselect
   notAvailable={true}
   unitBook
-  renderUnitBookCount={() => (
+  unitBookCount={
     <Book.UnitBookCount
       bookCount={30}
       bookCountUnit={Book.BookCountUnit.Single}
     />
-  )}
+  }
   onSelectedChange={() => {console.log('selected!')}}
   readingStatus={Book.ReadingStatus.New}
 />
@@ -48,14 +49,14 @@ const selected = true;
   updateBadge
   ridiselect
   unitBook
-  renderUnitBookCount={() => (
+  unitBookCount={
     <Book.UnitBookCount
       bookCount={30}
       bookCountUnit={Book.BookCountUnit.Single}
       render="a"
       href="/"
     />
-  )}
+  }
   readingStatus={Book.ReadingStatus.Opened}
   readingProgress={20}
 />
@@ -68,12 +69,12 @@ const selected = true;
   updateBadge
   ridiselect
   unitBook
-  renderUnitBookCount={() => (
+  unitBookCount={
     <Book.UnitBookCount
       bookCount={30}
       bookCountUnit={Book.BookCountUnit.Single}
     />
-  )}
+  }
   downloadStatus={Book.DownloadStatus.Downloading}
 />
 ```
@@ -113,6 +114,7 @@ const selected = true;
   author="임한백"
   downloadStatus={Book.DownloadStatus.Downloading}
   downloadProgress={80}
+  thumbnailLink={<a href="/">Thumbnail link</a>}
 />
 ```
 ### LandscapeBook
@@ -126,6 +128,7 @@ const selected = true;
     downloadProgress={80}
     downloadSize={13.4}
     expiredAt="21일 4시간 남음"
+    thumbnailLink={<a href="/">Thumbnail link</a>}
   />
 </div>
 ```
@@ -158,14 +161,14 @@ const selected = true;
     unitBook
     updateBadge
     readingStatus={Book.ReadingStatus.New}
-    renderUnitBookCount={() => (
+    unitBookCount={
       <Book.UnitBookCount
         bookCount={30}
         bookCountUnit={Book.BookCountUnit.Single}
         render="a"
         href="/"
       />
-    )}
+    }
   />
 </div>
 ```
