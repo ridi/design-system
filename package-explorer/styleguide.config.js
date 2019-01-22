@@ -1,6 +1,6 @@
 const path = require('path');
 const { parse: propsParser } = require('react-docgen-typescript');
-const webpackConfig = require('../packages/web-ui/webpack.config');
+const webUiWebpackConfig = require('../packages/web-ui/webpack.config.web');
 const webUiPackage = require('../packages/web-ui/package.json');
 
 module.exports = {
@@ -16,7 +16,7 @@ module.exports = {
     smartIndent: true,
   },
   webpackConfig: {
-    ...webpackConfig,
+    ...webUiWebpackConfig,
     mode: 'development',
     devtool: 'eval-source-map',
   },

@@ -1,24 +1,38 @@
 import colors from '@ridi/colors';
 import { rgba } from 'polished';
 
-const defaultFontFamily = `Helvetica Neue, Apple SD Gothic Neo, arial, '나눔고딕', Nanum Gothic, '돋움', Dotum, Tahoma, Geneva, sans-serif`;
+export const defaultFontFamily = [
+  'Helvetica Neue',
+  'Apple SD Gothic Neo',
+  'arial',
+  '"나눔고딕"',
+  'Nanum Gothic',
+  '"돋움"',
+  'Dotum',
+  'Tahoma',
+  'Geneva',
+  'sans-serif',
+].join(', ');
 
 export const resetAppearance = {
   appearance: 'none',
-  border: 'none',
+  background: 'none',
+  boxShadow: 'none',
+  border: 0,
 };
 
 export const resetFont = {
+  color: 'black',
   fontFamily: defaultFontFamily,
   fontWeight: 400,
-  letterSpacing: '-.03em',
+  letterSpacing: '-.4px',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
 };
 
 export const resetLayout = {
-  margin: 0,
   padding: 0,
+  margin: 0,
 };
 
 export const formElementHover = {
@@ -35,3 +49,45 @@ export const formElementDisabled = {
   backgroundColor: colors.slategray_5,
   color: colors.slategray_20,
 };
+
+export const cursorDefault = {
+  cursor: 'default',
+};
+
+export const cursorPointer = {
+  cursor: 'pointer',
+};
+
+export const inheritFont = {
+  color: 'inherit',
+  letterSpacing: 'inherit',
+  fontFamily: 'inherit',
+};
+
+export const displayHidden = {
+  display: 'inline-block',
+  width: 0,
+  height: 0,
+  margin: 0,
+  padding: 0,
+  overflow: 'hidden',
+  border: 0,
+  color: 'rgba(0, 0, 0, 0)',
+  fontSize: 0,
+  lineHeight: 0,
+  opacity: 0,
+  clip: 'rect(0, 0, 0, 0)',
+};
+
+export const lineClamp = (lineNum?: number) => ({
+  display: '-webkit-box',
+  WebkitBoxOrient: 'vertical',
+  overflow: 'hidden',
+  whiteSpace: 'normal',
+  wordBreak: 'break-all',
+  wordWrap: 'break-word',
+  lineHeight: '1.4em',
+  textOverflow: 'ellipsis',
+  WebkitLineClamp: lineNum,
+  maxHeight: `${lineNum * 1.4}em`,
+});
