@@ -8,9 +8,7 @@ const selected = true;
   updateBadge
   ridiselect
   unitBook
-  renderThunmbnailLink={() => (
-    <a href="/">상세 링크</a>
-  )}
+  renderThumbnailLink={<a href="/">Thumbnail link</a>}
   renderUnitBookCount={(props) => (
     <Book.UnitBookCount
       bookCount={60}
@@ -116,9 +114,7 @@ const selected = true;
   author="임한백"
   downloadStatus={Book.DownloadStatus.Downloading}
   downloadProgress={80}
-  renderThunmbnailLink={() => (
-    <a href="/">테스트 링크</a>
-  )}
+  renderThumbnailLink={<a href="/">Thumbnail link</a>}
 />
 ```
 ### LandscapeBook
@@ -132,9 +128,7 @@ const selected = true;
     downloadProgress={80}
     downloadSize={13.4}
     expiredAt="21일 4시간 남음"
-    renderThunmbnailLink={() => (
-      <a href="/">테스트 링크</a>
-    )}
+    renderThumbnailLink={<a href="/">Thumbnail link</a>}
   />
 </div>
 ```

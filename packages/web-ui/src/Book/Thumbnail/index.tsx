@@ -41,7 +41,7 @@ export interface ThumbnailProps extends
     selectMode?: boolean;
     selected?: boolean;
     readingStatus?: ReadingStatus;
-    renderThunmbnailLink?: React.FunctionComponent;
+    renderThumbnailLink?: React.ReactType;
     renderUnitBookCount?: React.FunctionComponent<UnitBookCountProps>;
     ridiSelect?: boolean;
     unitBook?: boolean;
@@ -64,7 +64,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     onSelectedChange,
     readingProgress,
     readingStatus,
-    renderThunmbnailLink,
+    renderThumbnailLink,
     renderUnitBookCount,
     ridiselect,
     selected = false,
@@ -129,8 +129,8 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
         }
         {children}
         {notAvailable && <NotAvailable />}
-        {renderThunmbnailLink && (
-          <div css={styles.thumbnailLink}>{renderThunmbnailLink({})}</div>
+        {renderThumbnailLink && (
+          <div css={styles.thumbnailLink}>{renderThumbnailLink}</div>
         )}
       </div>
     </div>
