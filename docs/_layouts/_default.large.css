@@ -1,6 +1,6 @@
 :root {
   --site-header-height: 80px;
-  --site-footer-height: 120px;
+  --site-footer-height: 200px;
 }
 
 body {
@@ -131,12 +131,12 @@ body {
   color: var(--slategray_50);
 
   &:hover {
-    color: var(--slategray_80);
+    color: var(--lightsteelblue_80);
   }
 
   &:active {
     font-weight: bold;
-    color: var(--slategray_80);
+    color: var(--lightsteelblue_80);
   }
 }
 
@@ -147,13 +147,19 @@ body {
 
 .site-footer__container {
   height: 100%;
-  display: flex;
-  flex-flow: row nowrap;
   align-items: center;
 }
 
+.site-link-wrapper {
+  padding-top: 40px;
+}
+
+.site-copyright {
+  padding-top: 110px;
+}
+
 .site-link-list {
-  margin-bottom: 0;
+  padding: 0;
 
   &:not(:last-child) {
     margin-right: 30px;
@@ -161,6 +167,11 @@ body {
 }
 
 .site-link-list-products {
-  flex: 1;
+  width: 50%;
+  float: left;
+}
+
+.site-link-list-misc {
+  float: right;
 }
 

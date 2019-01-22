@@ -56,12 +56,7 @@ html.home {
     padding-top: 230px;
     font-weight: normal;
     text-decoration: none;
-
-    &:hover {
-      & .site-content__title {
-        color: var(--slategray_70);
-      }
-    }
+    transition: all 0.2s;
   }
 
   & .site-content__title {
@@ -89,9 +84,10 @@ html.home {
     letter-spacing: -0.3px;
     line-height: 1.87;
     text-decoration: underline;
+    transition: color 0.2s;
     
     &:hover {
-      color: var(--dodgerblue_50);
+      color: var(--slategray_90);
     }
   }
 

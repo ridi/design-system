@@ -102,10 +102,12 @@
 
   <footer class="site-footer">
     <div class="site-footer__container container">
+      <div class="site-link-wrapper">
       {% for link_list_hash in site.data.links %}
         {% assign link_category = link_list_hash[0] %}
         {% assign link_list = link_list_hash[1] %}
-        <ul class="site-link-list site-link-list-{{ link_category }}">
+        
+          <ul class="site-link-list site-link-list-{{ link_category }}">
           {%- for item in link_list -%}
             <li class="site-link-list__item site-link-list-{{ link_category }}__item site-link-list__item-{{ item.name }}">
               <a
@@ -117,9 +119,15 @@
               </a>
             </li>
           {%- endfor -%}
-        </ul>
+          </ul>
+        
       {% endfor %}
+      </div>  
+      
+      <div class="site-copyright">© 2019 RIDI Corp. All right reserved.</div>
+
     </div>
+
   </footer>
 
   <script>
