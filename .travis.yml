@@ -13,11 +13,17 @@ deploy:
     name: website
     script: node ./deploy-website.js
     skip_cleanup: true
+    on:
+      repo: ridi/design-system
+      all_branches: true
 
   - provider: script
     name: package-explorer
     script: node ./deploy-package-explorer.js
     skip_cleanup: true
+    on:
+      repo: ridi/design-system
+      all_branches: true
 
   - provider: script
     name: npm
