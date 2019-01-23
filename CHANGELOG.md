@@ -6,12 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.1] - 2019-01-23
+### Fixed
+- Fix `Book`'s `max-width` and conditional rendering option (#38)
+
 ## [0.1.0] - 2019-01-22
 ### Added
-- Add `thumbnailLink` prop to Book (#37)
+- Add `thumbnailLink` prop to `Book` (#37)
 
 ### Changed
-- **BREAKING**: Change `renderUnitBookCount` to `unitBookCount` of Book (#37)
+- **BREAKING**: Change `renderUnitBookCount` to `unitBookCount` of `Book` (#37)
 
 ## [0.0.2] - 2019-01-18
 ### Added
