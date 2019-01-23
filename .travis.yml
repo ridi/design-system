@@ -6,6 +6,8 @@ script:
   - yarn build
 
 before_deploy:
+  - git config --global user.email "travis@travis-ci.com"
+  - git config --global user.name "Travis CI"
   - printf "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
 
 deploy:
