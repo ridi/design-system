@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "pacakge-explorer",
+  "name": "package-explorer",
   "version": "0.1.0",
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",

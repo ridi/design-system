@@ -6,7 +6,7 @@ const config = require('./styleguide.config');
 styleguidist(config).build(
   (err, config) => {
     if (err) {
-      console.log(err.stack || err);
+      console.error(err.stack || err);
       process.exit(err.code || 1);
     }
 
