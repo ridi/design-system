@@ -9,10 +9,21 @@ before_deploy:
   - printf "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
 
 deploy:
-  provider: script
-  script: lerna publish from-git --yes
-  skip_cleanup: true
-  on:
-    repo: ridi/design-system
-    branch: master
-    tags: true
+  - provider: script
+    name: website
+    script: node ./deploy-website.js
+    skip_cleanup: true
+
+  - provider: script
+    name: package-explorer
+    script: node ./deploy-package-explorer.js
+    skip_cleanup: true
+
+  - provider: script
+    name: npm
+    script: lerna publish from-git --yes
+    skip_cleanup: true
+    on:
+      repo: ridi/design-system
+      branch: master
+      tags: true
