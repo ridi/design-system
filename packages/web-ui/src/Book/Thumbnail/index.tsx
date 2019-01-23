@@ -128,7 +128,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
           </React.Fragment>
         }
         {children}
-        {notAvailable && <NotAvailable />}
+        {notAvailable && !selectMode && <NotAvailable />}
         {thumbnailLink && (
           <div css={styles.thumbnailLink}>{thumbnailLink}</div>
         )}
