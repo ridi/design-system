@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "start": "styleguidist server",
-    "build": "styleguidist build",
+    "build": "node ./build.js",
     "watch": "yarn start"
   },
   "devDependencies": {
