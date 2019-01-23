@@ -1,9 +1,12 @@
+const { execSync } = require('child_process');
 const ghpages = require('gh-pages');
+
+const gitHash = execSync('git rev-parse HEAD');
 
 ghpages.publish(
   'docs',
   {
-    message: 'Update website',
+    message: `Update website\n\nFrom git hash: ${gitHash}`,
     add: true,
     dotfiles: true,
   },
