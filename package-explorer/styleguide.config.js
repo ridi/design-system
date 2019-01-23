@@ -1,11 +1,11 @@
 const path = require('path');
 const { parse: propsParser } = require('react-docgen-typescript');
-const pkg = require('./package.json');
+const { version } = require('../lerna.json');
 const webUiWebpackConfig = require('../packages/web-ui/webpack.config.web');
 const webUiPackage = require('../packages/web-ui/package.json');
 
 module.exports = {
-  styleguideDir: path.join(__dirname, 'dist', `v${pkg.version}`),
+  styleguideDir: path.join(__dirname, 'dist', `v${version}`),
   pagePerSection: true,
   sections: [
     {

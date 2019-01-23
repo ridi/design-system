@@ -1,17 +1,11 @@
-const fse = require('fs-extra');
-const path = require('path');
 const ghpages = require('gh-pages');
-
-fse.copySync(
-  path.join(__dirname, 'package-explorer/dist'),
-  path.join(__dirname, 'docs/packages'),
-);
 
 ghpages.publish(
   'docs',
   {
+    message: 'Update website',
+    add: true,
     dotfiles: true,
-    push: false,
   },
   (err) => {
     if (err) {
