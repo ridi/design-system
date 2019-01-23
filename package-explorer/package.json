@@ -3,10 +3,15 @@
   "name": "pacakge-explorer",
   "version": "0.1.0",
   "scripts": {
+    "clean": "git clean -xdf --exclude=node_modules .",
     "start": "styleguidist server",
+    "build": "styleguidist build",
     "watch": "yarn start"
   },
   "devDependencies": {
+    "@ridi/colors": "^0.1.0",
+    "@ridi/web-icons": "^0.1.0",
+    "@ridi/web-ui": "^0.1.0",
     "react-docgen-typescript": "^1.12.2",
     "react-styleguidist": "^8.0.6"
   }

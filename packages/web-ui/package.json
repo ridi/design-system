@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
-    "build": "webpack",
+    "build": "rm -rf ./dist && webpack",
     "lint": "tslint src/**/*.{ts,tsx} -c ./tslint.json --fix",
     "precommit": "lint-staged"
   },
@@ -35,7 +35,6 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^10.0.2",
     "babel-plugin-lodash": "^3.3.4",
-    "clean-webpack-plugin": "^0.1.19",
     "lint-staged": "^8.1.0",
     "lodash": "^4.17.11",
     "polished": "^2.3.1",
