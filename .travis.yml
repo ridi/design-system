@@ -30,26 +30,24 @@ before_deploy:
 
 deploy:
   - provider: script
-    name: website
-    script: NODE_DEBUG=gh-pages node ./deploy-website.js
-    skip_cleanup: true
-    on:
-      repo: ridi/design-system
-      all_branches: true
-
-  - provider: script
-    name: package-explorer
-    script: NODE_DEBUG=gh-pages node ./deploy-package-explorer.js
-    skip_cleanup: true
-    on:
-      repo: ridi/design-system
-      all_branches: true
-
-  - provider: script
-    name: npm
     script: lerna publish from-git --yes
     skip_cleanup: true
     on:
       repo: ridi/design-system
       branch: master
       tags: true
+
+  - provider: script
+    script: >-
+      NODE_DEBUG=gh-pages
+      gh-pages
+      --dist package-explorer/dist
+      --branch gh-pages
+      --dest docs/packages
+      --add
+      --message "Update package-explorer"
+      --dotfiles
+    skip_cleanup: true
+    on:
+      repo: ridi/design-system
+      all_branches: true
