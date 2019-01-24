@@ -1,7 +1,6 @@
 import { PositionProperty } from "csstype";
 
 export const thumbnail = {
-  maxWidth: 110,
   lineHeight: 0,
 };
 
