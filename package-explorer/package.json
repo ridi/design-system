@@ -8,10 +8,17 @@
     "build": "node ./build.js",
     "watch": "yarn start"
   },
-  "devDependencies": {
+  "dependencies": {
     "@ridi/colors": "^0.1.0",
     "@ridi/web-icons": "^0.1.0",
     "@ridi/web-ui": "^0.1.0",
+    "react": "^16.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "lodash": "^4.17.11",
     "react-docgen-typescript": "^1.12.2",
     "react-styleguidist": "^8.0.6"
   }
