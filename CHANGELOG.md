@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.2] - 2019-01-24
+### Fixed
+- Add missing conditions and change styles for `Book` (#39)
+
 ## [0.1.1] - 2019-01-23
 ### Fixed
 - Fix `Book`'s `max-width` and conditional rendering option (#38)
