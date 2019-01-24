@@ -42,7 +42,7 @@ deploy:
       NODE_DEBUG=gh-pages
       gh-pages
       --dist package-explorer/dist
-      --branch gh-pages
+      --branch master
       --dest docs/packages
       --add
       --message "Update package-explorer"
@@ -50,4 +50,5 @@ deploy:
     skip_cleanup: true
     on:
       repo: ridi/design-system
-      all_branches: true
+      branch: master
+      tags: true
