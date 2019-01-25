@@ -26,7 +26,7 @@ const selected = true;
 ```jsx
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
-  thumbnailUrl="//misc.ridibooks.com/cover/425063833/xlarge"
+  thumbnailUrl="https://misc.ridibooks.com/cover/425063833/xlarge"
   thumbnailWidth={100}
   adultBadge
   updateBadge

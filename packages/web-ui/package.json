@@ -16,13 +16,12 @@
   ],
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
-    "build": "webpack",
-    "watch": "styleguidist server",
+    "build": "rm -rf ./dist && webpack",
     "lint": "tslint src/**/*.{ts,tsx} -c ./tslint.json --fix",
     "precommit": "lint-staged"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
+    "@babel/core": "^7.2.2",
     "@emotion/core": "^10.0.2",
     "@ridi/colors": "^0.1.0",
     "@ridi/tslint-config": "^0.1.0",
@@ -33,24 +32,21 @@
     "@types/react": "^16.7.13",
     "@types/react-dom": "^16.0.11",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^8.0.5",
     "babel-plugin-emotion": "^10.0.2",
     "babel-plugin-lodash": "^3.3.4",
-    "clean-webpack-plugin": "^0.1.19",
     "lint-staged": "^8.1.0",
     "lodash": "^4.17.11",
     "polished": "^2.3.1",
     "prettier": "^1.15.2",
     "react": "^16.6.0",
-    "react-docgen-typescript": "^1.11.0",
     "react-dom": "^16.6.0",
-    "react-styleguidist": "^8.0.2",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.16.0",
     "tslint-loader": "^3.5.4",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "3.1",
-    "webpack": "^4.23.1",
+    "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   }
 }

@@ -7,7 +7,6 @@ module.exports = _.merge({},
     target: 'node',
     output: {
       filename: 'index.node.js',
-      libraryTarget: 'commonjs2',
     },
   },
 );

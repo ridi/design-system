@@ -1,4 +1,3 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 const path = require('path');
 
@@ -9,6 +8,7 @@ module.exports = {
   entry: path.join(srcDir, 'index.ts'),
   output: {
     path: outDir,
+    libraryTarget: 'commonjs2',
   },
   mode: 'production',
   devtool: 'source-map',
@@ -31,7 +31,15 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         include: srcDir,
-        use: ['babel-loader', 'awesome-typescript-loader'],
+        use: [
+          'babel-loader',
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              configFileName: path.join(__dirname, 'tsconfig.json'),
+            },
+          },
+        ],
       },
       {
         test: /\.svg$/,
@@ -47,8 +55,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin([outDir]),
-    new CheckerPlugin(),
-  ],
+  plugins: [new CheckerPlugin()],
 };
