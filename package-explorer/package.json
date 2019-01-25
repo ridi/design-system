@@ -12,6 +12,7 @@
     "@ridi/colors": "^0.1.0",
     "@ridi/web-icons": "^0.1.0",
     "@ridi/web-ui": "^0.1.0",
+    "color": "^3.1.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   },
