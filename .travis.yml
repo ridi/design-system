@@ -11,6 +11,7 @@ before_deploy:
   - git config --global user.email "travis@travis-ci.com"
   - git config --global user.name "Travis CI"
 
+  # Reference: https://github.com/alrra/travis-scripts/blob/master/docs/github-deploy-keys.md
   - SSH_FILE=$HOME/.ssh/github_deploy_key
   - >-
     openssl aes-256-cbc
