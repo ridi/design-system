@@ -1,20 +1,29 @@
 # @ridi/web-icons
 
 ## Install
+
 ```bash
 $ npm install @ridi/web-icons
 ```
 
 ## Usage
-```js static
+
+With [`url-loader`](https://www.npmjs.com/package/url-loader):
+```jsx static
 const { airplane } = require('@ridi/web-icons');
+
+<img src={airplane} />
 ```
-or
-```js static
-const airplane = require('@ridi/web-icons/svgs/airplane.svg');
+
+With [SVGR](https://github.com/smooth-code/svgr):
+```jsx static
+const { airplane: Airplane } = require('@ridi/web-icons');
+
+<Airplane />
 ```
 
 ## Icons
+
 ```jsx
 /**
  * This example assumes using [SVGR](https://github.com/smooth-code/svgr).
@@ -42,9 +51,7 @@ const { snakeCase } = require('lodash');
           margin: '10px',
         }}
       >
-        <a
-          href={`https://cdn.jsdelivr.net/npm/@ridi/web-icons@${version}/svgs/${snakeCase(name)}.svg`}
-          target="_blank"
+        <div
           style={{
             display: 'inline-block',
             color: 'black',
@@ -52,9 +59,14 @@ const { snakeCase } = require('lodash');
             textDecoration: 'none',
           }}
         >
-          <Icon width="48" height="48" />
-          <div style={{ fontSize: '12px' }}>{name}</div>
-        </a>
+          <a
+            href={`https://cdn.jsdelivr.net/npm/@ridi/web-icons@${version}/svgs/${snakeCase(name)}.svg`}
+            target="_blank"
+          >
+            <Icon width="48" height="48" />
+          </a>
+          <div style={{ fontSize: '12px', userSelect: 'all' }}>{name}</div>
+        </div>
       </div>
     );
   })}
