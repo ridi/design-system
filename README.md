@@ -1,4 +1,4 @@
-# Design System
+# RIDI Design System
 
 ## Development
 

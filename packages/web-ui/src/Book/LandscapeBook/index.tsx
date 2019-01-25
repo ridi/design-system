@@ -55,6 +55,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
       <div css={styles.thumbnail}>
         <Book.Thumbnail
           adultBadge={adultBadge}
+          notAvailable={notAvailable}
           onSelectedChange={onSelectedChange}
           readingStatus={readingStatus}
           selected={selected}
