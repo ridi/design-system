@@ -7,7 +7,7 @@ $ npm install @ridi/web-ui
 
 ## Usage
 ```jsx static
-const { Button } = require('@ridi/web-ui');
+import { Button } from '@ridi/web-ui';
 
 <Button>Button</Button>
 ```

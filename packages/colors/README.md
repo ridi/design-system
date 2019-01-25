@@ -7,11 +7,11 @@ $ npm install @ridi/colors
 
 ## Usage
 ```js static
-const colors = require('@ridi/colors');
-const hex = require('@ridi/colors/hex.json');
-const rgb = require('@ridi/colors/rgb.json');
-const hsl = require('@ridi/colors/hsl.json');
-const hwb = require('@ridi/colors/hwb.json');
+import colors from '@ridi/colors';
+import hex from '@ridi/colors/hex.json';
+import rgb from '@ridi/colors/rgb.json';
+import hsl from '@ridi/colors/hsl.json';
+import hwb from '@ridi/colors/hwb.json';
 
 colors.dogerBlue5; // #EBF6FF
 hex.dogerBlue5; // #EBF6FF

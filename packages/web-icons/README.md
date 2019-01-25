@@ -10,14 +10,14 @@ $ npm install @ridi/web-icons
 
 With [`url-loader`](https://www.npmjs.com/package/url-loader):
 ```jsx static
-const { airplane } = require('@ridi/web-icons');
+import { airplane } from '@ridi/web-icons';
 
 <img src={airplane} />
 ```
 
 With [SVGR](https://github.com/smooth-code/svgr):
 ```jsx static
-const { airplane: Airplane } = require('@ridi/web-icons');
+import { airplane: Airplane } from '@ridi/web-icons';
 
 <Airplane />
 ```
