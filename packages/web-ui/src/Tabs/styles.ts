@@ -9,7 +9,7 @@ export const tabs = ({ stretchItems }: TabsProps) => merge({},
   {
     display: 'block',
     listStyle: 'none',
-    borderBottom: `2px solid ${colors.slategray_20}`,
+    borderBottom: `2px solid ${colors.slateGray20}`,
   },
 
   stretchItems && {
@@ -45,7 +45,7 @@ export const item = ({ active, activeColor }: Tabs.ItemProps) => merge({},
     position: 'relative',
     padding: '8px 0',
     width: '100%',
-    color: colors.slategray_50,
+    color: colors.slateGray50,
     fontSize: 15,
     fontWeight: 700,
     lineHeight: '16px',
@@ -63,13 +63,13 @@ export const item = ({ active, activeColor }: Tabs.ItemProps) => merge({},
       left: 0,
       right: 0,
       height: 0,
-      background: colors.slategray_20,
+      background: colors.slateGray20,
       transition: 'height .1s, background .1s',
     },
   },
 
   active && {
-    color: colors.slategray_80,
+    color: colors.slateGray80,
 
     '&::before': (() => {
       switch (activeColor) {
@@ -81,7 +81,7 @@ export const item = ({ active, activeColor }: Tabs.ItemProps) => merge({},
         case 'blue':
           return {
             height: 3,
-            background: colors.dodgerblue_50,
+            background: colors.dodgerBlue50,
           };
       }
     })(),
@@ -89,23 +89,23 @@ export const item = ({ active, activeColor }: Tabs.ItemProps) => merge({},
 
   !active && {
     '&:focus, &:active': {
-      color: colors.slategray_70,
+      color: colors.slateGray70,
     },
 
     '&:hover': {
-      color: colors.slategray_70,
+      color: colors.slateGray70,
 
       '&::before': (() => {
         switch (activeColor) {
           case 'black':
             return {
               height: 2,
-              background: colors.slategray_50,
+              background: colors.slateGray50,
             };
           case 'blue':
             return {
               height: 3,
-              background: colors.slategray_50,
+              background: colors.slateGray50,
             };
         }
       })(),

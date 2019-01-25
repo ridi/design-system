@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import {
-  book_mark_1 as BookMarkIcon,
-  message_1 as MessageIcon,
-  pencil_2 as PencilIcon,
+  bookmark1 as BookMarkIcon,
+  message1 as MessageIcon,
+  pencil2 as PencilIcon,
 } from '@ridi/web-icons';
 import * as React from 'react';
 import * as styles from './styles';
