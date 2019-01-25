@@ -1,4 +1,3 @@
-import css from "@emotion/css";
 import { TextAlignProperty } from "csstype";
 
 export const landscapeBook = {

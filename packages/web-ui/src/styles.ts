@@ -36,18 +36,18 @@ export const resetLayout = {
 };
 
 export const formElementHover = {
-  borderColor: colors.slategray_50,
+  borderColor: colors.slateGray50,
 };
 
 export const formElementFocus = {
-  borderColor: colors.dodgerblue_50,
-  boxShadow: `0 0 4px ${rgba(colors.dodgerblue_50, .1)}`,
+  borderColor: colors.dodgerBlue50,
+  boxShadow: `0 0 4px ${rgba(colors.dodgerBlue50, .1)}`,
 };
 
 export const formElementDisabled = {
-  borderColor: colors.slategray_20,
-  backgroundColor: colors.slategray_5,
-  color: colors.slategray_20,
+  borderColor: colors.slateGray20,
+  backgroundColor: colors.slateGray5,
+  color: colors.slateGray20,
 };
 
 export const cursorDefault = {

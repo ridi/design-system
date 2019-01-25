@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { not_available_1 as NotAvailableIcon } from '@ridi/web-icons';
+import { notAvailable1 as NotAvailableIcon } from '@ridi/web-icons';
 import * as styles from './styles';
 
 export const NotAvailable: React.FunctionComponent = () => (

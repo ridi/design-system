@@ -11,7 +11,7 @@ export default ({ active, disabled }: LabelProps) => merge({},
   {
     display: 'inline-block',
     fontSize: '13px',
-    color: colors.slategray_60,
+    color: colors.slateGray60,
     transition: 'color .2s',
     WebkitTapHighlightColor: 'transparent',
   },
@@ -20,15 +20,15 @@ export default ({ active, disabled }: LabelProps) => merge({},
     cursor: 'pointer',
 
     '&:hover, &:active': {
-      color: colors.slategray_90,
+      color: colors.slateGray90,
     },
   },
 
   !disabled && active && {
-    color: colors.slategray_90,
+    color: colors.slateGray90,
   },
 
   disabled && {
-    color: colors.slategray_20,
+    color: colors.slateGray20,
   },
 );

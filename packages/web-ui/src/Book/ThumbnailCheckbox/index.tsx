@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { check_5 as CheckIcon } from '@ridi/web-icons';
+import { check5 as CheckIcon } from '@ridi/web-icons';
 import * as React from 'react';
 import * as styles from './styles';
 

@@ -74,26 +74,26 @@ export default ({
       case 'blue':
         return {
           color: 'white',
-          backgroundColor: colors.dodgerblue_50,
-          borderColor: colors.dodgerblue_60,
-          boxShadow: `0 1px 1px 0 ${rgba(colors.dodgerblue_50, .3)}`,
+          backgroundColor: colors.dodgerBlue50,
+          borderColor: colors.dodgerBlue60,
+          boxShadow: `0 1px 1px 0 ${rgba(colors.dodgerBlue50, .3)}`,
 
           '&:not([disabled])': {
             '&:hover': {
-              backgroundColor: colors.dodgerblue_60,
+              backgroundColor: colors.dodgerBlue60,
             },
           },
         };
       case 'brown':
         return {
           color: 'white',
-          backgroundColor: colors.brown_50,
-          borderColor: colors.brown_60,
-          boxShadow: `0 1px 1px 0 ${rgba(colors.brown_50, .3)}`,
+          backgroundColor: colors.brown50,
+          borderColor: colors.brown60,
+          boxShadow: `0 1px 1px 0 ${rgba(colors.brown50, .3)}`,
 
           '&:not([disabled])': {
             '&:hover': {
-              backgroundColor: colors.brown_60,
+              backgroundColor: colors.brown60,
             },
           },
         };
@@ -101,13 +101,13 @@ export default ({
       default:
         return {
           color: 'white',
-          backgroundColor: colors.slategray_50,
-          borderColor: colors.slategray_60,
-          boxShadow: `0 1px 1px 0 ${rgba(colors.slategray_50, .3)}`,
+          backgroundColor: colors.slateGray50,
+          borderColor: colors.slateGray60,
+          boxShadow: `0 1px 1px 0 ${rgba(colors.slateGray50, .3)}`,
 
           '&:not([disabled])': {
             '&:hover': {
-              backgroundColor: colors.slategray_60,
+              backgroundColor: colors.slateGray60,
             },
           },
         };
@@ -118,41 +118,41 @@ export default ({
     switch (color) {
       case 'blue':
         return {
-          color: colors.dodgerblue_50,
+          color: colors.dodgerBlue50,
           backgroundColor: 'white',
-          borderColor: colors.dodgerblue_50,
-          boxShadow: `0 1px 1px 0 ${rgba(colors.dodgerblue_50, .3)}`,
+          borderColor: colors.dodgerBlue50,
+          boxShadow: `0 1px 1px 0 ${rgba(colors.dodgerBlue50, .3)}`,
 
           '&:not([disabled])': {
             '&:hover': {
-              backgroundColor: colors.dodgerblue_10,
+              backgroundColor: colors.dodgerBlue10,
             },
           },
         };
       case 'brown':
         return {
-          color: colors.brown_50,
+          color: colors.brown50,
           backgroundColor: 'white',
-          borderColor: colors.brown_50,
-          boxShadow: `0 1px 1px 0 ${rgba(colors.brown_50, .3)}`,
+          borderColor: colors.brown50,
+          boxShadow: `0 1px 1px 0 ${rgba(colors.brown50, .3)}`,
 
           '&:not([disabled])': {
             '&:hover': {
-              backgroundColor: colors.brown_10,
+              backgroundColor: colors.brown10,
             },
           },
         };
       case 'gray':
       default:
         return {
-          color: colors.slategray_50,
+          color: colors.slateGray50,
           backgroundColor: 'white',
-          borderColor: colors.slategray_20,
-          boxShadow: `0 1px 1px 0 ${rgba(colors.slategray_20, .3)}`,
+          borderColor: colors.slateGray20,
+          boxShadow: `0 1px 1px 0 ${rgba(colors.slateGray20, .3)}`,
 
           '&:not([disabled])': {
             '&:hover': {
-              backgroundColor: colors.slategray_10,
+              backgroundColor: colors.slateGray10,
             },
           },
         };

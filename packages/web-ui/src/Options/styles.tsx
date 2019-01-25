@@ -1,5 +1,5 @@
 import colors from '@ridi/colors';
-import { dot_1, dot_2 } from '@ridi/web-icons';
+import { dot1, dot2 } from '@ridi/web-icons';
 import { merge } from 'lodash';
 import * as React from 'react';
 import { resetAppearance, resetFont, resetLayout } from '../styles';
@@ -25,13 +25,13 @@ const getSeparatorStyle = (separator: OptionsProps['separator']) => merge(
       case 'dot':
         return {
           backgroundSize: '3px',
-          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot_1} fill={colors.slategray_20} />)})`,
+          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot1} fill={colors.slateGray20} />)})`,
         };
       case 'pipe':
       default:
         return {
           backgroundSize: '1px 100%',
-          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot_2} fill={colors.slategray_10} preserveAspectRatio="none" />)})`,
+          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot2} fill={colors.slateGray10} preserveAspectRatio="none" />)})`,
         };
     }
   })(),
@@ -64,7 +64,7 @@ export const item = ({ active }: Options.ItemProps) => merge({},
   {
     display: 'inline-block',
 
-    color: colors.slategray_50,
+    color: colors.slateGray50,
 
     fontSize: 12,
     fontWeight: 700,
@@ -76,16 +76,16 @@ export const item = ({ active }: Options.ItemProps) => merge({},
   },
 
   active && {
-    color: colors.slategray_90,
+    color: colors.slateGray90,
   },
 
   !active && {
     '&:focus, &:active': {
-      color: colors.slategray_70,
+      color: colors.slateGray70,
     },
 
     '&:hover': {
-      color: colors.slategray_70,
+      color: colors.slateGray70,
     },
   },
 );

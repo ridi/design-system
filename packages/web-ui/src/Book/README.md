@@ -4,17 +4,19 @@ const selected = true;
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
+  thumbnailWidth={100}
   adultBadge
   updateBadge
   ridiselect
+  thumbnailLink={<a href="/">Thumbnail link</a>}
   unitBook
-  renderUnitBookCount={(props) => (
+  unitBookCount={
     <Book.UnitBookCount
-      bookCount={60}
+      bookCount={40}
       bookCountUnit={Book.BookCountUnit.Serial}
       render="button"
     />
-  )}
+  }
   selectMode  
   selected={selected}
   onSelectedChange={() => {console.log('selected!')}}
@@ -24,18 +26,19 @@ const selected = true;
 ```jsx
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
-  thumbnailUrl="//misc.ridibooks.com/cover/425063833/xlarge"
+  thumbnailUrl="https://misc.ridibooks.com/cover/425063833/xlarge"
+  thumbnailWidth={100}
   adultBadge
   updateBadge
   ridiselect
   notAvailable={true}
   unitBook
-  renderUnitBookCount={() => (
+  unitBookCount={
     <Book.UnitBookCount
       bookCount={30}
       bookCountUnit={Book.BookCountUnit.Single}
     />
-  )}
+  }
   onSelectedChange={() => {console.log('selected!')}}
   readingStatus={Book.ReadingStatus.New}
 />
@@ -44,18 +47,19 @@ const selected = true;
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
+  thumbnailWidth={100}
   adultBadge
   updateBadge
   ridiselect
   unitBook
-  renderUnitBookCount={() => (
+  unitBookCount={
     <Book.UnitBookCount
       bookCount={30}
       bookCountUnit={Book.BookCountUnit.Single}
       render="a"
       href="/"
     />
-  )}
+  }
   readingStatus={Book.ReadingStatus.Opened}
   readingProgress={20}
 />
@@ -64,16 +68,17 @@ const selected = true;
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
+  thumbnailWidth={100}
   adultBadge
   updateBadge
   ridiselect
   unitBook
-  renderUnitBookCount={() => (
+  unitBookCount={
     <Book.UnitBookCount
       bookCount={30}
       bookCountUnit={Book.BookCountUnit.Single}
     />
-  )}
+  }
   downloadStatus={Book.DownloadStatus.Downloading}
 />
 ```
@@ -81,6 +86,7 @@ const selected = true;
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
+  thumbnailWidth={100}
   adultBadge
   updateBadge
   notAvailable
@@ -91,6 +97,7 @@ const selected = true;
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
+  thumbnailWidth={100}
   adultBadge
   updateBadge
   ridiselect
@@ -101,6 +108,7 @@ const selected = true;
 ```jsx
 <Book.PortraitBook
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
+  thumbnailWidth={80}
   title="위대한 소설가"
   downloadStatus={Book.DownloadStatus.Downloading}
   downloadProgress={80}
@@ -109,10 +117,12 @@ const selected = true;
 ```jsx
 <Book.PortraitBook
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
+  thumbnailWidth={80}
   title="위대한 소설가"
   author="임한백"
   downloadStatus={Book.DownloadStatus.Downloading}
   downloadProgress={80}
+  thumbnailLink={<a href="/">Thumbnail link</a>}
 />
 ```
 ### LandscapeBook
@@ -126,6 +136,7 @@ const selected = true;
     downloadProgress={80}
     downloadSize={13.4}
     expiredAt="21일 4시간 남음"
+    thumbnailLink={<a href="/">Thumbnail link</a>}
   />
 </div>
 ```
@@ -158,14 +169,14 @@ const selected = true;
     unitBook
     updateBadge
     readingStatus={Book.ReadingStatus.New}
-    renderUnitBookCount={() => (
+    unitBookCount={
       <Book.UnitBookCount
         bookCount={30}
         bookCountUnit={Book.BookCountUnit.Single}
         render="a"
         href="/"
       />
-    )}
+    }
   />
 </div>
 ```

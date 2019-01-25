@@ -1,5 +1,5 @@
 import colors from '@ridi/colors';
-import { arrow_1_down } from '@ridi/web-icons';
+import { arrow1Down } from '@ridi/web-icons';
 import { merge } from 'lodash';
 import * as React from 'react';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
@@ -7,7 +7,7 @@ import { Svg, SvgProps } from '../Svg';
 import { SelectProps } from './index';
 
 const ArrowIcon = (props: SvgProps) => (
-  <Svg render={arrow_1_down} {...props} />
+  <Svg render={arrow1Down} {...props} />
 );
 
 export default ({ outline }: SelectProps) => merge({},
@@ -26,7 +26,7 @@ export default ({ outline }: SelectProps) => merge({},
     borderWidth: 0,
     outline: 'none',
     background: 'white',
-    color: colors.slategray_70,
+    color: colors.slateGray70,
     lineHeight: '32px',
     fontSize: '13px',
     fontWeight: 700,
@@ -36,7 +36,7 @@ export default ({ outline }: SelectProps) => merge({},
     backgroundPosition: 'right 7px center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: '10px 6px',
-    backgroundImage: `url(${Svg.renderToDataUri(<ArrowIcon fill={colors.slategray_50} />)})`,
+    backgroundImage: `url(${Svg.renderToDataUri(<ArrowIcon fill={colors.slateGray50} />)})`,
 
     '&::-ms-expand': {
       display: 'none',
@@ -45,13 +45,13 @@ export default ({ outline }: SelectProps) => merge({},
     '&:not(:disabled)': {
       '&:hover, &:active': {
         ...formElementHover,
-        color: colors.slategray_90,
+        color: colors.slateGray90,
       },
     },
 
     '&:disabled': {
-      color: colors.slategray_40,
-      backgroundImage: `url(${Svg.renderToDataUri(<ArrowIcon fill={colors.slategray_20} />)})`,
+      color: colors.slateGray40,
+      backgroundImage: `url(${Svg.renderToDataUri(<ArrowIcon fill={colors.slateGray20} />)})`,
       cursor: 'not-allowed',
     },
   },
@@ -61,7 +61,7 @@ export default ({ outline }: SelectProps) => merge({},
     paddingRight: '1.7em',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: colors.slategray_20,
+    borderColor: colors.slateGray20,
     borderRadius: 3,
     lineHeight: '30px',
 

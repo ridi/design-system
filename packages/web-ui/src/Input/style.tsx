@@ -1,5 +1,5 @@
 import colors from '@ridi/colors';
-import { check_1, dot_1 } from '@ridi/web-icons';
+import { check1, dot1 } from '@ridi/web-icons';
 import { merge } from 'lodash';
 import * as React from 'react';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
@@ -16,11 +16,11 @@ export default merge({},
   {
     boxSizing: 'border-box',
     display: 'inline-block',
-    border: `${borderWidth}px solid ${colors.slategray_20}`,
+    border: `${borderWidth}px solid ${colors.slateGray20}`,
     borderRadius: '3px',
     outline: 'none',
     background: 'white',
-    color: colors.slategray_90,
+    color: colors.slateGray90,
     fontSize: '13px',
     fontWeight: 700,
     lineHeight: `${32 - 2 * borderWidth}px`,
@@ -48,8 +48,8 @@ export default merge({},
 
       '&:checked': {
         '&:not(:disabled)': {
-          borderColor: colors.dodgerblue_60,
-          background: colors.dodgerblue_50,
+          borderColor: colors.dodgerBlue60,
+          background: colors.dodgerBlue50,
         },
       },
 
@@ -60,7 +60,7 @@ export default merge({},
 
     '&[type=checkbox]': {
       '&::after': {
-        maskImage: `url('${Svg.renderToDataUri(<Svg render={check_1} />)}')`,
+        maskImage: `url('${Svg.renderToDataUri(<Svg render={check1} />)}')`,
         transform: 'scale(.625)',
       },
     },
@@ -69,7 +69,7 @@ export default merge({},
       borderRadius: '50%',
 
       '&::after': {
-        maskImage: `url(${Svg.renderToDataUri(<Svg render={dot_1} />)})`,
+        maskImage: `url(${Svg.renderToDataUri(<Svg render={dot1} />)})`,
         transform: 'scale(.5)',
       },
     },
