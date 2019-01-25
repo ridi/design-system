@@ -102,11 +102,11 @@ body {
 
 .site-main__aside {
   order: 1;
-  margin-top: 206px;
-  margin-left: 80px;
+  margin-top: 126px;
+  margin-left: 60px;
   display: block;
   box-sizing: border-box;
-  width: 180px;
+  width: 200px;
 }
 
 .site-toc {
@@ -125,18 +125,20 @@ body {
 }
 
 .site-toc-list__link {
+  padding: 0 12px;
   display: block;
   font-size: 15px;
   font-weight: normal;
   color: var(--slategray_50);
 
   &:hover {
-    color: var(--lightsteelblue_80);
+    color: var(--dodgerblue_40);
   }
 
   &:active {
     font-weight: bold;
-    color: var(--lightsteelblue_80);
+    color: var(--dodgerblue_40);
+    background: none;
   }
 }
 
