@@ -1,5 +1,26 @@
 # @ridi/colors
 
+## Install
+```bash
+$ npm install @ridi/colors
+```
+
+## Usage
+```js static
+const colors = require('@ridi/colors');
+const hex = require('@ridi/colors/hex.json');
+const rgb = require('@ridi/colors/rgb.json');
+const hsl = require('@ridi/colors/hsl.json');
+const hwb = require('@ridi/colors/hwb.json');
+
+colors.dogerBlue5; // #EBF6FF
+hex.dogerBlue5; // #EBF6FF
+rgb.dogerBlue5; // rgb(235, 246, 255)
+hsl.dogerBlue5; // hsl(207, 100%, 96%)
+hwb.dogerBlue5; // hwb(207, 92%, 0%)
+```
+
+## Colors
 ```jsx
 const colors = require('@ridi/colors'); // Same as `@ridi/colors/hex.json`.
 const hex = require('@ridi/colors/hex.json');
