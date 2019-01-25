@@ -1,5 +1,20 @@
 # @ridi/web-icons
 
+## Install
+```bash
+$ npm install @ridi/web-icons
+```
+
+## Usage
+```js static
+const { airplane } = require('@ridi/web-icons');
+```
+or
+```js static
+const airplane = require('@ridi/web-icons/svgs/airplane.svg');
+```
+
+## Icons
 ```jsx
 /**
  * This example assumes using [SVGR](https://github.com/smooth-code/svgr).
