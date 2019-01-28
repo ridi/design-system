@@ -9,6 +9,7 @@ export interface PortraitBookProps extends
   Book.AuthorProps,
   Book.ThumbnailProps,
   Book.TitleProps {
+    portraitStyles?: any;
     className?: string;
     [extraKey: string]: any;
   }
@@ -24,12 +25,14 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     expiredAt,
     notAvailable = false,
     onSelectedChange,
+    portraitStyles,
     readingProgress,
     readingStatus,
     ridiselect,
     selected,
     selectMode,
     thumbnailLink,
+    thumbnailTitle,
     thumbnailUrl,
     thumbnailWidth,
     title,
@@ -41,7 +44,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
 
   return (
     <div
-      css={styles.portraitBook}
+      css={[styles.portraitBook, portraitStyles]}
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
@@ -60,6 +63,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           selected={selected}
           selectMode={selectMode}
           thumbnailLink={thumbnailLink}
+          thumbnailTitle={thumbnailTitle}
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
           unitBook={unitBook}

@@ -13,6 +13,7 @@ export const unitBookCount = merge({}, resetAppearance, resetFont, resetLayout, 
     top: 0,
     width: '100%',
     height: '100%',
+    zIndex: 150,
   },
 });
 
@@ -22,7 +23,7 @@ export const count = {
   border: '1px solid #9ea7ad',
   height: '1em',
   lineHeight: '1em',
-  fontSize: 11,
+  fontSize: 12,
   fontWeight: 600,
   color: '#525a61',
   borderRadius: 50,
@@ -39,6 +40,10 @@ export const count = {
     background: 'rgba(0, 0, 0, .7)',
     boxShadow: '0 0 0 1px rgba(0, 0, 0, .7)',
   },
+};
+
+export const num = {
+  fontSize: 11,
 };
 
 export const icon = {
