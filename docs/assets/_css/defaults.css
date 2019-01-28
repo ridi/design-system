@@ -77,10 +77,28 @@ li {
 }
 
 blockquote {
-  /* margin: 0 0 20px 0; */
-  padding: 0 0 20px 20px;
+  margin: 0 0 40px 0;
+  padding: 0 0 0 20px;
   border-left: 4px solid var(--lightsteelblue_20);
   color: var(--slategray_50);
+}
+
+.do {
+  display: inline;
+  float: left;
+  background: url(../img/quote_icon_do.svg) no-repeat;
+  width: 12px;
+  height: 12px;
+  margin: 10px 10px 0 0;
+}
+
+.dont {
+  display: inline;
+  float: left;
+  background: url(../img/quote_icon_dont.svg) no-repeat;
+  width: 12px;
+  height: 12px;
+  margin: 10px 10px 0 0;
 }
 
 table {

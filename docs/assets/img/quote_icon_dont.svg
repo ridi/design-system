@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_no</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[desktop]-02.-Writings" transform="translate(-151.000000, -1246.000000)" fill="#ED6D5E" fill-rule="nonzero" stroke="#ED6D5E" stroke-width="0.7">
+            <g id="Contents" transform="translate(128.000000, 160.000000)">
+                <g id="UI-텍스트-작성-기본-원칙" transform="translate(0.000000, 869.000000)">
+                    <g id="고객-입장을-생각하며-쓰기" transform="translate(0.000000, 81.000000)">
+                        <g id="X/O" transform="translate(0.000000, 129.000000)">
+                            <g id="icon_no" transform="translate(23.000000, 7.000000)">
+                                <path d="M9.25865922,8.12751678 L6.13463687,5 L9.25865922,1.87248322 C9.56703911,1.56375839 9.56703911,1.04026846 9.25865922,0.731543624 C8.95027933,0.422818792 8.4273743,0.422818792 8.11899441,0.731543624 L4.99497207,3.8590604 L1.87094972,0.731543624 C1.56256983,0.422818792 1.0396648,0.422818792 0.731284916,0.731543624 C0.422905028,1.04026846 0.422905028,1.56375839 0.731284916,1.87248322 L3.85530726,5 L0.731284916,8.12751678 C0.422905028,8.43624161 0.422905028,8.95973154 0.731284916,9.26845638 C1.0396648,9.57718121 1.56256983,9.57718121 1.87094972,9.26845638 L4.99497207,6.1409396 L8.11899441,9.26845638 C8.4273743,9.57718121 8.95027933,9.57718121 9.25865922,9.26845638 C9.58044693,8.95973154 9.58044693,8.44966443 9.25865922,8.12751678 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
