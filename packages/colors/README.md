@@ -22,13 +22,13 @@ hwb.dogerBlue5; // hwb(207, 92%, 0%)
 
 ## Colors
 ```jsx
-const colors = require('@ridi/colors'); // Same as `@ridi/colors/hex.json`.
-const hex = require('@ridi/colors/hex.json');
-const rgb = require('@ridi/colors/rgb.json');
-const hsl = require('@ridi/colors/hsl.json');
-const hwb = require('@ridi/colors/hwb.json');
+import colors from '@ridi/colors';
+import hex from '@ridi/colors/hex.json';
+import rgb from '@ridi/colors/rgb.json';
+import hsl from '@ridi/colors/hsl.json';
+import hwb from '@ridi/colors/hwb.json';
 
-const Color = require('color');
+import Color from 'color';
 
 <div>
   {Object.keys(colors).map((name) => {
@@ -36,6 +36,7 @@ const Color = require('color');
 
     return (
       <div
+        key={name}
         style={{
           display: 'flex',
           alignItems: 'center',

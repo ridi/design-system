@@ -46,9 +46,8 @@ module.exports = {
     return `import { ${componentName} } from '${webUiPackage.name}';`;
   },
   propsParser,
-  editorConfig: {
-    theme: 'dracula',
-    smartIndent: true,
+  moduleAliases: {
+    [webUiPackage.name]: path.join(__dirname, '../packages/web-ui/src'),
   },
   webpackConfig: (env) =>
     _.merge(

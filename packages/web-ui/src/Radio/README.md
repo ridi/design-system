@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+import { Radio } from '@ridi/web-ui';
+
 initialState = { value: 'apple' };
 
 const handleChange = (event) => {

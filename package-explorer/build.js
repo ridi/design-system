@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const styleguidist = require('react-styleguidist');
+const styleguidist = require('react-styleguidist/lib/scripts');
 const config = require('./styleguide.config');
 
 styleguidist(config).build(

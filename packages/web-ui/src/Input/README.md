@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+import { Input } from '@ridi/web-ui';
+
 <div>
   <Input placeholder="Enter Something" />
   <Input value="This is read only" readOnly />
@@ -9,6 +11,8 @@
 
 ### `type="checkbox"`
 ```jsx
+import { Input } from '@ridi/web-ui';
+
 <div>
   <Input type="checkbox" />
   <Input type="checkbox" defaultChecked />
@@ -20,6 +24,8 @@
 
 ### `type="radio"`
 ```jsx
+import { Input } from '@ridi/web-ui';
+
 <div>
   <Input name="inputExample1" type="radio" />
   <Input name="inputExample1" type="radio" defaultChecked />
