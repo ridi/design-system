@@ -8,6 +8,16 @@ export const thumbnailWidth = (width: number) => ({
   width,
 });
 
+export const thumbnailDimmed = {
+  display: 'block',
+  position: 'absolute' as PositionProperty,
+  left: 0,
+  top: 0,
+  width: '100%',
+  height: '100%',
+  background: 'rgba(0, 0, 0, .4)',
+};
+
 export const thumbnailImageWrapper = {
   display: 'inline-block',
   position: 'relative' as PositionProperty,

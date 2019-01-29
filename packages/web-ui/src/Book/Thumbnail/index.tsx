@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import classNames from 'classnames';
 import * as React from 'react';
 import {
   AdultBadge,
@@ -68,6 +67,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     selected = false,
     selectMode = false,
     thumbnailLink,
+    thumbnailTitle,
     thumbnailUrl,
     thumbnailWidth,
     unitBook = false,
@@ -80,7 +80,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   return (
     <div
       css={[styles.thumbnail, thumbnailWidth && styles.thumbnailWidth(thumbnailWidth)]}
-      className={classNames(['Thumbnail', className])}
+      className={`Thumbnail ${className}`}
       {...extraProps}
     >
       {readingStatus && <React.Fragment>
@@ -97,17 +97,19 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
             checked={selected}
           />
         }
-        <ThumbnailImage thumbnailUrl={thumbnailUrl} />
+        <ThumbnailImage thumbnailUrl={thumbnailUrl} thumbnailTitle={thumbnailTitle} />
         {adultBadge && <AdultBadge />}
         {updateBadge && <UpdateBadge />}
         {viewType === ViewType.Portrait &&
           <React.Fragment>
-            {unitBook ? (
+            {unitBook && (
               <React.Fragment>
+                {(notAvailable || selectMode) && <div css={styles.thumbnailDimmed} />}
                 {unitBookCount}
-                {downloadStatus === DownloadStatus.Downloading && <UnitBookDownloading size={UnitBookDownloadingSize.Large} />}
+                {downloadStatus === DownloadStatus.Downloading && !selectMode && <UnitBookDownloading size={UnitBookDownloadingSize.Large} />}
               </React.Fragment>
-            ) : (
+            )}
+            {!unitBook && (
               <React.Fragment>
                 {!notAvailable &&
                   <DownloadButton
@@ -116,6 +118,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
                     size={DownloadButtonSize.Large}
                   />
                 }
+                {(notAvailable || selectMode) && <div css={styles.thumbnailDimmed} />}
                 {ridiselect ? (
                   <Ridiselect />
                 ) : expired ? (

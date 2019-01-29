@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import classNames from 'classnames';
 import * as React from 'react';
 import { Book } from '../';
 import * as styles from './styles';
@@ -9,6 +8,7 @@ export interface PortraitBookProps extends
   Book.AuthorProps,
   Book.ThumbnailProps,
   Book.TitleProps {
+    portraitStyles?: any;
     className?: string;
     [extraKey: string]: any;
   }
@@ -24,12 +24,14 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     expiredAt,
     notAvailable = false,
     onSelectedChange,
+    portraitStyles,
     readingProgress,
     readingStatus,
     ridiselect,
     selected,
     selectMode,
     thumbnailLink,
+    thumbnailTitle,
     thumbnailUrl,
     thumbnailWidth,
     title,
@@ -41,8 +43,8 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
 
   return (
     <div
-      css={styles.portraitBook}
-      className={classNames(['PortraitBook', className])}
+      css={[styles.portraitBook, portraitStyles]}
+      className={`PortraitBook ${className}`}
       {...extraProps}
     >
       <div css={styles.thumbnail}>
@@ -60,6 +62,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           selected={selected}
           selectMode={selectMode}
           thumbnailLink={thumbnailLink}
+          thumbnailTitle={thumbnailTitle}
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
           unitBook={unitBook}

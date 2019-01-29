@@ -11,7 +11,6 @@ export const checkbox = {
   height: '100%',
   zIndex: 200,
   cursor: 'pointer',
-  background: 'rgba(0, 0, 0, .4)',
 };
 
 export const checkboxInput = merge({}, resetAppearance, resetLayout, {

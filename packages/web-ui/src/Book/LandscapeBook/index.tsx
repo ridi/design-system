@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import classNames from 'classnames';
 import * as React from 'react';
 import { Book } from '../';
 import * as styles from './styles';
@@ -37,6 +36,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     selected,
     selectMode,
     thumbnailLink,
+    thumbnailTitle,
     thumbnailUrl,
     thumbnailWidth,
     title,
@@ -49,7 +49,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
   return (
     <div
       css={styles.landscapeBook}
-      className={classNames(['LandscapeBook', className])}
+      className={`LandscapeBook ${className}`}
       {...extraProps}
     >
       <div css={styles.thumbnail}>
@@ -61,6 +61,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           selected={selected}
           selectMode={selectMode}
           thumbnailLink={thumbnailLink}
+          thumbnailTitle={thumbnailTitle}
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
           updateBadge={updateBadge}

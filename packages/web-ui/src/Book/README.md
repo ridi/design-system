@@ -4,6 +4,7 @@ import { Book } from '@ridi/web-ui';
 
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
+  thumbnailTitle="위대한 소설가"
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   thumbnailWidth={100}
   adultBadge
@@ -29,6 +30,7 @@ import { Book } from '@ridi/web-ui';
 
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
+  thumbnailTitle="위대한 소설가"
   thumbnailUrl="https://misc.ridibooks.com/cover/425063833/xlarge"
   thumbnailWidth={100}
   adultBadge
@@ -51,6 +53,7 @@ import { Book } from '@ridi/web-ui';
 
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
+  thumbnailTitle="위대한 소설가"
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   thumbnailWidth={100}
   adultBadge
@@ -207,7 +210,9 @@ import { Book } from '@ridi/web-ui';
 
 <div className="CustomBook">
   <Book.ThumbnailImage
+    thumbnailTitle="위대한 소설가"
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
+    className="ThumbnailImage"
   />
 </div>
 ```
