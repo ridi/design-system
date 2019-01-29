@@ -37,7 +37,7 @@ deploy:
       && cp -a ./package-explorer/dist/. ./docs/packages
       && cp -a ./package-explorer/dist/. ./docs/packages/${TRAVIS_TAG}
       && git add .
-      && git commit -m "Update package-explorer"
+      && git diff-index --quiet HEAD || git commit -m "Update package-explorer"
       && git push origin HEAD:master
     skip_cleanup: true
     on:
