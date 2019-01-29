@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-01-29
+### Fixed
+- Fix 'Book''s child components z-index and classNames (#42)
+
 ## [0.2.0] - 2019-01-25
 ### Added
 - Publish package explorer (#40)
