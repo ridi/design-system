@@ -15,7 +15,6 @@
     }
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1",
     "husky": "^1.2.0",
     "lerna": "^3.6.0"
   },
