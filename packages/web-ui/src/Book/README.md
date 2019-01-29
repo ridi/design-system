@@ -189,6 +189,7 @@ const selected = true;
   <Book.ThumbnailImage
     thumbnailTitle="위대한 소설가"
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
+    className="ThumbnailImage"
   />
 </div>
 ```

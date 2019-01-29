@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import classNames from 'classnames';
 import * as React from 'react';
 import { Book } from '../';
 import * as styles from './styles';
@@ -50,7 +49,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
   return (
     <div
       css={styles.landscapeBook}
-      className={classNames(['LandscapeBook', className])}
+      className={`LandscapeBook ${className}`}
       {...extraProps}
     >
       <div css={styles.thumbnail}>

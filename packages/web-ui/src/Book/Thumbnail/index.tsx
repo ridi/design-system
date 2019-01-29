@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import classNames from 'classnames';
 import * as React from 'react';
 import {
   AdultBadge,
@@ -81,7 +80,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   return (
     <div
       css={[styles.thumbnail, thumbnailWidth && styles.thumbnailWidth(thumbnailWidth)]}
-      className={classNames(['Thumbnail', className])}
+      className={`Thumbnail ${className}`}
       {...extraProps}
     >
       {readingStatus && <React.Fragment>
