@@ -10,21 +10,21 @@ html.home {
   & .hero {
     margin: calc(-1 * var(--site-padding));
     margin-bottom: 0;
-    padding: 100px 0 40px;
+    padding: 80px 0 30px;
   }
 
   & .hero__logo {
-    width: 216px;
+    width: 221px;
     height: 24px;
-    background: url(../../assets/img/RIDIDesignSystem.svg) no-repeat;
+    background: url('/assets/img/RIDIDesignSystem.svg') no-repeat;
     background-size: cover;
     margin: 0 auto;
   }
 
   & .hero__title {
-    margin: 14px 0;
+    margin: 16px 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: -0.4px;

@@ -1,5 +1,5 @@
 :root {
-  --site-header-height: 80px;
+  --site-header-height: 74px;
   --site-footer-height: 200px;
   --site-padding: 20px;
 }
@@ -46,11 +46,13 @@ body {
 }
 
 .site-title__logo {
-  width: 187px;
-  height: 20px;
-  margin-top: 3px;
+  width: 166px;
+  height: 0;
+  padding: 18px 0 0 0;
+  overflow: hidden;
+  margin-top: 5px;
   object-fit: contain;
-  background: url(../../assets/img/RIDIDesignSystem.svg) no-repeat;
+  background: url('/assets/img/RIDIDesignSystem.svg') no-repeat;
   background-size: cover;
   margin-right: 10px;
 }
@@ -60,7 +62,7 @@ body {
   height: 24px;
   margin-top: 1px;
   object-fit: contain;
-  background: url(../../assets/img/tag_beta.png) no-repeat;
+  background: url('/assets/img/tag_beta.png') no-repeat;
   background-size: cover;
 }
 
@@ -323,7 +325,7 @@ body {
   box-sizing: border-box;
   height: var(--site-footer-height);
   border-top: 1px solid var(--slategray_10);
-  padding: 10px 0 20px;
+  padding: 20px 0 24px;
   text-align: center;
   background: var(--lightsteelblue_10);
 }
@@ -335,17 +337,18 @@ body {
 }
 
 .site-copyright {
-  padding-top: 20px;
+  padding-top: 18px;
   width: 100%;
   text-align: center;
   font-size: 12px;
   color: var(--lightsteelblue_70);
   font-weight: normal;
+  letter-spacing: 0;
 }
 
 .site-link-list {
   margin: 0;
-  padding: 20px 0 20px;
+  padding: 18px 0;
   line-height: 0;
 }
 
@@ -410,33 +413,38 @@ body {
 
 .site-link-list__link-ridibooks {
   mask-image: url('/assets/img/ridibooks.svg');
-  width: 71px;
+  width: 86px;
+  height: 13px;
 }
 
 .site-link-list__link-ridiselect {
   mask-image: url('/assets/img/ridiselect.svg');
-  width: 67px;
+  width: 82px;
+  height: 13px;
+
 }
 
 .site-link-list__link-paper {
   mask-image: url('/assets/img/paper.svg');
-  width: 42px;
+  width: 56px;
+  height: 13px;
+
 }
 
 .site-link-list__link-blog {
   mask-image: url('/assets/img/footer_icon_ridi.svg');
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
 .site-link-list__link-dribbble {
   mask-image: url('/assets/img/footer_icon_dribbble.svg');
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
 .site-link-list__link-github {
   mask-image: url('/assets/img/footer_icon_github.svg');
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
