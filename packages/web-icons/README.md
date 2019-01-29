@@ -25,13 +25,9 @@ import { airplane: Airplane } from '@ridi/web-icons';
 ## Icons
 
 ```jsx
-/**
- * This example assumes using [SVGR](https://github.com/smooth-code/svgr).
- */
-
-const icons = require('@ridi/web-icons');
-const { version } = require('@ridi/web-icons/package.json');
-const { snakeCase } = require('lodash');
+import icons from '@ridi/web-icons';
+import { version } from '@ridi/web-icons/package.json';
+import { snakeCase } from 'lodash';
 
 <div
   style={{

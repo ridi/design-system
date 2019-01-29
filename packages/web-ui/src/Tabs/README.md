@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+import { Tabs } from '@ridi/web-ui';
+
 initialState = { value: 'apple' };
 
 const handleClick = (event) => {
@@ -35,6 +37,8 @@ const handleClick = (event) => {
 
 ### Active Color
 ```jsx
+import { Tabs } from '@ridi/web-ui';
+
 initialState = { value: 'apple' };
 
 const handleClick = (event) => {
@@ -70,6 +74,8 @@ const handleClick = (event) => {
 
 ### Stretch Items
 ```jsx
+import { Tabs } from '@ridi/web-ui';
+
 initialState = { value: 'apple' };
 
 const handleClick = (event) => {
@@ -105,6 +111,8 @@ const handleClick = (event) => {
 
 ### Using Anchor
 ```jsx
+import { Tabs } from '@ridi/web-ui';
+
 class Example extends React.Component {
   constructor(props) {
     super(props);

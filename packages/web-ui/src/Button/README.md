@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+import { Button } from '@ridi/web-ui';
+
 const handleClick = (event) => {
   alert('Clicked!');
 };
@@ -16,6 +18,8 @@ const handleClick = (event) => {
 
 ### Outline
 ```jsx
+import { Button } from '@ridi/web-ui';
+
 <div>
   <Button outline color="gray">Button</Button>
   <Button outline color="blue">Button</Button>
@@ -28,6 +32,8 @@ const handleClick = (event) => {
 
 ### Thick Border
 ```jsx
+import { Button } from '@ridi/web-ui';
+
 <div>
   <Button thickBorder color="gray">Button</Button>
   <Button thickBorder color="blue">Button</Button>
@@ -40,6 +46,8 @@ const handleClick = (event) => {
 
 ### Loading Icon
 ```jsx
+import { Button } from '@ridi/web-ui';
+
 <div>
   <Button loading color="gray">Button</Button>
   <Button loading color="blue">Button</Button>
@@ -52,6 +60,8 @@ const handleClick = (event) => {
 
 ### Sizes
 ```jsx
+import { Button } from '@ridi/web-ui';
+
 <div>
   <Button size="small">Button</Button>
   <Button size="medium">Button</Button>
@@ -66,6 +76,8 @@ const handleClick = (event) => {
 
 #### Function as Prop
 ```jsx
+import { Button } from '@ridi/web-ui';
+
 <Button
   render={(props) => (
     <a {...props} />
@@ -78,6 +90,8 @@ const handleClick = (event) => {
 
 #### Component as Prop
 ```jsx
+import { Button } from '@ridi/web-ui';
+
 const Anchor = (props) => (
   <a {...props} />
 );
@@ -89,6 +103,8 @@ const Anchor = (props) => (
 
 #### Tag String as Prop
 ```jsx
+import { Button } from '@ridi/web-ui';
+
 <Button render="a" href="#button/example">
   Button
 </Button>

@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+import { Options } from '@ridi/web-ui';
+
 initialState = { value: 'apple' };
 
 const handleClick = (event) => {
@@ -35,6 +37,8 @@ const handleClick = (event) => {
 
 ### Dot Separator
 ```jsx
+import { Options } from '@ridi/web-ui';
+
 initialState = { value: 'apple' };
 
 const handleClick = (event) => {
@@ -70,6 +74,8 @@ const handleClick = (event) => {
 
 ### Using Anchor
 ```jsx
+import { Options } from '@ridi/web-ui';
+
 class Example extends React.Component {
   constructor(props) {
     super(props);

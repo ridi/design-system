@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "start": "styleguidist server",
-    "build": "node ./build.js",
+    "build": "styleguidist build",
     "watch": "yarn start"
   },
   "dependencies": {
@@ -21,7 +21,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "lodash": "^4.17.11",
-    "react-docgen-typescript": "^1.12.2",
-    "react-styleguidist": "^8.0.6"
+    "react-docgen-typescript": "^1.12.3",
+    "react-styleguidist": "^9.0.0-beta4"
   }
 }

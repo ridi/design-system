@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+import { Label, Input } from '@ridi/web-ui';
+
 <div>
   <div>
     <Label>

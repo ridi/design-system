@@ -1,6 +1,7 @@
 ### Thumbnail
 ```jsx
-const selected = true;
+import { Book } from '@ridi/web-ui';
+
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
@@ -18,12 +19,14 @@ const selected = true;
     />
   }
   selectMode  
-  selected={selected}
+  selected
   onSelectedChange={() => {console.log('selected!')}}
   readingStatus={Book.ReadingStatus.New}
 />
 ```
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/425063833/xlarge"
@@ -44,6 +47,8 @@ const selected = true;
 />
 ```
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
@@ -65,6 +70,8 @@ const selected = true;
 />
 ```
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
@@ -83,6 +90,8 @@ const selected = true;
 />
 ```
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
@@ -94,6 +103,8 @@ const selected = true;
 />
 ```
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <Book.Thumbnail
   viewType={Book.ViewType.Portrait}
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
@@ -106,6 +117,8 @@ const selected = true;
 ```
 ### PortraitBook
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <Book.PortraitBook
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   thumbnailWidth={80}
@@ -115,6 +128,8 @@ const selected = true;
 />
 ```
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <Book.PortraitBook
   thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
   thumbnailWidth={80}
@@ -127,6 +142,8 @@ const selected = true;
 ```
 ### LandscapeBook
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <div style={{ border: '1px dotted magenta' }}>
   <Book.LandscapeBook
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
@@ -141,6 +158,8 @@ const selected = true;
 </div>
 ```
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <div style={{ border: '1px dotted magenta' }}>
   <Book.LandscapeBook
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
@@ -160,6 +179,8 @@ const selected = true;
 </div>
 ```
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <div style={{ border: '1px dotted magenta' }}>
   <Book.LandscapeBook
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
@@ -182,6 +203,8 @@ const selected = true;
 ```
 ### Custom
 ```jsx
+import { Book } from '@ridi/web-ui';
+
 <div className="CustomBook">
   <Book.ThumbnailImage
     thumbnailUrl="https://misc.ridibooks.com/cover/3421000159/xxlarge?dpi=xxhdpi"
@@ -189,14 +212,18 @@ const selected = true;
 </div>
 ```
 ```jsx
-<Book.DownloadButton
-  downloadStatus={Book.DownloadStatus.Downloadable}
-/>
-<Book.DownloadButton
-  downloadStatus={Book.DownloadStatus.Wating}
-/>
-<Book.DownloadButton
-  downloadStatus={Book.DownloadStatus.Downloading}
-  downloadProgress={80}
-/>
+import { Book } from '@ridi/web-ui';
+
+<div>
+  <Book.DownloadButton
+    downloadStatus={Book.DownloadStatus.Downloadable}
+  />
+  <Book.DownloadButton
+    downloadStatus={Book.DownloadStatus.Wating}
+  />
+  <Book.DownloadButton
+    downloadStatus={Book.DownloadStatus.Downloading}
+    downloadProgress={80}
+  />
+</div>
 ```

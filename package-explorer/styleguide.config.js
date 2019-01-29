@@ -5,7 +5,6 @@ const { parse: propsParser } = require('react-docgen-typescript').withDefaultCon
     skipPropsWithoutDoc: true,
   },
 });
-const { version } = require('../lerna.json');
 const colorsPackage = require('@ridi/colors/package.json');
 const webIconsPackage = require('@ridi/web-icons/package.json');
 const webUiPackage = require('@ridi/web-ui/package.json');
@@ -16,7 +15,7 @@ const getDescription = ({ name, version }) => `\
 `;
 
 module.exports = {
-  styleguideDir: `dist/v${version}`,
+  styleguideDir: 'dist',
   title: 'RIDI Design System Packages',
   pagePerSection: true,
   sections: [
@@ -50,9 +49,8 @@ module.exports = {
     return `import { ${componentName} } from '${webUiPackage.name}';`;
   },
   propsParser,
-  editorConfig: {
-    theme: 'dracula',
-    smartIndent: true,
+  moduleAliases: {
+    [webUiPackage.name]: path.join(__dirname, '../packages/web-ui/src'),
   },
   webpackConfig: (env) =>
     _.merge(

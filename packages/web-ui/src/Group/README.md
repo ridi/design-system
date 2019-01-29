@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+import { Button, Group } from '@ridi/web-ui';
+
 <Group>
   <Button>Button</Button>
   <Button>Button</Button>
@@ -8,6 +10,8 @@
 ```
 
 ```jsx
+import { Input, Group } from '@ridi/web-ui';
+
 <Group>
   <Input placeholder="Enter something" />
   <Input placeholder="Enter something" />
@@ -16,6 +20,8 @@
 ```
 
 ```jsx
+import { Button, Input, Select, Group } from '@ridi/web-ui';
+
 <Group>
   <Select outline>
     <Select.Option>Option</Select.Option>
@@ -27,6 +33,8 @@
 
 ### Vertical Orientation
 ```jsx
+import { Button, Input, Select, Group } from '@ridi/web-ui';
+
 <Group orientation="vertical">
   <Select outline>
     <Select.Option>Option</Select.Option>

@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+import { Select } from '@ridi/web-ui';
+
 initialState = { value: 1 };
 
 const handleChange = (event) => {
@@ -35,6 +37,8 @@ const handleChange = (event) => {
 
 ### Outline
 ```jsx
+import { Select } from '@ridi/web-ui';
+
 initialState = { value: 1 };
 
 const handleChange = (event) => {

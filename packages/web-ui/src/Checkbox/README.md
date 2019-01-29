@@ -1,5 +1,7 @@
 ### Basic Usage
 ```jsx
+import { Checkbox } from '@ridi/web-ui';
+
 initialState = { checked: false };
 
 <div>

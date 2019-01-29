@@ -31,23 +31,14 @@ before_deploy:
 
 deploy:
   - provider: script
-    script: lerna publish from-git --yes
-    skip_cleanup: true
-    on:
-      repo: ridi/design-system
-      branch: master
-      tags: true
-
-  - provider: script
     script: >-
-      NODE_DEBUG=gh-pages
-      gh-pages
-      --dist package-explorer/dist
-      --branch master
-      --dest docs/packages
-      --add
-      --message "Update package-explorer"
-      --dotfiles
+      lerna publish from-git --yes
+      && rm -rf ./docs/packages/build ./docs/packages/${TRAVIS_TAG}
+      && cp -a ./package-explorer/dist/. ./docs/packages
+      && cp -a ./package-explorer/dist/. ./docs/packages/${TRAVIS_TAG}
+      && git add .
+      && git diff-index --quiet HEAD || git commit -m "Update package-explorer"
+      && git push origin HEAD:master
     skip_cleanup: true
     on:
       repo: ridi/design-system
