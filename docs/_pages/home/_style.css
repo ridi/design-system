@@ -16,7 +16,7 @@ html.home {
   & .hero__logo {
     width: 221px;
     height: 24px;
-    background: url('/assets/img/RIDIDesignSystem.svg') no-repeat;
+    background: url('/assets/img/ridi_design_system.svg') no-repeat;
     background-size: cover;
     margin: 0 auto;
   }
@@ -85,7 +85,7 @@ html.home {
     line-height: 1.87;
     text-decoration: underline;
     transition: color 0.2s;
-    
+
     &:hover {
       color: var(--slategray_90);
     }

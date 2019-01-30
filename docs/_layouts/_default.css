@@ -52,7 +52,7 @@ body {
   overflow: hidden;
   margin-top: 5px;
   object-fit: contain;
-  background: url('/assets/img/RIDIDesignSystem.svg') no-repeat;
+  background: url('/assets/img/ridi_design_system.svg') no-repeat;
   background-size: cover;
   margin-right: 10px;
 }
