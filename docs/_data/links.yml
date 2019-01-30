@@ -1,8 +1,3 @@
-# official:
-#   - name: ridicorp
-#     title: RIDI Corp.
-#     url: https://www.ridicorp.com
-
 products:
   - name: ridibooks
     title: RIDIBOOKS
