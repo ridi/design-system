@@ -1,16 +1,16 @@
-import { css } from '@emotion/core';
 import colors from '@ridi/colors';
-import { arrow_1_down } from '@ridi/web-icons';
+import { arrow1Down } from '@ridi/web-icons';
+import { merge } from 'lodash';
 import * as React from 'react';
 import { formElementDisabled, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg, SvgProps } from '../Svg';
 import { SelectProps } from './index';
 
 const ArrowIcon = (props: SvgProps) => (
-  <Svg render={arrow_1_down} {...props} />
+  <Svg render={arrow1Down} {...props} />
 );
 
-export default ({ outline }: SelectProps) => css(
+export default ({ outline }: SelectProps) => merge({},
   resetAppearance,
   resetFont,
   resetLayout,
@@ -25,7 +25,7 @@ export default ({ outline }: SelectProps) => css(
     paddingRight: '1.7em',
     outline: 'none',
     background: 'white',
-    color: colors.slategray_70,
+    color: colors.slateGray70,
     fontSize: '13px',
     fontWeight: 700,
     touchAction: 'manipulation',
@@ -34,24 +34,22 @@ export default ({ outline }: SelectProps) => css(
     backgroundPosition: 'right 7px center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: '10px 6px',
-    backgroundImage: `url(${Svg.renderToDataUri(<ArrowIcon fill={colors.slategray_50} />)})`,
+    backgroundImage: `url(${Svg.renderToDataUri(<ArrowIcon fill={colors.slateGray50} />)})`,
 
     '&::-ms-expand': {
       display: 'none',
     },
 
     '&:not(:disabled)': {
-      '&:hover, &:active': css(
-        formElementHover,
-        {
-          color: colors.slategray_90,
-        },
-      ),
+      '&:hover, &:active': {
+        ...formElementHover,
+        color: colors.slateGray90,
+      },
     },
 
     '&:disabled': {
-      color: colors.slategray_40,
-      backgroundImage: `url(${Svg.renderToDataUri(<ArrowIcon fill={colors.slategray_20} />)})`,
+      color: colors.slateGray40,
+      backgroundImage: `url(${Svg.renderToDataUri(<ArrowIcon fill={colors.slateGray20} />)})`,
       cursor: 'not-allowed',
     },
   },
@@ -59,7 +57,7 @@ export default ({ outline }: SelectProps) => css(
   outline && {
     padding: '.6em',
     paddingRight: '1.7em',
-    border: `1px solid ${colors.slategray_20}`,
+    border: `1px solid ${colors.slateGray20}`,
     borderRadius: '3px',
 
     '&:disabled': formElementDisabled,

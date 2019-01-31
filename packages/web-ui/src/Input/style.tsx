@@ -1,6 +1,6 @@
-import { css } from '@emotion/core';
 import colors from '@ridi/colors';
-import { check_1, dot_1 } from '@ridi/web-icons';
+import { check1, dot1 } from '@ridi/web-icons';
+import { merge } from 'lodash';
 import * as React from 'react';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg } from '../Svg';
@@ -8,18 +8,19 @@ import { Svg } from '../Svg';
 const borderWidth = 1;
 const buttonSize = 18;
 
-export default css(
+export default merge({},
   resetAppearance,
   resetFont,
   resetLayout,
+
   {
     boxSizing: 'border-box',
     display: 'inline-block',
-    border: `${borderWidth}px solid ${colors.slategray_20}`,
+    border: `${borderWidth}px solid ${colors.slateGray20}`,
     borderRadius: '3px',
     outline: 'none',
     background: 'white',
-    color: colors.slategray_90,
+    color: colors.slateGray90,
     fontSize: '13px',
     fontWeight: 700,
     transition: 'color .2s, background .2s, border-color .2s, box-shadow .2s',
@@ -46,8 +47,8 @@ export default css(
 
       '&:checked': {
         '&:not(:disabled)': {
-          borderColor: colors.dodgerblue_60,
-          background: colors.dodgerblue_50,
+          borderColor: colors.dodgerBlue60,
+          background: colors.dodgerBlue50,
         },
       },
 
@@ -58,7 +59,7 @@ export default css(
 
     '&[type=checkbox]': {
       '&::after': {
-        maskImage: `url('${Svg.renderToDataUri(<Svg render={check_1} />)}')`,
+        maskImage: `url('${Svg.renderToDataUri(<Svg render={check1} />)}')`,
         transform: 'scale(.625)',
       },
     },
@@ -67,7 +68,7 @@ export default css(
       borderRadius: '50%',
 
       '&::after': {
-        maskImage: `url(${Svg.renderToDataUri(<Svg render={dot_1} />)})`,
+        maskImage: `url(${Svg.renderToDataUri(<Svg render={dot1} />)})`,
         transform: 'scale(.5)',
       },
     },
