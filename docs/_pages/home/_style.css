@@ -15,10 +15,10 @@ html.home {
   }
 
   & .hero__title {
-    width: 221px;
+    width: 240px;
     height: 0;
     padding: 0;
-    padding-top: 24px;
+    padding-top: 26px;
     margin: 0 auto;
     background: url('/assets/img/ridi_design_system.svg') no-repeat;
     background-size: contain;
@@ -30,7 +30,7 @@ html.home {
   & .hero__description {
     margin: 16px 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: -0.4px;
@@ -68,7 +68,7 @@ html.home {
     margin: 0 0 30px;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 27px;
+    font-size: 25px;
     font-weight: bold;
     color: var(--slategray_90);
     border: none;
