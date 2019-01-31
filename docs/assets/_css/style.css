@@ -1,21 +1,19 @@
 .do {
-    display: inline;
-    float: left;
+    display: inline-block;
+    width: 12px;
+    height: 0;
+    padding: 12px 0 0;
+    margin-right: 7px;
+    overflow: hidden;
     background: url('/assets/img/quote_icon_do.svg') no-repeat;
-    width: 12px;
-    height: 0;
-    padding: 12px 0 0;
-    overflow: hidden;
-    margin: 10px 10px 0 0;
   }
-  
-  .dont {
-    display: inline;
-    float: left;
-    background: url('/assets/img/quote_icon_dont.svg') no-repeat;
-    width: 12px;
-    height: 0;
-    padding: 12px 0 0;
-    overflow: hidden;
-    margin: 10px 10px 0 0;
-  }
+
+.dont {
+  display: inline-block;
+  width: 12px;
+  height: 0;
+  padding: 12px 0 0;
+  margin-right: 7px;
+  overflow: hidden;
+  background: url('/assets/img/quote_icon_dont.svg') no-repeat;
+}
