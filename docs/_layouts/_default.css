@@ -429,14 +429,12 @@ body {
   mask-image: url('/assets/img/ridiselect.svg');
   width: 82px;
   height: 13px;
-
 }
 
 .site-link-list__link-paper {
   mask-image: url('/assets/img/paper.svg');
   width: 56px;
   height: 13px;
-
 }
 
 .site-link-list__link-blog {
