@@ -41,10 +41,6 @@ html.home {
     }
   }
 
-  & .site-content__title {
-    font-size: 27px;
-  }
-
   & .site-content {
     width: calc(33.333% - 26px);
     margin: 80px 0 0;
@@ -53,6 +49,10 @@ html.home {
     &:nth-child(3){
       margin-right: 0;
     }
+  }
+
+  & .site-content__title {
+    font-size: 27px;
   }
 
   & .site-content__description {
