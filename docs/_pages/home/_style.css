@@ -11,17 +11,23 @@ html.home {
     margin: calc(-1 * var(--site-padding));
     margin-bottom: 0;
     padding: 80px 0 30px;
-  }
-
-  & .hero__logo {
-    width: 221px;
-    height: 24px;
-    background: url('/assets/img/ridi_design_system.svg') no-repeat;
-    background-size: cover;
-    margin: 0 auto;
+    text-align: center;
   }
 
   & .hero__title {
+    width: 221px;
+    height: 0;
+    padding: 0;
+    padding-top: 24px;
+    margin: 0 auto;
+    background: url('/assets/img/ridi_design_system.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+    border: none;
+  }
+
+  & .hero__description {
     margin: 16px 0;
     padding: 0;
     font-size: 18px;
@@ -29,7 +35,6 @@ html.home {
     line-height: 1.5;
     letter-spacing: -0.4px;
     color: var(--slategray_50);
-    border: none;
   }
 
   & .site-content-nav {

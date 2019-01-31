@@ -8,15 +8,17 @@ html.home {
     margin: calc(-1 * var(--site-padding));
     margin-bottom: 0;
     padding: 120px 20px 40px;
-  }
-
-  & .hero__logo {
-    width: 432px;
-    height: 47px; 
-    margin: 0;
+    text-align: left;
   }
 
   & .hero__title {
+    width: 432px;
+    height: 0;
+    padding: 47px 0 0 0;
+    margin: 0;
+  }
+
+  & .hero__description {
     margin: 20px 0;
     padding: 0;
     font-size: 24px;

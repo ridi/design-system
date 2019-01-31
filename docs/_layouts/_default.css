@@ -41,34 +41,42 @@ body {
 }
 
 .site-title {
-  float: left;
-  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.site-title__text {
+  display: inline-block;
 }
 
 .site-title__logo {
   width: 166px;
   height: 0;
-  padding: 18px 0 0 0;
-  overflow: hidden;
-  margin-top: 5px;
-  object-fit: contain;
-  background: url('/assets/img/ridi_design_system.svg') no-repeat;
-  background-size: cover;
+  padding: 21px 0 0 0;
   margin-right: 10px;
+  background: url('/assets/img/ridi_design_system.svg') no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  overflow: hidden;
 }
 
 .site-title__beta {
   width: 45px;
-  height: 24px;
-  margin-top: 1px;
-  object-fit: contain;
+  height: 0;
+  padding: 25px 0 0 0;
   background: url('/assets/img/tag_beta.png') no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position-y: bottom;
+  overflow: hidden;
 }
 
 .site-title__link {
-  display: inline-block;
-  padding: 25px 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
   color: inherit;
   font-weight: inherit;
   text-decoration: none;

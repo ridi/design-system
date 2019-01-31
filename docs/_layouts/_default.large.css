@@ -18,16 +18,11 @@ body {
 
 .site-title__logo {
   width: 193px;
-  height: 0;
-  padding: 21px 0 0 0;
-  overflow: hidden;
-  margin-top: 4px;
-  object-fit: contain;
-  margin-right: 10px;
+  padding: 25px 0 0 0;
 }
 
 .site-title__link {
-  padding: 30px 0;
+  padding: 0;
 }
 
 .site-menu {
