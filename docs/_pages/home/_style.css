@@ -7,73 +7,68 @@ html.home {
     max-width: none;
   }
 
-  & .header {
+  & .hero {
     margin: calc(-1 * var(--site-padding));
     margin-bottom: 0;
-    padding: 70px 0;
-    background: url('./img/home_bg_m.png') center center no-repeat;
-    background-size: cover;
+    padding: 80px 0 30px;
+    text-align: center;
   }
 
-  & .header__title {
-    margin: 0 0 20px;
+  & .hero__title {
+    width: 240px;
+    height: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 1.38;
-    color: var(--white);
-    text-shadow: 2px 2px 4px rgba(33, 37, 41, 0.5);
+    padding-top: 26px;
+    margin: 0 auto;
+    background: url('/assets/img/ridi_design_system.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
     border: none;
   }
 
-  & .header__description {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    letter-spacing: -0.3px;
-    text-align: center;
-    color: var(--slategray_40);
+  & .hero__description {
+    margin: 16px 0;
+    padding: 0;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    color: var(--slategray_50);
   }
 
   & .site-content-nav {
-    margin: 100px 0;
+    margin: 0 10px 60px;
   }
 
   & .site-content-list {
-    padding: 0;
     list-style: none;
+    padding: 0;
   }
 
   & .site-content {
-    margin: 80px 0;
+    width: 100%;
+    margin: 50px 0 0;
     background: no-repeat center top;
-    background-size: 80px 50px;
-    text-align: center;
+    background-size: 316px 200px;
+    text-align: left;
     line-height: normal;
   }
 
   & .site-content__link {
     display: inline-block;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 230px;
     font-weight: normal;
     text-decoration: none;
-
-    &:hover {
-      & .site-content__title {
-        color: var(--slategray_60);
-      }
-    }
+    transition: all 0.2s;
   }
 
   & .site-content__title {
-    margin: 0 0 12px;
+    margin: 0 0 30px;
     padding: 0;
-    text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
     color: var(--slategray_90);
     border: none;
@@ -81,29 +76,43 @@ html.home {
 
   & .site-content__description {
     margin: 0;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.3px;
+    font-size: 16px;
+    line-height: 1.65;
+    letter-spacing: -0.4px;
     color: var(--slategray_90);
   }
 
+  & .site-content__btn-more {
+    padding-top: 20px;
+    font-size: 15px;
+    color: var(--slategray_50);
+    letter-spacing: -0.3px;
+    line-height: 1.87;
+    text-decoration: underline;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--slategray_90);
+    }
+  }
+
   & .site-content-principles {
-    background-image: url('./img/home_icon_principles.png');
+    background-image: url('./img/1_Principle.png');
   }
 
   & .site-content-writings {
-    background-image: url('./img/home_icon_writings.png');
+    background-image: url('./img/2_Writings.png');
   }
 
   & .site-content-colors {
-    background-image: url('./img/home_icon_colors.png');
+    background-image: url('./img/3_Color.png');
   }
 
   & .site-content-web {
-    background-image: url('./img/home_icon_web.png');
+    background-image: url('./img/4_web.png');
   }
 
   & .site-content-app {
-    background-image: url('./img/home_icon_app.png');
+    background-image: url('./img/5_App.png');
   }
 }

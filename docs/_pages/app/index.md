@@ -1,3 +1,3 @@
 ---
-redirect_to: /app/principles
+redirect_to: /app/components
 ---
