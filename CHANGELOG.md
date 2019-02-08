@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.2.2] - 2019-02-08
+### Fixed
+- Add classnames to 'Book''s some child components and Fix UnitBookCount style (#43)
+
 ## [0.2.1] - 2019-01-29
 ### Fixed
 - Fix 'Book''s child components z-index and classNames (#42)
