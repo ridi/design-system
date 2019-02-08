@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import classNames from 'classnames';
 import * as React from 'react';
 import { Book } from '../';
 import * as styles from './styles';
@@ -44,7 +45,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
   return (
     <div
       css={[styles.portraitBook, portraitStyles]}
-      className={`PortraitBook ${className}`}
+      className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
       <div css={styles.thumbnail}>
