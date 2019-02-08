@@ -27,7 +27,6 @@ export const count = {
   fontWeight: 600,
   color: '#525a61',
   borderRadius: 50,
-  background: 'white',
   whiteSpace: 'nowrap' as WhiteSpaceProperty,
   '.Thumbnail & ': {
     position: 'absolute' as PositionProperty,
