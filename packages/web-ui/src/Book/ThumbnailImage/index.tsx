@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import classNames from 'classnames';
 import * as React from 'react';
 import * as styles from './styles';
 
@@ -10,7 +11,7 @@ export interface ThumbnailImageProps {
 }
 
 export const ThumbnailImage: React.FunctionComponent<ThumbnailImageProps> = ({thumbnailUrl, thumbnailTitle='도서 표지', className}) => (
-  <div className={className} css={styles.thumbnailImage}>
+  <div className={classNames(className)} css={styles.thumbnailImage}>
     <img
       css={styles.image}
       src={thumbnailUrl}
