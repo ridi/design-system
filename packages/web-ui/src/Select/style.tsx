@@ -2,7 +2,7 @@ import colors from '@ridi/colors';
 import { arrow1Down } from '@ridi/web-icons';
 import { merge } from 'lodash';
 import * as React from 'react';
-import { formElementDisabled, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
+import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
 import { Svg, SvgProps } from '../Svg';
 import { SelectProps } from './index';
 
@@ -21,11 +21,13 @@ export default ({ outline }: SelectProps) => merge({},
     cursor: 'pointer',
 
     boxSizing: 'border-box',
-    padding: '.7em 0',
+    padding: 0,
     paddingRight: '1.7em',
+    borderWidth: 0,
     outline: 'none',
     background: 'white',
     color: colors.slateGray70,
+    lineHeight: '32px',
     fontSize: '13px',
     fontWeight: 700,
     touchAction: 'manipulation',
@@ -55,10 +57,17 @@ export default ({ outline }: SelectProps) => merge({},
   },
 
   outline && {
-    padding: '.6em',
+    padding: '0 .6em',
     paddingRight: '1.7em',
-    border: `1px solid ${colors.slateGray20}`,
-    borderRadius: '3px',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.slateGray20,
+    borderRadius: 3,
+    lineHeight: '30px',
+
+    '&:not(:disabled)': {
+      '&:focus': formElementFocus,
+    },
 
     '&:disabled': formElementDisabled,
   },

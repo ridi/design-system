@@ -1,6 +1,10 @@
 const _ = require('lodash');
 const path = require('path');
-const { parse: propsParser } = require('react-docgen-typescript');
+const { parse: propsParser } = require('react-docgen-typescript').withDefaultConfig({
+  propFilter: {
+    skipPropsWithoutDoc: true,
+  },
+});
 const colorsPackage = require('@ridi/colors/package.json');
 const webIconsPackage = require('@ridi/web-icons/package.json');
 const webUiPackage = require('@ridi/web-ui/package.json');

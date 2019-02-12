@@ -23,14 +23,15 @@ export default merge({},
     color: colors.slateGray90,
     fontSize: '13px',
     fontWeight: 700,
+    lineHeight: `${32 - 2 * borderWidth}px`,
     transition: 'color .2s, background .2s, border-color .2s, box-shadow .2s',
 
-    padding: '.6em',
+    padding: '0 .6em',
 
     '&[type=checkbox], &[type=radio]': {
       padding: 0,
       width: `${buttonSize}px`,
-      lineHeight: `${buttonSize - borderWidth * 2}px`,
+      lineHeight: `${buttonSize - 2 * borderWidth}px`,
       color: 'white',
 
       '&::after': {
