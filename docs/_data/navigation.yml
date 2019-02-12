@@ -15,10 +15,6 @@
   url: /web
   children:
 
-    - name: principles
-      title: Principles
-      url: /web/principles
-
     - name: components
       title: Components
       url: /web/components
@@ -40,10 +36,6 @@
   url: /app
   children:
 
-    - name: principles
-      title: Principles
-      url: /app/principles
-
     - name: components
       title: Components
       url: /app/components
@@ -59,7 +51,3 @@
     - name: motion
       title: Motion
       url: /app/motion
-
-- name: sample
-  title: Sample
-  url: /sample

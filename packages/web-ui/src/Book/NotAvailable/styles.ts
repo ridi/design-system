@@ -7,7 +7,6 @@ export const notAvailable = merge({}, resetLayout, {
   top: 0,
   width: '100%',
   height: '100%',
-  background: 'black',
   opacity: .4,
   zIndex: 100,
 });

@@ -1,3 +1,3 @@
 ---
-redirect_to: /web/principles
+redirect_to: /web/components
 ---

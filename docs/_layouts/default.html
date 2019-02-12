@@ -5,10 +5,19 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ site.title }}</title>
+   
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png'| relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png'| relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png'| relative_url }}">
+  <link rel="manifest" href="{{ '/assets/img/site.webmanifest'| relative_url }}">
+  <link rel="mask-icon" href="{{ '/assets/img/safari-pinned-tab.svg'| relative_url }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="{{ '/assets/css/index.css' | relative_url }}" rel="stylesheet">
-
+ 
   <link href="{{ '/assets/vendor/zoom/zoom.css' | relative_url }}" rel="stylesheet">
   <script src="{{ "/assets/vendor/jquery-3.3.1.min.js" | relative_url }}"></script>
   <script src="{{ "/assets/vendor/bootstrap/transition.js" | relative_url }}"></script>
@@ -19,8 +28,8 @@
     <div class="site-header__container container">
       <h1 class="site-title">
         <a class="site-title__link" href="{{ '/' | relative_url }}">
-          <span class="site-title__text site-title__ridi">RIDI</span>
-          <span class="site-title__text site-title__design-system">Design System</span>
+          <span class="site-title__text site-title__logo">RIDI Design System</span>
+          <span class="site-title__text site-title__beta">BETA</span>
         </a>
       </h1>
 
@@ -103,10 +112,11 @@
 
   <footer class="site-footer">
     <div class="site-footer__container container">
+      <div class="site-link-wrapper">
       {% for link_list_hash in site.data.links %}
         {% assign link_category = link_list_hash[0] %}
         {% assign link_list = link_list_hash[1] %}
-        <ul class="site-link-list site-link-list-{{ link_category }}">
+          <ul class="site-link-list site-link-list-{{ link_category }}">
           {%- for item in link_list -%}
             <li class="site-link-list__item site-link-list-{{ link_category }}__item site-link-list__item-{{ item.name }}">
               <a
@@ -118,8 +128,11 @@
               </a>
             </li>
           {%- endfor -%}
-        </ul>
+          </ul>
       {% endfor %}
+      </div>  
+
+      <div class="site-copyright">© 2019 RIDI Corp. All right reserved.</div>
     </div>
   </footer>
 

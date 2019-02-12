@@ -30,7 +30,7 @@ export const UnitBookCount: React.FunctionComponent<UnitBookCountProps> = (props
       {...restProps}
     >
       <span css={styles.count}>
-        총 {bookCount}{bookCountUnit}
+        총 <span css={styles.num}>{bookCount}</span>{bookCountUnit}
         <ArrowIcon css={styles.icon}/>
       </span>
     </BookCountWRapper>
