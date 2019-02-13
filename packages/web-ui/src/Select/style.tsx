@@ -1,5 +1,5 @@
 import colors from '@ridi/colors';
-import { arrow1Down } from '@ridi/web-icons';
+import { arrowTriangleDown } from '@ridi/web-icons';
 import { merge } from 'lodash';
 import * as React from 'react';
 import { formElementDisabled, formElementFocus, formElementHover, resetAppearance, resetFont, resetLayout } from '../styles';
@@ -7,7 +7,7 @@ import { Svg, SvgProps } from '../Svg';
 import { SelectProps } from './index';
 
 const ArrowIcon = (props: SvgProps) => (
-  <Svg render={arrow1Down} {...props} />
+  <Svg render={arrowTriangleDown} {...props} />
 );
 
 export default ({ outline }: SelectProps) => merge({},

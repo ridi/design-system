@@ -4,9 +4,11 @@ export const thumbnail = {
   lineHeight: 0,
 };
 
-export const thumbnailWidth = (width: number) => ({
-  width,
-});
+export const thumbnailWidth = (width: number | string) => {
+  return ({
+    width,
+  });
+};
 
 export const thumbnailDimmed = {
   display: 'block',

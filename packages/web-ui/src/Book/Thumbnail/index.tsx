@@ -43,7 +43,7 @@ export interface ThumbnailProps extends
     readingStatus?: ReadingStatus;
     ridiSelect?: boolean;
     thumbnailLink?: React.ReactElement<any>;
-    thumbnailWidth?: number;
+    thumbnailWidth?: number | string;
     unitBook?: boolean;
     unitBookCount?: React.ReactElement<UnitBookCountProps>;
     updateBadge?: boolean;
@@ -101,11 +101,11 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
         <ThumbnailImage thumbnailUrl={thumbnailUrl} thumbnailTitle={thumbnailTitle} />
         {adultBadge && <AdultBadge />}
         {updateBadge && <UpdateBadge />}
+        {(notAvailable || selectMode || expired) && <div css={styles.thumbnailDimmed} />}
         {viewType === ViewType.Portrait &&
           <React.Fragment>
             {unitBook && (
               <React.Fragment>
-                {(notAvailable || selectMode) && <div css={styles.thumbnailDimmed} />}
                 {unitBookCount}
                 {downloadStatus === DownloadStatus.Downloading && !selectMode && <UnitBookDownloading size={UnitBookDownloadingSize.Large} />}
               </React.Fragment>
@@ -119,7 +119,6 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
                     size={DownloadButtonSize.Large}
                   />
                 }
-                {(notAvailable || selectMode) && <div css={styles.thumbnailDimmed} />}
                 {ridiselect ? (
                   <Ridiselect />
                 ) : expired ? (

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { arrow1Right as ArrowIcon } from '@ridi/web-icons';
+import { arrowTriangleRight as ArrowIcon } from '@ridi/web-icons';
 import * as React from 'react';
 import * as styles from './styles';
 
