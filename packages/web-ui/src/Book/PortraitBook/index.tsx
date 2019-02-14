@@ -9,16 +9,21 @@ export interface PortraitBookProps extends
   Book.AuthorProps,
   Book.ThumbnailProps,
   Book.TitleProps {
-    portraitStyles?: any;
+    additionalButton?: React.ReactElement<any>;
+    additionalMetadata?: React.ReactElement<any>;
     className?: string;
+    portraitStyles?: any;
     [extraKey: string]: any;
   }
 
 export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) => {
   const {
+    additionalButton,
+    additionalMetadata,
     adultBadge,
     author,
     className,
+    children,
     downloadProgress,
     downloadStatus,
     expired = false,
@@ -75,7 +80,10 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
       <div css={styles.metadata}>
         {title && <Book.Title title={title}/>}
         {author && <Book.Author author={author}/>}
+        {additionalMetadata}
       </div>
+      {additionalButton}
+      {children}
     </div>
   );
 };
