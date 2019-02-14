@@ -19,7 +19,7 @@ export const unitBookCount = merge({}, resetAppearance, resetFont, resetLayout, 
 
 export const count = {
   display: 'block',
-  padding: '3px 15px 4px 7px',
+  padding: '5px 16px 5px 10px',
   border: '1px solid #9ea7ad',
   height: '1em',
   lineHeight: '1em',
@@ -31,18 +31,19 @@ export const count = {
   '.Thumbnail & ': {
     position: 'absolute' as PositionProperty,
     left: '50%',
-    bottom: 10,
+    bottom: 8,
     transform: 'translate3d(-50%, 0, 0)',
     borderColor: 'white',
     fontWeight: 700,
     color: 'white',
     background: 'rgba(0, 0, 0, .7)',
-    boxShadow: '0 0 0 1px rgba(0, 0, 0, .7)',
+    boxShadow: '0 0 0 2px rgba(0, 0, 0, .7)',
   },
 };
 
 export const num = {
-  fontSize: 11,
+  fontSize: 12,
+  paddingRight: 2,
 };
 
 export const icon = {
