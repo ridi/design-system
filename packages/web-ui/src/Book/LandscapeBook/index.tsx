@@ -10,12 +10,16 @@ export interface LandscapeBookProps extends
   Book.AuthorProps,
   Book.ThumbnailProps,
   Book.TitleProps {
+    additionalButton?: React.ReactElement<any>;
+    additionalMetadata?: React.ReactElement<any>;
     className?: string;
     [extraKey: string]: any;
   }
 
 export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props) => {
   const {
+    additionalButton,
+    additionalMetadata,
     adultBadge,
     annotations = {
       bookMarkCount: 0,
@@ -23,6 +27,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
       memoCount: 0,
     },
     author,
+    children,
     className,
     downloadProgress,
     downloadSize,
@@ -79,6 +84,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
         ) : expiredAt ? (
           <Book.ExpiredAt expiredAt={expiredAt} />
         ) : null}
+        {additionalMetadata}
       </div>
       <div css={styles.buttons}>
         {unitBook ? (
@@ -103,7 +109,9 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
             ) : null
           )
         )}
+        {additionalButton}
       </div>
+      {children}
     </div>
   );
 };
