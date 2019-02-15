@@ -1,5 +1,10 @@
 # RIDI Design System
 
+[![](https://img.shields.io/npm/v/@ridi/colors.svg?label=%40ridi%2Fcolors&style=flat)](https://www.npmjs.com/package/@ridi/colors)
+[![](https://img.shields.io/npm/v/@ridi/web-icons.svg?label=%40ridi%2Fweb-icons&style=flat)](https://www.npmjs.com/package/@ridi/web-icons)
+[![](https://img.shields.io/npm/v/@ridi/web-ui.svg?label=%40ridi%2Fweb-ui&style=flat)](https://www.npmjs.com/package/@ridi/web-ui)
+[![](https://img.shields.io/travis/com/ridi/design-system.svg?label=travis&style=flat)](https://travis-ci.com/ridi/design-system)
+
 ## Development
 
 ### Website
