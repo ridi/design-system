@@ -99,7 +99,11 @@
       {% if page.toc %}
         <aside class="site-main__aside">
           <nav class="site-toc">
-            {% include toc_web.html %}
+            {% if root_path == '/web' %}
+              {% include toc_web.html %}
+            {% else %}
+              {% include toc.html html=content class='site-toc-list' item_class='site-toc-list__item' anchor_class='site-toc-list__link' h_min=page.toc.h_min h_max=page.toc.h_max %}
+            {% endif %}
           </nav>
         </aside>
       {% endif %}
