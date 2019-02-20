@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.2] - 2019-02-20
+### Added
+- Fix/book component (#48)
+- Setup Netlify (#47)
+
 ## [0.3.1] - 2019-02-15
 ### Added
 - Add slots to LandscapeBook and PortraitBook (#46)
