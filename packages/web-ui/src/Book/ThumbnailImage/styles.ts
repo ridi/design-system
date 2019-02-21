@@ -1,5 +1,7 @@
 import { BoxSizingProperty, PositionProperty } from "csstype";
 
+export const THUMBNAIL_HEIGHT_RATIO = '162%'; // width : height = 1: 1.618
+
 export const thumbnailImage = {
   display: 'inline-block',
   position: 'relative' as PositionProperty,
@@ -24,6 +26,15 @@ export const thumbnailImage = {
   },
 };
 
-export const image = {
-  width: '100%',
+export const image = (isImageLoaded : boolean, thumbnailWidth : string | number = '100%') => {
+  const backgroundImage = !isImageLoaded ? 'linear-gradient(147deg, #e6e8eb, #edeff2 55%, #e6e8eb)' : null;
+  const paddingBottom = !isImageLoaded ? THUMBNAIL_HEIGHT_RATIO : null;
+  const height = !isImageLoaded ? 0 : null;
+  return ({
+    display: 'block',
+    width: thumbnailWidth,
+    height,
+    paddingBottom,
+    backgroundImage,
+  });
 };

@@ -21,8 +21,9 @@ export const thumbnailDimmed = {
 };
 
 export const thumbnailImageWrapper = {
-  display: 'inline-block',
+  display: 'block',  
   position: 'relative' as PositionProperty,
+  fontSize: 0,
   lineHeight: 0,
 };
 
