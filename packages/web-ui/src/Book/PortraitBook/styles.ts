@@ -1,4 +1,5 @@
 import { PositionProperty } from "csstype";
+import { THUMBNAIL_HEIGHT_RATIO } from "../ThumbnailImage/styles";
 
 export const portraitBook = {
   maxWidth: 100,
@@ -9,7 +10,7 @@ export const thumbnail = {
   lineHeight: 0,
   width: '100%',
   height: 'auto',
-  paddingBottom: '162%', // width : height = 1: 1.618
+  paddingBottom: THUMBNAIL_HEIGHT_RATIO,
   '& .Thumbnail': {
     position: 'absolute' as PositionProperty,
     bottom: 0,
