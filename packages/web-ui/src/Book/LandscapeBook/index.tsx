@@ -58,7 +58,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
       className={classNames(['LandscapeBook', className])}
       {...extraProps}
     >
-      <div css={styles.thumbnail}>
+      <div className="LandscapeBook_Thumbnail" css={styles.thumbnail}>
         <Book.Thumbnail
           adultBadge={adultBadge}
           notAvailable={notAvailable}
@@ -74,7 +74,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           viewType={Book.ViewType.Landscape}
         />
       </div>
-      <div css={styles.metadata}>
+      <div className="LandscapeBook_Metadata" css={styles.metadata}>
         {title && <Book.Title title={title}/>}
         {author && <Book.Author author={author}/>}
         {ridiselect ? (
@@ -86,7 +86,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
         ) : null}
         {additionalMetadata}
       </div>
-      <div css={styles.buttons}>
+      <div className="LandscapeBook_Buttons" css={styles.buttons}>
         {unitBook ? (
           downloadStatus === Book.DownloadStatus.Downloading ? (
             <Book.UnitBookDownloading />

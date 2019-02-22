@@ -12,7 +12,7 @@ export const expiredAt = merge({}, resetFont, resetLayout, {
   whiteSpace: 'nowrap',
   '.Thumbnail & ': {
     position: 'absolute',
-    padding: '0 0 0 18px',
+    padding: '0 0 0 20px',
     marginTop: 0,
     left: 0,
     bottom: 0,
@@ -34,7 +34,7 @@ export const expiredAtIcon = {
   height: 10,
   fill: '#0077d9',
   '.Thumbnail & ': {
-    left: 3,
+    left: 5,
     fill: 'white',
   },
 };

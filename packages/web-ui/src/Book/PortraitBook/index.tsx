@@ -53,7 +53,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
-      <div css={styles.thumbnail}>
+      <div className="PortraitBook_Thumbnail" css={styles.thumbnail}>
         <Book.Thumbnail
           adultBadge={adultBadge}
           downloadProgress={downloadProgress}
@@ -77,7 +77,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           viewType={Book.ViewType.Portrait}
         />
       </div>
-      <div css={styles.metadata}>
+      <div className="PortraitBook_Metadata" css={styles.metadata}>
         {title && <Book.Title title={title}/>}
         {author && <Book.Author author={author}/>}
         {additionalMetadata}

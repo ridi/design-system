@@ -43,7 +43,6 @@ export interface ThumbnailProps extends
     readingStatus?: ReadingStatus;
     ridiSelect?: boolean;
     thumbnailLink?: React.ReactElement<any>;
-    thumbnailWidth?: number | string;
     unitBook?: boolean;
     unitBookCount?: React.ReactElement<UnitBookCountProps>;
     updateBadge?: boolean;
@@ -98,7 +97,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
             checked={selected}
           />
         }
-        <ThumbnailImage thumbnailUrl={thumbnailUrl} thumbnailTitle={thumbnailTitle} />
+        <ThumbnailImage thumbnailUrl={thumbnailUrl} thumbnailTitle={thumbnailTitle} thumbnailWidth={thumbnailWidth} />
         {adultBadge && <AdultBadge />}
         {updateBadge && <UpdateBadge />}
         {(notAvailable || selectMode || expired) && <div css={styles.thumbnailDimmed} />}
