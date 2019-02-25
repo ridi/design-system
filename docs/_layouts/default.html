@@ -33,12 +33,12 @@
         </a>
       </h1>
 
-      <nav class="site-menu">
-        <button id="site-menu-toggle-button" class="site-menu__toggle-button">
-          <span class="site-menu__toggle-button-content">Toggle Menu</span>
-        </button>
+      <button id="site-menu-toggle-button" class="site-menu-toggle-button">
+        <span class="site-menu-toggle-button-content">Toggle Menu</span>
+      </button>
 
-        <ul id="site-menu-list" class="site-menu__list">
+      <nav id="site-menu" class="site-menu">
+        <ul class="site-menu__list">
           {% for item in site.data.navigation %}
             {% if item.url == page_url or item.url == root_path %}
               {% assign active = true %}
@@ -156,12 +156,12 @@
   <script>
     (function initSiteMenuToggleButton() {
       var toggleButton = document.getElementById('site-menu-toggle-button');
-      var menuList = document.getElementById('site-menu-list');
+      var menu = document.getElementById('site-menu');
 
       toggleButton.addEventListener('click', function () {
-        toggleButton.classList.toggle('site-menu__toggle-button_pressed');
-        menuList.classList.add('site-menu__list_animated');
-        menuList.classList.toggle('site-menu__list_visible');
+        toggleButton.classList.toggle('site-menu-toggle-button_pressed');
+        menu.classList.add('site-menu_animated');
+        menu.classList.toggle('site-menu_visible');
       });
     })();
 

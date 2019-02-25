@@ -25,20 +25,19 @@ body {
   padding: 0;
 }
 
-.site-menu {
-  height: auto;
-}
-
-.site-menu__toggle-button {
+.site-menu-toggle-button {
   display: none;
 }
 
-.site-menu__list {
+.site-menu {
+  position: static;
+  margin-top: 2px;
   visibility: visible;
   opacity: 1;
-  position: static;
+}
+
+.site-menu__list {
   display: block;
-  margin-top: 2px;
 }
 
 .site-menu__item {
