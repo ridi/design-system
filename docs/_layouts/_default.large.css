@@ -14,6 +14,11 @@ body {
 .site-header {
   position: static;
   padding: 0 var(--site-padding);
+
+  &::after {
+    position: absolute;
+    z-index: 10;
+  }
 }
 
 .site-title__logo {

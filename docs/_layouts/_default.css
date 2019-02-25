@@ -29,8 +29,19 @@ body {
   padding: 0;
   background: var(--white);
   color: var(--slategray_100);
-  border-bottom: 1px solid var(--slategray_10);
   z-index: 10;
+
+  &::after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--site-header-height);
+    content: '';
+    border-bottom: 1px solid var(--slategray_10);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+  }
 }
 
 .site-header__container {
