@@ -11,6 +11,10 @@ body {
   max-width: 1024px;
 }
 
+.site_lock-scroll {
+  overflow: auto;
+}
+
 .site-header {
   position: static;
   padding: 0 var(--site-padding);
@@ -36,9 +40,16 @@ body {
 
 .site-menu {
   position: static;
-  padding: 0;
   visibility: visible;
   opacity: 1;
+}
+
+.site-menu__list {
+  padding: 0;
+}
+
+.site-menu__list .site-menu__list {
+  display: none;
 }
 
 .site-menu__item {

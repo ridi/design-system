@@ -46,12 +46,25 @@
             {% else %}
               {% assign active = false %}
             {% endif %}
-            <li class="site-menu__item{% if active %} site-menu__item_active{% endif %}">
-              <a class="site-menu__item-link" href="{{ item.url | relative_url }}" title="{{ item.title }}">
+            <li class="site-menu__item">
+              <a class="site-menu__item-link{% if active %} site-menu__item-link_active{% endif %}" href="{{ item.url | relative_url }}" title="{{ item.title }}">
                 <span class="site-menu__item-text">
                   {{ item.title }}
                 </span>
               </a>
+              {% if item.children %}
+                <ul class="site-menu__list">
+                  {% for subitem in item.children %}
+                    <li class="site-menu__item">
+                      <a class="site-menu__item-link" href="{{ subitem.url | relative_url }}" title="{{ subitem.title }}">
+                        <span class="site-menu__item-text">
+                          {{ subitem.title }}
+                        </span>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>
@@ -157,18 +170,20 @@
 
   <script>
     (function initSiteMenuToggleButton() {
-      var toggleButton = document.getElementById('site-menu-toggle-button');
-      var menu = document.getElementById('site-menu');
+      var toggleButton = document.querySelector('#site-menu-toggle-button');
+      var menu = document.querySelector('#site-menu');
+      var html = document.querySelector('html');
 
       toggleButton.addEventListener('click', function () {
         toggleButton.classList.toggle('site-menu-toggle-button_pressed');
         menu.classList.add('site-menu_animated');
         menu.classList.toggle('site-menu_visible');
+        html.classList.toggle('site_lock-scroll');
       });
     })();
 
     (function initSiteSubmenu() {
-      var submenu = document.getElementById('site-submenu');
+      var submenu = document.querySelector('#site-submenu');
 
       if (!submenu) {
         return;
@@ -179,7 +194,7 @@
         event.stopPropagation();
       });
 
-      var items = submenu.getElementsByClassName('site-submenu__item');
+      var items = submenu.querySelectorAll('.site-submenu__item');
 
       for (var i = 0; i < items.length; i++) {
         var item = items[i];

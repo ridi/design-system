@@ -20,6 +20,10 @@ body {
   margin: 0 auto;
 }
 
+.site_lock-scroll {
+  overflow: hidden;
+}
+
 .site-header {
   position: fixed;
   top: 0;
@@ -165,8 +169,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 10px 20px;
   background: var(--white);
+  overflow: auto;
 }
 
 .site-menu_animated {
@@ -181,7 +185,7 @@ body {
 .site-menu__list {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 10px 20px;
   height: 100%;
 }
 
@@ -212,9 +216,23 @@ body {
   line-height: 1.25;
 }
 
-.site-menu__item_active .site-menu__item-text {
+.site-menu__item-link_active .site-menu__item-text {
   font-weight: 700;
   border-bottom-color: currentColor;
+}
+
+.site-menu__list .site-menu__list {
+  & .site-menu__item-link {
+    height: 52px;
+    line-height: 52px;
+  }
+
+  & .site-menu__item-text {
+    color: var(--slategray_80);
+    border: none;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+  }
 }
 
 .site-aside {
