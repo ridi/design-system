@@ -47,8 +47,10 @@
               {% assign active = false %}
             {% endif %}
             <li class="site-menu__item{% if active %} site-menu__item_active{% endif %}">
-              <a class="site-menu__link" href="{{ item.url | relative_url }}" title="{{ item.title }}">
-                {{ item.title }}
+              <a class="site-menu__item-link" href="{{ item.url | relative_url }}" title="{{ item.title }}">
+                <span class="site-menu__item-text">
+                  {{ item.title }}
+                </span>
               </a>
             </li>
           {% endfor %}

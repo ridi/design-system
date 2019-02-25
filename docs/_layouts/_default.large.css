@@ -31,19 +31,13 @@ body {
 
 .site-menu {
   position: static;
-  margin-top: 2px;
+  padding: 0;
   visibility: visible;
   opacity: 1;
 }
 
-.site-menu__list {
-  display: block;
-}
-
 .site-menu__item {
   display: inline-block;
-  margin: 0;
-  font-size: 16px;
 
   &:not(:last-child) {
     margin-right: 50px;
