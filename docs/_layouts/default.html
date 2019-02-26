@@ -188,65 +188,64 @@
     (function initActiveHashLinks() {
       var links = document.querySelectorAll('a[href^="#"]');
 
-      (function updateOnClick() {
-        function updateClass() {
-          for (var i = 0; i < links.length; i++) {
-            var link = links[i];
+      function updateClass() {
+        for (var i = 0; i < links.length; i++) {
+          var link = links[i];
 
-            if (link.href === location.href) {
-              link.classList.add('link_active');
-            } else {
-              link.classList.remove('link_active');
-            }
+          if (link.href === location.href) {
+            link.classList.add('link_active');
+          } else {
+            link.classList.remove('link_active');
           }
         }
+      }
+      updateClass();
+      window.addEventListener('hashchange', updateClass);
 
-        updateClass();
+      function throttle(func, wait) {
+        var timer;
+        return function () {
+          if (!timer) {
+            var args = arguments;
+            timer = setTimeout(function () {
+              timer = null;
+              func.apply(null, args);
+            }, wait);
+          }
+        };
+      }
 
-        window.addEventListener('hashchange', updateClass);
-      })();
+      var lastPageYOffset = window.pageYOffset;
+      var headers = document.querySelectorAll('.site-main__content h2[id]');
+      window.addEventListener('scroll', throttle(function () {
+        var isScrollDown = window.pageYOffset - lastPageYOffset > 0;
+        
+        for (var i = headers.length - 1; i >= 0; i--) {
+          var header = headers[i];
+          var isActiveHeader = isScrollDown ? (
+            header.offsetTop - window.pageYOffset < 100
+          ) : (
+            header.offsetTop - window.pageYOffset - window.innerHeight < -100
+          );
 
-      (function updateOnScroll() {
-        function throttle(func, wait) {
-          var timer;
-          return function () {
-            if (!timer) {
-              var args = arguments;
-              timer = setTimeout(function () {
-                timer = null;
-                func.apply(null, args);
-              }, wait);
-            }
-          };
-        }
-
-        var lastPageYOffset = window.pageYOffset;
-        var headers = document.querySelectorAll('.site-main__content h2[id]');
-        window.addEventListener('scroll', throttle(function () {
-          var isScrollDown = window.pageYOffset - lastPageYOffset > 0;
-          
-          for (var i = headers.length - 1; i >= 0; i--) {
-            var header = headers[i];
-            var isActiveHeader = isScrollDown ? (
-              header.offsetTop - window.pageYOffset < 100
-            ) : (
-              header.offsetTop - window.pageYOffset - window.innerHeight < -100
-            );
-
-            if (isActiveHeader) {
-              if (decodeURIComponent(location.hash) !== '#' + header.id) {
+          if (isActiveHeader) {
+            if (decodeURIComponent(location.hash) !== '#' + header.id) {
+              if (history.replaceState) {
+                history.replaceState(null, null, '#' + header.id);
+                updateClass();
+              } else {
                 var id = header.id;
                 header.id = undefined;
                 location.hash = id;
                 header.id = id;
               }
-              break;
             }
+            break;
           }
+        }
 
-          lastPageYOffset = window.pageYOffset;
-        }, 100));
-      })();
+        lastPageYOffset = window.pageYOffset;
+      }, 100));
     })();
   </script>
 </body>
