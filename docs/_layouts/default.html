@@ -42,7 +42,6 @@
           {% for item in site.data.navigation %}
             {% if item.url == page_url or item.url == root_path %}
               {% assign active = true %}
-              {% assign active_menu = item %}
             {% else %}
               {% assign active = false %}
             {% endif %}
@@ -81,43 +80,6 @@
       </nav>
     </div>
   </header>
-
-  {% if active_menu.children %}
-    <aside class="site-aside">
-      <nav id="site-submenu" class="site-submenu">
-        {% for item in active_menu.children %}
-          {% if item.url == page_url %}
-            {% assign active_submenu = item %}
-            <div class="site-submenu__item site-submenu__item_active site-submenu__placeholder">
-              <a class="site-submenu__link">
-                {{ item.title }}
-              </a>
-            </div>
-            {% break %}
-          {% endif %}
-        {% endfor %}
-
-        <ul class="site-submenu__list container">
-          {% for item in active_menu.children %}
-            {% if item == active_submenu %}
-              {% assign active = true %}
-            {% else %}
-              {% assign active = false %}
-            {% endif %}
-            <li class="site-submenu__item{% if active %} site-submenu__item_active{% endif %}">
-              <a
-                class="site-submenu__link"
-                href="{{ item.url | relative_url }}"
-                title="{{ item.title }}"
-              >
-                {{ item.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </aside>
-  {% endif %}
 
   <main class="site-main">
     <div class="site-main__container container">
@@ -202,37 +164,6 @@
           html.classList.remove('site_lock-scroll');
         });
       }
-    })();
-
-    (function initSiteSubmenu() {
-      var submenu = document.querySelector('#site-submenu');
-
-      if (!submenu) {
-        return;
-      }
-
-      submenu.addEventListener('click', function (event) {
-        submenu.classList.toggle('site-submenu_opened');
-        event.stopPropagation();
-      });
-
-      var items = submenu.querySelectorAll('.site-submenu__item');
-
-      for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-
-        if (item.classList.contains('site-submenu__item_active')) {
-          continue;
-        }
-
-        item.addEventListener('click', function (event) {
-          event.stopPropagation();
-        });
-      }
-
-      window.addEventListener('click', function () {
-        submenu.classList.remove('site-submenu_opened');
-      });
     })();
   </script>
 </body>
