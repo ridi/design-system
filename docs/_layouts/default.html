@@ -168,6 +168,26 @@
         });
       }
     })();
+
+    (function initActiveLinks() {
+      var links = document.querySelectorAll('a:link');
+
+      function updateClass() {
+        for (var i = 0; i < links.length; i++) {
+          var link = links[i];
+
+          if (link.href === location.href) {
+            link.classList.add('link_active');
+          } else {
+            link.classList.remove('link_active');
+          }
+        }
+      }
+
+      updateClass();
+
+      window.addEventListener('hashchange', updateClass);
+    })();
   </script>
 </body>
 </html>

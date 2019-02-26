@@ -240,7 +240,6 @@ h2[id] {
     border: none;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
-    letter-spacing: -0.3px;
   }
 }
 
@@ -250,17 +249,21 @@ h2[id] {
 }
 
 .site-menu__toc-item {
-  margin: 6px 0;
+  margin: 0;
 }
 
 .site-menu__toc-link {
   display: inline-block;
-  padding: 5px 12px;
+  padding: 8px 12px;
   color: var(--slategray_50);
   font-size: 15px;
   font-weight: normal;
   line-height: 22px;
-  letter-spacing: -0.3px;
+  
+  &.link_active {
+    color: var(--dodgerblue_40);
+    font-weight: bold;
+  }
 }
 
 .site-main {
