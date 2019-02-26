@@ -9,18 +9,19 @@ export const landscapeBook = {
 };
 
 export const thumbnail = {
-  flex: '0 1 0px',
+  flex: '0 0 auto',
   paddingRight: 16,
   alignSelf: 'flex-end',
 };
 
 export const metadata = {
-  flex: '1 1 0px',
+  flex: 'auto',
   padding: '10px 0',
+  fontSize: 13,
 };
 
 export const buttons = {
-  flex: '0 1 0px',
+  flex: '0 0 auto',
   textAlign: 'right' as TextAlignProperty,
   paddingLeft: 20,
 };
