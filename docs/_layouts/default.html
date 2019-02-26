@@ -68,7 +68,7 @@
                       </a>
 
                       {% if subitem.url == page_url %}
-                        {% include toc_by_url.html class='site-menu__toc' item_class='site-menu__toc-item' anchor_class='site-menu__toc-link' url=subitem.url h_min=2 h_max=2 %}
+                        {% include toc_by_url.html url=subitem.url class='site-menu__toc' item_class='site-menu__toc-item' anchor_class='site-menu__toc-link' h_min=2 h_max=2 %}
                       {% endif %}
                     </li>
                   {% endfor %}
@@ -84,25 +84,28 @@
   <main class="site-main">
     <div class="site-main__container container">
       {% if page.toc %}
+        {% assign menu_item = site.data.navigation | where: 'url', root_path | first %}
         {% assign class='site-toc-list' %}
         {% assign item_class='site-toc-list__item' %}
         {% assign anchor_class='site-toc-list__link' %}
-        {% assign h_min=1 %}
+        {% assign h_min=2 %}
         {% assign h_max=2 %}
         <aside class="site-main__aside">
           <nav class="site-toc">
-            {% if root_path == '/web' %}
-              {% include toc_by_url.html url='/web/components' class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
-              {% include toc_by_url.html url='/web/icons' class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
-              {% include toc_by_url.html url='/web/typography' class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
-              {% include toc_by_url.html url='/web/motion' class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
-            {% elsif root_path == '/app' %}
-              {% include toc_by_url.html url='/app/components' class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
-              {% include toc_by_url.html url='/app/icons' class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
-              {% include toc_by_url.html url='/app/typography' class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
-              {% include toc_by_url.html url='/app/motion' class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
+            {% if menu_item.children %}
+              <ul class="{{ class }}">
+                {% for menu_subitem in menu_item.children %}
+                  <li class="{{ item_class }}">
+                    <a class="site-toc-list__page-link" href="{{ menu_subitem.url | relative_url }}">{{ menu_subitem.title }}</a>
+
+                    {% if menu_subitem.url == page_url %}
+                      {% include toc_by_url.html url=menu_subitem.url class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
             {% else %}
-              {% include toc.html html=content class=class item_class=item_class anchor_class=anchor_class h_min=page.toc.h_min h_max=page.toc.h_max %}
+              {% include toc_by_url.html url=menu_item.url class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
             {% endif %}
           </nav>
         </aside>

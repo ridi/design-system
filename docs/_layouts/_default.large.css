@@ -98,34 +98,43 @@ h2[id] {
 
 .site-toc {
   position: sticky;
-  top: 20px;
+  top: 0;
 }
 
 .site-toc-list {
-  margin: -16px 0;
+  margin: 0;
   padding: 0;
-}
-
-.site-toc-list__item {
-  margin: 16px 0;
   list-style: none;
 }
 
+.site-toc-list__item {
+  margin: 0;
+}
+
 .site-toc-list__link {
-  padding: 0 12px;
   display: block;
+  padding: 8px 12px;
   font-size: 15px;
   font-weight: normal;
   color: var(--slategray_50);
+  transition: color 0.2s;
 
   &:hover {
     color: var(--dodgerblue_40);
   }
+}
 
-  &:active {
-    font-weight: bold;
-    color: var(--dodgerblue_40);
-    background: none;
+.site-toc-list__page-link {
+  display: block;
+  padding: 10px 0;
+  color: var(--slategray_80);
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+
+  &:hover {
+    color: var(--slategray_80);
+    opacity: 0.5;
   }
 }
 
