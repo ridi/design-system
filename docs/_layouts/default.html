@@ -199,10 +199,55 @@
           }
         }
       }
-
       updateClass();
-
       window.addEventListener('hashchange', updateClass);
+
+      var headers = document.querySelectorAll('.site-main__content h2[id]');
+      window.addEventListener('scroll', function () {
+        for (var i = 0; i < links.length; i++) {
+          var link = links[i];
+          link.classList.remove('link_active');
+        }
+
+        for (var i = headers.length - 1; i >= 0; i--) {
+          var header = headers[i];
+
+          var diff = header.offsetTop - window.scrollY;
+
+          if (diff < 100) {
+            for (var j = 0; j < links.length; j++) {
+              var link = links[j];
+
+              if (link.getAttribute('href') !== '#' + header.id) {
+                continue;
+              }
+
+              link.classList.add('link_active');
+            }
+
+            break;
+          }
+        }
+
+
+        for (var i = 0; i < links.length; i++) {
+          var link = links[i];
+          var href = link.getAttribute('href');
+          
+          if (href[0] !== '#') {
+            continue;
+          }
+
+          var target = document.querySelector(href);
+
+          if (!target) {
+            continue;
+          }
+
+          var diff = target.offsetTop - window.scrollY;
+          
+        }
+      });
     })();
   </script>
 </body>
