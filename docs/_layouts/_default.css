@@ -16,6 +16,11 @@ body {
   padding-bottom: var(--site-footer-height);
 }
 
+h2[id] {
+  padding-top: calc(var(--site-padding) + var(--site-header-height));
+  margin-top: calc(-1 * (var(--site-padding) + var(--site-header-height)) + 60px);
+}
+
 .container {
   margin: 0 auto;
 }

@@ -7,6 +7,11 @@ body {
   padding-top: 0;
 }
 
+h2[id] {
+  padding-top: 60px;
+  margin-top: 0;
+}
+
 .container {
   max-width: 1024px;
 }
