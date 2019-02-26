@@ -46,12 +46,18 @@
             {% else %}
               {% assign active = false %}
             {% endif %}
+
             <li class="site-menu__item">
               <a class="site-menu__item-link{% if active %} site-menu__item-link_active{% endif %}" href="{{ item.url | relative_url }}" title="{{ item.title }}">
                 <span class="site-menu__item-text">
                   {{ item.title }}
                 </span>
               </a>
+
+              {% if item.url == page_url %}
+                {% include toc_by_url.html url=item.url class='site-menu__toc' item_class='site-menu__toc-item' anchor_class='site-menu__toc-link' h_min=2 h_max=2 %}
+              {% endif %}
+
               {% if item.children %}
                 <ul class="site-menu__list">
                   {% for subitem in item.children %}
@@ -61,6 +67,10 @@
                           {{ subitem.title }}
                         </span>
                       </a>
+
+                      {% if subitem.url == page_url %}
+                        {% include toc_by_url.html class='site-menu__toc' item_class='site-menu__toc-item' anchor_class='site-menu__toc-link' url=subitem.url h_min=2 h_max=2 %}
+                      {% endif %}
                     </li>
                   {% endfor %}
                 </ul>
@@ -169,7 +179,7 @@
   </footer>
 
   <script>
-    (function initSiteMenuToggleButton() {
+    (function initSiteMenu() {
       var toggleButton = document.querySelector('#site-menu-toggle-button');
       var menu = document.querySelector('#site-menu');
       var html = document.querySelector('html');
@@ -180,6 +190,18 @@
         menu.classList.toggle('site-menu_visible');
         html.classList.toggle('site_lock-scroll');
       });
+
+      var tocLinks = menu.querySelectorAll('.site-menu__toc-link');
+
+      for (var i = 0; i < tocLinks.length; i++) {
+        var link = tocLinks[i];
+
+        link.addEventListener('click', function (event) {
+          toggleButton.classList.remove('site-menu-toggle-button_pressed');
+          menu.classList.remove('site-menu_visible');
+          html.classList.remove('site_lock-scroll');
+        });
+      }
     })();
 
     (function initSiteSubmenu() {

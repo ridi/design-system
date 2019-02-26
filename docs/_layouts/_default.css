@@ -185,7 +185,7 @@ body {
 .site-menu__list {
   display: block;
   margin: 0;
-  padding: 10px 20px;
+  padding: 10px 0;
   height: 100%;
 }
 
@@ -196,6 +196,7 @@ body {
 
 .site-menu__item-link {
   display: inline-block;
+  padding: 0 20px;
   height: 60px;
   line-height: 60px;
   transition: opacity 0.2s;
@@ -222,6 +223,8 @@ body {
 }
 
 .site-menu__list .site-menu__list {
+  padding: 0 20px;
+
   & .site-menu__item-link {
     height: 52px;
     line-height: 52px;
@@ -230,9 +233,29 @@ body {
   & .site-menu__item-text {
     color: var(--slategray_80);
     border: none;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     letter-spacing: -0.3px;
   }
+}
+
+.site-menu__toc {
+  padding: 0 20px;
+  list-style: none;
+}
+
+.site-menu__toc-item {
+  margin: 6px 0;
+}
+
+.site-menu__toc-link {
+  display: inline-block;
+  padding: 5px 12px;
+  color: var(--slategray_50);
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 22px;
+  letter-spacing: -0.3px;
 }
 
 .site-aside {

@@ -60,6 +60,14 @@ body {
   }
 }
 
+.site-menu__item-link {
+  padding: 0;
+}
+
+.site-menu__toc {
+  display: none;
+}
+
 .site-aside {
   padding: 0;
 }
