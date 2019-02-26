@@ -229,14 +229,15 @@
           );
 
           if (isActiveHeader) {
-            if (decodeURIComponent(location.hash) !== '#' + header.id) {
+            var hash = '#' + header.id;
+            if (decodeURIComponent(location.hash) !== hash) {
               if (history.replaceState) {
-                history.replaceState(null, null, '#' + header.id);
+                history.replaceState(null, null, hash);
                 updateClass();
               } else {
                 var id = header.id;
                 header.id = undefined;
-                location.hash = id;
+                location.replace(hash);
                 header.id = id;
               }
             }
