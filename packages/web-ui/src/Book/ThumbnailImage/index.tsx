@@ -22,11 +22,13 @@ export class ThumbnailImage extends React.Component<ThumbnailImageProps, Thumbna
       isImageLoaded: false,
     };
 
-    this.imgRef = React.createRef();
+    this.imgRef = React.createRef<HTMLImageElement>();
   }
 
+  private imgRef: React.RefObject<HTMLImageElement>;
+
   public componentDidMount() {
-    const image = this.imgRef.current;
+    const image: HTMLImageElement | null = this.imgRef.current;
     if (image && image.complete) {
       this.handleOnLoaded();
     }
