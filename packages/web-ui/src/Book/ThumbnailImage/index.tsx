@@ -21,6 +21,17 @@ export class ThumbnailImage extends React.Component<ThumbnailImageProps, Thumbna
     this.state = {
       isImageLoaded: false,
     };
+
+    this.imgRef = React.createRef<HTMLImageElement>();
+  }
+
+  private imgRef: React.RefObject<HTMLImageElement>;
+
+  public componentDidMount() {
+    const image: HTMLImageElement | null = this.imgRef.current;
+    if (image && image.complete) {
+      this.handleOnLoaded();
+    }
   }
 
   public handleOnLoaded = () => {
@@ -36,6 +47,7 @@ export class ThumbnailImage extends React.Component<ThumbnailImageProps, Thumbna
     return (
       <div className={classNames(className)} css={styles.thumbnailImage}>
         <img
+          ref={this.imgRef}
           css={styles.image(isImageLoaded, thumbnailWidth)}
           src={thumbnailUrl}
           alt={thumbnailTitle}
