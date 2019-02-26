@@ -62,6 +62,16 @@ body {
 
 .site-menu__item-link {
   padding: 0;
+  text-align: center;
+
+  &::after {
+    display: block;
+    content: attr(title);
+    font-weight: 700;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
 }
 
 .site-menu__toc {
