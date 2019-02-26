@@ -39,7 +39,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     thumbnailLink,
     thumbnailTitle,
     thumbnailUrl,
-    thumbnailWidth,
+    thumbnailWidth = '100%',
     title,
     unitBook = false,
     unitBookCount,
@@ -49,7 +49,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
 
   return (
     <div
-      css={[styles.portraitBook, portraitStyles]}
+      css={[styles.portraitBook(thumbnailWidth), portraitStyles]}
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >

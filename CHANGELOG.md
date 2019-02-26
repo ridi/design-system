@@ -5,6 +5,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.3.6] - 2019-02-26
+### Added
+- Add a logic for already loaded image
+
+## [0.3.5] - 2019-02-26
+### Added
+- missing props
+
+### Fixed
+- flex layout
+- README
+
+
+## [0.3.4] - 2019-02-25
+### Fixed
+- Fix flex style for IE 11
+
 ## [0.3.3] - 2019-02-21
 ### Added
 - Add Thumbnail Image skeleton

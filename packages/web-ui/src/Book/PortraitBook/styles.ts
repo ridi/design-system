@@ -1,9 +1,9 @@
 import { PositionProperty } from "csstype";
 import { THUMBNAIL_HEIGHT_RATIO } from "../ThumbnailImage/styles";
 
-export const portraitBook = {
-  maxWidth: 100,
-};
+export const portraitBook = (thumbnailWidth: number | string) => ({
+  width: thumbnailWidth,
+});
 
 export const thumbnail = {
   position: 'relative' as PositionProperty,

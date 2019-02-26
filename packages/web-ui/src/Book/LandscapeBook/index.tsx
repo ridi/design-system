@@ -13,6 +13,7 @@ export interface LandscapeBookProps extends
     additionalButton?: React.ReactElement<any>;
     additionalMetadata?: React.ReactElement<any>;
     className?: string;
+    landscapeStyles?: any;
     [extraKey: string]: any;
   }
 
@@ -34,6 +35,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     downloadStatus,
     expired = false,
     expiredAt,
+    landscapeStyles,
     notAvailable = false,
     onSelectedChange,
     readingProgress,
@@ -44,7 +46,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     thumbnailLink,
     thumbnailTitle,
     thumbnailUrl,
-    thumbnailWidth,
+    thumbnailWidth = '100%',
     title,
     unitBook = false,
     unitBookCount,
@@ -54,7 +56,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
 
   return (
     <div
-      css={styles.landscapeBook}
+      css={[styles.landscapeBook, landscapeStyles]}
       className={classNames(['LandscapeBook', className])}
       {...extraProps}
     >
