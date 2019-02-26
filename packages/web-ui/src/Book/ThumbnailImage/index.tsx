@@ -25,7 +25,7 @@ export class ThumbnailImage extends React.Component<ThumbnailImageProps, Thumbna
     this.imgRef = React.createRef();
   }
 
-  componentDidMount() {
+  private componentDidMount() {
     const iamge = this.imgRef.current;
     if (image && image.complete) {
       this.handleOnLoaded();
