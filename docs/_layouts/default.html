@@ -46,8 +46,12 @@
               {% assign active = false %}
             {% endif %}
 
-            <li class="site-menu__item">
-              <a class="site-menu__item-link{% if active %} site-menu__item-link_active{% endif %}" href="{{ item.url | relative_url }}" title="{{ item.title }}">
+            <li class="site-menu__item{% if item.children %} site-menu__container-item{% if active %} site-menu__container-item_opened{% endif %}{% endif %}">
+              <a
+                class="site-menu__item-link{% if active %} site-menu__item-link_active{% endif %}"
+                href="{{ item.url | relative_url }}"
+                title="{{ item.title }}"
+              >
                 <span class="site-menu__item-text">
                   {{ item.title }}
                 </span>
@@ -156,12 +160,24 @@
         html.classList.toggle('site_lock-scroll');
       });
 
-      var tocLinks = menu.querySelectorAll('.site-menu__toc-link');
+      var containerItems = menu.querySelectorAll('.site-menu__container-item');
+      for (var i = 0; i < containerItems.length; i++) {
+        (function () {
+          var item = containerItems[i];
+          var link = item.querySelector('.site-menu__item-link');
+          link.addEventListener('click', function (event) {
+            item.classList.toggle('site-menu__container-item_opened');
+            if (window.innerWidth < 769) {
+              event.preventDefault();
+            }
+          });
+        })();
+      }
 
+      var tocLinks = menu.querySelectorAll('.site-menu__toc-link');
       for (var i = 0; i < tocLinks.length; i++) {
         var link = tocLinks[i];
-
-        link.addEventListener('click', function (event) {
+        link.addEventListener('click', function () {
           toggleButton.classList.remove('site-menu-toggle-button_pressed');
           menu.classList.remove('site-menu_visible');
           html.classList.remove('site_lock-scroll');

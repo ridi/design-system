@@ -204,6 +204,7 @@ h2[id] {
   padding: 0 20px;
   height: 60px;
   line-height: 60px;
+  cursor: pointer;
   transition: opacity 0.2s;
 
   &:hover {
@@ -227,19 +228,30 @@ h2[id] {
   border-bottom-color: currentColor;
 }
 
-.site-menu__list .site-menu__list {
-  padding: 0 20px;
+.site-menu__container-item {
+  & .site-menu__list {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.2s;
 
-  & .site-menu__item-link {
-    height: 52px;
-    line-height: 52px;
+    & .site-menu__item-link {
+      height: 52px;
+      line-height: 52px;
+    }
+
+    & .site-menu__item-text {
+      color: var(--slategray_80);
+      border: none;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 500;
+    }
   }
+}
 
-  & .site-menu__item-text {
-    color: var(--slategray_80);
-    border: none;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 500;
+.site-menu__container-item_opened {
+  & .site-menu__list {
+    max-height: 1000px;
   }
 }
 
