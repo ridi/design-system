@@ -65,7 +65,11 @@
                 <ul class="site-menu__list">
                   {% for subitem in item.children %}
                     <li class="site-menu__item">
-                      <a class="site-menu__item-link" href="{{ subitem.url | relative_url }}" title="{{ subitem.title }}">
+                      <a
+                        class="site-menu__item-link"
+                        href="{{ subitem.url | relative_url }}"
+                        title="{{ subitem.title }}"
+                      >
                         <span class="site-menu__item-text">
                           {{ subitem.title }}
                         </span>
@@ -227,24 +231,24 @@
         };
       }
 
-      var headers = document.querySelectorAll('.site-main__content h2[id]');
+      var headings = document.querySelectorAll('.site-main__content h2[id]');
       window.addEventListener('scroll', throttle(function () {
-        for (var i = headers.length - 1; i >= 0; i--) {
-          var header = headers[i];
-          var top = header.offsetTop - window.pageYOffset;
-          var isActiveHeader = top < 100;
+        for (var i = headings.length - 1; i >= 0; i--) {
+          var heading = headings[i];
+          var top = heading.offsetTop - window.pageYOffset;
+          var isActiveHeading = top < 100;
 
-          if (isActiveHeader) {
-            var hash = '#' + header.id;
+          if (isActiveHeading) {
+            var hash = '#' + heading.id;
             if (decodeURIComponent(location.hash) !== hash) {
               if (history.replaceState) {
                 history.replaceState(null, null, hash);
                 updateClass();
               } else {
-                var id = header.id;
-                header.id = undefined;
+                var id = heading.id;
+                heading.id = undefined;
                 location.replace(hash);
-                header.id = id;
+                heading.id = id;
               }
             }
             break;
