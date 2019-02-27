@@ -147,18 +147,34 @@
     </div>
   </footer>
 
+  <script src="{{ "/assets/vendor/bodyScrollLock.min.js" | relative_url }}"></script>
   <script>
     (function initSiteMenu() {
+      var largeScreenMql = window.matchMedia('(min-width: 769px)');
       var toggleButton = document.querySelector('#site-menu-toggle-button');
       var menu = document.querySelector('#site-menu');
       var html = document.querySelector('html');
 
+      function openMenu() {
+        toggleButton.classList.add('site-menu-toggle-button_pressed');
+        menu.classList.add('site-menu_opened');
+        bodyScrollLock.disableBodyScroll(menu);
+      }
+
+      function closeMenu() {
+        toggleButton.classList.remove('site-menu-toggle-button_pressed');
+        menu.classList.remove('site-menu_opened');
+        bodyScrollLock.enableBodyScroll(menu);
+      }
+
       toggleButton.addEventListener('click', function () {
-        toggleButton.classList.toggle('site-menu-toggle-button_pressed');
-        menu.classList.add('site-menu_animated');
-        menu.classList.toggle('site-menu_visible');
-        html.classList.toggle('site_lock-scroll');
+        if (menu.classList.contains('site-menu_opened')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
       });
+      largeScreenMql.addListener(closeMenu);
 
       var containerItems = menu.querySelectorAll('.site-menu__container-item');
       for (var i = 0; i < containerItems.length; i++) {
@@ -167,7 +183,7 @@
           var link = item.querySelector('.site-menu__item-link');
           link.addEventListener('click', function (event) {
             item.classList.toggle('site-menu__container-item_opened');
-            if (window.innerWidth < 769) {
+            if (!largeScreenMql.matches) {
               event.preventDefault();
             }
           });
@@ -177,11 +193,7 @@
       var tocLinks = menu.querySelectorAll('.site-menu__toc-link');
       for (var i = 0; i < tocLinks.length; i++) {
         var link = tocLinks[i];
-        link.addEventListener('click', function () {
-          toggleButton.classList.remove('site-menu-toggle-button_pressed');
-          menu.classList.remove('site-menu_visible');
-          html.classList.remove('site_lock-scroll');
-        });
+        link.addEventListener('click', closeMenu);
       }
     })();
 

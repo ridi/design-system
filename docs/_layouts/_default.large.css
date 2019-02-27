@@ -16,10 +16,6 @@ h2[id] {
   max-width: 1024px;
 }
 
-.site_lock-scroll {
-  overflow: auto;
-}
-
 .site-header {
   position: static;
   padding: 0 var(--site-padding);

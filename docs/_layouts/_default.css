@@ -25,10 +25,6 @@ h2[id] {
   margin: 0 auto;
 }
 
-.site_lock-scroll {
-  overflow: hidden;
-}
-
 .site-header {
   position: fixed;
   top: 0;
@@ -176,13 +172,11 @@ h2[id] {
   bottom: 0;
   background: var(--white);
   overflow: auto;
-}
-
-.site-menu_animated {
   transition: opacity .2s, visibility .2s;
+  -webkit-overflow-scrolling: touch;
 }
 
-.site-menu_visible {
+.site-menu_opened {
   visibility: visible;
   opacity: 1;
 }
