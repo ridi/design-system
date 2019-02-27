@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ site.title }}</title>
-   
+
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png'| relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png'| relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png'| relative_url }}">
@@ -17,11 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="{{ '/assets/css/index.css' | relative_url }}" rel="stylesheet">
- 
   <link href="{{ '/assets/vendor/zoom/zoom.css' | relative_url }}" rel="stylesheet">
-  <script src="{{ "/assets/vendor/jquery-3.3.1.min.js" | relative_url }}"></script>
-  <script src="{{ "/assets/vendor/bootstrap/transition.js" | relative_url }}"></script>
-  <script src="{{ "/assets/vendor/zoom/zoom.min.js" | relative_url }}"></script>
 </head>
 <body>
   <header class="site-header">
@@ -33,23 +29,55 @@
         </a>
       </h1>
 
-      <nav class="site-menu">
-        <button id="site-menu-toggle-button" class="site-menu__toggle-button">
-          <span class="site-menu__toggle-button-content">Toggle Menu</span>
-        </button>
+      <button id="site-menu-toggle-button" class="site-menu-toggle-button">
+        <span class="site-menu-toggle-button-content">Toggle Menu</span>
+      </button>
 
-        <ul id="site-menu-list" class="site-menu__list">
+      <nav id="site-menu" class="site-menu">
+        <ul class="site-menu__list">
           {% for item in site.data.navigation %}
             {% if item.url == page_url or item.url == root_path %}
               {% assign active = true %}
-              {% assign active_menu = item %}
             {% else %}
               {% assign active = false %}
             {% endif %}
-            <li class="site-menu__item{% if active %} site-menu__item_active{% endif %}">
-              <a class="site-menu__link" href="{{ item.url | relative_url }}" title="{{ item.title }}">
-                {{ item.title }}
+
+            <li class="site-menu__item{% if item.children %} site-menu__container-item{% if active %} site-menu__container-item_opened{% endif %}{% endif %}">
+              <a
+                class="site-menu__item-link{% if active %} site-menu__item-link_active{% endif %}"
+                href="{{ item.url | relative_url }}"
+                title="{{ item.title }}"
+              >
+                <span class="site-menu__item-text">
+                  {{ item.title }}
+                </span>
               </a>
+
+              {% if item.url == page_url %}
+                {% include toc_by_url.html url=item.url class='site-menu__toc' item_class='site-menu__toc-item' anchor_class='site-menu__toc-link' h_min=2 h_max=2 %}
+              {% endif %}
+
+              {% if item.children %}
+                <ul class="site-menu__list">
+                  {% for subitem in item.children %}
+                    <li class="site-menu__item">
+                      <a
+                        class="site-menu__item-link"
+                        href="{{ subitem.url | relative_url }}"
+                        title="{{ subitem.title }}"
+                      >
+                        <span class="site-menu__item-text">
+                          {{ subitem.title }}
+                        </span>
+                      </a>
+
+                      {% if subitem.url == page_url %}
+                        {% include toc_by_url.html url=subitem.url class='site-menu__toc' item_class='site-menu__toc-item' anchor_class='site-menu__toc-link' h_min=2 h_max=2 %}
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>
@@ -57,49 +85,32 @@
     </div>
   </header>
 
-  {% if active_menu.children %}
-    <aside class="site-aside">
-      <nav id="site-submenu" class="site-submenu">
-        {% for item in active_menu.children %}
-          {% if item.url == page_url %}
-            {% assign active_submenu = item %}
-            <div class="site-submenu__item site-submenu__item_active site-submenu__placeholder">
-              <a class="site-submenu__link">
-                {{ item.title }}
-              </a>
-            </div>
-            {% break %}
-          {% endif %}
-        {% endfor %}
-
-        <ul class="site-submenu__list container">
-          {% for item in active_menu.children %}
-            {% if item == active_submenu %}
-              {% assign active = true %}
-            {% else %}
-              {% assign active = false %}
-            {% endif %}
-            <li class="site-submenu__item{% if active %} site-submenu__item_active{% endif %}">
-              <a
-                class="site-submenu__link"
-                href="{{ item.url | relative_url }}"
-                title="{{ item.title }}"
-              >
-                {{ item.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </aside>
-  {% endif %}
-
   <main class="site-main">
     <div class="site-main__container container">
       {% if page.toc %}
+        {% assign menu_item = site.data.navigation | where: 'url', root_path | first %}
+        {% assign class='site-toc-list' %}
+        {% assign item_class='site-toc-list__item' %}
+        {% assign anchor_class='site-toc-list__link' %}
+        {% assign h_min=2 %}
+        {% assign h_max=2 %}
         <aside class="site-main__aside">
           <nav class="site-toc">
-            {% include toc.html html=content class='site-toc-list' item_class='site-toc-list__item' anchor_class='site-toc-list__link' h_min=page.toc.h_min h_max=page.toc.h_max %}
+            {% if menu_item.children %}
+              <ul class="{{ class }}">
+                {% for menu_subitem in menu_item.children %}
+                  <li class="{{ item_class }}">
+                    <a class="site-toc-list__page-link" href="{{ menu_subitem.url | relative_url }}">{{ menu_subitem.title }}</a>
+
+                    {% if menu_subitem.url == page_url %}
+                      {% include toc_by_url.html url=menu_subitem.url class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              {% include toc_by_url.html url=menu_item.url class=class item_class=item_class anchor_class=anchor_class h_min=h_min h_max=h_max %}
+            {% endif %}
           </nav>
         </aside>
       {% endif %}
@@ -136,47 +147,113 @@
     </div>
   </footer>
 
+  <script src="{{ "/assets/vendor/jquery-3.3.1.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/vendor/bootstrap/transition.js" | relative_url }}"></script>
+  <script src="{{ "/assets/vendor/zoom/zoom.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/vendor/bodyScrollLock.min.js" | relative_url }}"></script>
   <script>
-    (function initSiteMenuToggleButton() {
-      var toggleButton = document.getElementById('site-menu-toggle-button');
-      var menuList = document.getElementById('site-menu-list');
+    (function initSiteMenu() {
+      var largeScreenMql = window.matchMedia('(min-width: 769px)');
+      var toggleButton = document.querySelector('#site-menu-toggle-button');
+      var menu = document.querySelector('#site-menu');
+      var html = document.querySelector('html');
+
+      function openMenu() {
+        toggleButton.classList.add('site-menu-toggle-button_pressed');
+        menu.classList.add('site-menu_opened');
+        bodyScrollLock.disableBodyScroll(menu);
+      }
+
+      function closeMenu() {
+        toggleButton.classList.remove('site-menu-toggle-button_pressed');
+        menu.classList.remove('site-menu_opened');
+        bodyScrollLock.enableBodyScroll(menu);
+      }
 
       toggleButton.addEventListener('click', function () {
-        toggleButton.classList.toggle('site-menu__toggle-button_pressed');
-        menuList.classList.add('site-menu__list_animated');
-        menuList.classList.toggle('site-menu__list_visible');
+        if (menu.classList.contains('site-menu_opened')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
       });
+      largeScreenMql.addListener(closeMenu);
+
+      var containerItems = menu.querySelectorAll('.site-menu__container-item');
+      for (var i = 0; i < containerItems.length; i++) {
+        (function () {
+          var item = containerItems[i];
+          var link = item.querySelector('.site-menu__item-link');
+          link.addEventListener('click', function (event) {
+            item.classList.toggle('site-menu__container-item_opened');
+            if (!largeScreenMql.matches) {
+              event.preventDefault();
+            }
+          });
+        })();
+      }
+
+      var tocLinks = menu.querySelectorAll('.site-menu__toc-link');
+      for (var i = 0; i < tocLinks.length; i++) {
+        var link = tocLinks[i];
+        link.addEventListener('click', closeMenu);
+      }
     })();
 
-    (function initSiteSubmenu() {
-      var submenu = document.getElementById('site-submenu');
+    (function initActiveHashLinks() {
+      var links = document.querySelectorAll('a[href^="#"]');
 
-      if (!submenu) {
-        return;
-      }
+      function updateClass() {
+        for (var i = 0; i < links.length; i++) {
+          var link = links[i];
 
-      submenu.addEventListener('click', function (event) {
-        submenu.classList.toggle('site-submenu_opened');
-        event.stopPropagation();
-      });
-
-      var items = submenu.getElementsByClassName('site-submenu__item');
-
-      for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-
-        if (item.classList.contains('site-submenu__item_active')) {
-          continue;
+          if (link.href === location.href) {
+            link.classList.add('link_active');
+          } else {
+            link.classList.remove('link_active');
+          }
         }
+      }
+      updateClass();
+      window.addEventListener('hashchange', updateClass);
 
-        item.addEventListener('click', function (event) {
-          event.stopPropagation();
-        });
+      function throttle(func, wait) {
+        var timer;
+        return function () {
+          if (!timer) {
+            var args = arguments;
+            timer = setTimeout(function () {
+              timer = null;
+              func.apply(null, args);
+            }, wait);
+          }
+        };
       }
 
-      window.addEventListener('click', function () {
-        submenu.classList.remove('site-submenu_opened');
-      });
+      var headings = document.querySelectorAll('.site-main__content h2[id]');
+      window.addEventListener('scroll', throttle(function () {
+        for (var i = headings.length - 1; i >= 0; i--) {
+          var heading = headings[i];
+          var top = heading.offsetTop - window.pageYOffset;
+          var isActiveHeading = top < 100;
+
+          if (isActiveHeading) {
+            var hash = '#' + heading.id;
+            if (decodeURIComponent(location.hash) !== hash) {
+              if (history.replaceState) {
+                history.replaceState(null, null, hash);
+                updateClass();
+              } else {
+                var id = heading.id;
+                heading.id = undefined;
+                location.replace(hash);
+                heading.id = id;
+              }
+            }
+            break;
+          }
+        }
+      }, 100));
     })();
   </script>
 </body>
