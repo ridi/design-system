@@ -59,6 +59,11 @@ body {
 .site-menu__item-link {
   padding: 0;
   text-align: center;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   &::after {
     display: block;
