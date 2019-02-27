@@ -16,11 +16,6 @@ body {
   padding-bottom: var(--site-footer-height);
 }
 
-h2[id] {
-  padding-top: calc(var(--site-padding) + var(--site-header-height));
-  margin-top: calc(-1 * (var(--site-padding) + var(--site-header-height)) + 60px);
-}
-
 .container {
   margin: 0 auto;
 }
@@ -283,6 +278,11 @@ h2[id] {
 .site-main__content {
   flex: 1;
   width: 0;
+
+  & h2[id] {
+    padding-top: calc(var(--site-padding) + var(--site-header-height));
+    margin-top: calc(-1 * (var(--site-padding) + var(--site-header-height)) + 60px);
+  }
 }
 
 .site-main__aside {

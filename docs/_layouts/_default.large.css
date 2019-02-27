@@ -7,11 +7,6 @@ body {
   padding-top: 0;
 }
 
-h2[id] {
-  padding-top: 60px;
-  margin-top: 0;
-}
-
 .container {
   max-width: 1024px;
 }
@@ -81,6 +76,11 @@ h2[id] {
 
 .site-main__content {
   order: 0;
+
+  & h2[id] {
+    padding-top: 60px;
+    margin-top: 0;
+  }
 }
 
 .site-main__aside {
