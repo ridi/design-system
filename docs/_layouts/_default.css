@@ -180,12 +180,13 @@ body {
   display: block;
   margin: 0;
   padding: 10px 0;
-  height: 100%;
+  padding-bottom: 80px;
 }
 
 .site-menu__item {
   display: block;
   margin: 0;
+  line-height: 1;
 }
 
 .site-menu__item-link {
@@ -213,10 +214,13 @@ body {
 
 .site-menu__container-item {
   & .site-menu__list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
     max-height: 0;
     overflow: hidden;
     padding: 0 20px;
-    transition: max-height 0.2s;
+    transition: max-height 0.2s ease-in-out;
 
     & .site-menu__item-link {
       height: 52px;
