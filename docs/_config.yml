@@ -1,5 +1,6 @@
 # Site settings
 title: RIDI Design System
+baseurl: "/design-system"
 
 # Build settings
 collections:
