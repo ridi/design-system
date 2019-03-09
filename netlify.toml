@@ -2,17 +2,11 @@
 
 [build]
   base = "/"
-  publish = "netlify/"
+  publish = "docs/_site/"
   environment = { NODE_VERSION = "10", RUBY_VERSION = "2.5" }
   command = '''
   yarn build \
   && cp -a ./package-explorer/dist/. ./docs/packages \
   && cd docs \
   && yarn install \
-  && yarn build \
-  && mkdir -p ../netlify/design-system \
-  && cp -a ./_site/. ../netlify/design-system'''
-
-[[redirects]]
-  from = "/*"
-  to = "/design-system"
+  && yarn build'''
