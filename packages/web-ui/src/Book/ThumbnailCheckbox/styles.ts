@@ -1,6 +1,7 @@
 import { PositionProperty } from 'csstype';
 import { merge } from 'lodash';
 import { resetAppearance, resetLayout } from "../../styles";
+import { ThumbnailChildrenSize } from '../Thumbnail';
 
 export const checkbox = {
   display: 'block',
@@ -18,17 +19,26 @@ export const checkboxInput = merge({}, resetAppearance, resetLayout, {
   height: 0,
 });
 
-export const iconWrapper = {
-  display: 'block',
-  width: 40,
-  height: 40,
-  borderRadius: 44,
-  border: '2px solid rgba(0, 0, 0, .3)',
-  position: 'absolute' as PositionProperty,
-  left: '50%',
-  top: '50%',
-  transform: 'translate3d(-50%, -50%, 0)',
-  overflow: 'hidden',
+export const iconWrapper = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Medium) => {
+  let iconSize = 40;
+  if (size === ThumbnailChildrenSize.Large) {
+    iconSize = 50;
+  } else if (size === ThumbnailChildrenSize.XLarge) {
+    iconSize = 70;
+  }
+
+  return {
+    display: 'block',
+    width: iconSize,
+    height: iconSize,
+    borderRadius: '50%',
+    border: '2px solid rgba(0, 0, 0, .3)',
+    position: 'absolute' as PositionProperty,
+    left: '50%',
+    top: '50%',
+    transform: 'translate3d(-50%, -50%, 0)',
+    overflow: 'hidden',
+  };
 };
 
 export const checkboxIcon = (isActive: boolean) => {

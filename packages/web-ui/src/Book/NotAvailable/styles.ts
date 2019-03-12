@@ -1,5 +1,6 @@
 import { merge } from 'lodash';
 import { displayHidden, resetLayout } from "../../styles";
+import { ThumbnailChildrenSize } from '../Thumbnail';
 
 export const notAvailable = merge({}, resetLayout, {
   position: 'absolute',
@@ -11,17 +12,26 @@ export const notAvailable = merge({}, resetLayout, {
   zIndex: 100,
 });
 
-export const icon = {
-  position: 'absolute',
-  left: '50%',
-  top: '50%',
-  transform: 'translate3d(-50%, -50%, 0)',
-  width: 40,
-  height: 40,
-  fill: 'black',
-  padding: 2,
-  borderRadius: 44,
-  background: '#f3f4f5',
+export const icon = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Medium) => {
+  let iconSize = 40;
+  if (size === ThumbnailChildrenSize.Large) {
+    iconSize = 50;
+  } else if (size === ThumbnailChildrenSize.XLarge) {
+    iconSize = 70;
+  }
+
+  return {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate3d(-50%, -50%, 0)',
+    width: iconSize,
+    height: iconSize,
+    fill: 'black',
+    padding: 2,
+    borderRadius: '50%',
+    background: '#f3f4f5',
+  };
 };
 
 export const text = displayHidden;

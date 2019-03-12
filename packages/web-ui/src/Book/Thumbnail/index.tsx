@@ -42,6 +42,7 @@ export interface ThumbnailProps extends
     selected?: boolean;
     readingStatus?: ReadingStatus;
     ridiSelect?: boolean;
+    thumbnailChildrenSize?: ThumbnailChildrenSize;
     thumbnailLink?: React.ReactElement<any>;
     unitBook?: boolean;
     unitBookCount?: React.ReactElement<UnitBookCountProps>;
@@ -49,6 +50,37 @@ export interface ThumbnailProps extends
     viewType?: ViewType;
     [extraKey: string]: any;
   }
+
+export enum ThumbnailChildrenSize {
+  XXSmall = 'XXSmall',
+  XSmall = 'XSmall',
+  Small = 'Small',
+  Medium = 'Medium',
+  Large = 'Large',
+  XLarge = 'XLarge',
+  XXLarge = 'XXLarge',
+}
+
+const getThumbnailChildrenSize = (width: string | number) => {
+  const thumbnailWidthString = String(width).split('px')[0];
+  const thumbnailWidth = Number(thumbnailWidthString);
+  if (thumbnailWidthString.includes('%')) {
+    // % width default size
+    return ThumbnailChildrenSize.Medium;
+  } else if (thumbnailWidth >= 180) {
+    return ThumbnailChildrenSize.XLarge;
+  } else if (thumbnailWidth >= 130) {
+    return ThumbnailChildrenSize.Large;
+  } else if (thumbnailWidth >= 110) {
+    return ThumbnailChildrenSize.Medium;
+  } else if (thumbnailWidth >= 100) {
+    return ThumbnailChildrenSize.Small;
+  } else if (thumbnailWidth >= 80) {
+    return ThumbnailChildrenSize.XSmall;
+  } else {
+    return ThumbnailChildrenSize.XXSmall;
+  }
+};
 
 export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   const {
@@ -66,6 +98,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     ridiselect,
     selected = false,
     selectMode = false,
+    thumbnailChildrenSize,
     thumbnailLink,
     thumbnailTitle,
     thumbnailUrl,
@@ -76,6 +109,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     viewType = ViewType.Portrait,
     ...extraProps
   } = props;
+  const childrenSize = thumbnailChildrenSize ? thumbnailChildrenSize : thumbnailWidth ? getThumbnailChildrenSize(thumbnailWidth) : ThumbnailChildrenSize.Medium;
 
   return (
     <div
@@ -95,6 +129,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
           <ThumbnailCheckbox
             onChange={onSelectedChange}
             checked={selected}
+            size={childrenSize}
           />
         }
         <ThumbnailImage thumbnailUrl={thumbnailUrl} thumbnailTitle={thumbnailTitle} thumbnailWidth={thumbnailWidth} />
@@ -119,18 +154,18 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
                   />
                 }
                 {ridiselect ? (
-                  <Ridiselect />
+                  <Ridiselect size={childrenSize} />
                 ) : expired ? (
-                  <Expired />
+                  <Expired size={childrenSize} />
                 ) : expiredAt ? (
-                  <ExpiredAt expiredAt={expiredAt} />
+                  <ExpiredAt expiredAt={expiredAt} size={childrenSize} />
                 ) : null}
               </React.Fragment>
             )}
           </React.Fragment>
         }
         {children}
-        {notAvailable && !selectMode && <NotAvailable />}
+        {notAvailable && !selectMode && <NotAvailable size={childrenSize} />}
         {thumbnailLink && (
           <div css={styles.thumbnailLink}>{thumbnailLink}</div>
         )}
