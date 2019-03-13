@@ -1,0 +1,11 @@
+{% assign pages_collection = site.collections | where: 'label', 'pages' | first %}
+
+{% assign url = include.url | remove: '/index' | append: '/index' %}
+
+{% assign doc = pages_collection.docs | where: 'url', url | first %}
+
+{% assign html = doc.content | markdownify %}
+
+{% assign baseurl = doc.url | remove: 'index' | relative_url %}
+
+{% include toc.html baseurl=baseurl html=html sanitize=include.sanitize class=include.class id=include.id h_min=include.h_min h_max=include.h_max ordered=include.ordered item_class=include.item_class baseurl=include.baseurl anchor_class=include.anchor_class %}
