@@ -12,7 +12,7 @@ export interface ExpiredAtProps {
 
 export const ExpiredAt: React.FunctionComponent<ExpiredAtProps> = (props) => {
   const { expiredAt, size } = props;
-  const isRemainTime = expiredAt.includes('남음');
+  const isRemainTime = expiredAt.indexOf('남음') !== -1;
   return (
     <p css={styles.expiredAt(size, isRemainTime)}>
       {isRemainTime && <TimerIcon css={styles.expiredAtIcon(size)}/>}

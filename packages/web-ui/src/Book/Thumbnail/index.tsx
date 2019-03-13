@@ -64,7 +64,7 @@ export enum ThumbnailChildrenSize {
 const getThumbnailChildrenSize = (width: string | number) => {
   const thumbnailWidthString = String(width).split('px')[0];
   const thumbnailWidth = Number(thumbnailWidthString);
-  if (thumbnailWidthString.includes('%')) {
+  if (thumbnailWidthString.indexOf('%') !== -1) {
     // % width default size
     return ThumbnailChildrenSize.Medium;
   } else if (thumbnailWidth >= 180) {
