@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.3.9] - 2019-03-14
+### Fixed
+- Fix some method for IE : includes to indexOf
+
 ## [0.3.8] - 2019-03-13
 ### Fixed
 - Fix wrong font style order
