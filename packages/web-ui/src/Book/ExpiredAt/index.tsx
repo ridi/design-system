@@ -10,9 +10,13 @@ export interface ExpiredAtProps {
   size?: ThumbnailChildrenSize;
 }
 
-export const ExpiredAt: React.FunctionComponent<ExpiredAtProps> = (props) => (
-  <p css={styles.expiredAt(props.size)}>
-    <TimerIcon css={styles.expiredAtIcon(props.size)}/>
-    {props.expiredAt}
-  </p>
-);
+export const ExpiredAt: React.FunctionComponent<ExpiredAtProps> = (props) => {
+  const { expiredAt, size } = props;
+  const isRemainTime = expiredAt.includes('남음');
+  return (
+    <p css={styles.expiredAt(size, isRemainTime)}>
+      {isRemainTime && <TimerIcon css={styles.expiredAtIcon(size)}/>}
+      {expiredAt}
+    </p>
+  );
+};

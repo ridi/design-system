@@ -2,7 +2,7 @@ import { BoxSizingProperty, PositionProperty, WhiteSpaceProperty } from "csstype
 import { resetFont } from "../../styles";
 import { ThumbnailChildrenSize } from "../Thumbnail";
 
-export const expiredAt = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Medium) => {
+export const expiredAt = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Medium, isRemainTime: boolean) => {
   let fontSize = 12;
   let height = 18;
   let paddingLeft = 20;
@@ -16,18 +16,18 @@ export const expiredAt = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Med
   const lineHeight = `${height}px`;
 
   return {
+    ...resetFont,
     position: 'relative' as PositionProperty,
     fontSize: 12,
     height: '1em',
     lineHeight: '1em',
     color: '#0077d9',
-    padding: '0 0 0 16px',
+    padding: isRemainTime ? '0 0 0 16px' : '0',
     margin: '4px 0 0 0',
     whiteSpace: 'nowrap' as WhiteSpaceProperty,
-    ...resetFont,
     '.Thumbnail & ': {
       position: 'absolute' as PositionProperty,
-      padding: `0 0 0 ${paddingLeft}px`,
+      padding: isRemainTime ? `0 0 0 ${paddingLeft}px` : '0',
       marginTop: 0,
       left: 0,
       bottom: 0,
