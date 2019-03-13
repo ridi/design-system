@@ -16,6 +16,7 @@ export const ridiselect = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Me
   const lineHeight = `${height}px`;
 
   return {
+    ...resetFont,
     position: 'relative' as PositionProperty,
     fontSize: 12,
     height: '1em',
@@ -24,7 +25,6 @@ export const ridiselect = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Me
     padding: '0 0 0 16px',
     margin: '4px 0 0 0',
     whiteSpace: 'nowrap' as WhiteSpaceProperty,
-    ...resetFont,
     '.Thumbnail & ': {
       position: 'absolute' as PositionProperty,
       padding: `0 0 0 ${paddingLeft}px`,
