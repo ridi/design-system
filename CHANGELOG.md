@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.3.8] - 2019-03-13
+### Fixed
+- Fix wrong font style order
+
+### Added
+- Add conditional rendering to ExpiredAt icon
+- Add thumbnail image skeleton’s height Ratio
+
 ## [0.3.7] - 2019-03-13
 ### Added
 - Add thumbnailChildrenSize props
@@ -23,7 +31,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - flex layout
 - README
-
 
 ## [0.3.4] - 2019-02-25
 ### Fixed
