@@ -39,7 +39,7 @@ export const thumbnailLink = {
     position: 'absolute' as PositionProperty,
     width: '100%',
     height: '100%',
-    background: 'transprent',
+    background: 'transparent',
     lineHeight: '0',
     fontSize: 0,
     color: 'transparent',
