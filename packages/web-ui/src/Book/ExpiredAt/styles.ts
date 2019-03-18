@@ -66,3 +66,8 @@ export const expiredAtIcon = (size:ThumbnailChildrenSize = ThumbnailChildrenSize
   };
 };
 
+export const remainText = {
+  '.Thumbnail &': {
+    display: 'none',
+  },
+};
