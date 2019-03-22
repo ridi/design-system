@@ -3,11 +3,9 @@
 # Motion
 
 ## 모션이 중요한 이유
-* 디지털 제품은 동적(dynamic)입니다. 사용자는 서비스를 이용하는 매 순간 변화하는 화면, 움직이는 요소를 마주하게됩니다. <br>
+* 디지털 제품은 동적입니다. 사용자는 서비스를 이용하는 매 순간 변화하는 화면, 움직이는 요소를 마주하게됩니다. <br>
 그러므로 제품 전반에 걸쳐 일관되고 자연스러운 모션, 트랜지션을 제공해야 사용자 경험을 해치지 않을 수 있습니다. <br>
 * 특히, 모바일 기기 사용자는 한 번에 한 화면만 볼 수 있습니다. 그러므로 모션과 애니메이션은 화면의 계층 구조를 파악하는 데 도움을 줍니다.
-
-
 
 ## 모션 원칙
 
@@ -66,12 +64,12 @@
 * Interpolator : 한 Duration 동안 어떻게 전환할 것인지 (linear, ease-in, ease-out)
 * 반복 횟수 : 1회만 or 여러 번 or 계속 (무한히) 실행
 
-### Interpolator란?
+### 인터폴레이터(Interpolator)란?
 Android 애니메이션에서 State를 시간에 따라 어떤 양상으로 변화시킬 지 나타내는 function입니다. 각 Interpolator에 factor를 바꾸어 쉽게 변형할 수 있습니다. 또는 Interpolator 자체를 원하는 대로 만들어 사용할 수도 있습니다. <br> 
 ![Interpolator](motion_interpolator.png){:data-action='zoom'}
 <figcaption>Graph 출처 : http://antoine-merle.com/images/interpolators2.png</figcaption>
 
-### 리디북스 앱에서 사용하고 있는 Interpolator의 종류 
+### 리디북스 앱에서 사용하고 있는 인터폴레이터의 종류 
 * Accelerate Interpolator: 처음에 느리게 변하다가 점점 빠르게 (ease-in)
 * Decelerate Interpolator: 처음에 빠르게 변하다가 점점 천천히 (ease-out)
 * AccelerateDecelerate Interpolator: 위 둘을 동시에 (ease-in-out)
