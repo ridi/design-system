@@ -6,11 +6,16 @@ export const updateBadge = merge({}, resetFont, {
   left: 0,
   top: 0,
   margin: 0,
-  padding: 5,
-  fontSize: 8,
-  fontWeight: 700,
-  lineHeight: '1em',
-  color: 'white',
-  background: 'rgba(0, 119, 217, .95)',
+  padding: '4px 0',
+  width: 24,
+  textAlign: 'center',
+  background: 'rgba(33, 37, 41, 0.9)',
   borderBottomRightRadius: 4,
 });
+
+export const updateIcon = {
+  display: 'inline-block',
+  width: 15,
+  height: 9,
+  fill: 'white',
+};

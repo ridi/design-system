@@ -10,12 +10,17 @@ export interface LandscapeBookProps extends
   Book.AuthorProps,
   Book.ThumbnailProps,
   Book.TitleProps {
+    additionalButton?: React.ReactElement<any>;
+    additionalMetadata?: React.ReactElement<any>;
     className?: string;
+    landscapeStyles?: any;
     [extraKey: string]: any;
   }
 
 export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props) => {
   const {
+    additionalButton,
+    additionalMetadata,
     adultBadge,
     annotations = {
       bookMarkCount: 0,
@@ -23,12 +28,14 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
       memoCount: 0,
     },
     author,
+    children,
     className,
     downloadProgress,
     downloadSize,
     downloadStatus,
     expired = false,
     expiredAt,
+    landscapeStyles,
     notAvailable = false,
     onSelectedChange,
     readingProgress,
@@ -36,10 +43,11 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     ridiselect,
     selected,
     selectMode,
+    thumbnailChildrenSize,
     thumbnailLink,
     thumbnailTitle,
     thumbnailUrl,
-    thumbnailWidth,
+    thumbnailWidth = '100%',
     title,
     unitBook = false,
     unitBookCount,
@@ -49,11 +57,11 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
 
   return (
     <div
-      css={styles.landscapeBook}
+      css={[styles.landscapeBook, landscapeStyles]}
       className={classNames(['LandscapeBook', className])}
       {...extraProps}
     >
-      <div css={styles.thumbnail}>
+      <div className="LandscapeBook_Thumbnail" css={styles.thumbnail}>
         <Book.Thumbnail
           adultBadge={adultBadge}
           notAvailable={notAvailable}
@@ -61,6 +69,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           readingStatus={readingStatus}
           selected={selected}
           selectMode={selectMode}
+          thumbnailChildrenSize={thumbnailChildrenSize}
           thumbnailLink={thumbnailLink}
           thumbnailTitle={thumbnailTitle}
           thumbnailUrl={thumbnailUrl}
@@ -69,7 +78,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           viewType={Book.ViewType.Landscape}
         />
       </div>
-      <div css={styles.metadata}>
+      <div className="LandscapeBook_Metadata" css={styles.metadata}>
         {title && <Book.Title title={title}/>}
         {author && <Book.Author author={author}/>}
         {ridiselect ? (
@@ -79,8 +88,9 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
         ) : expiredAt ? (
           <Book.ExpiredAt expiredAt={expiredAt} />
         ) : null}
+        {additionalMetadata}
       </div>
-      <div css={styles.buttons}>
+      <div className="LandscapeBook_Buttons" css={styles.buttons}>
         {unitBook ? (
           downloadStatus === Book.DownloadStatus.Downloading ? (
             <Book.UnitBookDownloading />
@@ -103,7 +113,9 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
             ) : null
           )
         )}
+        {additionalButton}
       </div>
+      {children}
     </div>
   );
 };

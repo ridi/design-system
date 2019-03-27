@@ -45,6 +45,12 @@ export const downloadButton = (size: DownloadButtonSize, status: DownloadStatus)
       right: 6,
       bottom: 6,
     },
+  } : status === DownloadStatus.Downloadable ? {
+    '.Thumbnail & ': {
+      position: 'absolute',
+      right: 6,
+      bottom: 6,
+    },
   } : {};
 
   return merge({}, defaultStyle, optionalStyle);

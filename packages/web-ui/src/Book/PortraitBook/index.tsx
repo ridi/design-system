@@ -9,16 +9,21 @@ export interface PortraitBookProps extends
   Book.AuthorProps,
   Book.ThumbnailProps,
   Book.TitleProps {
-    portraitStyles?: any;
+    additionalButton?: React.ReactElement<any>;
+    additionalMetadata?: React.ReactElement<any>;
     className?: string;
+    portraitStyles?: any;
     [extraKey: string]: any;
   }
 
 export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) => {
   const {
+    additionalButton,
+    additionalMetadata,
     adultBadge,
     author,
     className,
+    children,
     downloadProgress,
     downloadStatus,
     expired = false,
@@ -31,10 +36,11 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     ridiselect,
     selected,
     selectMode,
+    thumbnailChildrenSize,
     thumbnailLink,
     thumbnailTitle,
     thumbnailUrl,
-    thumbnailWidth,
+    thumbnailWidth = '100%',
     title,
     unitBook = false,
     unitBookCount,
@@ -44,11 +50,11 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
 
   return (
     <div
-      css={[styles.portraitBook, portraitStyles]}
+      css={[styles.portraitBook(thumbnailWidth), portraitStyles]}
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
-      <div css={styles.thumbnail}>
+      <div className="PortraitBook_Thumbnail" css={styles.thumbnail}>
         <Book.Thumbnail
           adultBadge={adultBadge}
           downloadProgress={downloadProgress}
@@ -62,6 +68,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           ridiselect={ridiselect}
           selected={selected}
           selectMode={selectMode}
+          thumbnailChildrenSize={thumbnailChildrenSize}
           thumbnailLink={thumbnailLink}
           thumbnailTitle={thumbnailTitle}
           thumbnailUrl={thumbnailUrl}
@@ -72,10 +79,13 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           viewType={Book.ViewType.Portrait}
         />
       </div>
-      <div css={styles.metadata}>
+      <div className="PortraitBook_Metadata" css={styles.metadata}>
         {title && <Book.Title title={title}/>}
         {author && <Book.Author author={author}/>}
+        {additionalMetadata}
       </div>
+      {additionalButton}
+      {children}
     </div>
   );
 };

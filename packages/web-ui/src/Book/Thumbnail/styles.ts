@@ -4,9 +4,11 @@ export const thumbnail = {
   lineHeight: 0,
 };
 
-export const thumbnailWidth = (width: number) => ({
-  width,
-});
+export const thumbnailWidth = (width: number | string) => {
+  return ({
+    width,
+  });
+};
 
 export const thumbnailDimmed = {
   display: 'block',
@@ -19,8 +21,9 @@ export const thumbnailDimmed = {
 };
 
 export const thumbnailImageWrapper = {
-  display: 'inline-block',
+  display: 'block',  
   position: 'relative' as PositionProperty,
+  fontSize: 0,
   lineHeight: 0,
 };
 
@@ -36,7 +39,7 @@ export const thumbnailLink = {
     position: 'absolute' as PositionProperty,
     width: '100%',
     height: '100%',
-    background: 'transprent',
+    background: 'transparent',
     lineHeight: '0',
     fontSize: 0,
     color: 'transparent',

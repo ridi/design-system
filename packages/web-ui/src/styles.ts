@@ -79,7 +79,7 @@ export const displayHidden = {
   clip: 'rect(0, 0, 0, 0)',
 };
 
-export const lineClamp = (lineNum?: number) => ({
+export const lineClamp = (lineNum: number = 2) => ({
   display: '-webkit-box',
   WebkitBoxOrient: 'vertical',
   overflow: 'hidden',

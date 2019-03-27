@@ -1,5 +1,5 @@
 import colors from '@ridi/colors';
-import { dot1, dot2 } from '@ridi/web-icons';
+import { dotCircle, dotSquare } from '@ridi/web-icons';
 import { merge } from 'lodash';
 import * as React from 'react';
 import { resetAppearance, resetFont, resetLayout } from '../styles';
@@ -25,13 +25,13 @@ const getSeparatorStyle = (separator: OptionsProps['separator']) => merge(
       case 'dot':
         return {
           backgroundSize: '3px',
-          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot1} fill={colors.slateGray20} />)})`,
+          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dotCircle} fill={colors.slateGray20} />)})`,
         };
       case 'pipe':
       default:
         return {
           backgroundSize: '1px 100%',
-          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dot2} fill={colors.slateGray10} preserveAspectRatio="none" />)})`,
+          backgroundImage: `url(${Svg.renderToDataUri(<Svg render={dotSquare} fill={colors.slateGray10} preserveAspectRatio="none" />)})`,
         };
     }
   })(),
