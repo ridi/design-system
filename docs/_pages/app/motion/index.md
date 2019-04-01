@@ -64,13 +64,11 @@
 * Interpolator : 한 Duration 동안 어떻게 전환할 것인지 (linear, ease-in, ease-out)
 * 반복 횟수 : 1회만 or 여러 번 or 계속 (무한히) 실행
 
-### 인터폴레이터(Interpolator)란?
-Android 애니메이션에서 State를 시간에 따라 어떤 양상으로 변화시킬 지 나타내는 function입니다. 각 Interpolator에 factor를 바꾸어 쉽게 변형할 수 있습니다. 또는 Interpolator 자체를 원하는 대로 만들어 사용할 수도 있습니다. <br> 
-![Interpolator](motion_interpolator.png){:data-action='zoom'}
-<figcaption>Graph 출처 : http://antoine-merle.com/images/interpolators2.png</figcaption>
+#### 주로 사용하는 모션 종류
 
-### 리디북스 앱에서 사용하고 있는 인터폴레이터의 종류 
-* Accelerate Interpolator: 처음에 느리게 변하다가 점점 빠르게 (ease-in)
-* Decelerate Interpolator: 처음에 빠르게 변하다가 점점 천천히 (ease-out)
-* AccelerateDecelerate Interpolator: 위 둘을 동시에 (ease-in-out)
+* Accelerate Interpolator[^1]: 점점 빠르게 (ease-in)
+* Decelerate Interpolator: 처음에 빠르게 변하다가점점 느리게 (ease-out)
+* AccelerateDecelerate Interpolator: 점점 빠르다가 느리게 (ease-in-out)
 * Cycle Interpolator: 왔다갔다
+
+[^1]: Android에서는 애니메이션의 속도를 정의할 때 인터폴레이터(Interpolator)라는 용어를 사용합니다.

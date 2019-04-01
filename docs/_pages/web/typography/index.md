@@ -11,9 +11,9 @@
 
 ### **Apple SD Gothic Neo**
 
-- macOS 리디북스 서점에서 한글 폰트로 사용하며 디자인 시 사용되는 폰트입니다.
+- macOS 리디북스 서점에서 사용합니다.
 
-### **Helvetica Neue** 
+### **Helvetica Neue**
 
 - 리디북스 서점에서 영문, 숫자 폰트로 사용합니다.
 
@@ -33,7 +33,7 @@
 
 폰트 스택을 다음과 같이 정의하여 각 기기 및 OS에서 지원하는 시스템 폰트를 순차적으로 출력합니다. 시스템 폰트는 사용자가 서비스와 시스템을 오갈 때 익숙하고 일관된 경험을 유지할 수 있게 합니다.
 
-```
+```css
 font-family: Helvetica Neue,'Apple SD Gothic Neo',arial,'나눔고딕','NanumGothic','돋움',Dotum,Tahoma,Geneva,sans-serif;
 ```
 
@@ -77,7 +77,7 @@ font-family: Helvetica Neue,'Apple SD Gothic Neo',arial,'나눔고딕','NanumGot
 
 ## 행간
 
-폰트 크기에 비례한 1.3em 값을 사용합니다. 패러그래프의 경우, 글자 수와 영역에 따라 적절한 값을 유동적으로 적용하여 사용해야 합니다. 
+폰트 크기에 비례한 1.3em 값을 사용합니다. 문단에는 글자 수, 영역에 따라 적절한 값을 유동적으로 적용하여 사용합니다. 
 
 - 권장: 1.4-1.6
 
