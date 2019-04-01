@@ -52,7 +52,7 @@
 
 - 섬네일에 `linear-gradient`와 `border` 효과를 아래와 같이 공통으로 적용합니다. 이는 섬네일을 부드럽게 강조하고 돋보이게 합니다.
   - `background: linear-gradient(to right,rgba(0,0,0,.2) 0,rgba(0,0,0,0)5%,rgba(0,0,0,0) 95%,rgba(0,0,0,.2)100%);`
-  - `border: 1px solid RGBA(0,0,0,.1);`
+  - `border: 1px solid rgba(0,0,0,.1);`
 - 하지만 서비스 및 기기의 특성, 주변 디자인 요소에 따라 해당 효과를 제외하거나 다른 효과를 추가할 수 있습니다.
   - PAPER 서점에서는 그래픽 요소를 최소화하기 위해 `border` 만 적용합니다.
   - 리디셀렉트 상세페이지의 섬네일은 배경색과 구분을 위해 `shadow` 효과를 적용합니다.
