@@ -19,4 +19,4 @@
 
 서비스를 넘어 디자인 시스템의 요소를 일관성 있게 사용합니다. 이 덕분에 다양한 제품, 플랫폼이더라도 사용자는 서비스를 쉽게 이해할 수 있습니다. 뿐만 아니라 일관성 있는 디자인은 효율적으로 제품을 만드는 디자인 시스템의 토대가 됩니다.
 
-[^1]: https://archive.uie.com/brainsparks/2011/09/14/do-users-change-their-settings/
+[^1]: "Do users change their settings?" *uie*, 2011년 9월 14일, [https://archive.uie.com/brainsparks/2011/09/14/do-users-change-their-settings/.](https://archive.uie.com/brainsparks/2011/09/14/do-users-change-their-settings/.)
