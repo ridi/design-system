@@ -121,11 +121,12 @@ body {
   transition: color 0.2s;
 
   &:hover {
-    color: var(--dodgerblue_40);
+    opacity: .6;
+    color: var(--slategray_50);
   }
 
   &.link_active {
-    color: var(--dodgerblue_40);
+    color: #1abc9c;
     font-weight: bold;
   }
 }
@@ -133,14 +134,14 @@ body {
 .site-toc-list__page-link {
   display: block;
   padding: 10px 0;
-  color: var(--slategray_80);
+  color: var(--slategray_70);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   transition: opacity 0.2s;
 
   &:hover {
-    color: var(--slategray_80);
-    opacity: 0.5;
+    opacity: .6;
+    color: var(--slategray_70);
   }
 }
 
@@ -179,4 +180,3 @@ body {
 .site-link-list-misc {
   float: right;
 }
-
