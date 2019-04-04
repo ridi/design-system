@@ -12,11 +12,6 @@ html {
     opacity: 0;
     overflow: hidden;
   }
-
-  &.wf-active,
-  &.wf-inactive {
-    transition: opacity .2s ease-out;  
-  }
 }
 
 body {
