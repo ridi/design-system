@@ -7,7 +7,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 40px 0 20px;
+  margin: 40px 0 16px;
   font-weight: bold;
 }
 
@@ -32,12 +32,12 @@ h1 {
 
 h2 {
   font-size: 28px;
-  margin: 0 0 20px;
   padding-top: 60px;
 }
 
 h3 {
   font-size: 22px;
+  margin: 40px 0 14px;
 }
 
 h4 {
@@ -72,7 +72,7 @@ ul ul {
 }
 
 li {
-  margin: 8px 0;
+  margin: 7px 0;
   line-height: 1.75;
 }
 
@@ -96,7 +96,7 @@ th, td {
 }
 
 thead {
-  background: var(--lightsteelblue_5);
+  background: var(--lightsteelblue_10);
 }
 
 th {
@@ -111,21 +111,22 @@ td:first-child {
 }
 
 a {
-  font-weight: bold;
   text-decoration: none;
-  color: var(--dodgerblue_30);
+  color: #1abc9c;
 
   &:hover {
-    color: var(--dodgerblue_40);
+    opacity: .5;
   }
 }
 
 code {
-  padding: 2px 4px;
+  padding: 2px 5px;
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   letter-spacing: 0;
-  background: var(--lightsteelblue_5);
+  background: rgba(227,237,247,.7);
+  color: var(--slategray_80);
+  border-radius: 2px;
 }
 
 pre {
@@ -159,4 +160,46 @@ figcaption {
 hr {
   margin: 60px 0;
   border: 1px solid var(--slategray_5);
+}
+
+.footnotes {
+  margin-top: 80px;
+  font-size: 15px;
+  color: var(--slategray_50);
+
+  & ol {
+    padding-left: 14px;
+  }
+}
+a.footnote {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 0 2px;
+}
+
+.color-box {
+  width: 80%;
+  border: 1px solid rgba(0,0,0,.05);
+  border-radius: 3px;
+  margin: 4px 0;
+  font-size: 14px;
+  color: white;
+
+  & span {
+    background: rgba(0,0,0,.1);
+    padding: 2px 8px 4px 8px;
+    border-radius: 14px;
+    margin: 6px;
+    display: inline-block;
+  }
+
+  & span:last-child {
+    float: right;
+  }
+
+}
+
+.txt-black {
+  color: var(--slategray_70);
 }

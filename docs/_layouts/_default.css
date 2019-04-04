@@ -270,7 +270,7 @@ body {
   line-height: 22px;
   
   &.link_active {
-    color: var(--dodgerblue_40);
+    color: #1abc9c;
     font-weight: bold;
   }
 }
