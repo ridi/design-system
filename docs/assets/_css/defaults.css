@@ -1,5 +1,5 @@
 html {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Open Sans', 'APPLE SD Gothic Neo', HelveticaNeue, Helvetica, NanumGothic, '맑은 고딕', 'Malgun Gothic', arial, sans-serif;
   line-height: normal;
   letter-spacing: -.3px;
   background: var(--white);
@@ -14,7 +14,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   padding-bottom: 30px;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 0;
@@ -24,7 +23,6 @@ h1 {
   & small {
     margin: 8px 0;
     display: block;
-    font-family: 'Noto Sans KR', sans-serif;
     font-size: 20px;
     font-weight: normal;
   }
@@ -121,7 +119,7 @@ a {
 
 code {
   padding: 2px 5px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: monospace;
   font-size: 14px;
   letter-spacing: 0;
   background: rgba(227,237,247,.7);
@@ -172,7 +170,6 @@ hr {
   }
 }
 a.footnote {
-  font-family: sans-serif;
   font-weight: 700;
   font-size: 13px;
   padding: 0 2px;

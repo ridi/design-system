@@ -67,7 +67,6 @@ html.home {
   & .site-content__title {
     margin: 0 0 30px;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
     font-size: 25px;
     font-weight: bold;
     color: var(--slategray_90);
