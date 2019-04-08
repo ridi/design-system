@@ -22,46 +22,18 @@
 ###  Dodger Blue
 
 앱 아이콘, 서점 GNB 등 브랜드를 대표할 수 있는 영역에 주로 dodgerblue-50을 사용합니다.
-
-<div>
-{% for dodgerblue in site.data.dodgerblue-list %}
-    <div class="color-box" style="background: var(--{{ dodgerblue.name }});">
-        <div class="color-label">
-            <span>{{ dodgerblue.name }}</span>
-            <span>{{ dodgerblue.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
+{% include colors.html colors=site.data.dodgerblue-list %}
 
 ###  Slate Gray
 
 텍스트 컬러로 주로 사용합니다.
-<div>
-{% for slategray in site.data.slategray-list %}
-    <div class="color-box" style="background: var(--{{ slategray.name }});">
-        <div class="color-label">
-            <span>{{ slategray.name }}</span>
-            <span>{{ slategray.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
-
+{% include colors.html colors=site.data.slategray-list %}
 
 ###  Blue Gray
 
 Slate Gray와 구분이 필요한 경우 보조 컬러로 사용합니다.
-<div>
-{% for bluegray in site.data.bluegray-list %}
-    <div class="color-box" style="background: var(--{{ bluegray.name }});">
-        <div class="color-label">
-            <span>{{ bluegray.name }}</span>
-            <span>{{ bluegray.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
+{% include colors.html colors=site.data.bluegray-list %}
+
 
 ## 보조 컬러
 
@@ -70,99 +42,35 @@ Slate Gray와 구분이 필요한 경우 보조 컬러로 사용합니다.
 ### Light Steel Blue
 
 흰 배경과 구분이 필요할 때, 배경 컬러로 사용합니다.
-<div>
-{% for lightsteelblue in site.data.lightsteelblue-list %}
-    <div class="color-box" style="background: var(--{{ lightsteelblue.name }});">
-        <div class="color-label">
-            <span>{{ lightsteelblue.name }}</span>
-            <span>{{ lightsteelblue.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
+{% include colors.html colors=site.data.lightsteelblue-list %}
 
 ### Blue Purple
 
 - 현재는 서점 내에서 셀렉트 표기 시 bluepurple-40, 70을 사용하고 있습니다.
 - 앞으로 셀렉트를 대표하는 컬러로 자리매김할 예정입니다.
-<div>
-{% for bluepurple in site.data.bluepurple-list %}
-    <div class="color-box" style="background: {{ bluepurple.hexcode }};">
-        <div class="color-label">
-            <span>{{ bluepurple.name }}</span>
-            <span>{{ bluepurple.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
+{% include colors.html colors=site.data.bluepurple-list %}
 
 ###  Gray
 
 PAPER에서 주로 사용합니다.
-<div>
-{% for gray in site.data.gray-list %}
-    <div class="color-box" style="background: {{ gray.hexcode }};">
-        <div class="color-label">
-            <span>{{ gray.name }}</span>
-            <span>{{ gray.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
+{% include colors.html colors=site.data.gray-list %}
 
 ###  Red
 
 오류, 경고, 주의, 실패와 같은 부정적인 메시지에 사용합니다.
-
-<div>
-{% for red in site.data.red-list %}
-    <div class="color-box" style="background: var(--{{ red.name }});">
-        <div class="color-label">
-            <span>{{ red.name }}</span>
-            <span>{{ red.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
+{% include colors.html colors=site.data.red-list %}
 
 ### Orange
 
 보조 포인트 컬러와 별점에 사용합니다.
-<div>
-{% for orange in site.data.orange-list %}
-    <div class="color-box" style="background: var(--{{ orange.name }});">
-        <div class="color-label">
-            <span>{{ orange.name }}</span>
-            <span>{{ orange.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
+{% include colors.html colors=site.data.orange-list %}
 
 ###  Green
 
 확인, 성공과 같은 긍정적인 메세지에 사용합니다.
-<div>
-{% for green in site.data.green-list %}
-    <div class="color-box" style="background: var(--{{ green.name }});">
-        <div class="color-label">
-            <span>{{ green.name }}</span>
-            <span>{{ green.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
+{% include colors.html colors=site.data.green-list %}
 
 ### Brown
 
 안내 메시지에 사용합니다.
-<div>
-{% for brown in site.data.brown-list %}
-    <div class="color-box" style="background: var(--{{ brown.name }});">
-        <div class="color-label">
-            <span>{{ brown.name }}</span>
-            <span>{{ brown.hexcode }}</span>
-        </div>
-    </div>
-{% endfor %}
-</div>
+{% include colors.html colors=site.data.brown-list %}
