@@ -22,17 +22,17 @@
 ###  Dodger Blue
 
 앱 아이콘, 서점 GNB 등 브랜드를 대표할 수 있는 영역에 주로 dodgerblue-50을 사용합니다.
-{% include colors.html colors=site.data.dodgerblue-list %}
+{% include colors.html colors=site.data.colors.dodgerblue %}
 
 ###  Slate Gray
 
 텍스트 컬러로 주로 사용합니다.
-{% include colors.html colors=site.data.slategray-list %}
+{% include colors.html colors=site.data.colors.slategray %}
 
 ###  Blue Gray
 
 Slate Gray와 구분이 필요한 경우 보조 컬러로 사용합니다.
-{% include colors.html colors=site.data.bluegray-list %}
+{% include colors.html colors=site.data.colors.bluegray %}
 
 
 ## 보조 컬러
@@ -42,35 +42,35 @@ Slate Gray와 구분이 필요한 경우 보조 컬러로 사용합니다.
 ### Light Steel Blue
 
 흰 배경과 구분이 필요할 때, 배경 컬러로 사용합니다.
-{% include colors.html colors=site.data.lightsteelblue-list %}
+{% include colors.html colors=site.data.colors.lightsteelblue %}
 
 ### Blue Purple
 
 - 현재는 서점 내에서 셀렉트 표기 시 bluepurple-40, 70을 사용하고 있습니다.
 - 앞으로 셀렉트를 대표하는 컬러로 자리매김할 예정입니다.
-{% include colors.html colors=site.data.bluepurple-list %}
+{% include colors.html colors=site.data.colors.bluepurple %}
 
 ###  Gray
 
 PAPER에서 주로 사용합니다.
-{% include colors.html colors=site.data.gray-list %}
+{% include colors.html colors=site.data.colors.gray %}
 
 ###  Red
 
 오류, 경고, 주의, 실패와 같은 부정적인 메시지에 사용합니다.
-{% include colors.html colors=site.data.red-list %}
+{% include colors.html colors=site.data.colors.red %}
 
 ### Orange
 
 보조 포인트 컬러와 별점에 사용합니다.
-{% include colors.html colors=site.data.orange-list %}
+{% include colors.html colors=site.data.colors.orange %}
 
 ###  Green
 
 확인, 성공과 같은 긍정적인 메세지에 사용합니다.
-{% include colors.html colors=site.data.green-list %}
+{% include colors.html colors=site.data.colors.green %}
 
 ### Brown
 
 안내 메시지에 사용합니다.
-{% include colors.html colors=site.data.brown-list %}
+{% include colors.html colors=site.data.colors.brown %}

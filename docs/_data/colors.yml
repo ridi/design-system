@@ -1,0 +1,239 @@
+dodgerblue:
+  - name: dodgerblue_5
+    hexcode: "#ebf6ff"
+  - name: dodgerblue_10
+    hexcode: "#cce8ff"
+  - name: dodgerblue_20
+    hexcode: "#99d1ff"
+  - name: dodgerblue_30
+    hexcode: "#66baff"
+  - name: dodgerblue_40
+    hexcode: "#339cf2"
+  - name: dodgerblue_50
+    hexcode: "#1f8ce6"
+  - name: dodgerblue_60
+    hexcode: "#0077d9"
+  - name: dodgerblue_70
+    hexcode: "#0062b3"
+  - name: dodgerblue_80
+    hexcode: "#005499"
+  - name: dodgerblue_90
+    hexcode: "#004680"
+  - name: dodgerblue_100
+    hexcode: "#003866"
+
+slategray:
+  - name: slategray_5
+    hexcode: "#f2f4f5"
+  - name: slategray_10
+    hexcode: "#d1d5d9"
+  - name: slategray_20
+    hexcode: "#d1d5d9"
+  - name: slategray_30
+    hexcode: "#b8bfc4"
+  - name: slategray_40
+    hexcode: "#9ea7ad"
+  - name: slategray_50
+    hexcode: "#808991"
+  - name: slategray_60
+    hexcode: "#636c73"
+  - name: slategray_70
+    hexcode: "#525a61"
+  - name: slategray_80
+    hexcode: "#40474d"
+  - name: slategray_90
+    hexcode: "#303538"
+  - name: slategray_100
+    hexcode: "#212529"
+
+bluegray:
+  - name: bluegray_5
+    hexcode: "#f2f6fc"
+  - name: bluegray_10
+    hexcode: "#d6deeb"
+  - name: bluegray_20
+    hexcode: "#94a2b8"
+  - name: bluegray_30
+    hexcode: "#738096"
+  - name: bluegray_40
+    hexcode: "#59667a"
+  - name: bluegray_50
+    hexcode: "#475161"
+  - name: bluegray_60
+    hexcode: "#384252"
+  - name: bluegray_70
+    hexcode: "#2e3847"
+  - name: bluegray_80
+    hexcode: "#212b3b"
+  - name: bluegray_90
+    hexcode: "#17202"
+  - name: bluegray_100
+    hexcode: "#0f1724"
+
+lightsteelblue:
+  - name: lightsteelblue_5
+    hexcode: "#f7fafc"
+  - name: lightsteelblue_10
+    hexcode: "#f0f5fa"
+  - name: lightsteelblue_20
+    hexcode: "#e3edf7"
+  - name: lightsteelblue_30
+    hexcode: "#d6e3f0"
+  - name: lightsteelblue_40
+    hexcode: "#ccd9e6"
+  - name: lightsteelblue_50
+    hexcode: "#c4d1de"
+  - name: lightsteelblue_60
+    hexcode: "#b3c2d1"
+  - name: lightsteelblue_70
+    hexcode: "#9eafbf"
+  - name: lightsteelblue_80
+    hexcode: "#8c9dad"
+  - name: lightsteelblue_90
+    hexcode: "#7d8e9e"
+  - name: lightsteelblue_100
+    hexcode: "#70808f"
+
+bluepurple:
+  - name: bluepurple_5
+    hexcode: "#f2f3ff"
+  - name: bluepurple_10
+    hexcode: "#d9dcff"
+  - name: bluepurple_20
+    hexcode: "#c0c5ff"
+  - name: bluepurple_30
+    hexcode: "#a7aeff"
+  - name: bluepurple_40
+    hexcode: "#8e97ff"
+  - name: bluepurple_50
+    hexcode: "#7580ff"
+  - name: bluepurple_60
+    hexcode: "#5c69ff"
+  - name: bluepurple_70
+    hexcode: "#515de6"
+  - name: bluepurple_80
+    hexcode: "#4651ce"
+  - name: bluepurple_90
+    hexcode: "#3c46b5"
+  - name: bluepurple_100
+    hexcode: "#262E84"
+
+gray:
+  - name: gray_5
+    hexcode: "#f2f2f2"
+  - name: gray_10
+    hexcode: "#e6e6e6"
+  - name: gray_20
+    hexcode: "#cccccc"
+  - name: gray_30
+    hexcode: "#b3b3b3"
+  - name: gray_40
+    hexcode: "#999999"
+  - name: gray_50
+    hexcode: "#808080"
+  - name: gray_60
+    hexcode: "#666666"
+  - name: gray_70
+    hexcode: "#4d4d4d"
+  - name: gray_80
+    hexcode: "#333333"
+  - name: gray_90
+    hexcode: "#1a1a1a"
+  - name: gray_100
+    hexcode: "#000000"
+    
+red:
+  - name: red_5
+    hexcode: "#fce8e6"
+  - name: red_10
+    hexcode: "#fabab3"
+  - name: red_20
+    hexcode: "#f5948a"
+  - name: red_30
+    hexcode: "#ed6d5e"
+  - name: red_40
+    hexcode: "#eb5847"
+  - name: red_50
+    hexcode: "#e64938"
+  - name: red_60
+    hexcode: "#d93826"
+  - name: red_70
+    hexcode: "#c93221"
+  - name: red_80
+    hexcode: "#ba2c1c"
+  - name: red_90
+    hexcode: "#ab2617"
+  - name: red_100
+    hexcode: "#942114"
+
+orange:
+  - name: orange_5
+    hexcode: "#ffeee6"
+  - name: orange_10
+    hexcode: "#ffccb3"
+  - name: orange_20
+    hexcode: "#ffaa80"
+  - name: orange_30
+    hexcode: "#ff884d"
+  - name: orange_40
+    hexcode: "#fa722e"
+  - name: orange_50
+    hexcode: "#fa5300"
+  - name: orange_60
+    hexcode: "#e64d00"
+  - name: orange_70
+    hexcode: "#c40"
+  - name: orange_80
+    hexcode: "#b33b00"
+  - name: orange_90
+    hexcode: "#930"
+  - name: orange_100
+    hexcode: "#802b00"
+
+green:
+  - name: green_5
+    hexcode: "#f1faeb"
+  - name: green_10
+    hexcode: "#ddf2cc"
+  - name: green_20
+    hexcode: "#b2e08f"
+  - name: green_30
+    hexcode: "#7bcf3b"
+  - name: green_40
+    hexcode: "#5abf0d"
+  - name: green_50
+    hexcode: "#4fb303"
+  - name: green_60
+    hexcode: "#469e03"
+  - name: green_70
+    hexcode: "#409103"
+  - name: green_80
+    hexcode: "#398003"
+  - name: green_90
+    hexcode: "#2c6600"
+  - name: green_100
+    hexcode: "#214d00"
+
+brown:
+  - name: brown_5
+    hexcode: "#fff9f0"
+  - name: brown_10
+    hexcode: "#f5e8d4"
+  - name: brown_20
+    hexcode: "#e6cfad"
+  - name: brown_30
+    hexcode: "#d1aa70"
+  - name: brown_40
+    hexcode: "#c29757"
+  - name: brown_50
+    hexcode: "#b0874a"
+  - name: brown_60
+    hexcode: "#a37a3d"
+  - name: brown_70
+    hexcode: "#8f6930"
+  - name: brown_80
+    hexcode: "#805b24"
+  - name: brown_90
+    hexcode: "#6b4a1a"
+  - name: brown_100
+    hexcode: "#5c3f14"
