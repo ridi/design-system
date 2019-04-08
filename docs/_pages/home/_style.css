@@ -33,7 +33,6 @@ html.home {
     font-size: 19px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: -0.4px;
     color: var(--slategray_50);
   }
 
@@ -67,7 +66,6 @@ html.home {
   & .site-content__title {
     margin: 0 0 30px;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
     font-size: 25px;
     font-weight: bold;
     color: var(--slategray_90);
@@ -76,17 +74,14 @@ html.home {
 
   & .site-content__description {
     margin: 0;
-    font-size: 16px;
     line-height: 1.65;
-    letter-spacing: -0.4px;
-    color: var(--slategray_90);
+    color: var(--slategray_80);
   }
 
   & .site-content__btn-more {
     padding-top: 20px;
     font-size: 15px;
     color: var(--slategray_50);
-    letter-spacing: -0.3px;
     line-height: 1.87;
     text-decoration: underline;
     transition: color 0.2s;

@@ -201,7 +201,6 @@ body {
   padding: 5px 0;
   color: var(--slategray_100);
   border-bottom: 2px solid transparent;
-  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.25;
@@ -230,7 +229,6 @@ body {
     & .site-menu__item-text {
       color: var(--slategray_80);
       border: none;
-      font-family: 'Noto Sans KR', sans-serif;
       font-weight: 500;
     }
   }
@@ -261,7 +259,7 @@ body {
   
   &.link_active {
     color: #1abc9c;
-    font-weight: bold;
+    font-weight: 600;
   }
 }
 
@@ -360,7 +358,6 @@ body {
 
 .site-link-list__link {
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 15px;
   color: var(--lightsteelblue_70);
