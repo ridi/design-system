@@ -1,0 +1,32 @@
+- name: gray_5
+  hexcode: "#f2f2f2"
+
+- name: gray_10
+  hexcode: "#e6e6e6"
+
+- name: gray_20
+  hexcode: "#cccccc"
+
+- name: gray_30
+  hexcode: "#b3b3b3"
+
+- name: gray_40
+  hexcode: "#999999"
+
+- name: gray_50
+  hexcode: "#808080"
+
+- name: gray_60
+  hexcode: "#666666"
+
+- name: gray_70
+  hexcode: "#4d4d4d"
+
+- name: gray_80
+  hexcode: "#333333"
+
+- name: gray_90
+  hexcode: "#1a1a1a"
+
+- name: gray_100
+  hexcode: "#000000"

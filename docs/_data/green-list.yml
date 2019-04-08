@@ -1,0 +1,32 @@
+- name: green_5
+  hexcode: "#f1faeb"
+
+- name: green_10
+  hexcode: "#ddf2cc"
+
+- name: green_20
+  hexcode: "#b2e08f"
+
+- name: green_30
+  hexcode: "#7bcf3b"
+
+- name: green_40
+  hexcode: "#5abf0d"
+
+- name: green_50
+  hexcode: "#4fb303"
+
+- name: green_60
+  hexcode: "#469e03"
+
+- name: green_70
+  hexcode: "#409103"
+
+- name: green_80
+  hexcode: "#398003"
+
+- name: green_90
+  hexcode: "#2c6600"
+
+- name: green_100
+  hexcode: "#214d00"
