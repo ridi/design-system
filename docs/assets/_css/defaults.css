@@ -1,7 +1,8 @@
 html {
-  font-family: 'Open Sans', 'APPLE SD Gothic Neo', HelveticaNeue, Helvetica, NanumGothic, '맑은 고딕', 'Malgun Gothic', arial, sans-serif;
+  font-family: "Open Sans", "APPLE SD Gothic Neo", "HelveticaNeue", "Helvetica", "NanumGothic", "맑은 고딕", "Malgun Gothic", "arial", sans-serif;
   line-height: normal;
-  letter-spacing: -.3px;
+  font-size: 17px;
+  letter-spacing: -0.003em;
   background: var(--white);
   color: var(--slategray_80);
 }

@@ -49,6 +49,7 @@ body {
 }
 
 .site-menu__item {
+  font-family: "Open Sans",sans-serif;
   display: inline-block;
 
   &:not(:last-child) {

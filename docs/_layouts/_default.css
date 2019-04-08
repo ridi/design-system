@@ -259,7 +259,7 @@ body {
   
   &.link_active {
     color: #1abc9c;
-    font-weight: bold;
+    font-weight: 600;
   }
 }
 
