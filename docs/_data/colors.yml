@@ -26,7 +26,7 @@ slategray:
   - name: slategray_5
     hexcode: "#f2f4f5"
   - name: slategray_10
-    hexcode: "#d1d5d9"
+    hexcode: "#e6e8eb"
   - name: slategray_20
     hexcode: "#d1d5d9"
   - name: slategray_30
@@ -66,7 +66,7 @@ bluegray:
   - name: bluegray_80
     hexcode: "#212b3b"
   - name: bluegray_90
-    hexcode: "#17202"
+    hexcode: "#17202e"
   - name: bluegray_100
     hexcode: "#0f1724"
 
@@ -154,7 +154,7 @@ red:
   - name: red_40
     hexcode: "#eb5847"
   - name: red_50
-    hexcode: "#e64938"
+    hexcode: "#e64937"
   - name: red_60
     hexcode: "#d93826"
   - name: red_70
@@ -182,11 +182,11 @@ orange:
   - name: orange_60
     hexcode: "#e64d00"
   - name: orange_70
-    hexcode: "#c40"
+    hexcode: "#cc4400"
   - name: orange_80
     hexcode: "#b33b00"
   - name: orange_90
-    hexcode: "#930"
+    hexcode: "#993300"
   - name: orange_100
     hexcode: "#802b00"
 
