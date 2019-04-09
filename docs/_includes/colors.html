@@ -1,0 +1,10 @@
+<div>
+{% for color in include.colors %}
+    <div class="color-box" style="background: {{ color.hexcode }};">
+        <div class="color-label">
+            <span>{{ color.name }}</span>
+            <span>{{ color.hexcode }}</span>
+        </div>
+    </div>
+{% endfor %}
+</div>
