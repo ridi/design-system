@@ -41,7 +41,7 @@ const BookCover: React.FC<BookCoverProps> = props => {
 
 ```json
   "compilerOptions": {
-    ...options,
+    "some": "options",
     "paths": {
       "@ridi/web-ui/dist/index.node": ["./node_modules/@ridi/web-ui/dist/index.d.ts"]
     }
