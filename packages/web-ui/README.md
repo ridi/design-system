@@ -13,7 +13,7 @@ import { Button } from '@ridi/web-ui';
 ```
 
 ## Support TypeScript
-### Client Only Example
+### Use client side only
 ```typescript jsx
 import * as React from 'react';
 import { Book } from '@ridi/web-ui';
@@ -36,7 +36,7 @@ const BookCover: React.FC<BookCoverProps> = props => {
 }
 ```
 
-### SSR Example
+### Use server or client side (SSR)
 > Add type declaration path to `tsconfig.json` 
 
 ```json
