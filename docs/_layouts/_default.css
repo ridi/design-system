@@ -364,7 +364,8 @@ body {
   transition: color 0.2s;
 
   &:hover {
-    color: var(--lightsteelblue_100);
+    color: var(--lightsteelblue_90);
+    opacity: 1;
   }
 }
 
