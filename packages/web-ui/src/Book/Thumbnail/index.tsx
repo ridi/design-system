@@ -36,6 +36,7 @@ export interface ThumbnailProps extends
     className?: string;
     expired?: boolean;
     expiredAt?: string;
+    addMaxHeight?: boolean;
     notAvailable?: boolean;
     onSelectedChange?: (e: React.SyntheticEvent<any>) => void;
     selectMode?: boolean;
@@ -107,13 +108,14 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     unitBookCount,
     updateBadge = false,
     viewType = ViewType.Portrait,
+    addMaxHeight = false,
     ...extraProps
   } = props;
-  const childrenSize = thumbnailChildrenSize ? thumbnailChildrenSize : thumbnailWidth ? getThumbnailChildrenSize(thumbnailWidth) : ThumbnailChildrenSize.Medium;
+  const childrenSize = thumbnailChildrenSize ? thumbnailChildrenSize : getThumbnailChildrenSize(thumbnailWidth);
 
   return (
     <div
-      css={[styles.thumbnail, thumbnailWidth && styles.thumbnailWidth(thumbnailWidth)]}
+      css={[styles.thumbnail, styles.thumbnailSize(thumbnailWidth, addMaxHeight)]}
       className={classNames(['Thumbnail', className])}
       {...extraProps}
     >

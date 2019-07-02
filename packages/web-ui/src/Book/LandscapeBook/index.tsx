@@ -47,7 +47,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     thumbnailLink,
     thumbnailTitle,
     thumbnailUrl,
-    thumbnailWidth = '100%',
+    thumbnailWidth,
     title,
     unitBook = false,
     unitBookCount,

@@ -1,14 +1,17 @@
 import { PositionProperty } from "csstype";
+import { THUMBNAIL_HEIGHT_RATIO } from "../ThumbnailImage/styles";
+
+export const getMaxHeight = (width: number) => `${Math.floor(width * THUMBNAIL_HEIGHT_RATIO / 100)}px`;
 
 export const thumbnail = {
   lineHeight: 0,
+  maxHeight: 'inherit',
 };
 
-export const thumbnailWidth = (width: number | string) => {
-  return ({
-    width,
-  });
-};
+export const thumbnailSize = (width: number, addMaxHeight: boolean) => ({
+  width,
+  maxHeight: addMaxHeight ? getMaxHeight(width) : null,
+});
 
 export const thumbnailDimmed = {
   display: 'block',
@@ -25,6 +28,7 @@ export const thumbnailImageWrapper = {
   position: 'relative' as PositionProperty,
   fontSize: 0,
   lineHeight: 0,
+  maxHeight: 'inherit',
 };
 
 export const thumbnailLink = {

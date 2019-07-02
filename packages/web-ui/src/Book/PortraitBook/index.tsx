@@ -40,7 +40,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     thumbnailLink,
     thumbnailTitle,
     thumbnailUrl,
-    thumbnailWidth = '100%',
+    thumbnailWidth,
     title,
     unitBook = false,
     unitBookCount,
@@ -54,13 +54,14 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
-      <div className="PortraitBook_Thumbnail" css={styles.thumbnail}>
+      <div className="PortraitBook_Thumbnail" css={styles.thumbnail(thumbnailWidth)}>
         <Book.Thumbnail
           adultBadge={adultBadge}
           downloadProgress={downloadProgress}
           downloadStatus={downloadStatus}
           expired={expired}
           expiredAt={expiredAt}
+          addMaxHeight={true}
           notAvailable={notAvailable}
           onSelectedChange={onSelectedChange}
           readingProgress={readingProgress}

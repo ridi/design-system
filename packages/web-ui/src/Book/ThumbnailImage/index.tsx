@@ -6,8 +6,8 @@ import * as styles from './styles';
 
 export interface ThumbnailImageProps {
   thumbnailUrl: string;
-  thumbnailTitle?: string;
-  thumbnailWidth?: number | string;
+  thumbnailWidth: number; // pixel only
+  thumbnailTitle?: string;  
   className?: string;
 }
 
