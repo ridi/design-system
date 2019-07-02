@@ -44,10 +44,10 @@ import { Book } from '@ridi/web-ui';
     marginLeft: 20,
   }}>
     <Book.Thumbnail
+      addMaxHeight
       thumbnailTitle="데미안"
       thumbnailUrl="https://misc.ridibooks.com/cover/509000028/large?dpi=xhdpi"
       thumbnailWidth={100}
-      addMaxHeight
     />
     <p>max-height on</p>
   </div>

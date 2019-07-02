@@ -31,12 +31,12 @@ export interface ThumbnailProps extends
   DownloadButtonProps,
   ReadingProgressBarProps,
   ThumbnailImageProps {
+    addMaxHeight?: boolean;
     adultBadge?: boolean;
     children?: React.ReactNode;
     className?: string;
     expired?: boolean;
     expiredAt?: string;
-    addMaxHeight?: boolean;
     notAvailable?: boolean;
     onSelectedChange?: (e: React.SyntheticEvent<any>) => void;
     selectMode?: boolean;
@@ -85,6 +85,7 @@ const getThumbnailChildrenSize = (width: string | number) => {
 
 export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   const {
+    addMaxHeight = false,
     adultBadge = false,
     children,
     className,
@@ -108,7 +109,6 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     unitBookCount,
     updateBadge = false,
     viewType = ViewType.Portrait,
-    addMaxHeight = false,
     ...extraProps
   } = props;
   const childrenSize = thumbnailChildrenSize ? thumbnailChildrenSize : getThumbnailChildrenSize(thumbnailWidth);

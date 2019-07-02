@@ -20,6 +20,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
   const {
     additionalButton,
     additionalMetadata,
+    addMaxHeight = true,
     adultBadge,
     author,
     className,
@@ -56,12 +57,12 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     >
       <div className="PortraitBook_Thumbnail" css={styles.thumbnail(thumbnailWidth)}>
         <Book.Thumbnail
+          addMaxHeight={addMaxHeight}
           adultBadge={adultBadge}
           downloadProgress={downloadProgress}
           downloadStatus={downloadStatus}
           expired={expired}
           expiredAt={expiredAt}
-          addMaxHeight={true}
           notAvailable={notAvailable}
           onSelectedChange={onSelectedChange}
           readingProgress={readingProgress}
