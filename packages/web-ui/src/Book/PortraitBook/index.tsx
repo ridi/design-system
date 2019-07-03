@@ -3,6 +3,8 @@ import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 import { Book } from '../';
+import { ViewType } from '../Book';
+import { getReadingStatus } from '../Thumbnail';
 import * as styles from './styles';
 
 export interface PortraitBookProps extends
@@ -49,13 +51,15 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     ...extraProps
   } = props;
 
+  const { isUnRead, isOpened } = getReadingStatus(readingStatus, ViewType.Portrait);
+
   return (
     <div
       css={[styles.portraitBook(thumbnailWidth), portraitStyles]}
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
-      <div className="PortraitBook_Thumbnail" css={styles.thumbnail(thumbnailWidth)}>
+      <div className="PortraitBook_Thumbnail" css={styles.portraitBookThumbnailLayout(thumbnailWidth, isUnRead, isOpened)}>
         <Book.Thumbnail
           addMaxHeight={addMaxHeight}
           adultBadge={adultBadge}

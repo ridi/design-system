@@ -83,6 +83,11 @@ const getThumbnailChildrenSize = (width: string | number) => {
   }
 };
 
+export const getReadingStatus = (readingStatus: ReadingStatus, viewType: ViewType) => ({
+  isUnRead: readingStatus && readingStatus === ReadingStatus.New,
+  isOpened: readingStatus && readingStatus === ReadingStatus.Opened && viewType === ViewType.Portrait,
+});
+
 export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   const {
     addMaxHeight = false,
@@ -112,20 +117,15 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     ...extraProps
   } = props;
   const childrenSize = thumbnailChildrenSize ? thumbnailChildrenSize : getThumbnailChildrenSize(thumbnailWidth);
-
+  const { isUnRead, isOpened } = getReadingStatus(readingStatus, viewType);
   return (
     <div
-      css={[styles.thumbnail, styles.thumbnailSize(thumbnailWidth, addMaxHeight)]}
+      css={styles.thumbnailLayout(thumbnailWidth, addMaxHeight, isUnRead, isOpened)}
       className={classNames(['Thumbnail', className])}
       {...extraProps}
     >
-      {readingStatus && <React.Fragment>
-        {readingStatus === ReadingStatus.New ? (
-          <UnReadDot />
-        ) : readingStatus === ReadingStatus.Opened && viewType === ViewType.Portrait ? (
-          <ReadingProgressBar readingProgress={readingProgress} />
-        ) : null}
-      </React.Fragment>}
+      {isUnRead && <UnReadDot />}
+      {isOpened && <ReadingProgressBar readingProgress={readingProgress} />}
       <div css={styles.thumbnailImageWrapper}>
         {selectMode &&
           <ThumbnailCheckbox
