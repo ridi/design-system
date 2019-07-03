@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.5.0] - 2019-07-03
+### Fixed
+- Fix max-height issue
+
+### Changed
+- **BREAKING**: Change thumbnailWidth prop 
+  - optional to required
+  - type: only pixel number
+
 ## [0.4.0] - 2019-06-27
 ### Changed
 - **BREAKING**: Remove unused components
