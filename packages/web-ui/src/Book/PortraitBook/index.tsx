@@ -22,7 +22,6 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
   const {
     additionalButton,
     additionalMetadata,
-    addMaxHeight = true,
     adultBadge,
     author,
     className,
@@ -48,10 +47,11 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     unitBook = false,
     unitBookCount,
     updateBadge,
+    useMaxHeight = true,
     ...extraProps
   } = props;
 
-  const { isUnRead, isOpened } = getReadingStatus(readingStatus, ViewType.Portrait);
+  const { isUnread, isOpened } = getReadingStatus(readingStatus, ViewType.Portrait);
 
   return (
     <div
@@ -59,9 +59,8 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
-      <div className="PortraitBook_Thumbnail" css={styles.portraitBookThumbnailLayout(thumbnailWidth, isUnRead, isOpened)}>
+      <div className="PortraitBook_Thumbnail" css={styles.portraitBookThumbnailLayout(thumbnailWidth, isUnread, isOpened)}>
         <Book.Thumbnail
-          addMaxHeight={addMaxHeight}
           adultBadge={adultBadge}
           downloadProgress={downloadProgress}
           downloadStatus={downloadStatus}
@@ -82,6 +81,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           unitBook={unitBook}
           unitBookCount={unitBookCount}
           updateBadge={updateBadge}
+          useMaxHeight={useMaxHeight}
           viewType={Book.ViewType.Portrait}
         />
       </div>

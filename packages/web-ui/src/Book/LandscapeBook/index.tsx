@@ -21,7 +21,6 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
   const {
     additionalButton,
     additionalMetadata,
-    addMaxHeight = false,
     adultBadge,
     annotations = {
       bookMarkCount: 0,
@@ -53,6 +52,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     unitBook = false,
     unitBookCount,
     updateBadge,
+    useMaxHeight = false,
     ...extraProps
   } = props;
 
@@ -65,7 +65,6 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
       <div className="LandscapeBook_Thumbnail" css={styles.thumbnail}>
         <Book.Thumbnail
           adultBadge={adultBadge}
-          addMaxHeight={addMaxHeight}
           notAvailable={notAvailable}
           onSelectedChange={onSelectedChange}
           readingStatus={readingStatus}
@@ -77,6 +76,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
           updateBadge={updateBadge}
+          useMaxHeight={useMaxHeight}
           viewType={Book.ViewType.Landscape}
         />
       </div>

@@ -1,10 +1,10 @@
 import { PositionProperty } from "csstype";
 import { ProgressBarOutterHeight } from "../ReadingProgressBar/styles";
 import { THUMBNAIL_HEIGHT_RATIO } from "../ThumbnailImage/styles";
-import { UnReadDotOutterHeight } from "../UnreadDot/styles";
+import { UnreadDotOutterHeight } from "../UnreadDot/styles";
 
 export const getMaxHeight = (width: number) => Math.floor(width * THUMBNAIL_HEIGHT_RATIO / 100);
-export const getAdditionalPaddingTop = (hasUnReadDot: boolean, hasReadingProgressBar: boolean) => hasUnReadDot ? UnReadDotOutterHeight : hasReadingProgressBar ? ProgressBarOutterHeight : 0;
+export const getAdditionalPaddingTop = (hasUnreadDot: boolean, hasReadingProgressBar: boolean) => hasUnreadDot ? UnreadDotOutterHeight : hasReadingProgressBar ? ProgressBarOutterHeight : 0;
 
 export const thumbnail = {
   lineHeight: 0,
@@ -12,11 +12,11 @@ export const thumbnail = {
   position: 'relative' as PositionProperty,
 };
 
-export const thumbnailLayout = (width: number, addMaxHeight: boolean, hasUnReadDot: boolean, hasReadingProgressBar: boolean) => ({
+export const thumbnailLayout = (width: number, useMaxHeight: boolean, hasUnreadDot: boolean, hasReadingProgressBar: boolean) => ({
   ...thumbnail,
   width,
-  maxHeight: addMaxHeight ? `${getMaxHeight(width)}px` : null,
-  paddingTop: `${getAdditionalPaddingTop(hasUnReadDot, hasReadingProgressBar)}px`,
+  maxHeight: useMaxHeight ? `${getMaxHeight(width)}px` : null,
+  paddingTop: `${getAdditionalPaddingTop(hasUnreadDot, hasReadingProgressBar)}px`,
 });
 
 export const thumbnailDimmed = {

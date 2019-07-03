@@ -2,10 +2,10 @@ import { PositionProperty } from 'csstype';
 import { merge } from 'lodash';
 import { resetFont, resetLayout } from "../../styles";
 
-const progresssBarheight = 4;
-const marginBottomForThumbnailInside = 8;
+const PROGRESS_BAR_HEIGHT = 4;
+const MARGIN_BOTTOM_FOR_THUMBNAIL_INSIDE = 8;
 
-export const ProgressBarOutterHeight = progresssBarheight + marginBottomForThumbnailInside;
+export const ProgressBarOutterHeight = PROGRESS_BAR_HEIGHT + MARGIN_BOTTOM_FOR_THUMBNAIL_INSIDE;
 export const readingProgressBar = merge({}, resetLayout, {
   position: 'relative',
   lineHeight: 0,
@@ -46,12 +46,12 @@ export const percentage = merge({}, resetFont, {
 
 export const progressBG = {
   display: 'inline-block',
-  borderRadius: progresssBarheight,
+  borderRadius: PROGRESS_BAR_HEIGHT,
   background: '#d1d5d9',
   overflow: 'hidden',
   position: 'relative' as PositionProperty,
   width: 80,
-  height: progresssBarheight,
+  height: PROGRESS_BAR_HEIGHT,
   '.Thumbnail & ': {
     width: '100%',
   },
@@ -64,7 +64,7 @@ export const progress = {
   top: 0,
   width: 0,
   height: '100%',
-  borderRadius: progresssBarheight,
+  borderRadius: PROGRESS_BAR_HEIGHT,
   background: '#808991',
   color: '#808991',
 };

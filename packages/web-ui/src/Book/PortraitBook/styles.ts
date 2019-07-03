@@ -5,11 +5,11 @@ export const portraitBook = (thumbnailWidth: number) => ({
   width: thumbnailWidth,
 });
 
-export const portraitBookThumbnailLayout = (thumbnailWidth: number,  hasUnReadDot: boolean, hasReadingProgressBar: boolean) => ({
+export const portraitBookThumbnailLayout = (thumbnailWidth: number,  hasUnreadDot: boolean, hasReadingProgressBar: boolean) => ({
   position: 'relative' as PositionProperty,
   lineHeight: 0,
   width: '100%',
-  height: `${getMaxHeight(thumbnailWidth) + getAdditionalPaddingTop(hasUnReadDot, hasReadingProgressBar)}px`,
+  height: `${getMaxHeight(thumbnailWidth) + getAdditionalPaddingTop(hasUnreadDot, hasReadingProgressBar)}px`,
   '& .Thumbnail': {
     position: 'absolute' as PositionProperty,
     bottom: 0,

@@ -19,7 +19,7 @@ import {
   ThumbnailImageProps,
   UnitBookCountProps,
   UnitBookDownloading,
-  UnReadDot,
+  UnreadDot,
   UpdateBadge,
   ViewType,
 } from '../Book';
@@ -31,7 +31,6 @@ export interface ThumbnailProps extends
   DownloadButtonProps,
   ReadingProgressBarProps,
   ThumbnailImageProps {
-    addMaxHeight?: boolean;
     adultBadge?: boolean;
     children?: React.ReactNode;
     className?: string;
@@ -48,6 +47,7 @@ export interface ThumbnailProps extends
     unitBook?: boolean;
     unitBookCount?: React.ReactElement<UnitBookCountProps>;
     updateBadge?: boolean;
+    useMaxHeight?: boolean;
     viewType?: ViewType;
     [extraKey: string]: any;
   }
@@ -84,13 +84,12 @@ const getThumbnailChildrenSize = (width: string | number) => {
 };
 
 export const getReadingStatus = (readingStatus: ReadingStatus, viewType: ViewType) => ({
-  isUnRead: readingStatus && readingStatus === ReadingStatus.New,
+  isUnread: readingStatus && readingStatus === ReadingStatus.New,
   isOpened: readingStatus && readingStatus === ReadingStatus.Opened && viewType === ViewType.Portrait,
 });
 
 export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   const {
-    addMaxHeight = false,
     adultBadge = false,
     children,
     className,
@@ -113,18 +112,19 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     unitBook = false,
     unitBookCount,
     updateBadge = false,
+    useMaxHeight = false,
     viewType = ViewType.Portrait,
     ...extraProps
   } = props;
   const childrenSize = thumbnailChildrenSize ? thumbnailChildrenSize : getThumbnailChildrenSize(thumbnailWidth);
-  const { isUnRead, isOpened } = getReadingStatus(readingStatus, viewType);
+  const { isUnread, isOpened } = getReadingStatus(readingStatus, viewType);
   return (
     <div
-      css={styles.thumbnailLayout(thumbnailWidth, addMaxHeight, isUnRead, isOpened)}
+      css={styles.thumbnailLayout(thumbnailWidth, useMaxHeight, isUnread, isOpened)}
       className={classNames(['Thumbnail', className])}
       {...extraProps}
     >
-      {isUnRead && <UnReadDot />}
+      {isUnread && <UnreadDot />}
       {isOpened && <ReadingProgressBar readingProgress={readingProgress} />}
       <div css={styles.thumbnailImageWrapper}>
         {selectMode &&
