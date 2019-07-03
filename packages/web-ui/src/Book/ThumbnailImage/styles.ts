@@ -1,12 +1,13 @@
 import { BoxSizingProperty, PositionProperty } from "csstype";
 
-export const THUMBNAIL_HEIGHT_RATIO = '162%'; // width : height = 1: 1.618
-export const THUMBNAIL_SKELETON_HEIGHT_RATIO = '142%';
+export const THUMBNAIL_HEIGHT_RATIO = 162; // width : height = 1: 1.618
+export const THUMBNAIL_SKELETON_HEIGHT_RATIO = 142;
 
 export const thumbnailImage = {
   display: 'inline-block',
   position: 'relative' as PositionProperty,
   lineHeight: 0,
+  maxHeight: 'inherit',
   '&::after': {
     display: 'block',
     boxSizing: 'border-box' as BoxSizingProperty,
@@ -27,13 +28,14 @@ export const thumbnailImage = {
   },
 };
 
-export const image = (isImageLoaded : boolean, thumbnailWidth : string | number = '100%') => {
+export const image = (isImageLoaded : boolean, thumbnailWidth : number) => {
   const backgroundImage = !isImageLoaded ? 'linear-gradient(147deg, #e6e8eb, #edeff2 55%, #e6e8eb)' : null;
-  const paddingBottom = !isImageLoaded ? THUMBNAIL_SKELETON_HEIGHT_RATIO : null;
+  const paddingBottom = !isImageLoaded ? `${THUMBNAIL_SKELETON_HEIGHT_RATIO}%` : null;
   const height = !isImageLoaded ? 0 : null;
   return ({
     display: 'block',
     width: thumbnailWidth,
+    maxHeight: 'inherit',
     height,
     paddingBottom,
     backgroundImage,

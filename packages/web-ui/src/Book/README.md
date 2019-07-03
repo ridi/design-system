@@ -4,7 +4,10 @@
 import { Book } from '@ridi/web-ui';
 
 <div style={{ width: '200px' }}>
-  <Book.Thumbnail thumbnailUrl="https://misc.ridibooks.com/cover/204000008/xxlarge?dpi=xxhdpi" />
+  <Book.Thumbnail
+    thumbnailUrl="https://misc.ridibooks.com/cover/204000008/xxlarge?dpi=xxhdpi"
+    thumbnailWidth={200} // pixel only
+  />
 </div>
 ```
 
@@ -14,13 +17,41 @@ import { Book } from '@ridi/web-ui';
 <Book.Thumbnail
   thumbnailTitle="그레이의 50가지 그림자" // default '도서 표지'
   thumbnailUrl="https://misc.ridibooks.com/cover/862000002/xxlarge?dpi=xxhdpi"
-  thumbnailWidth={150} // default '100%'
+  thumbnailWidth={150}
   viewType={Book.ViewType.Portrait} // default ViewType.Portrait
-  
+
   updateBadge
   adultBadge
   thumbnailLink={<a href="/">Thumbnail link</a>}
 />
+```
+
+```jsx
+import { Book } from '@ridi/web-ui';
+<div>
+  <div style={{
+    display: 'inline-block',
+  }}>
+    <Book.Thumbnail
+      thumbnailTitle="데미안"
+      thumbnailUrl="https://misc.ridibooks.com/cover/509000028/large?dpi=xhdpi"
+      thumbnailWidth={100}
+    />
+    <p>max-height off</p>
+  </div>
+  <div style={{
+    display: 'inline-block',
+    marginLeft: 20,
+  }}>
+    <Book.Thumbnail
+      useMaxHeight
+      thumbnailTitle="데미안"
+      thumbnailUrl="https://misc.ridibooks.com/cover/509000028/large?dpi=xhdpi"
+      thumbnailWidth={100}
+    />
+    <p>max-height on</p>
+  </div>
+</div>
 ```
 
 ```jsx

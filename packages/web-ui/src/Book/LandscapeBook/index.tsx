@@ -47,11 +47,12 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     thumbnailLink,
     thumbnailTitle,
     thumbnailUrl,
-    thumbnailWidth = '100%',
+    thumbnailWidth,
     title,
     unitBook = false,
     unitBookCount,
     updateBadge,
+    useMaxHeight = false,
     ...extraProps
   } = props;
 
@@ -75,6 +76,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
           updateBadge={updateBadge}
+          useMaxHeight={useMaxHeight}
           viewType={Book.ViewType.Landscape}
         />
       </div>

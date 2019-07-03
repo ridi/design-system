@@ -3,6 +3,8 @@ import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 import { Book } from '../';
+import { ViewType } from '../Book';
+import { getReadingStatus } from '../Thumbnail';
 import * as styles from './styles';
 
 export interface PortraitBookProps extends
@@ -40,13 +42,16 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     thumbnailLink,
     thumbnailTitle,
     thumbnailUrl,
-    thumbnailWidth = '100%',
+    thumbnailWidth,
     title,
     unitBook = false,
     unitBookCount,
     updateBadge,
+    useMaxHeight = true,
     ...extraProps
   } = props;
+
+  const { isUnread, isOpened } = getReadingStatus(readingStatus, ViewType.Portrait);
 
   return (
     <div
@@ -54,7 +59,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
-      <div className="PortraitBook_Thumbnail" css={styles.thumbnail}>
+      <div className="PortraitBook_Thumbnail" css={styles.portraitBookThumbnailLayout(thumbnailWidth, isUnread, isOpened)}>
         <Book.Thumbnail
           adultBadge={adultBadge}
           downloadProgress={downloadProgress}
@@ -76,6 +81,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           unitBook={unitBook}
           unitBookCount={unitBookCount}
           updateBadge={updateBadge}
+          useMaxHeight={useMaxHeight}
           viewType={Book.ViewType.Portrait}
         />
       </div>

@@ -1,21 +1,20 @@
 import { PositionProperty } from "csstype";
-import { THUMBNAIL_HEIGHT_RATIO } from "../ThumbnailImage/styles";
+import { getAdditionalPaddingTop, getMaxHeight } from "../Thumbnail/styles";
 
-export const portraitBook = (thumbnailWidth: number | string) => ({
+export const portraitBook = (thumbnailWidth: number) => ({
   width: thumbnailWidth,
 });
 
-export const thumbnail = {
+export const portraitBookThumbnailLayout = (thumbnailWidth: number,  hasUnreadDot: boolean, hasReadingProgressBar: boolean) => ({
   position: 'relative' as PositionProperty,
   lineHeight: 0,
   width: '100%',
-  height: 'auto',
-  paddingBottom: THUMBNAIL_HEIGHT_RATIO,
+  height: `${getMaxHeight(thumbnailWidth) + getAdditionalPaddingTop(hasUnreadDot, hasReadingProgressBar)}px`,
   '& .Thumbnail': {
     position: 'absolute' as PositionProperty,
     bottom: 0,
   },
-};
+});
 
 export const metadata = {
   marginTop: 5,
