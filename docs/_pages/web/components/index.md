@@ -9,11 +9,11 @@
 
 팁이나 안내 사항 같은 부가적인 정보나 경고의 상태를 알릴 때 사용합니다.
 
-![Alert](alert-intro.png)
+![Alert](alert/alert-intro.png)
 
 ### 타입
 
-![타입](alert-type.png)
+![타입](alert/alert-type.png)
 
 - 정보
     - 유저에게 피드백을 요구하지 않는 일반적인 정보 전달에 쓰입니다.
@@ -24,19 +24,19 @@
 
 #### 텍스트만 있는 경우
 
-![텍스트](alert-text.png)
+![텍스트](alert/alert-text.png)
 
 - 본문 내 `bold` 효과를 쓸 수 있습니다.
 
 #### 링크 버튼이 있는 경우
 
-![링크](alert-link.png)
+![링크](alert/alert-link.png)
 
 - 링크로 연결되는 텍스트 부분은 `bold`와 `underline` 효과를 적용하고 오른쪽에 `>` 아이콘을 붙입니다.
 
 #### 더보기 버튼이 있는 경우
 
-![더보기](alert-more.png)
+![더보기](alert/alert-more.png)
 
 - 본문이 아래 높이 값을 초과하는 경우 `더보기` 버튼을 붙입니다.
     - 모바일: 160px 이상
@@ -45,7 +45,7 @@
 
 #### 이미지가 있는 경우
 
-![더보기](alert-image.png)
+![더보기](alert/alert-image.png)
 
 - 이미지 자체에 외부 링크를 허용합니다.
 - 이미지가 아래 높이 값을 초과하는 경우 `더보기` 버튼을 붙입니다.
