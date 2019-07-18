@@ -358,6 +358,11 @@
 
 
 ## Text Inputs
+텍스트 인풋은 사용자가 입력해야 하는 내용에 적절한 힌트를 제공합니다. 또한, 에러와 같은 상태에 따라 시각적인 피드백을 제공합니다. 
+최대 한 줄을 적을 수 있는 Text-input 형태와 검색어를 입력하는 Search-input, 여러 줄의 내용을 적을 때 사용하는 Text-area로 구분합니다.
+
+![Text Input](text-input/text-input-intro.png)
+
 
 ### 종류
 
