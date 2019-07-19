@@ -1,6 +1,6 @@
 import { PositionProperty } from 'csstype';
 import { merge } from 'lodash';
-import { resetAppearance, resetLayout } from "../../styles";
+import { resetAppearance, resetLayout } from "src/styles";
 import { ThumbnailChildrenSize } from '../Thumbnail';
 
 export const checkbox = {

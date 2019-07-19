@@ -1,5 +1,5 @@
 import { BoxSizingProperty, PositionProperty, WhiteSpaceProperty } from "csstype";
-import { resetFont } from "../../styles";
+import { resetFont } from "src/styles";
 import { ThumbnailChildrenSize } from "../Thumbnail";
 
 export const ridiselect = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Medium) => {

@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { displayHidden, resetLayout } from "../../styles";
+import { displayHidden, resetLayout } from "src/styles";
 import { ThumbnailChildrenSize } from '../Thumbnail';
 
 export const notAvailable = merge({}, resetLayout, {

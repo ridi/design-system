@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { up as UpIcon} from '@ridi/web-icons';
 import * as React from 'react';
-import { displayHidden } from '../../styles';
+import { displayHidden } from 'src/styles';
 import * as styles from './styles';
 
 export const UpdateBadge: React.FunctionComponent = () => (

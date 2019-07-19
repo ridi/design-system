@@ -1,6 +1,6 @@
 import { DisplayProperty, PositionProperty, WhiteSpaceProperty } from 'csstype';
 import { merge } from 'lodash';
-import { resetAppearance, resetFont, resetLayout } from "../../styles";
+import { resetAppearance, resetFont, resetLayout } from "src/styles";
 
 export const unitBookCount = merge({}, resetAppearance, resetFont, resetLayout, {
   display: 'inline-block',
