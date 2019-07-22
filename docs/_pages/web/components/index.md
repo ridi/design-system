@@ -358,22 +358,60 @@
 
 
 ## Text Inputs
+
 텍스트 인풋은 사용자가 입력해야 하는 내용에 적절한 힌트를 제공합니다. 또한, 에러와 같은 상태에 따라 시각적인 피드백을 제공합니다. 
-최대 한 줄을 적을 수 있는 Text-input 형태와 검색어를 입력하는 Search-input, 여러 줄의 내용을 적을 때 사용하는 Text-area로 구분합니다.
 
 ![Text Input](text-input/text-input-intro.png)
 
-
 ### 종류
 
-- 싱글 라인 필드
+#### Text input
 
-- 텍스트 에어리어
+![Text Input](text-input/text-input-1.png)
 
-### 유의사항
+- 최대 한 줄 짜리 입력 필드를 일컫습니다.
+- 여러 개의 텍스트 인풋을 이용해 하나의 폼(Form)을 만들 수도 있습니다. (ex. 회원가입)
+- 사용자가 입력한 텍스트의 유효성을 아이콘, 텍스트 등의 시각적인 피드백으로 알려줍니다.
 
-- 공간이 부족할 경우 레이블은 플레이스홀더로 대체할 수 있습니다.
-- 입력한 텍스트의 유효성을 아이콘, 텍스트 등으로 표시하여 시각적인 피드백을 제공하는 게 좋습니다.
+![Text Input](text-input/text-input-structure-1.png)
+
+1. Container
+2. Label text
+3. Input/helper text
+4. Validation text
+5. Status icon (error, success, loading, etc)
+6. Staus border (nomal, hover, error, disabled)
+
+#### Search input
+
+![Text Input](text-input/text-input-2.png)
+
+- GNB
+    - 배경색이 있는 곳이 쓰일 경우 Container의 배경색을 #FFF로 합니다. 
+    - 검색어가 입력된 상태에서는 검색어를 한 번에 지울 수 있도록 [취소] 버튼을 제공합니다. 
+- 서브 페이지
+    - 페이지 타이틀 혹은 탭 요소 아래에 위치합니다.
+
+![Text Input](text-input/text-input-structure-2.png)
+
+1. Container
+2. Search icon
+3. Input/helper text
+4. Cancle button
+5. Status border (hover)
+
+#### Text area
+
+![Text Input](text-input/text-input-3.png)
+
+- 한 줄 이상의 글을 적을 때 쓰입니다.
+- 주로, 입력한 내용을 저장하는 [완료] 버튼과 함께 쓰입니다.
+
+#### 유의사항
+
+- 상태에 따라 Container의 보더 색상을 다르게 표시합니다. 
+    - normal/hover/focus/error/disabled
+- 사용처에 맞지 않는 text-input을 쓰지 않도록 주의합니다.
 
 ## Toasts
 
