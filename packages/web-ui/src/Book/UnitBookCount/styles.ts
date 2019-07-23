@@ -1,4 +1,4 @@
-import { DisplayProperty, PositionProperty, WhiteSpaceProperty } from 'csstype';
+import { PositionProperty, WhiteSpaceProperty } from 'csstype';
 import { merge } from 'lodash';
 import { resetAppearance, resetFont, resetLayout } from "src/styles";
 
@@ -47,7 +47,7 @@ export const num = {
 };
 
 export const icon = {
-  position: 'absolute',
+  position: 'absolute' as PositionProperty,
   right: 7,
   top: '50%',
   transform: 'translate3d(0, -50%, 0)',

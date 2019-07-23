@@ -5,9 +5,14 @@ const chalk = require('chalk');
 
 const fileNames = fs.readdirSync('svgs').filter(name => /\.svg$/.test(name));
 
+const getModuleName = fileName => {
+  const moduleName = _.camelCase(path.basename(fileName, '.svg'));
+  return moduleName.charAt(0).toUpperCase() + moduleName.slice(1);
+};
+
 (() => {
   const data = fileNames.map((fileName) => {
-    const moduleName = _.camelCase(path.basename(fileName, '.svg'));
+    const moduleName = getModuleName(fileName);
     return `export { default as ${moduleName} } from './svgs/${fileName}';`;
   }).join('\n') + '\n';
 
@@ -18,7 +23,7 @@ const fileNames = fs.readdirSync('svgs').filter(name => /\.svg$/.test(name));
 
 (() => {
   const data = fileNames.map((fileName) => {
-    const moduleName = _.camelCase(path.basename(fileName, '.svg'));
+    const moduleName = getModuleName(fileName);
     return `export const ${moduleName}: any;`;
   }).join('\n') + '\n';
 

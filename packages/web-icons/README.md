@@ -10,16 +10,16 @@ $ npm install @ridi/web-icons
 
 With [`url-loader`](https://www.npmjs.com/package/url-loader):
 ```jsx static
-import { airplane } from '@ridi/web-icons';
+import { CheckboxCircle } from '@ridi/web-icons';
 
-<img src={airplane} />
+<img src={CheckboxCircle} />
 ```
 
 With [SVGR](https://github.com/smooth-code/svgr):
 ```jsx static
-import { airplane: Airplane } from '@ridi/web-icons';
+import { CheckboxCircle } from '@ridi/web-icons';
 
-<Airplane />
+<CheckboxCircle />
 ```
 
 ## Icons
