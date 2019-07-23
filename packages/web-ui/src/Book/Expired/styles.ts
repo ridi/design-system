@@ -50,7 +50,7 @@ export const expiredIcon = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.M
     left = 8;
   }
   return {
-    position: 'absolute',
+    position: 'absolute' as PositionProperty,
     left: 2,
     top: '50%',
     transform: 'translate3d(0, -50%, 0)',
