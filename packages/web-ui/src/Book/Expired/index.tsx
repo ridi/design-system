@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { timer as TimerIcon } from '@ridi/web-icons';
 import * as React from 'react';
+import TimerIcon from 'src/svgs/Timer.svg';
 import { ThumbnailChildrenSize } from '../Thumbnail';
 import * as styles from './styles';
 
