@@ -1,6 +1,6 @@
 import { PositionProperty } from 'csstype';
 import { merge } from 'lodash';
-import { resetLayout } from "../../styles";
+import { resetLayout } from "src/styles";
 
 const UNREAD_DOT_SIZE = 6;
 const UNREAD_DOT_MARGIN_BOTTOM = 8;

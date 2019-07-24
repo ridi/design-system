@@ -1,6 +1,6 @@
 import { PositionProperty } from 'csstype';
 import { merge } from 'lodash';
-import { resetFont, resetLayout } from "../../styles";
+import { resetFont, resetLayout } from "src/styles";
 
 const PROGRESS_BAR_HEIGHT = 4;
 const MARGIN_BOTTOM_FOR_THUMBNAIL_INSIDE = 8;

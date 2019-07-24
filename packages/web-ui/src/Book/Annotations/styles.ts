@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { resetFont, resetLayout } from '../../styles';
+import { resetFont, resetLayout } from 'src/styles';
 
 export const annotations = merge({}, resetLayout, {
   listStyle: 'none',
