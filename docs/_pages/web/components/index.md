@@ -370,41 +370,32 @@
 ![Text Input](text-input/text-input-1.png)
 
 - 최대 한 줄 짜리 입력 필드를 일컫습니다.
-- 여러 개의 텍스트 인풋을 이용해 하나의 폼(Form)을 만들 수도 있습니다. (ex. 회원가입)
+- 여러 개의 텍스트 인풋과 다른 컴포넌트를 조합하여 하나의 폼(Form)을 만들 수 있습니다. (ex. 회원가입)
 - 사용자가 입력한 텍스트의 유효성을 아이콘, 텍스트 등의 시각적인 피드백으로 알려줍니다.
 
+##### 구조
 ![Text Input](text-input/text-input-structure-1.png)
-
-1. Container
-2. Label text
-3. Input/helper text
-4. Validation text
-5. Status icon (error, success, loading, etc)
-6. Staus border (nomal, hover, error, disabled)
 
 #### Search input
 
 ![Text Input](text-input/text-input-2.png)
 
 - GNB
-    - 배경색이 있는 곳이 쓰일 경우 Container의 배경색을 #FFF로 합니다. 
-    - 검색어가 입력된 상태에서는 검색어를 한 번에 지울 수 있는 버튼을 제공합니다. 
+    - 배경색이 있는 곳에 쓰일 경우 Container의 배경색을 #FFF로 합니다. 
+    - 검색어를 입력한 상태에서는 검색어를 한 번에 지울 수 있는 버튼을 제공합니다. 
 - 서브 페이지
     - 페이지 타이틀 혹은 탭 요소 아래에 위치합니다.
 
-![Text Input](text-input/text-input-structure-2.png)
+##### 구조
 
-1. Container
-2. Search icon
-3. Input/helper text
-4. Cancle button
-5. Status border (hover)
+![Text Input](text-input/text-input-structure-2.png)
 
 #### Text area
 
 ![Text Input](text-input/text-input-3.png)
 
-- 한 줄 이상의 글을 적을 때 쓰입니다. 글자 수에 따라 영역의 높이가 늘어납니다.
+- 한 줄 이상의 글을 적을 때 쓰입니다. 
+- 글자 수에 따라 Container의 높이가 늘어납니다. 단, 쓰이는 곳에 따라 적절한 최소 높이를 지정해줍니다.
 - 주로, 입력한 내용을 저장하는 버튼과 함께 쓰입니다.
 
 ### 유의사항
