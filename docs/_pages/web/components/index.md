@@ -363,20 +363,22 @@
 
 ![Text Input](text-input/text-input-intro.png)
 
-### 종류
-
-#### Text input
+### Text input
 
 ![Text Input](text-input/text-input-1.png)
 
 - 최대 한 줄 짜리 입력 필드를 일컫습니다.
 - 여러 개의 텍스트 인풋과 다른 컴포넌트를 조합하여 하나의 폼(Form)을 만들 수 있습니다. (ex. 회원가입)
 - 사용자가 입력한 텍스트의 유효성을 아이콘, 텍스트 등의 시각적인 피드백으로 알려줍니다.
+- 숫자나 비밀번호를 입력하는 경우 letter-spacing을 넓게 하여 각 글자가 잘 구분되어 보이도록 합니다.
 
-##### 구조
+#### 구조 (Structure)
 ![Text Input](text-input/text-input-structure-1.png)
 
-#### Search input
+#### 상태 (Status)
+![Text Input](text-input/text-input-status.png)
+
+### Search input
 
 ![Text Input](text-input/text-input-2.png)
 
@@ -386,11 +388,11 @@
 - 서브 페이지
     - 페이지 타이틀 혹은 탭 요소 아래에 위치합니다.
 
-##### 구조
+#### 구조 (Structure)
 
 ![Text Input](text-input/text-input-structure-2.png)
 
-#### Text area
+### Text area
 
 ![Text Input](text-input/text-input-3.png)
 
