@@ -300,13 +300,13 @@
 
 탭을 사용하면 한정된 공간 안에서 연관된 여러 콘텐츠를 체계적으로 보여줄 수 있습니다. 페이지에서 완전히 벗어나지 않고 쉽게 연관된 콘텐츠를 살펴볼 수 있습니다.
 
-![Tabs](tab-intro.jpg)
+![Tabs](tab/tab-intro.jpg)
 
 ### 분류
 
 #### 탭 개수에 따른 분류
 
-![탭 개수](tab-number.jpg)
+![탭 개수](tab/tab-number.jpg)
 
 - 1개의 탭
 - 2개의 탭
@@ -315,7 +315,7 @@
 
 #### 위치에 따른 분류
 
-![위치](tab-position.jpg)
+![위치](tab/tab-position.jpg)
 
 - 최상단
   - 페이지 타이틀과 함께 사용됩니다.
@@ -327,7 +327,7 @@
 
 모바일에서 탭 아이템 개수가 고정일 때 사용하며 화면의 가로를 모두 사용합니다. 
 
-![가로 길이에 따른 분류](tab-width.jpg)
+![가로 길이에 따른 분류](tab/tab-width.jpg)
 
 - 전체 길이를 탭 아이템 개수로 나눠서 모두 균등한 너비인 탭
 - 탭 아이템 내 텍스트 레이블의 비율에 맞춰 불균등한 너비를 사용하는 탭
@@ -337,7 +337,7 @@
 
 #### 가로 스크롤이 가능한 탭
 
-![가로 스크롤 가능 탭](tab-overflow.jpg)
+![가로 스크롤 가능 탭](tab/tab-overflow.jpg)
 
 - 주로 탭 아이템 개수가 유동적인 경우 사용합니다.
 - 텍스트 레이블의 너비를 기준으로 탭 아이템 가로 길이를 산정하며 탭 아이템은 일정한 여백을 두고 나열됩니다.
@@ -345,7 +345,7 @@
 
 #### 데스크톱 탭
 
-![데스크톱 탭](tab-desktop.jpg)
+![데스크톱 탭](tab/tab-desktop.jpg)
 
 데스크톱 탭은 모바일에서 화면 가로를 모두 채워 쓰던 탭이더라도 가로 스크롤 가능한 탭처럼 텍스트 레이블의 너비를 기준으로 탭 아이템 가로 길이를 산정하여 일정한 여백을 두고 나열하여 사용합니다.
 
@@ -357,18 +357,54 @@
 
 
 
-## Text Inputs
+## Text inputs
 
-### 종류
+텍스트 인풋은 사용자가 입력해야 하는 내용에 적절한 힌트를 제공합니다. 또한, 에러와 같은 상태에 따라 시각적인 피드백을 제공합니다. 
 
-- 싱글 라인 필드
+![Text Input](text-input/text-input-intro.png)
 
-- 텍스트 에어리어
+### Text input
+
+![Text Input](text-input/text-input-1.png)
+
+- 최대 한 줄 짜리 입력 필드를 일컫습니다.
+- 여러 개의 텍스트 인풋과 다른 컴포넌트를 조합하여 하나의 폼(Form)을 만들 수 있습니다. (ex. 회원가입)
+- 사용자가 입력한 텍스트의 유효성을 아이콘, 텍스트 등의 시각적인 피드백으로 알려줍니다.
+- 숫자나 비밀번호를 입력하는 경우 letter-spacing을 넓게 하여 각 글자가 잘 구분되어 보이도록 합니다.
+
+#### 구조 (Structure)
+![Text Input](text-input/text-input-structure-1.png)
+
+#### 상태 (Status)
+![Text Input](text-input/text-input-status.png)
+
+### Search input
+
+![Text Input](text-input/text-input-2.png)
+
+- GNB
+    - 배경색이 있는 곳에 쓰일 경우 Container의 배경색을 #FFF로 합니다. 
+    - 검색어를 입력한 상태에서는 검색어를 한 번에 지울 수 있는 버튼을 제공합니다. 
+- 서브 페이지
+    - 페이지 타이틀 혹은 탭 요소 아래에 위치합니다.
+
+#### 구조 (Structure)
+
+![Text Input](text-input/text-input-structure-2.png)
+
+### Text area
+
+![Text Input](text-input/text-input-3.png)
+
+- 한 줄 이상의 글을 적을 때 쓰입니다. 
+- 글자 수에 따라 Container의 높이가 늘어납니다. 단, 쓰이는 곳에 따라 적절한 최소 높이를 지정해줍니다.
+- 주로, 입력한 내용을 저장하는 버튼과 함께 쓰입니다.
 
 ### 유의사항
 
-- 공간이 부족할 경우 레이블은 플레이스홀더로 대체할 수 있습니다.
-- 입력한 텍스트의 유효성을 아이콘, 텍스트 등으로 표시하여 시각적인 피드백을 제공하는 게 좋습니다.
+- 상태에 따라 Container의 보더 색상을 다르게 표시합니다. 
+    - normal/hover/focus/error/disabled
+- 사용처에 맞지 않는 text-input을 쓰지 않도록 주의합니다.
 
 ## Toasts
 
