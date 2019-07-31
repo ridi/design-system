@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import NotAvailableIcon from 'src/svgs/NotAvailable.svg';
+import NotAvailableIcon from 'src/icons/NotAvailable.svg';
 import { ThumbnailChildrenSize } from '../Thumbnail';
 import * as styles from './styles';
 

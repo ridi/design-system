@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import ArrowIcon from 'src/svgs/ArrowTriangleRight.svg';
+import ArrowIcon from 'src/icons/ArrowTriangleRight.svg';
 import * as styles from './styles';
 
 export enum BookCountUnit {

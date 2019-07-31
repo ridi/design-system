@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import DownloadableIcon from 'src/svgs/DownloadableCircle.svg';
-import WaitingIcon from 'src/svgs/DownloadWaiting.svg';
+import DownloadableIcon from 'src/icons/DownloadableCircle.svg';
+import WaitingIcon from 'src/icons/DownloadWaiting.svg';
 import * as styles from './styles';
 
 export enum DownloadStatus {

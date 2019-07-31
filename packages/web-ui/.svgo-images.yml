@@ -1,0 +1,10 @@
+plugins:
+  - removeViewBox: false
+  - removeDimensions: true
+  - removeAttrs:
+      attrs:
+        - 'fill-rule'
+        - 'stroke'
+        - 'version'
+        - 'class'
+  - sortAttrs: true

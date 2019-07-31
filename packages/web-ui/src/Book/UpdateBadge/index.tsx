@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import UpIcon from 'src/icons/Up.svg';
 import { displayHidden } from 'src/styles';
-import UpIcon from 'src/svgs/Up.svg';
 import * as styles from './styles';
 
 export const UpdateBadge: React.FunctionComponent = () => (

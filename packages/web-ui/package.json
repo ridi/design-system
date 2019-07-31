@@ -18,6 +18,8 @@
     "clean": "git clean -xdf --exclude=node_modules .",
     "build": "rm -rf ./dist && webpack",
     "lint": "tslint src/**/*.{ts,tsx} -c ./tslint.json --fix",
+    "svgo-icons": "svgo --config=.svgo-icons.yml --folder=src/icons --multipass",
+    "svgo-images": "svgo --config=.svgo-images.yml --folder=src/images --multipass",
     "precommit": "lint-staged"
   },
   "devDependencies": {
