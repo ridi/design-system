@@ -44,11 +44,11 @@ Slate Gray와 구분이 필요한 경우 보조 컬러로 사용합니다.
 흰 배경과 구분이 필요할 때, 배경 컬러로 사용합니다.
 {% include colors.html colors=site.data.colors.lightsteelblue %}
 
-### Blue Purple
+### Scuba Blue
 
-- 현재는 서점 내에서 셀렉트 표기 시 bluepurple-40, 70을 사용하고 있습니다.
+- 현재는 서점 내에서 셀렉트 표기 시 scubablue-50, 70을 사용하고 있습니다.
 - 앞으로 셀렉트를 대표하는 컬러로 자리매김할 예정입니다.
-{% include colors.html colors=site.data.colors.bluepurple %}
+{% include colors.html colors=site.data.colors.scubablue %}
 
 ###  Gray
 
