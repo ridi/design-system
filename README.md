@@ -34,9 +34,10 @@ $ yarn start
 #### Deployment
 To publish the packages, please follow the steps:
 
-1. Checkout `master` branch.
-2. Update `CHANGELOG.md` and commit changes.
-3. Run `yarn lerna version` to update the packages' version. This will automatically *commit version changes* and *add a version tag*.
-4. Push the commits & version tag to `master` branch.
+1. Create a new branch from `master` and do the following:
+   - Update `CHANGELOG.md` and commit changes.
+   - Run `yarn lerna version --no-git-tag-version` to update the packages' version. This will automatically *commit version changes*.
+1. Open a pull request with the branch.
+1. When the PR is merged, create a version tag on `master` and push it.
 
 > CI will be triggered after pushing the tag to start deployment process.
