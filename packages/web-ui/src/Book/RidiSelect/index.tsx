@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { ridiselect as RidiselectIcon } from '@ridi/web-icons';
+import { Ridiselect as RidiselectIcon } from '@ridi/web-icons';
 import * as React from 'react';
 import { ThumbnailChildrenSize } from '../Thumbnail';
 import * as styles from './styles';

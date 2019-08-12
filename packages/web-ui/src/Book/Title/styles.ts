@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { lineClamp, resetFont, resetLayout } from "../../styles";
+import { lineClamp, resetFont, resetLayout } from "src/styles";
 
 export const title = merge({}, lineClamp(), resetFont, resetLayout, {
   color: '#212529',

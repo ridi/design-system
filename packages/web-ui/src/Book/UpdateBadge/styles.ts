@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { resetFont } from "../../styles";
+import { resetFont } from "src/styles";
 
 export const updateBadge = merge({}, resetFont, {
   position: 'absolute',

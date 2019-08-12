@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { notAvailable as NotAvailableIcon } from '@ridi/web-icons';
+import NotAvailableIcon from 'src/svgs/NotAvailable.svg';
 import { ThumbnailChildrenSize } from '../Thumbnail';
 import * as styles from './styles';
 

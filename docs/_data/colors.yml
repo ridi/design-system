@@ -94,29 +94,29 @@ lightsteelblue:
   - name: lightsteelblue_100
     hexcode: "#70808f"
 
-bluepurple:
-  - name: bluepurple_5
-    hexcode: "#f2f3ff"
-  - name: bluepurple_10
-    hexcode: "#d9dcff"
-  - name: bluepurple_20
-    hexcode: "#c0c5ff"
-  - name: bluepurple_30
-    hexcode: "#a7aeff"
-  - name: bluepurple_40
-    hexcode: "#8e97ff"
-  - name: bluepurple_50
-    hexcode: "#7580ff"
-  - name: bluepurple_60
-    hexcode: "#5c69ff"
-  - name: bluepurple_70
-    hexcode: "#515de6"
-  - name: bluepurple_80
-    hexcode: "#4651ce"
-  - name: bluepurple_90
-    hexcode: "#3c46b5"
-  - name: bluepurple_100
-    hexcode: "#262E84"
+scubablue:
+  - name: scubablue_5
+    hexcode: "#e9f8fa"
+  - name: scubablue_10
+    hexcode: "#c1ebf2"
+  - name: scubablue_20
+    hexcode: "#99dee9"
+  - name: scubablue_30
+    hexcode: "#72d2e0"
+  - name: scubablue_40
+    hexcode: "#4ac5d8"
+  - name: scubablue_50
+    hexcode: "#22b8cf"
+  - name: scubablue_60
+    hexcode: "#16a8be"
+  - name: scubablue_70
+    hexcode: "#0d96ab"
+  - name: scubablue_80
+    hexcode: "#058295"
+  - name: scubablue_90
+    hexcode: "#006d7e"
+  - name: scubablue_100
+    hexcode: "#005664"    
 
 gray:
   - name: gray_5

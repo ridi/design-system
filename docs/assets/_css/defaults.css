@@ -46,8 +46,8 @@ h4 {
 
 h5 {
   margin-top: 20px;
-  font-size: 16px;
-  font-weight: normal;
+  font-size: 17px;
+  font-weight: bold;
   line-height: 1.75;
 }
 
@@ -62,11 +62,14 @@ p {
   line-height: 1.75;
 }
 
-ul {
+ul, ol {
   padding: 0 0 0 28px;
 }
 
-ul ul {
+ul ul,
+ol ol,
+ul ol,
+ol ul {
   padding: 0 0 0 18px;
 }
 
