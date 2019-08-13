@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
-    "build": "node build.js",
+    "build": "yarn svgo && node build.js",
     "watch": "chokidar 'svgs/*.svg' -c 'node build.js' --initial --silent",
     "svgo": "svgo --config=.svgo.yml --folder=svgs --multipass",
     "precommit": "lint-staged"
