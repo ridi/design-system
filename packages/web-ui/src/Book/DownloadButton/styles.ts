@@ -104,7 +104,9 @@ export const circle = ({
 });
 
 export const progressMask = (size: DownloadButtonSize, deg?: number) => {
-  const progressTransform = deg ? {transform: `rotate(${deg}deg)`,} : {};
+  const progressTransform = deg ? {
+    transform: `rotate(${deg}deg)`,
+  } : {};
   return ({
     ...circle,
     ...progressTransform,
