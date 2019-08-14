@@ -134,7 +134,7 @@
 
 ### 종류
 
-![버튼 종류](button/button-type.png)
+![버튼 종류](./button/button-type.png)
 
 #### 레이블 버튼
 
