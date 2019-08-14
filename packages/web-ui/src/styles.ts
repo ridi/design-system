@@ -1,4 +1,5 @@
 import colors from '@ridi/colors';
+import { AppearanceProperty, BoxOrientProperty, WhiteSpaceProperty, WordBreakProperty, WordWrapProperty } from 'csstype';
 import { rgba } from 'polished';
 
 export const defaultFontFamily = [
@@ -15,7 +16,7 @@ export const defaultFontFamily = [
 ].join(', ');
 
 export const resetAppearance = {
-  appearance: 'none',
+  appearance: 'none' as AppearanceProperty,
   background: 'none',
   boxShadow: 'none',
   border: 0,
@@ -81,11 +82,11 @@ export const displayHidden = {
 
 export const lineClamp = (lineNum: number = 2) => ({
   display: '-webkit-box',
-  WebkitBoxOrient: 'vertical',
+  WebkitBoxOrient: 'vertical' as BoxOrientProperty,
   overflow: 'hidden',
-  whiteSpace: 'normal',
-  wordBreak: 'break-all',
-  wordWrap: 'break-word',
+  whiteSpace: 'normal' as WhiteSpaceProperty,
+  wordBreak: 'break-all' as WordBreakProperty,
+  wordWrap: 'break-word' as WordWrapProperty,
   lineHeight: '1.4em',
   textOverflow: 'ellipsis',
   WebkitLineClamp: lineNum,

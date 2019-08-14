@@ -1,9 +1,9 @@
 import { PositionProperty } from 'csstype';
-import { merge } from 'lodash';
 import { displayHidden, resetLayout } from "src/styles";
 import { ThumbnailChildrenSize } from '../Thumbnail';
 
-export const notAvailable = merge({}, resetLayout, {
+export const notAvailable = {
+  ...resetLayout,
   position: 'absolute' as PositionProperty,
   left: 0,
   top: 0,
@@ -11,7 +11,7 @@ export const notAvailable = merge({}, resetLayout, {
   height: '100%',
   opacity: .4,
   zIndex: 100,
-});
+};
 
 export const icon = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Medium) => {
   let iconSize = 40;

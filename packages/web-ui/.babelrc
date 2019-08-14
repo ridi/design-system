@@ -2,13 +2,11 @@
   "env": {
     "production": {
       "plugins": [
-        "lodash",
         ["emotion", { "hoist": true }]
       ]
     },
     "development": {
       "plugins": [
-        "lodash",
         ["emotion", { "sourceMap": true, "autoLabel": true }]
       ]
     }
