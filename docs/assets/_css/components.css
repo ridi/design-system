@@ -17,3 +17,40 @@
   overflow: hidden;
   background: url('/assets/img/quote_icon_dont.svg') no-repeat;
 }
+
+.columnWrapper {
+  display: block;
+  width: 100%;
+}
+
+.columns {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+.columns img {
+  margin: 0 0 10px 0;
+}
+
+.gifBadge {
+  position: relative;
+}
+
+.columnText {
+  margin-top: -20px;
+}
+
+.gifBadge:before {
+  content: "GIF";
+  position: absolute;
+  bottom: 38px;
+  right: 8px;
+  padding: 0px 6px;
+  height: 24px;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  background: rgba(0,0,0,.5);
+}
