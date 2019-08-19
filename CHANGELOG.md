@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.6.2] - 2019-08-19
+### Removed
+- Remove lodash from web-ui
+
 ## [0.6.1] - 2019-08-12
 ### Changed
 - Update the adult badge to use path instead of text
