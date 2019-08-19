@@ -1,5 +1,4 @@
 import { PositionProperty } from 'csstype';
-import { merge } from 'lodash';
 import { resetAppearance, resetLayout } from "src/styles";
 import { ThumbnailChildrenSize } from '../Thumbnail';
 
@@ -14,10 +13,12 @@ export const checkbox = {
   cursor: 'pointer',
 };
 
-export const checkboxInput = merge({}, resetAppearance, resetLayout, {
+export const checkboxInput = {
+  ...resetAppearance,
+  ...resetLayout, 
   width: 0,
   height: 0,
-});
+};
 
 export const iconWrapper = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Medium) => {
   let iconSize = 40;

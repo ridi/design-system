@@ -1,21 +1,23 @@
 import { PositionProperty, WhiteSpaceProperty } from 'csstype';
-import { merge } from 'lodash';
 import { resetAppearance, resetFont, resetLayout } from "src/styles";
 
-export const unitBookCount = merge({}, resetAppearance, resetFont, resetLayout, {
+export const unitBookCount = {
+  ...resetAppearance,
+  ...resetFont,
+  ...resetLayout, 
   display: 'inline-block',
-  position: 'relative',
+  position: 'relative' as PositionProperty,
   textDecoration: 'none',
   '.Thumbnail & ': {
     display: 'block',
-    position: 'absolute',
+    position: 'absolute' as PositionProperty,
     left: 0,
     top: 0,
     width: '100%',
     height: '100%',
     zIndex: 150,
   },
-});
+};
 
 export const count = {
   display: 'block',
