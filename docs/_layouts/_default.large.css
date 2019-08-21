@@ -191,7 +191,7 @@ body {
   width: 50%;
 }
 
-.firstImg {
+.firstColumn {
   padding: 0 20px 20px 0;
 }
 
@@ -199,8 +199,8 @@ body {
   margin-top: inherit;
 }
 
-.gifBadge:before {
-  content: "GIF";
-  bottom: 38px;
+.mp4Badge:before {
+  content: "MP4";
+  top: 8px;
   right: 28px;
 }

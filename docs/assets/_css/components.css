@@ -29,28 +29,29 @@
   padding: 0 0 20px 0;
 }
 
-.columns img {
+.columns img, video {
   margin: 0 0 10px 0;
-}
-
-.gifBadge {
-  position: relative;
 }
 
 .columnText {
   margin-top: -20px;
 }
 
-.gifBadge:before {
-  content: "GIF";
+/* imageBadge */
+.mp4Badge {
+  position: relative;
+}
+
+.mp4Badge:before {
+  content: "MP4";
   position: absolute;
-  bottom: 38px;
+  top: 8px;
   right: 8px;
   padding: 0px 6px;
-  height: 24px;
+  height: 23px;
   border-radius: 3px;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 23px;
   color: #fff;
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.2);
 }
