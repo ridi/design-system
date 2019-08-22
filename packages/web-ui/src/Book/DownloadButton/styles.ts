@@ -1,5 +1,4 @@
-import { PositionProperty } from 'csstype';
-import { merge } from 'lodash';
+import { PositionProperty, TextAlignProperty } from 'csstype';
 import { DownloadStatus } from ".";
 import { resetAppearance, resetFont, resetLayout } from "../../styles";
 
@@ -8,52 +7,60 @@ export enum DownloadButtonSize {
   Large = 32,
 }
 
-export const buttonWrapper = merge({}, resetLayout, {
-  textAlign: 'right',
+export const buttonWrapper = {
+  ...resetLayout,
+  textAlign: 'right' as TextAlignProperty,
   paddingTop: 20,
   '.Thumbnail & ': {
     paddingTop: 0,
-    position: 'absolute',
+    position: 'absolute' as PositionProperty,
     left: 0,
     top: 0,
     width: '100%',
     height: '100%',
     zIndex: 100,
   },
-});
+};
 
-export const blocked = merge({}, buttonWrapper, {
+export const blocked = {
+  ...buttonWrapper,
   '.Thumbnail & ': {
     background: 'rgba(0, 0, 0, .4)',
   },
-});
+};
 
 export const downloadButton = (size: DownloadButtonSize, status: DownloadStatus) => {
-  const defaultStyle = merge({}, resetAppearance, resetFont, resetLayout, {
+  const defaultStyle = {
+    ...resetAppearance,
+    ...resetFont,
+    ...resetLayout,
     width: size,
     height: size,
     cursor: 'pointer',
     outline: 'transparent',
-  });
+  };
 
   const optionalStyle = status === DownloadStatus.Downloading ? {
-    position: 'relative',
+    position: 'relative' as PositionProperty,
     borderRadius: '50%',
     background: '#1F8CE6',
     '.Thumbnail & ': {
-      position: 'absolute',
+      position: 'absolute' as PositionProperty,
       right: 6,
       bottom: 6,
     },
   } : status === DownloadStatus.Downloadable ? {
     '.Thumbnail & ': {
-      position: 'absolute',
+      position: 'absolute' as PositionProperty,
       right: 6,
       bottom: 6,
     },
   } : {};
 
-  return merge({}, defaultStyle, optionalStyle);
+  return ({
+    ...defaultStyle,
+    ...optionalStyle,
+  });
 };
 
 const iconDefaultStyle = {
@@ -61,7 +68,8 @@ const iconDefaultStyle = {
   height: '100%',
 };
 
-export const downloadableIcon = merge({}, iconDefaultStyle, {
+export const downloadableIcon = {
+  ...iconDefaultStyle,
   '& circle': {
     fill: 'black',
     fillOpacity: 0.5,
@@ -70,9 +78,10 @@ export const downloadableIcon = merge({}, iconDefaultStyle, {
   '& path': {
     fill: 'white',
   },
-});
+};
 
-export const waitingIcon = merge({}, iconDefaultStyle, {
+export const waitingIcon = {
+  ...iconDefaultStyle,
   '& circle': {
     fill: '#F2F4F5',
     fillOpacity: 0.8,
@@ -81,10 +90,10 @@ export const waitingIcon = merge({}, iconDefaultStyle, {
     fill: '#9EA7AD',
     fillOpacity: 0.8,
   },
-});
+};
 
 export const circle = ({
-  position: 'absolute',
+  position: 'absolute' as PositionProperty,
   left: 0,
   top: 0,
   width: '100%',
@@ -94,13 +103,19 @@ export const circle = ({
   transition: 'transform .5s',
 });
 
-export const progressMask = (size: DownloadButtonSize, deg?: number) => merge({}, circle, {
-  clip: `rect(0, ${size}px, ${size}px, ${size / 2}px)`,
-}, deg && {
-  transform: `rotate(${deg}deg)`,
-});
+export const progressMask = (size: DownloadButtonSize, deg?: number) => {
+  const progressTransform = deg ? {
+    transform: `rotate(${deg}deg)`,
+  } : {};
+  return ({
+    ...circle,
+    ...progressTransform,
+    clip: `rect(0, ${size}px, ${size}px, ${size / 2}px)`,
+  });
+};
 
-export const progressFill = (size: DownloadButtonSize, deg: number) => merge({}, circle, {
+export const progressFill = (size: DownloadButtonSize, deg: number) => ({
+  ...circle,
   background: '#0077d9',
   clip: `rect(0, ${size / 2}px, ${size}px, 0)`,
   transform: `rotate(${deg}deg)`,
@@ -123,7 +138,9 @@ export const stopRect = (size: DownloadButtonSize) => {
   });
 };
 
-export const downloadSize = merge({}, resetFont, resetLayout, {
+export const downloadSize = {
+  ...resetFont,
+  ...resetLayout,
   color: '#808991',
   fontSize: 12,
   marginTop: 5,
@@ -137,4 +154,4 @@ export const downloadSize = merge({}, resetFont, resetLayout, {
     lineHeight: 0,
     color: 'transparent',
   },
-});
+};
