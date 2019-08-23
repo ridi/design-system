@@ -181,3 +181,26 @@ body {
 .site-link-list-misc {
   float: right;
 }
+
+.columnWrapper {
+  display: flex;
+}
+
+.columns {
+  flex-grow: 1;
+  width: 50%;
+}
+
+.firstColumn {
+  padding: 0 20px 20px 0;
+}
+
+.columnText {
+  margin-top: inherit;
+}
+
+.mp4Badge:before {
+  content: "MP4";
+  top: 8px;
+  right: 28px;
+}

@@ -145,13 +145,13 @@ pre {
 }
 
 
-img {
+img, video {
   display: block;
   max-width: 100%;
   margin: 20px auto;
 }
 
-figcaption {
+figcaption, .caption {
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
