@@ -8,15 +8,15 @@
 
 ## Grid와 Keyline
 
-일정한 사이즈의 그리드(grid)와 키라인(keyline) 내에서 작업하여 디자인 작업과 제품 구현에서 위치와 정렬이 일치하도록 합니다.
+일정한 사이즈의 그리드와 키라인 내에서 작업하여 디자인 작업과 제품 구현에서 위치와 정렬이 일치하도록 합니다.
 <div class="columnWrapper" markdown="1">
 
 ![Grid, 24x24](system-icon/icon-grid.png) 
-그리드(Grid) - 가로, 세로 24px
+그리드 - 가로, 세로 24px
 {:.columns .firstColumn .caption}
 
 ![Keyline](system-icon/icon-keyline.png)
-키라인(Keyline)
+키라인
 {:.columns .caption}
 
 </div>
@@ -67,7 +67,7 @@ Stroke weight는 2px이 기준입니다.
 {:.columns .firstColumn}
 
 Shape의 안쪽으로 Stroke가 생기도록 작업합니다.
-이는 아이콘의 형태가 키라인(keyline)을 지키면서 아이콘을 구성하는 작은 요소들이 균형을 이룰 수 있도록 합니다.
+이는 아이콘의 형태가 키라인을 지키면서 아이콘을 구성하는 작은 요소들이 균형을 이룰 수 있도록 합니다.
 {:.columns .columnText}
 
 </div>
@@ -160,8 +160,8 @@ Filled, Rounded 등의 스타일이나 Disabled와 같이 특정 상황을 표�
 </div>
 {:.columns .mp4Badge .firstColumn}
 
-간혹 텍스트와 함께 배치할 때 키라인(keyline)의 기본 여백으로 인해 텍스트와 사이 간격이 넓어져 레이아웃이 어색해질 수 있습니다.  
-이 경우, 정확한 레이아웃을 위해 예외로 세로로 긴 직사각형 / 가로로 긴 직사각형의 키라인(keyline)만을 적용한 아이콘을 사용합니다.  
+간혹 텍스트와 함께 배치할 때 키라인의 기본 여백으로 인해 텍스트와 사이 간격이 넓어져 레이아웃이 어색해질 수 있습니다.  
+이 경우, 정확한 레이아웃을 위해 예외로 세로로 긴 직사각형 / 가로로 긴 직사각형의 키라인만을 적용한 아이콘을 사용합니다.  
 대체로 레이블 오른쪽에 배치하는 Arrow 아이콘이 이에 해당합니다.
 {:.columns .columnText}
 
