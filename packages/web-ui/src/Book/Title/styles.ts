@@ -1,12 +1,15 @@
-import { merge } from 'lodash';
 import { lineClamp, resetFont, resetLayout } from "src/styles";
 
-export const title = merge({}, lineClamp(), resetFont, resetLayout, {
+const titleLineClamp = lineClamp();
+export const title = {
+  ...titleLineClamp,
+  ...resetFont,
+  ...resetLayout,
   color: '#212529',
   fontSize: 15,
-  fontWeight: 'bold',
+  fontWeight: 700,
   lineHeight: '1.31em',
   '.PortraitBook & ': {
     fontSize: 13,
   },
-});
+};

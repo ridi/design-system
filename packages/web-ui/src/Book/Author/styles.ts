@@ -1,9 +1,12 @@
-import { merge } from 'lodash';
 import { lineClamp, resetFont, resetLayout } from 'src/styles';
 
-export const author = merge({}, resetFont, resetLayout, lineClamp(1), {
+const authorLineClamp = lineClamp(1);
+export const author = {
+  ...resetFont,
+  ...resetLayout,
+  ...authorLineClamp,
   lineHeight: '1.4em',
   marginTop: 4,
   color: '#808991',
   fontSize: 12,
-});
+};
