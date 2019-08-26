@@ -1,20 +1,20 @@
 html {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Open Sans", "APPLE SD Gothic Neo", "HelveticaNeue", "Helvetica", "NanumGothic", "맑은 고딕", "Malgun Gothic", "arial", sans-serif;
   line-height: normal;
-  letter-spacing: -.3px;
+  font-size: 17px;
+  letter-spacing: -0.003em;
   background: var(--white);
   color: var(--slategray_80);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 40px 0 20px;
+  margin: 40px 0 16px;
   font-weight: bold;
 }
 
 h1 {
   padding-bottom: 30px;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 0;
@@ -24,7 +24,6 @@ h1 {
   & small {
     margin: 8px 0;
     display: block;
-    font-family: 'Noto Sans KR', sans-serif;
     font-size: 20px;
     font-weight: normal;
   }
@@ -32,12 +31,12 @@ h1 {
 
 h2 {
   font-size: 28px;
-  margin: 0 0 20px;
   padding-top: 60px;
 }
 
 h3 {
   font-size: 22px;
+  margin: 40px 0 14px;
 }
 
 h4 {
@@ -47,8 +46,8 @@ h4 {
 
 h5 {
   margin-top: 20px;
-  font-size: 16px;
-  font-weight: normal;
+  font-size: 17px;
+  font-weight: bold;
   line-height: 1.75;
 }
 
@@ -63,16 +62,19 @@ p {
   line-height: 1.75;
 }
 
-ul {
+ul, ol {
   padding: 0 0 0 28px;
 }
 
-ul ul {
+ul ul,
+ol ol,
+ul ol,
+ol ul {
   padding: 0 0 0 18px;
 }
 
 li {
-  margin: 8px 0;
+  margin: 7px 0;
   line-height: 1.75;
 }
 
@@ -96,7 +98,7 @@ th, td {
 }
 
 thead {
-  background: var(--lightsteelblue_5);
+  background: var(--lightsteelblue_10);
 }
 
 th {
@@ -111,21 +113,22 @@ td:first-child {
 }
 
 a {
-  font-weight: bold;
   text-decoration: none;
-  color: var(--dodgerblue_30);
+  color: #1abc9c;
 
   &:hover {
-    color: var(--dodgerblue_40);
+    opacity: .5;
   }
 }
 
 code {
-  padding: 2px 4px;
-  font-family: 'Roboto Mono', monospace;
+  padding: 2px 5px;
+  font-family: monospace;
   font-size: 14px;
   letter-spacing: 0;
-  background: var(--lightsteelblue_5);
+  background: rgba(227,237,247,.7);
+  color: var(--slategray_80);
+  border-radius: 2px;
 }
 
 pre {
@@ -142,13 +145,13 @@ pre {
 }
 
 
-img {
+img, video {
   display: block;
   max-width: 100%;
   margin: 20px auto;
 }
 
-figcaption {
+figcaption, .caption {
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
@@ -159,4 +162,39 @@ figcaption {
 hr {
   margin: 60px 0;
   border: 1px solid var(--slategray_5);
+}
+
+.footnotes {
+  margin-top: 80px;
+  font-size: 15px;
+  color: var(--slategray_50);
+
+  & ol {
+    padding-left: 14px;
+  }
+}
+a.footnote {
+  font-weight: 700;
+  font-size: 13px;
+  padding: 0 2px;
+}
+
+.color-box {
+  width: 100%;
+  height: 30px;
+  border: 1px solid rgba(0,0,0,.05);
+  border-radius: 3px;
+  margin: 0 0 34px 0;
+  font-size: 14px;
+}
+
+.color-box:last-child {
+  margin-bottom: 64px;
+}
+
+.color-label {
+  margin: 32px 0 0 0;
+  & span:last-child {
+    float: right;
+  }
 }

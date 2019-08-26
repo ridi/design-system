@@ -21,10 +21,9 @@ html.home {
   & .hero__description {
     margin: 20px 0;
     padding: 0;
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: -0.5px;
     color: var(--slategray_50);
     border: none;
   }
@@ -53,9 +52,5 @@ html.home {
 
   & .site-content__title {
     font-size: 27px;
-  }
-
-  & .site-content__description {
-    font-size: 17px;
   }
 }

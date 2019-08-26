@@ -5,3 +5,7 @@ h1 {
     display: inline-block;
   }
 }
+
+.color-box {
+  width: 48%;
+}

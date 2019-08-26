@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "package-explorer",
-  "version": "0.2.2",
+  "version": "0.6.3",
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
     "start": "styleguidist server",
@@ -9,9 +9,9 @@
     "watch": "yarn start"
   },
   "dependencies": {
-    "@ridi/colors": "^0.2.1",
-    "@ridi/web-icons": "^0.2.1",
-    "@ridi/web-ui": "^0.2.2",
+    "@ridi/colors": "^0.6.0",
+    "@ridi/web-icons": "^0.6.0",
+    "@ridi/web-ui": "^0.6.3",
     "color": "^3.1.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"

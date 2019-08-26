@@ -1,25 +1,27 @@
-import { DisplayProperty, PositionProperty, WhiteSpaceProperty } from 'csstype';
-import { merge } from 'lodash';
-import { resetAppearance, resetFont, resetLayout } from "../../styles";
+import { PositionProperty, WhiteSpaceProperty } from 'csstype';
+import { resetAppearance, resetFont, resetLayout } from "src/styles";
 
-export const unitBookCount = merge({}, resetAppearance, resetFont, resetLayout, {
+export const unitBookCount = {
+  ...resetAppearance,
+  ...resetFont,
+  ...resetLayout, 
   display: 'inline-block',
-  position: 'relative',
+  position: 'relative' as PositionProperty,
   textDecoration: 'none',
   '.Thumbnail & ': {
     display: 'block',
-    position: 'absolute',
+    position: 'absolute' as PositionProperty,
     left: 0,
     top: 0,
     width: '100%',
     height: '100%',
     zIndex: 150,
   },
-});
+};
 
 export const count = {
   display: 'block',
-  padding: '3px 15px 4px 7px',
+  padding: '5px 16px 5px 10px',
   border: '1px solid #9ea7ad',
   height: '1em',
   lineHeight: '1em',
@@ -31,22 +33,23 @@ export const count = {
   '.Thumbnail & ': {
     position: 'absolute' as PositionProperty,
     left: '50%',
-    bottom: 10,
+    bottom: 8,
     transform: 'translate3d(-50%, 0, 0)',
     borderColor: 'white',
     fontWeight: 700,
     color: 'white',
     background: 'rgba(0, 0, 0, .7)',
-    boxShadow: '0 0 0 1px rgba(0, 0, 0, .7)',
+    boxShadow: '0 0 0 2px rgba(0, 0, 0, .7)',
   },
 };
 
 export const num = {
-  fontSize: 11,
+  fontSize: 12,
+  paddingRight: 2,
 };
 
 export const icon = {
-  position: 'absolute',
+  position: 'absolute' as PositionProperty,
   right: 7,
   top: '50%',
   transform: 'translate3d(0, -50%, 0)',

@@ -1,0 +1,12 @@
+# https://www.netlify.com/docs/netlify-toml-reference/
+
+[build]
+  base = "/"
+  publish = "docs/_site/"
+  environment = { NODE_VERSION = "10", RUBY_VERSION = "2.5" }
+  command = '''
+  yarn build \
+  && cp -a ./package-explorer/dist/. ./docs/packages \
+  && cd docs \
+  && yarn install \
+  && yarn build'''
