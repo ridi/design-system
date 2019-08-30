@@ -35,9 +35,8 @@ export const SeriesCover: React.FunctionComponent<ThumbnailImageProps> = ({ thum
         .getPalette()
         .then((palette: VibrantPalette) => {
           const rgb =
-            palette.DarkVibrant ||
-            palette.Vibrant ||
-            palette.LightMuted ||
+            palette.Muted ||
+            palette.DarkMuted ||
             SERIES_COVER_DEFAULT_COLOR;
           setDominantColor(rgb);
         });

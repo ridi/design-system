@@ -43,6 +43,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     ridiselect,
     selected,
     selectMode,
+    series = false,
     thumbnailChildrenSize,
     thumbnailLink,
     thumbnailTitle,
@@ -70,6 +71,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           readingStatus={readingStatus}
           selected={selected}
           selectMode={selectMode}
+          series={series}
           thumbnailChildrenSize={thumbnailChildrenSize}
           thumbnailLink={thumbnailLink}
           thumbnailTitle={thumbnailTitle}

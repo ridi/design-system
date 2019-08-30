@@ -38,6 +38,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     ridiselect,
     selected,
     selectMode,
+    series = false,
     thumbnailChildrenSize,
     thumbnailLink,
     thumbnailTitle,
@@ -73,6 +74,7 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
           ridiselect={ridiselect}
           selected={selected}
           selectMode={selectMode}
+          series={series}
           thumbnailChildrenSize={thumbnailChildrenSize}
           thumbnailLink={thumbnailLink}
           thumbnailTitle={thumbnailTitle}
