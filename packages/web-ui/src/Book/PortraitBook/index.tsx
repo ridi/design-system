@@ -3,8 +3,6 @@ import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 import { Book } from '../';
-import { ViewType } from '../Book';
-import { getReadingStatus } from '../Thumbnail';
 import * as styles from './styles';
 
 export interface PortraitBookProps extends
@@ -26,15 +24,11 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     author,
     className,
     children,
-    downloadProgress,
-    downloadStatus,
     expired = false,
     expiredAt,
     notAvailable = false,
     onSelectedChange,
     portraitStyles,
-    readingProgress,
-    readingStatus,
     ridiselect,
     selected,
     selectMode,
@@ -52,25 +46,19 @@ export const PortraitBook: React.FunctionComponent<PortraitBookProps> = (props) 
     ...extraProps
   } = props;
 
-  const { isUnread, isOpened } = getReadingStatus(readingStatus, ViewType.Portrait);
-
   return (
     <div
       css={[styles.portraitBook(thumbnailWidth), portraitStyles]}
       className={classNames(['PortraitBook', className])}
       {...extraProps}
     >
-      <div className="PortraitBook_Thumbnail" css={styles.portraitBookThumbnailLayout(thumbnailWidth, isUnread, isOpened)}>
+      <div className="PortraitBook_Thumbnail" css={styles.portraitBookThumbnailLayout(thumbnailWidth)}>
         <Book.Thumbnail
           adultBadge={adultBadge}
-          downloadProgress={downloadProgress}
-          downloadStatus={downloadStatus}
           expired={expired}
           expiredAt={expiredAt}
           notAvailable={notAvailable}
           onSelectedChange={onSelectedChange}
-          readingProgress={readingProgress}
-          readingStatus={readingStatus}
           ridiselect={ridiselect}
           selected={selected}
           selectMode={selectMode}
