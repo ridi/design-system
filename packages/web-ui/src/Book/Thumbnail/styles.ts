@@ -29,12 +29,25 @@ export const thumbnailDimmed = {
   background: 'rgba(0, 0, 0, .4)',
 };
 
-export const thumbnailImageWrapper = {
-  display: 'block',  
-  position: 'relative' as PositionProperty,
-  fontSize: 0,
-  lineHeight: 0,
-  maxHeight: 'inherit',
+export const SERIES_BOOK_SCALE = 0.9;
+
+export const thumbnailImageWrapper = (isSeries: boolean, thumbnailWidth: number) => {
+  let seriesStyle = {};
+  if (isSeries) {
+    seriesStyle = {
+      transform: `scale(${SERIES_BOOK_SCALE})`,
+      transformOrigin: 'left bottom',
+      position: 'relative' as PositionProperty,
+    };
+  }
+  return {
+    display: 'block',  
+    position: 'relative' as PositionProperty,
+    fontSize: 0,
+    lineHeight: 0,
+    maxHeight: 'inherit',
+    ...seriesStyle,
+  };
 };
 
 export const thumbnailLink = {

@@ -2,35 +2,16 @@
 import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
-import {
-  AdultBadge,
-  DownloadButton,
-  DownloadButtonProps,
-  DownloadStatus,
-  Expired,
-  ExpiredAt,
-  NotAvailable,
-  ReadingProgressBar,
-  ReadingProgressBarProps,
-  ReadingStatus,
-  Ridiselect,
-  ThumbnailCheckbox,
-  ThumbnailImage,
-  ThumbnailImageProps,
-  UnitBookCountProps,
-  UnitBookDownloading,
-  UnreadDot,
-  UpdateBadge,
-  ViewType,
-} from '../Book';
+import * as Book from '../Book';
 import { DownloadButtonSize } from '../DownloadButton/styles';
 import { UnitBookDownloadingSize } from '../UnitBookDownloading/styles';
+import { SeriesCover } from './SeriesCover';
 import * as styles from './styles';
 
 export interface ThumbnailProps extends
-  DownloadButtonProps,
-  ReadingProgressBarProps,
-  ThumbnailImageProps {
+Book.DownloadButtonProps,
+Book.ReadingProgressBarProps,
+Book.ThumbnailImageProps {
     adultBadge?: boolean;
     children?: React.ReactNode;
     className?: string;
@@ -40,15 +21,16 @@ export interface ThumbnailProps extends
     onSelectedChange?: (e: React.SyntheticEvent<any>) => void;
     selectMode?: boolean;
     selected?: boolean;
-    readingStatus?: ReadingStatus;
+    readingStatus?: Book.ReadingStatus;
     ridiSelect?: boolean;
     thumbnailChildrenSize?: ThumbnailChildrenSize;
     thumbnailLink?: React.ReactElement<any>;
     unitBook?: boolean;
-    unitBookCount?: React.ReactElement<UnitBookCountProps>;
+    unitBookCount?: React.ReactElement<Book.UnitBookCountProps>;
     updateBadge?: boolean;
     useMaxHeight?: boolean;
-    viewType?: ViewType;
+    viewType?: Book.ViewType;
+    series?: boolean;
     [extraKey: string]: any;
   }
 
@@ -83,9 +65,9 @@ const getThumbnailChildrenSize = (width: string | number) => {
   }
 };
 
-export const getReadingStatus = (readingStatus: ReadingStatus, viewType: ViewType) => ({
-  isUnread: readingStatus && readingStatus === ReadingStatus.New,
-  isOpened: readingStatus && readingStatus === ReadingStatus.Opened && viewType === ViewType.Portrait,
+export const getReadingStatus = (readingStatus: Book.ReadingStatus, viewType: Book.ViewType) => ({
+  isUnread: readingStatus && readingStatus === Book.ReadingStatus.New,
+  isOpened: readingStatus && readingStatus === Book.ReadingStatus.Opened && viewType === Book.ViewType.Portrait,
 });
 
 export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
@@ -113,7 +95,8 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     unitBookCount,
     updateBadge = false,
     useMaxHeight = false,
-    viewType = ViewType.Portrait,
+    viewType = Book.ViewType.Portrait,
+    series = false,
     ...extraProps
   } = props;
   const childrenSize = thumbnailChildrenSize ? thumbnailChildrenSize : getThumbnailChildrenSize(thumbnailWidth);
@@ -124,50 +107,52 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
       className={classNames(['Thumbnail', className])}
       {...extraProps}
     >
-      {isUnread && <UnreadDot />}
-      {isOpened && <ReadingProgressBar readingProgress={readingProgress} />}
-      <div css={styles.thumbnailImageWrapper}>
+      {isUnread && <Book.UnreadDot />}
+      {isOpened && <Book.ReadingProgressBar readingProgress={readingProgress} />}
+      <div css={styles.thumbnailImageWrapper(series, thumbnailWidth)}>
+        {series && <SeriesCover thumbnailWidth={thumbnailWidth} thumbnailUrl={thumbnailUrl} />}
         {selectMode &&
-          <ThumbnailCheckbox
+          <Book.ThumbnailCheckbox
             onChange={onSelectedChange}
             checked={selected}
             size={childrenSize}
+            series={series}
           />
         }
-        <ThumbnailImage thumbnailUrl={thumbnailUrl} thumbnailTitle={thumbnailTitle} thumbnailWidth={thumbnailWidth} />
-        {adultBadge && <AdultBadge />}
-        {updateBadge && <UpdateBadge />}
+        <Book.ThumbnailImage thumbnailUrl={thumbnailUrl} thumbnailTitle={thumbnailTitle} thumbnailWidth={thumbnailWidth} />
+        {adultBadge && <Book.AdultBadge />}
+        {updateBadge && <Book.UpdateBadge />}
         {(notAvailable || selectMode || expired) && <div css={styles.thumbnailDimmed} />}
-        {viewType === ViewType.Portrait &&
+        {viewType === Book.ViewType.Portrait &&
           <React.Fragment>
             {unitBook && (
               <React.Fragment>
                 {unitBookCount}
-                {downloadStatus === DownloadStatus.Downloading && !selectMode && <UnitBookDownloading size={UnitBookDownloadingSize.Large} />}
+                {downloadStatus === Book.DownloadStatus.Downloading && !selectMode && <Book.UnitBookDownloading size={UnitBookDownloadingSize.Large} />}
               </React.Fragment>
             )}
             {!unitBook && (
               <React.Fragment>
                 {!notAvailable &&
-                  <DownloadButton
+                  <Book.DownloadButton
                     downloadStatus={downloadStatus}
                     downloadProgress={downloadProgress}
                     size={DownloadButtonSize.Large}
                   />
                 }
                 {ridiselect ? (
-                  <Ridiselect size={childrenSize} />
+                  <Book.Ridiselect size={childrenSize} />
                 ) : expired ? (
-                  <Expired size={childrenSize} />
+                  <Book.Expired size={childrenSize} />
                 ) : expiredAt ? (
-                  <ExpiredAt expiredAt={expiredAt} size={childrenSize} />
+                  <Book.ExpiredAt expiredAt={expiredAt} size={childrenSize} />
                 ) : null}
               </React.Fragment>
             )}
           </React.Fragment>
         }
         {children}
-        {notAvailable && !selectMode && <NotAvailable size={childrenSize} />}
+        {notAvailable && !selectMode && <Book.NotAvailable size={childrenSize} />}
         {thumbnailLink && (
           <div css={styles.thumbnailLink}>{thumbnailLink}</div>
         )}

@@ -8,6 +8,7 @@ import * as styles from './styles';
 export interface ThumbnailCheckboxProps {
   checked: boolean;
   onChange: (e: React.SyntheticEvent<any>) => void;
+  series: boolean;
   size?: ThumbnailChildrenSize;
 }
 
@@ -16,6 +17,7 @@ export const ThumbnailCheckbox: React.FunctionComponent<ThumbnailCheckboxProps> 
     checked,
     onChange,
     size,
+    series,
   } = props;
 
   return (
@@ -26,7 +28,7 @@ export const ThumbnailCheckbox: React.FunctionComponent<ThumbnailCheckboxProps> 
         checked={checked}
         onChange={onChange}
       />
-      <span css={styles.iconWrapper(size)}>
+      <span css={styles.iconWrapper(size, series)}>
         <CheckIcon css={styles.checkboxIcon(checked)} />
       </span>
     </label>
