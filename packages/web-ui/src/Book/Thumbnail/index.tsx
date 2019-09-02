@@ -19,7 +19,10 @@ Book.ThumbnailImageProps {
     selected?: boolean;
     ridiSelect?: boolean;
     thumbnailChildrenSize?: ThumbnailChildrenSize;
+    thumbnailInnerAdditionalElement?: React.ReactElement<any>;
     thumbnailLink?: React.ReactElement<any>;
+    thumbnailOuterAdditionalElement?: React.ReactElement<any>;
+    thumbnailStyles?: any;
     unitBook?: boolean;
     unitBookCount?: React.ReactElement<Book.UnitBookCountProps>;
     updateBadge?: boolean;
@@ -73,7 +76,10 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     selected = false,
     selectMode = false,
     thumbnailChildrenSize,
+    thumbnailInnerAdditionalElement,
     thumbnailLink,
+    thumbnailOuterAdditionalElement,
+    thumbnailStyles,
     thumbnailTitle,
     thumbnailUrl,
     thumbnailWidth,
@@ -88,10 +94,11 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   const childrenSize = thumbnailChildrenSize ? thumbnailChildrenSize : getThumbnailChildrenSize(thumbnailWidth);
   return (
     <div
-      css={styles.thumbnailLayout(thumbnailWidth, useMaxHeight)}
+      css={[styles.thumbnailLayout(thumbnailWidth, useMaxHeight), thumbnailStyles]}
       className={classNames(['Thumbnail', className])}
       {...extraProps}
     >
+      {thumbnailOuterAdditionalElement}
       <div css={styles.thumbnailImageWrapper(series)}>
         {series && <SeriesCover thumbnailWidth={thumbnailWidth} thumbnailUrl={thumbnailUrl} />}
         {selectMode &&
@@ -119,6 +126,7 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
                   ? <Book.ExpiredAt expiredAt={expiredAt} size={childrenSize} />
                   : null
         )}
+        {thumbnailInnerAdditionalElement}
         {children}
         {notAvailable && !selectMode && <Book.NotAvailable size={childrenSize} />}
         {thumbnailLink && (
