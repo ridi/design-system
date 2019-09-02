@@ -133,7 +133,7 @@ Filled, Rounded 등의 스타일이나 Disabled와 같이 특정 상황을 표�
 
 ## 아이콘 레이아웃
 ### 터치, 클릭 영역
-터치와 클릭 영역은 너무 작아 인식이 어렵거나 크게 적용하여 영역이 겹쳐 사용자가 의도하지 않은 동작을 하지 않도록 주의합니다. Google의 [Material Design 접근성 가이드](https://material.io/design/usability/accessibility.html#layout-typography)와 [System Icon 가이드](https://material.io/design/iconography/system-icons.html#system-icon-metrics)에서는 아이콘을 단독으로 사용할 경우, 아이콘을 포함한 터치 영역을 48 &times; 48 dp의 터치 영역을 권장하며, 포인터 기반의 기기에서는 40 &times; 40 dp의 영역을 확보하도록 제안하고 있습니다.  
+터치와 클릭 영역은 너무 작아 인식이 어렵거나, 영역이 겹칠만큼 크게 적용하여 사용자가 의도하지 않은 동작을 하지 않도록 주의합니다. Google의 [Material Design 접근성 가이드](https://material.io/design/usability/accessibility.html#layout-typography)와 [System Icon 가이드](https://material.io/design/iconography/system-icons.html#system-icon-metrics)에서는 아이콘을 단독으로 사용할 경우, 아이콘을 포함한 터치 영역을 48 &times; 48dp의 터치 영역을 권장하며, 포인터 기반의 기기에서는 40 &times; 40dp의 영역을 확보하도록 제안하고 있습니다.  
 이 크기는 약 9mm의 물리적 크기로 터치 스크린 요소의 권장 크기는 7 ~ 10mm입니다.
 ![Layout, 터치와 클릭 영역](system-icon/icon-layout-touch-point.png)
 
