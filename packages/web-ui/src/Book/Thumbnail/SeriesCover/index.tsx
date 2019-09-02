@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import Vibrant from 'node-vibrant';
 import { Palette as VibrantPalette } from 'node-vibrant/lib/color';
 import * as React from 'react';
 import { ThumbnailImageProps } from 'src/Book/ThumbnailImage';
 import { SERIES_BOOK_SCALE } from '../styles';
 import * as styles from './styles';
-// tslint:disable-next-line
-const Vibrant = require('node-vibrant');
 
 export interface RGB {
   r: number;
