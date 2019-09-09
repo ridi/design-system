@@ -48,7 +48,7 @@ Slate Gray와 구분이 필요한 경우 보조 컬러로 사용합니다.
 
 - 앞으로 셀렉트를 대표하는 컬러로 자리매김할 예정입니다.
 - 서점 내에서 셀렉트 표기 시 주로 scubablue-50을 사용합니다.
-- 배경 색상과 구분하기 위해 밝거나 어두운 단계를 사용할 수도 있습니다. test
+- 배경 색상과 구분하기 위해 밝거나 어두운 단계를 사용할 수도 있습니다.
 {% include colors.html colors=site.data.colors.scubablue %}
 
 ###  Gray
