@@ -25,7 +25,7 @@ export const thumbnailDimmed = {
   background: 'rgba(0, 0, 0, .4)',
 };
 
-export const SERIES_BOOK_SCALE = 0.9;
+export const SERIES_BOOK_SCALE = 0.86;
 
 export const thumbnailImageWrapper = (isSeries: boolean) => {
   let seriesStyle = {};
