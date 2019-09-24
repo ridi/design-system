@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { CheckboxCircle as CheckIcon } from '@ridi/web-icons';
 import * as React from 'react';
+import CheckIcon from 'src/icons/CheckboxCircle.svg';
 import { ThumbnailChildrenSize } from '../Thumbnail';
 import * as styles from './styles';
 
