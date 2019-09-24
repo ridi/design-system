@@ -6,7 +6,6 @@ import { Book } from '../';
 import * as styles from './styles';
 
 export interface LandscapeBookProps extends
-  Book.AnnotationsProps,
   Book.AuthorProps,
   Book.ThumbnailProps,
   Book.TitleProps {
@@ -22,29 +21,23 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
     additionalButton,
     additionalMetadata,
     adultBadge,
-    annotations = {
-      bookMarkCount: 0,
-      highlightCount: 0,
-      memoCount: 0,
-    },
     author,
     children,
     className,
-    downloadProgress,
-    downloadSize,
-    downloadStatus,
     expired = false,
     expiredAt,
     landscapeStyles,
     notAvailable = false,
     onSelectedChange,
-    readingProgress,
-    readingStatus,
     ridiselect,
     selected,
     selectMode,
+    series = false,
     thumbnailChildrenSize,
+    thumbnailInnerAdditionalElement,
     thumbnailLink,
+    thumbnailOuterAdditionalElement,
+    thumbnailStyles,
     thumbnailTitle,
     thumbnailUrl,
     thumbnailWidth,
@@ -67,11 +60,14 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
           adultBadge={adultBadge}
           notAvailable={notAvailable}
           onSelectedChange={onSelectedChange}
-          readingStatus={readingStatus}
           selected={selected}
           selectMode={selectMode}
+          series={series}
           thumbnailChildrenSize={thumbnailChildrenSize}
+          thumbnailInnerAdditionalElement={thumbnailInnerAdditionalElement}
           thumbnailLink={thumbnailLink}
+          thumbnailOuterAdditionalElement={thumbnailOuterAdditionalElement}
+          thumbnailStyles={thumbnailStyles}
           thumbnailTitle={thumbnailTitle}
           thumbnailUrl={thumbnailUrl}
           thumbnailWidth={thumbnailWidth}
@@ -93,28 +89,7 @@ export const LandscapeBook: React.FunctionComponent<LandscapeBookProps> = (props
         {additionalMetadata}
       </div>
       <div className="LandscapeBook_Buttons" css={styles.buttons}>
-        {unitBook ? (
-          downloadStatus === Book.DownloadStatus.Downloading ? (
-            <Book.UnitBookDownloading />
-          ) : unitBookCount
-        ) : (
-          readingStatus === Book.ReadingStatus.Opened ? (
-            <React.Fragment>
-              <Book.ReadingProgressBar readingProgress={readingProgress} />
-              <Book.Annotations annotations={annotations} />
-            </React.Fragment>
-          ) : (
-            !notAvailable ? (
-              <React.Fragment>
-                <Book.DownloadButton
-                  downloadProgress={downloadProgress}
-                  downloadSize={downloadSize}
-                  downloadStatus={downloadStatus}
-                />
-              </React.Fragment>
-            ) : null
-          )
-        )}
+        {unitBook ? unitBookCount : null}
         {additionalButton}
       </div>
       {children}

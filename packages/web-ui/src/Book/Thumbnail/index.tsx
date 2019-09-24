@@ -2,35 +2,12 @@
 import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
-import {
-  AdultBadge,
-  DownloadButton,
-  DownloadButtonProps,
-  DownloadStatus,
-  Expired,
-  ExpiredAt,
-  NotAvailable,
-  ReadingProgressBar,
-  ReadingProgressBarProps,
-  ReadingStatus,
-  Ridiselect,
-  ThumbnailCheckbox,
-  ThumbnailImage,
-  ThumbnailImageProps,
-  UnitBookCountProps,
-  UnitBookDownloading,
-  UnreadDot,
-  UpdateBadge,
-  ViewType,
-} from '../Book';
-import { DownloadButtonSize } from '../DownloadButton/styles';
-import { UnitBookDownloadingSize } from '../UnitBookDownloading/styles';
+import * as Book from '../Book';
+import { SeriesCover } from './SeriesCover';
 import * as styles from './styles';
 
 export interface ThumbnailProps extends
-  DownloadButtonProps,
-  ReadingProgressBarProps,
-  ThumbnailImageProps {
+Book.ThumbnailImageProps {
     adultBadge?: boolean;
     children?: React.ReactNode;
     className?: string;
@@ -40,15 +17,18 @@ export interface ThumbnailProps extends
     onSelectedChange?: (e: React.SyntheticEvent<any>) => void;
     selectMode?: boolean;
     selected?: boolean;
-    readingStatus?: ReadingStatus;
     ridiSelect?: boolean;
     thumbnailChildrenSize?: ThumbnailChildrenSize;
+    thumbnailInnerAdditionalElement?: React.ReactElement<any>;
     thumbnailLink?: React.ReactElement<any>;
+    thumbnailOuterAdditionalElement?: React.ReactElement<any>;
+    thumbnailStyles?: any;
     unitBook?: boolean;
-    unitBookCount?: React.ReactElement<UnitBookCountProps>;
+    unitBookCount?: React.ReactElement<Book.UnitBookCountProps>;
     updateBadge?: boolean;
     useMaxHeight?: boolean;
-    viewType?: ViewType;
+    viewType?: Book.ViewType;
+    series?: boolean;
     [extraKey: string]: any;
   }
 
@@ -83,29 +63,23 @@ const getThumbnailChildrenSize = (width: string | number) => {
   }
 };
 
-export const getReadingStatus = (readingStatus: ReadingStatus, viewType: ViewType) => ({
-  isUnread: readingStatus && readingStatus === ReadingStatus.New,
-  isOpened: readingStatus && readingStatus === ReadingStatus.Opened && viewType === ViewType.Portrait,
-});
-
 export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
   const {
     adultBadge = false,
     children,
     className,
-    downloadProgress,
-    downloadStatus,
     expired = false,
     expiredAt,
     notAvailable = false,
     onSelectedChange,
-    readingProgress,
-    readingStatus,
     ridiselect,
     selected = false,
     selectMode = false,
     thumbnailChildrenSize,
+    thumbnailInnerAdditionalElement,
     thumbnailLink,
+    thumbnailOuterAdditionalElement,
+    thumbnailStyles,
     thumbnailTitle,
     thumbnailUrl,
     thumbnailWidth,
@@ -113,61 +87,48 @@ export const Thumbnail: React.FunctionComponent<ThumbnailProps> = (props) => {
     unitBookCount,
     updateBadge = false,
     useMaxHeight = false,
-    viewType = ViewType.Portrait,
+    viewType = Book.ViewType.Portrait,
+    series = false,
     ...extraProps
   } = props;
   const childrenSize = thumbnailChildrenSize ? thumbnailChildrenSize : getThumbnailChildrenSize(thumbnailWidth);
-  const { isUnread, isOpened } = getReadingStatus(readingStatus, viewType);
   return (
     <div
-      css={styles.thumbnailLayout(thumbnailWidth, useMaxHeight, isUnread, isOpened)}
+      css={[styles.thumbnailLayout(thumbnailWidth, useMaxHeight), thumbnailStyles]}
       className={classNames(['Thumbnail', className])}
       {...extraProps}
     >
-      {isUnread && <UnreadDot />}
-      {isOpened && <ReadingProgressBar readingProgress={readingProgress} />}
-      <div css={styles.thumbnailImageWrapper}>
+      {thumbnailOuterAdditionalElement}
+      <div css={styles.thumbnailImageWrapper(series)}>
+        {series && <SeriesCover thumbnailWidth={thumbnailWidth} thumbnailUrl={thumbnailUrl} />}
         {selectMode &&
-          <ThumbnailCheckbox
+          <Book.ThumbnailCheckbox
             onChange={onSelectedChange}
             checked={selected}
             size={childrenSize}
+            series={series}
           />
         }
-        <ThumbnailImage thumbnailUrl={thumbnailUrl} thumbnailTitle={thumbnailTitle} thumbnailWidth={thumbnailWidth} />
-        {adultBadge && <AdultBadge />}
-        {updateBadge && <UpdateBadge />}
+        <Book.ThumbnailImage thumbnailUrl={thumbnailUrl} thumbnailTitle={thumbnailTitle} thumbnailWidth={thumbnailWidth} />
+        {adultBadge && <Book.AdultBadge />}
+        {updateBadge && <Book.UpdateBadge />}
         {(notAvailable || selectMode || expired) && <div css={styles.thumbnailDimmed} />}
-        {viewType === ViewType.Portrait &&
-          <React.Fragment>
-            {unitBook && (
-              <React.Fragment>
-                {unitBookCount}
-                {downloadStatus === DownloadStatus.Downloading && !selectMode && <UnitBookDownloading size={UnitBookDownloadingSize.Large} />}
-              </React.Fragment>
-            )}
-            {!unitBook && (
-              <React.Fragment>
-                {!notAvailable &&
-                  <DownloadButton
-                    downloadStatus={downloadStatus}
-                    downloadProgress={downloadProgress}
-                    size={DownloadButtonSize.Large}
-                  />
-                }
-                {ridiselect ? (
-                  <Ridiselect size={childrenSize} />
-                ) : expired ? (
-                  <Expired size={childrenSize} />
-                ) : expiredAt ? (
-                  <ExpiredAt expiredAt={expiredAt} size={childrenSize} />
-                ) : null}
-              </React.Fragment>
-            )}
-          </React.Fragment>
-        }
+        {viewType === Book.ViewType.Portrait && (
+          unitBook
+            ? series
+              ? null
+              : unitBookCount
+            : ridiselect 
+              ? <Book.Ridiselect size={childrenSize} />
+              : expired
+                ? <Book.Expired size={childrenSize} />
+                : expiredAt
+                  ? <Book.ExpiredAt expiredAt={expiredAt} size={childrenSize} />
+                  : null
+        )}
+        {thumbnailInnerAdditionalElement}
         {children}
-        {notAvailable && !selectMode && <NotAvailable size={childrenSize} />}
+        {notAvailable && !selectMode && <Book.NotAvailable size={childrenSize} />}
         {thumbnailLink && (
           <div css={styles.thumbnailLink}>{thumbnailLink}</div>
         )}

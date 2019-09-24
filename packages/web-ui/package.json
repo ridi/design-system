@@ -37,6 +37,7 @@
     "babel-plugin-emotion": "^10.0.13",
     "classnames": "^2.2.6",
     "lint-staged": "^8.2.1",
+    "node-vibrant": "^3.1.4",
     "polished": "^3.4.1",
     "prettier": "^1.18.2",
     "react": "^16.8.6",

@@ -1,6 +1,7 @@
 import { PositionProperty } from 'csstype';
 import { resetAppearance, resetLayout } from "src/styles";
 import { ThumbnailChildrenSize } from '../Thumbnail';
+import { SERIES_BOOK_SCALE } from '../Thumbnail/styles';
 
 export const checkbox = {
   display: 'block',
@@ -20,13 +21,19 @@ export const checkboxInput = {
   height: 0,
 };
 
-export const iconWrapper = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Medium) => {
+export const iconWrapper = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.Medium, series:boolean) => {
   let iconSize = 40;
   if (size === ThumbnailChildrenSize.Large) {
     iconSize = 50;
   } else if (size === ThumbnailChildrenSize.XLarge) {
     iconSize = 70;
   }
+  const transform = series ? {
+    transform: `scale(${2 - SERIES_BOOK_SCALE}) translate3d(-50%, -50%, 0)`,
+    transformOrigin: 'left top',
+  } : {
+    transform: 'translate3d(-50%, -50%, 0)',
+  };
 
   return {
     display: 'block',
@@ -37,8 +44,8 @@ export const iconWrapper = (size:ThumbnailChildrenSize = ThumbnailChildrenSize.M
     position: 'absolute' as PositionProperty,
     left: '50%',
     top: '50%',
-    transform: 'translate3d(-50%, -50%, 0)',
     overflow: 'hidden',
+    ...transform,
   };
 };
 
