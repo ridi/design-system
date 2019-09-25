@@ -21,9 +21,8 @@
     "build": "node build.js",
     "watch": "chokidar 'svgs/*.svg' -c 'node build.js' --initial --silent",
     "svgo": "svgo --config=.svgo.yml --folder=svgs --multipass",
-    "precommit": "lint-staged"
+    "precommit": "yarn svgo && lint-staged"
   },
-  "pre-commit": [ "svgo" ],
   "devDependencies": {
     "chalk": "^2.4.1",
     "chokidar-cli": "^1.2.1",
