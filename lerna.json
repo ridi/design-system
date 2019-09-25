@@ -1,5 +1,5 @@
 {
-  "version": "0.6.3",
+  "version": "0.7.0",
   "packages": [
     "package-explorer",
     "packages/*"
@@ -8,7 +8,6 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "allowBranch": "master",
       "push": false
     }
   }

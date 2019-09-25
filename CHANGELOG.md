@@ -5,6 +5,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.7.0] - 2019-09-25
+### @ridi/web-icons
+- **BREAKING** - Renaming icon
+  - `Ridiselect` → `RidiselectFilled`
+#### Added
+- Add multiple icons
+### @ridi/web-ui
+- **BREAKING** - Remove components
+  - `Annotation`
+  - `DownloadButton`
+  - `ReadingProgressBar`
+  - `UnitBookDownloading`
+  - `UnreadDot`
+#### Added
+- Add slots to LandscapeBook and PortraitBook
+- Add SVGO to build process
+
 ## [0.6.3] - 2019-08-19
 ### Fixed
 - Update yarn.lock
