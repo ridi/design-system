@@ -1,5 +1,5 @@
 {
   "linters": {
-    "svgs/**/*.svg": ["svgo --config=.svgo.yml --multipass", "git add"]
+    "svgs/**/*.svg": ["yarn svgo", "git add"]
   }
 }

@@ -20,8 +20,8 @@
     "clean": "git clean -xdf --exclude=node_modules .",
     "build": "node build.js",
     "watch": "chokidar 'svgs/*.svg' -c 'node build.js' --initial --silent",
-    "svgo": "svgo --config=.svgo.yml --folder=svgs --multipass",
-    "precommit": "yarn svgo && lint-staged"
+    "svgo": "svgo --config=.svgo.yml --multipass",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "chalk": "^2.4.1",
