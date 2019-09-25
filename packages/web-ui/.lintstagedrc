@@ -1,5 +1,7 @@
 {
   "linters": {
-    "src/**/*.{ts,tsx}": ["tslint -c ./tslint.json", "git add"]
+    "src/**/*.{ts,tsx}": ["tslint -c ./tslint.json", "git add"],
+    "src/icons/**/*.svg": ["yarn svgo-icons", "git add"],
+    "src/images/**/*.svg": ["yarn svgo-images", "git add"]
   }
 }
