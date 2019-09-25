@@ -1,6 +1,6 @@
 {
   "name": "@ridi/web-ui",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "RIDI Web UI",
   "license": "MIT",
   "repository": {
@@ -16,18 +16,18 @@
   ],
   "scripts": {
     "clean": "git clean -xdf --exclude=node_modules .",
-    "build": "rm -rf ./dist && yarn svgo-icons && yarn svgo-images && webpack",
+    "build": "rm -rf ./dist && webpack",
     "lint": "tslint src/**/*.{ts,tsx} -c ./tslint.json --fix",
-    "svgo-icons": "svgo --config=.svgo-icons.yml --folder=src/icons --multipass",
-    "svgo-images": "svgo --config=.svgo-images.yml --folder=src/images --multipass",
+    "svgo-icons": "svgo --config=.svgo-icons.yml --multipass",
+    "svgo-images": "svgo --config=.svgo-images.yml --multipass",
     "precommit": "lint-staged"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@emotion/core": "^10.0.10",
-    "@ridi/colors": "^0.7.0",
+    "@ridi/colors": "^0.7.1",
     "@ridi/tslint-config": "^0.1.0",
-    "@ridi/web-icons": "^0.7.0",
+    "@ridi/web-icons": "^0.7.1",
     "@svgr/webpack": "^4.3.0",
     "@types/classnames": "^2.2.8",
     "@types/react": "^16.8.22",
