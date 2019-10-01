@@ -90,7 +90,7 @@ table {
 }
 
 table, th, td {
-  border: 1px solid var(--slategray_10);
+  border: 1px solid var(--lightsteelblue_30);
 }
 
 th, td {
@@ -149,6 +149,8 @@ img, video {
   display: block;
   max-width: 100%;
   margin: 20px auto;
+  outline: 1px solid rgba(197, 213, 228, 0.5);
+  outline-offset: -1px;
 }
 
 figcaption, .caption {
