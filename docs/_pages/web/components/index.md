@@ -320,22 +320,48 @@
 
 ## Select Controls
 
-하나 또는 여러 항목을 선택하거나 필요한 옵션을 끄고 켤 때 사용합니다. 
+셀렉션 컨트롤을 사용하면 하나 또는 여러 항목을 선택하거나 설정을 끄고 켤 수 있습니다. 
 
-![Selection Controls](selection-control/intro.jpg)
+![Selection Controls](selection-control/intro.png)
 
-### Check box
+### 종류
+#### Check box
+<div class="columnWrapper" markdown="1">
+
+![checkbox](selection-control/checkbox.png) 
+{:.columns .firstColumn}
+
 - 하나 이상의 항목을 선택할 때 사용합니다.
 - 모든 항목을 한 번에 선택/해제 할 수 있는 체크박스 또는 버튼과 함께 사용할 수 있습니다. (ex. 웹 내 서재 편집모드)
 - 항목을 특정 단위 개수 만큼 빠르게 선택할 수 있도록 도와주는 툴팁을 함께 사용하기도 합니다. (ex.서점 시리즈 여러개 담기)
+{:.columns .columnText}
 
-### Radio button
+</div>
+
+#### Radio button
+<div class="columnWrapper" markdown="1">
+
+![radio button](selection-control/radio button.png) 
+{:.columns .firstColumn}
+
 - 여러 개의 항목 중 하나를 선택할 때 사용합니다. 체크박스와 달리 중복으로 선택할 수 없습니다.
 - 기본 값 또는 많이 사용하는 항목이 선택된 상태로 제공합니다.
+{:.columns .columnText}
 
-### Toggle switch
-- 필요한 옵션을 끄고 켤 때 사용합니다.
+</div>
 
+#### Toggle switch
+<div class="columnWrapper" markdown="1">
+
+![toggle switch](selection-control/switch.png) 
+{:.columns .firstColumn}
+
+- 설정을 끄고 켤 때 사용합니다.
+{:.columns .columnText}
+
+</div>
+
+### 애니메니션 확인
 <p class="codepen" data-height="454" data-theme-id="light" data-default-tab="result" data-user="stacyyya" data-slug-hash="BaBmodx" data-preview="true" style="height: 454px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="selection control (toggle switch, checkbox, radio btn)">
   <span>See the Pen <a href="https://codepen.io/stacyyya/pen/BaBmodx">
   selection control (toggle switch, checkbox, radio btn)</a> by Stacy Kim (<a href="https://codepen.io/stacyyya">@stacyyya</a>)
@@ -428,22 +454,20 @@
 
 ### Text input
 
-![텍스트인풋](text-input/text-input-1.png)
-
 - 최대 한 줄 짜리 입력 필드를 일컫습니다.
 - 여러 개의 텍스트 인풋과 다른 컴포넌트를 조합하여 하나의 폼(Form)을 만들 수 있습니다. (ex. 회원가입)
 - 사용자가 입력한 텍스트의 유효성을 아이콘, 텍스트 등의 시각적인 피드백으로 알려줍니다.
 - 숫자나 비밀번호를 입력하는 경우 letter-spacing을 넓게 하여 각 글자가 잘 구분되어 보이도록 합니다.
 
+![텍스트인풋](text-input/text-input-1.png)
+
 #### 구조 (Structure)
 ![구조](text-input/text-input-structure-1.png)
 
-#### 상태 (Status)
+#### 상태 (State)
 ![상태](text-input/text-input-status.png)
 
 ### Search input
-
-![서치인풋](text-input/text-input-2.png)
 
 - GNB
     - 배경색이 있는 곳에 쓰일 경우 Container의 배경색을 #FFF로 합니다. 
@@ -451,17 +475,19 @@
 - 서브 페이지
     - 페이지 타이틀 혹은 탭 요소 아래에 위치합니다.
 
+![서치인풋](text-input/text-input-2.png)
+
 #### 구조 (Structure)
 
 ![구조](text-input/text-input-structure-2.png)
 
 ### Text area
 
-![텍스트영역](text-input/text-input-3.png)
-
 - 한 줄 이상의 글을 적을 때 쓰입니다. 
 - 글자 수에 따라 Container의 높이가 늘어납니다. 단, 쓰이는 곳에 따라 적절한 최소 높이를 지정해줍니다.
 - 주로, 입력한 내용을 저장하는 버튼과 함께 쓰입니다.
+
+![텍스트영역](text-input/text-input-3.png)
 
 ### 유의사항
 
