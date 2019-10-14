@@ -1,0 +1,39 @@
+{
+  "name": "ridi-design-system",
+  "private": true,
+  "description": "RIDI Design System",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17",
+    "gatsby": "^2.15.28",
+    "gatsby-plugin-emotion": "^4.1.9",
+    "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-source-filesystem": "^2.1.29",
+    "gatsby-transformer-json": "^2.2.12",
+    "gatsby-transformer-remark": "^2.6.27",
+    "gatsby-transformer-yaml": "^2.2.12",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
