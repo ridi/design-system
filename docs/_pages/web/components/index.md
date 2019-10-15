@@ -332,8 +332,7 @@
 {:.columns .firstColumn}
 
 - 하나 이상의 항목을 선택할 때 사용합니다.
-- 모든 항목을 한 번에 선택/해제 할 수 있는 체크박스 또는 버튼과 함께 사용할 수 있습니다. (ex. 웹 내 서재 편집모드)
-- 항목을 특정 단위 개수 만큼 빠르게 선택할 수 있도록 도와주는 툴팁을 함께 사용하기도 합니다. (ex.서점 시리즈 여러개 담기)
+- 모든 항목을 전체 선택할 수 있는 체크박스를 함께 제공합니다.
 {:.columns .columnText}
 
 </div>
@@ -344,8 +343,9 @@
 ![radio button](selection-control/radio button.png) 
 {:.columns .firstColumn}
 
-- 여러 개의 항목 중 하나를 선택할 때 사용합니다. 체크박스와 달리 중복으로 선택할 수 없습니다.
+- 여러 개의 항목 중 하나만 선택할 때 사용합니다. 
 - 기본 값 또는 많이 사용하는 항목이 선택된 상태로 제공합니다.
+- 체크박스와 달리 중복으로 선택할 수 없습니다.
 {:.columns .columnText}
 
 </div>
@@ -362,12 +362,7 @@
 </div>
 
 ### 애니메니션 확인
-<p class="codepen" data-height="454" data-theme-id="light" data-default-tab="result" data-user="stacyyya" data-slug-hash="BaBmodx" data-preview="true" style="height: 454px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="selection control (toggle switch, checkbox, radio btn)">
-  <span>See the Pen <a href="https://codepen.io/stacyyya/pen/BaBmodx">
-  selection control (toggle switch, checkbox, radio btn)</a> by Stacy Kim (<a href="https://codepen.io/stacyyya">@stacyyya</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script async src="//jsfiddle.net/stacyyya/e6tyvgq1/13/embed/result/"></script>
 
 ## Tables
 
