@@ -1,8 +1,3 @@
 ---
-path: "/app"
-title: "app Page"
+redirect_to: /app/components
 ---
-
-# app Page
-
-## description

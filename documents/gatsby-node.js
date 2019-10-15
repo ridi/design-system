@@ -10,8 +10,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       allMarkdownRemark(limit: 1000) {
         edges {
           node {
-            frontmatter {
-              path
+            id
+            parent {
+              ... on File {
+                relativePath
+              }
             }
           }
         }
@@ -25,10 +28,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const mdRelativePath = node.parent.relativePath;
+    const {dir, name} = path.parse(mdRelativePath);
+    const mdPath = `/${name === 'index' ? dir : path.join(dir, name)}`;
+
     createPage({
-      path: node.frontmatter.path,
+      path: mdPath,
       component: pageTemplate,
-      context: {},
+      context: {
+        id: node.id
+      },
     })
   })
 }

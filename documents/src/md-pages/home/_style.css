@@ -1,0 +1,113 @@
+html.home {
+  & .site-main {
+    padding: var(--site-padding);
+  }
+
+  & .site-main__container {
+    max-width: none;
+  }
+
+  & .hero {
+    margin: calc(-1 * var(--site-padding));
+    margin-bottom: 0;
+    padding: 80px 0 30px;
+    text-align: center;
+  }
+
+  & .hero__title {
+    width: 240px;
+    height: 0;
+    padding: 0;
+    padding-top: 26px;
+    margin: 0 auto;
+    background: url('/assets/img/ridi_design_system.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+    border: none;
+  }
+
+  & .hero__description {
+    margin: 16px 0;
+    padding: 0;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--slategray_50);
+  }
+
+  & .site-content-nav {
+    margin: 0 10px 60px;
+  }
+
+  & .site-content-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  & .site-content {
+    width: 100%;
+    margin: 50px 0 0;
+    background: no-repeat center top;
+    background-size: 316px 200px;
+    text-align: left;
+    line-height: normal;
+  }
+
+  & .site-content__link {
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 230px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  & .site-content__title {
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--slategray_90);
+    border: none;
+  }
+
+  & .site-content__description {
+    margin: 0;
+    line-height: 1.65;
+    color: var(--slategray_80);
+  }
+
+  & .site-content__btn-more {
+    padding-top: 20px;
+    font-size: 15px;
+    color: var(--slategray_50);
+    line-height: 1.87;
+    text-decoration: underline;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--slategray_90);
+    }
+  }
+
+  & .site-content-principles {
+    background-image: url('./img/1_Principle.png');
+  }
+
+  & .site-content-writings {
+    background-image: url('./img/2_Writings.png');
+  }
+
+  & .site-content-colors {
+    background-image: url('./img/3_Color.png');
+  }
+
+  & .site-content-web {
+    background-image: url('./img/4_web.png');
+  }
+
+  & .site-content-app {
+    background-image: url('./img/5_App.png');
+  }
+}
