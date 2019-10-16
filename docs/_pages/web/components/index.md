@@ -328,7 +328,9 @@
 #### Check box
 <div class="columnWrapper" markdown="1">
 
-![checkbox](selection-control/checkbox.png) 
+<div>
+    <video autoplay loop muted playsinline><source src="selection-control/checkbox.mov" type="video/mp4"> 지금 접속하신 브라우저는 비디오를 지원하지 않습니다.</video>
+</div>
 {:.columns .firstColumn}
 
 - 하나 이상의 항목을 선택할 때 사용합니다.
@@ -340,12 +342,13 @@
 #### Radio button
 <div class="columnWrapper" markdown="1">
 
-![radio button](selection-control/radio button.png) 
+<div>
+    <video autoplay loop muted playsinline><source src="selection-control/radio button.mov" type="video/mp4"> 지금 접속하신 브라우저는 비디오를 지원하지 않습니다.</video>
+</div>
 {:.columns .firstColumn}
 
 - 여러 개의 항목 중 하나만 선택할 때 사용합니다. 
 - 기본 값 또는 많이 사용하는 항목이 선택된 상태로 제공합니다.
-- 체크박스와 달리 중복으로 선택할 수 없습니다.
 {:.columns .columnText}
 
 </div>
@@ -353,13 +356,22 @@
 #### Toggle switch
 <div class="columnWrapper" markdown="1">
 
-![toggle switch](selection-control/switch.png) 
+<div>
+    <video autoplay loop muted playsinline><source src="selection-control/switch.mov" type="video/mp4"> 지금 접속하신 브라우저는 비디오를 지원하지 않습니다.</video>
+</div>
 {:.columns .firstColumn}
 
 - 설정을 끄고 켤 때 사용합니다.
 {:.columns .columnText}
 
 </div>
+
+### 유의사항
+
+셀렉션 컨트롤의 상태 변화를 적절한 애니메이션 효과로 표현해줍니다.
+```
+.checkbox label:after { transition: 0.3s; }
+```
 
 ## Tables
 
