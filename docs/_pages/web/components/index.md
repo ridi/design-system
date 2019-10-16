@@ -361,9 +361,6 @@
 
 </div>
 
-### 애니메니션 확인
-<script async src="//jsfiddle.net/stacyyya/e6tyvgq1/13/embed/result/"></script>
-
 ## Tables
 
 테이블은 정보를 열과 행으로 구분하여 사용자가 쉽게 읽고 이해할 수 있도록 돕습니다. 주로 열의 타이틀만 표시합니다.
@@ -460,7 +457,7 @@
 ![구조](text-input/text-input-structure-1.png)
 
 #### 상태 (State)
-![상태](text-input/text-input-status.png)
+![상태](text-input/text-input-state.png)
 
 ### Search input
 
