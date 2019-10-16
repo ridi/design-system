@@ -414,3 +414,8 @@ body {
   width: 36px;
   height: 36px;
 }
+
+// 컬럼 내 li 요소의 좌측 여백 추가
+.columnWrapper li {
+  margin: 0 0 0 20px;
+}
