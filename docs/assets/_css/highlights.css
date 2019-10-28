@@ -8,7 +8,7 @@
 
 .highlight .cs { color: #999999; font-weight: bold; font-style: italic; }
 
-.highlight .c, .highlight .cd { color: #999988; font-style: italic; }
+.highlight .c, .highlight .cd { color: var(--slategray_40); font-style: italic; }
 
 .highlight .err { color: #a61717; background-color: #e3d2d2; }
 
@@ -88,7 +88,7 @@
 
 .highlight .nb { color: #0086B3; }
 
-.highlight .nc { color: #445588; font-weight: bold; }
+.highlight .nc { color: var(--bluegray_70); font-weight: bold; }
 
 .highlight .no { color: #008080; }
 
@@ -98,13 +98,13 @@
 
 .highlight .ne { color: #990000; font-weight: bold; }
 
-.highlight .nf { color: #990000; font-weight: bold; }
+.highlight .nf { color: var(--bluegray_70); font-weight: bold; }
 
 .highlight .nl { color: #990000; font-weight: bold; }
 
 .highlight .nn { color: #555555; }
 
-.highlight .nt { color: #000080; }
+.highlight .nt { color: var(--bluegray_70); }
 
 .highlight .vc { color: #008080; }
 
@@ -116,6 +116,6 @@
 
 .highlight .ow { color: #000000; font-weight: bold; }
 
-.highlight .o { color: #000000; font-weight: bold; }
+.highlight .o { color: var(--bluegray_70); font-weight: bold; }
 
 .highlight .w { color: #bbbbbb; }
