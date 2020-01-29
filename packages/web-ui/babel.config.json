@@ -1,0 +1,7 @@
+{
+  "presets": ["@babel/preset-react"],
+  "plugins": [
+    ["module-resolver", { "root": ["."] }],
+    ["emotion", { "sourceMap": true, "hoist": true }]
+  ]
+}
