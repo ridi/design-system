@@ -22,6 +22,7 @@
     "babel-loader": "^8.0.5",
     "lodash": "^4.17.11",
     "react-docgen-typescript": "^1.12.3",
-    "react-styleguidist": "^9.0.0-beta4"
+    "react-styleguidist": "^9.0.0-beta4",
+    "webpack": "^4.41.5"
   }
 }
