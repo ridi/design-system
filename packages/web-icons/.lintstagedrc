@@ -1,5 +1,0 @@
-{
-  "linters": {
-    "svgs/**/*.svg": ["yarn svgo", "git add"]
-  }
-}
