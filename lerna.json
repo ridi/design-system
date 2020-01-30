@@ -1,7 +1,6 @@
 {
   "version": "0.7.1",
   "packages": [
-    "package-explorer",
     "packages/*"
   ],
   "npmClient": "yarn",
