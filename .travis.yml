@@ -1,0 +1,46 @@
+language: node_js
+node_js: '10'
+cache: yarn
+
+script:
+  - yarn build
+
+before_deploy:
+  - printf "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+
+  - git config --global user.email "travis@travis-ci.com"
+  - git config --global user.name "Travis CI"
+
+  # Reference: https://github.com/alrra/travis-scripts/blob/master/docs/github-deploy-keys.md
+  - SSH_FILE=$HOME/.ssh/github_deploy_key
+  - >-
+    openssl aes-256-cbc
+    -K $encrypted_17d783f347c4_key
+    -iv $encrypted_17d783f347c4_iv
+    -in github_deploy_key.enc
+    -out $SSH_FILE
+    -d
+  - chmod 600 $SSH_FILE
+  - >-
+    printf "%s\n"
+    "Host github.com"
+    "  IdentityFile $SSH_FILE"
+    "  LogLevel ERROR"
+    >> ~/.ssh/config
+  - git remote set-url origin git@github.com:${TRAVIS_REPO_SLUG}.git
+
+deploy:
+  - provider: script
+    script: >-
+      lerna publish from-git --yes
+      && rm -rf ./docs/packages/build ./docs/packages/${TRAVIS_TAG}
+      && cp -a ./package-explorer/dist/. ./docs/packages
+      && cp -a ./package-explorer/dist/. ./docs/packages/${TRAVIS_TAG}
+      && git add .
+      && git diff-index --quiet HEAD || git commit -m "Update package-explorer"
+      && git push origin HEAD:master
+    skip_cleanup: true
+    on:
+      repo: ridi/design-system
+      branch: master
+      tags: true
