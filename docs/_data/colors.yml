@@ -213,6 +213,8 @@ green:
     hexcode: "#2c6600"
   - name: green_100
     hexcode: "#214d00"
+  - name: seagreen
+    hexcode: "#3EA590"
 
 brown:
   - name: brown_5
